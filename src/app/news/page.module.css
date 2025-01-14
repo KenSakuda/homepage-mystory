@@ -1,0 +1,22 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.titleSeparator {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  margin-bottom: 32px;
+}

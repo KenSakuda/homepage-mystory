@@ -1,0 +1,44 @@
+.section {
+  margin-top: 30px;
+  padding: 60px 20px;
+  background-color: #ff8c00;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  display: flex;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.title p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.button {
+  margin-top: 10px;
+  max-width: 100%;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  .section {
+    text-align: center;
+  }
+
+  .button {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+  }
+}

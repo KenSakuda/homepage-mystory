@@ -1,0 +1,85 @@
+.recruitSection {
+  padding: 60px 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.titleSeparator {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  margin-bottom: 32px;
+}
+
+.recruitCards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.recruitCard {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+  max-width: 600px;
+  flex: 1;
+}
+
+.recruitCard h2 {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.recruitCard ul {
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.button {
+  display: flex;
+  background-color: #ff8c00;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 30px auto;
+  justify-content: center;
+  max-width: 70%;
+}
+
+/* .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  width: 100%;
+  margin-top: 30px; */
+
+.recruitCard a:hover {
+  background-color: #e55a00;
+}
+
+@media screen and (max-width: 768px) {
+  .recruitCards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recruitCard {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,75 @@
+/* 共通レイアウト */
+.section {
+  padding: 60px 20px;
+  margin-bottom: 40px;
+}
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  color: white;
+  overflow: hidden;
+  text-align: center;
+}
+.heroContent {
+  z-index: 1;
+}
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.description {
+  font-size: 1.2rem;
+}
+.bgimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+/* News Section */
+.news {
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #fff;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.newsTitle h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.newsTitle p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.contents {
+  justify-content: center;
+}
+
+.newsLink {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+}

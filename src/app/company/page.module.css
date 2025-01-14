@@ -1,0 +1,45 @@
+.companysection {
+  padding: 60px 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.titleSeparator {
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  margin-bottom: 32px;
+}
+
+.companyInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.infoCard {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+  border: 1px solid #ddd;
+}
+.infoCard h2 {
+  font-size: 1.2em;
+  color: #ff8c00;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.infoCard p {
+  font-size: 1em;
+  color: #333;
+}

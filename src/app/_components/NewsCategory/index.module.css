@@ -1,0 +1,9 @@
+.tag {
+  color: #ff8c00;
+  background-color: var(--color-bg-main);
+  padding: 4px 12px;
+  border: 1px solid #ff8c00;
+  border-radius: var(--border-radius);
+  white-space: nowrap;
+  font-size: 0.7rem;
+}
