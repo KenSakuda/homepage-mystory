@@ -49,21 +49,16 @@ import { getNewsDetail } from "@/app/_libs/microcms";
 import Article from "@/app/_components/Article";
 import ButtonLink from "@/app/_components/ButtonLink";
 import styles from "./page.module.css";
-// 型を定義する
-type PageProps = {
-  params: {
-    slug: string; // 必須
-  };
-  searchParams?: {
-    dk?: string; // オプション型
-  };
-};
-// generateMetadata 関数
+// PageProps 型を使用する
 export async function generateMetadata({
   params,
-}: PageProps): Promise<Metadata> {
+  searchParams,
+}: {
+  params: { slug: string };
+  searchParams: { dk?: string };
+}): Promise<Metadata> {
   const data = await getNewsDetail(params.slug, {
-    draftKey: "",
+    draftKey: searchParams.dk ?? "",
   });
   return {
     title: data.title,
@@ -72,13 +67,16 @@ export async function generateMetadata({
     },
   };
 }
-// ページコンポーネント
-export default async function Page({ params, searchParams }: PageProps) {
+export default async function Page({
+  params,
+  searchParams,
+}: {
+  params: { slug: string };
+  searchParams: { dk?: string };
+}) {
   const data = await getNewsDetail(params.slug, {
-    draftKey: searchParams?.dk ?? "", // オプションで存在しない場合は空文字を使用
-  }).catch(() => {
-    return notFound();
-  });
+    draftKey: searchParams.dk ?? "",
+  }).catch(notFound);
   return (
     <>
       <Article data={data} />
