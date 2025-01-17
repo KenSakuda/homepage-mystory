@@ -9,9 +9,7 @@ export default function Page() {
       <div className={styles.header}>
         <span className={styles.category}>施策実行支援</span>
         <h1 className={styles.title}>
-          施策を実行する際のターゲット選定や
-          <br />
-          One-to-Oneコミュニケーションに活用
+          施策を実行する際のターゲット選定やOne-to-Oneコミュニケーションに活用
         </h1>
       </div>
       {/* 記事本文 */}

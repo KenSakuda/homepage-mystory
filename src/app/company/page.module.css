@@ -43,3 +43,12 @@
   font-size: 1em;
   color: #333;
 }
+.link {
+  color: blue;
+}
+
+@media screen and (max-width: 768px) {
+  .infoCard {
+    width: 80%;
+  }
+}

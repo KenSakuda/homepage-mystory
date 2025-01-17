@@ -31,7 +31,9 @@ export default function Page() {
         </div>
         <div className={styles.infoCard}>
           <h2>プライバシーポリシー</h2>
-          <Link href="/privacypolicy">Privacy policy</Link>
+          <Link href="/privacypolicy" className={styles.link}>
+            Privacy policy
+          </Link>
         </div>
       </div>
     </section>

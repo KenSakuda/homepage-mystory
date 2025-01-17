@@ -10,9 +10,7 @@ export default function Page() {
       <div className={styles.header}>
         <span className={styles.category}>マーケティング戦略策定</span>
         <h1 className={styles.title}>
-          4P戦略検討やシミュレーションを通じて
-          <br />
-          マーケティング活動高度化
+          4P戦略検討やシミュレーションを通じてマーケティング活動高度化
         </h1>
       </div>
       {/* 記事本文 */}

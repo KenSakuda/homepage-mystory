@@ -9,9 +9,7 @@ export default function Page() {
       <div className={styles.header}>
         <span className={styles.category}>効果検証</span>
         <h1 className={styles.title}>
-          様々なシーンに対応可能な効果検証
-          <br />
-          ・推定手法でビジネス成果を正しく評価
+          様々なシーンに対応可能な効果検証・推定手法でビジネス成果を正しく評価
         </h1>
       </div>
       {/* 記事本文 */}
