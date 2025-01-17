@@ -48,7 +48,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .infoCard {
-    width: 80%;
+  .companyInfo {
+    max-width: 600px;
   }
 }
