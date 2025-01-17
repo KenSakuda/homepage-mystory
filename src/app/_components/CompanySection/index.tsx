@@ -14,7 +14,7 @@ export default function CompanySection() {
           src="/office.png"
           alt="会社イメージ"
           width={320}
-          height={250}
+          height={240}
           className={styles.image}
         />
         <div className={styles.text}>
