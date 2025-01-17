@@ -14,8 +14,8 @@ export default function ServicesSection() {
           <Image
             src="/photo_service_image1.png"
             alt="データ分析コンサルティング"
-            width={300}
-            height={200}
+            width={240}
+            height={160}
             className={styles.image}
           />
           <h3>
@@ -33,8 +33,8 @@ export default function ServicesSection() {
           <Image
             src="/photo_service_image2.png"
             alt="ブロックチェーン開発"
-            width={300}
-            height={200}
+            width={240}
+            height={160}
             className={styles.image}
           />
           <h3>ブロックチェーン開発</h3>
@@ -46,8 +46,8 @@ export default function ServicesSection() {
           <Image
             src="/photo_service_image3.jpg"
             alt="デジタルメディアの運営"
-            width={300}
-            height={200}
+            width={240}
+            height={160}
             className={styles.image}
           />
           <h3>デジタルメディアの運営</h3>
@@ -62,8 +62,8 @@ export default function ServicesSection() {
           <Image
             src="/photo_service_image4.jpg"
             alt="ウエルネス関連のサービス開発"
-            width={300}
-            height={200}
+            width={240}
+            height={160}
             className={styles.image}
           />
           <h3>
