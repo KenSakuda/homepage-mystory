@@ -44,7 +44,7 @@ export default function ServicesSection() {
         </div>
         <div className={styles.card}>
           <Image
-            src="/photo_service_image3.jpg"
+            src="/photo_service_image2.png"
             alt="デジタルメディアの運営"
             width={350}
             height={220}
@@ -61,7 +61,7 @@ export default function ServicesSection() {
         </div>
         <div className={styles.card}>
           <Image
-            src="/photo_service_image3.jpg"
+            src="/photo_service_image4.jpg"
             alt="ウエルネス関連のサービス開発"
             width={350}
             height={220}

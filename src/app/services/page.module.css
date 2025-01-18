@@ -71,11 +71,10 @@
   height: 120px;
   margin-top: 20px;
   text-align: center;
-  margin: 0 auto;
 }
 
 .productDevelopment h3 {
-  display: inline-flex;
   text-align: center;
-  font-size: 1.1rem;
+  margin: 0 auto;
+  font-size: 1rem;
 }
