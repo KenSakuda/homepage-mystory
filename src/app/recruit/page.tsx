@@ -38,7 +38,7 @@ export default function Page() {
                 href="https://jp.indeed.com/job/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%83%86%E3%82%A3%E3%82%B9%E3%83%88-%E3%83%87%E3%83%BC%E3%82%BF%E3%82%A2%E3%83%8A%E3%83%AA%E3%82%B9%E3%83%88%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%83%E3%83%97-93b620a0f45812d0"
                 className={styles.button}
               >
-                indeed採用ページへ
+                採用ページへ
               </Link>
             </div>
             <div className={styles.recruitCard}>

@@ -49,9 +49,3 @@
 .link {
   color: blue;
 }
-
-@media (max-width: 640px) {
-  .companyInfo {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
-}
