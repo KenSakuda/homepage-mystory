@@ -53,7 +53,7 @@
 @media (max-width: 768px) {
   .companyInfo {
     grid-template-columns: 1fr;
-    width: 90%;
+    width: 100%;
   }
 
   .infoCard {
