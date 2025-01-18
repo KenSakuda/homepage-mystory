@@ -32,6 +32,8 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   color: #333;
   border: 1px solid #ddd;
+  margin: 0 auto;
+  max-width: 100%;
 }
 .infoCard h2 {
   font-size: 1.2em;
@@ -48,7 +50,11 @@
 }
 
 @media (max-width: 640px) {
+  .companyInfo {
+    width: 90%;
+  }
+
   .infoCard {
-    margin: 0 auto;
+    margin: 100%;
   }
 }

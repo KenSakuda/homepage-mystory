@@ -214,8 +214,11 @@ export default function Page() {
           <li>提供者：Google Inc.</li>
           <li>
             プライバシーポリシー：
-            <Link href="http://www.google.com/intl/ja/policies/privacy/">
-              リンクを見る
+            <Link
+              href="http://www.google.com/intl/ja/policies/privacy/"
+              className={styles.link}
+            >
+              プライバシーポリシー
             </Link>
           </li>
         </ul>

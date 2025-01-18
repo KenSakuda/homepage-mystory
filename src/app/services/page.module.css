@@ -70,12 +70,13 @@
   background-color: #f8f8f8;
   height: 120px;
   margin-top: 20px;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .productDevelopment h3 {
   text-align: center;
-  margin: 0 auto;
-  height: auto;
+  margin: 0;
   font-size: 1.1rem;
 }
