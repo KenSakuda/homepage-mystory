@@ -76,5 +76,6 @@
 .productDevelopment h3 {
   text-align: center;
   margin: 0 auto;
+  height: auto;
   font-size: 1.1rem;
 }

@@ -49,6 +49,6 @@
 
 @media (max-width: 640px) {
   .infoCard {
-    max-width: 80%;
+    margin: 0 auto;
   }
 }
