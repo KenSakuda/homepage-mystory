@@ -17,18 +17,10 @@ export default async function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.title}>
-            <strong>「〇〇 × データサイエンス」</strong>で作るちょっと便利な未来
-          </h1>
+          <h1 className={styles.title}>先端技術の力で新しい未来を</h1>
           <p className={styles.description}>
-            データサイエンスと何かをかけ合わせることで、企業活動や人々の生活を豊かなものにするお手伝いをします
+            AIやブロックチェーンなど先端技術を駆使して、あらゆるビジネス課題を解決します
           </p>
-          <ul>
-            <li>マーケティング × データサイエンス</li>
-            <li>スポーツ × データサイエンス</li>
-            <li>ヘルスケア × データサイエンス</li>
-            <li>ブロックチェーン × データサイエンス</li>
-          </ul>
         </div>
         <Image
           className={styles.bgimg}
