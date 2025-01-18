@@ -55,8 +55,9 @@ export default function ServicesSection() {
             スポーツアナリティクスに
             <br />
             特化した情報アプリを開発
+            <br />
+            ＜プロダクト開発中＞
           </p>
-          <p className={styles.productDevelopment}>＜プロダクト開発中＞</p>
         </div>
         <div className={styles.card}>
           <Image
@@ -74,9 +75,8 @@ export default function ServicesSection() {
           <p>
             理学療法士と業務提携し、
             <br />
-            健康関連サービスを開発
+            健康関連サービスを開発 ＜プロダクト開発中＞
           </p>
-          <p className={styles.productDevelopment}>＜プロダクト開発中＞</p>
         </div>
       </div>
       <div className={styles.button}>
