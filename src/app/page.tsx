@@ -18,7 +18,7 @@ export default async function Home() {
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1 className={styles.title}>
-            "〇〇 × データサイエンス"で作るちょっと便利な未来
+            <strong>「〇〇 × データサイエンス」</strong>で作るちょっと便利な未来
           </h1>
           <p className={styles.description}>
             データサイエンスと何かをかけ合わせることで、企業活動や人々の生活を豊かなものにするお手伝いをします
