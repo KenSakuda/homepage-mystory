@@ -46,3 +46,9 @@
 .link {
   color: blue;
 }
+
+@media (max-width: 640px) {
+  .infoCard {
+    max-width: 80%;
+  }
+}

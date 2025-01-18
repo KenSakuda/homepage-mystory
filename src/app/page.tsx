@@ -19,7 +19,7 @@ export default async function Home() {
         <div className={styles.heroContent}>
           <h1 className={styles.title}>先端技術の力で新しい未来を</h1>
           <p className={styles.description}>
-            AIやブロックチェーンなど先端技術を駆使して、あらゆるビジネス課題を解決します
+            AIやブロックチェーン、モダンApp開発など先端技術を駆使して、あらゆるビジネス課題を解決します
           </p>
         </div>
         <Image
