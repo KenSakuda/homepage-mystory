@@ -5,28 +5,13 @@ import { createContactData } from "@/app/_actions/contact";
 import { useActionState } from "react";
 import styles from "./index.module.css";
 
-interface ContactFormState {
-  status: "success" | "error" | "";
-  message: string;
-}
-
-const initialState: ContactFormState = {
+const initialState = {
   status: "",
   message: "",
 };
 
-const handleCreateContactData = async (
-  state: ContactFormState,
-  formData: FormData
-): Promise<ContactFormState> => {
-  return await createContactData(state, formData);
-};
-
 export default function ContactForm() {
-  const [state, formAction] = useActionState(
-    handleCreateContactData,
-    initialState
-  );
+  const [state, formAction] = useActionState(createContactData, initialState);
   console.log(state);
 
   const handleSubmit = () => {
@@ -36,7 +21,7 @@ export default function ContactForm() {
   if (state.status === "success") {
     return (
       <p className={styles.success}>
-        6 お問い合わせいただき、ありがとうございます。
+        お問い合わせいただき、ありがとうございます。
         <br />
         お返事まで今しばらくお待ちください。
       </p>
