@@ -16,7 +16,7 @@ export default function NewsLayout({ children }: Props) {
         padding: "40px 0",
       }}
     >
-      <Sheet>{children}</Sheet>;
+      <Sheet>{children}</Sheet>
     </div>
   );
 }

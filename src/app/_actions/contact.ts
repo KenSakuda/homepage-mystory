@@ -1,14 +1,19 @@
 "use server";
 
+interface ContactFormState {
+  status: "success" | "error" | "";
+  message: string;
+}
+
 function validateEmail(email: string) {
   const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return pattern.test(email);
 }
 
 export async function createContactData(
-  _prevState: Record<string, unknown>,
+  _prevState: ContactFormState,
   formData: FormData
-) {
+): Promise<ContactFormState> {
   const rawFormData = {
     lastname: formData.get("lastname") as string,
     firstname: formData.get("firstname") as string,
