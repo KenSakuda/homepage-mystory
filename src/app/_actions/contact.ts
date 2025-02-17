@@ -68,6 +68,11 @@ export async function createContactData(
     };
   }
 
+  const hubspotutk = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith(`hubspotutk=`))
+    ?.split("=")[1];
+
   const result = await fetch(
     `https://api.hsforms.com/submissions/v3/integration/submit/${process.env.HUBSPOT_PORTAL_ID}/${process.env.HUBSPOT_FORM_ID}`,
     {
@@ -113,6 +118,11 @@ export async function createContactData(
             value: rawFormData.message,
           },
         ],
+        context: {
+          hutk: hubspotutk || "",
+          pageUri: "https://www.b-mystory.com/conmtact",
+          pageName: "お問い合わせフォーム",
+        },
       }),
     }
   );
