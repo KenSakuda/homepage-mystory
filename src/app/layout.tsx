@@ -7,8 +7,8 @@ import Footer from "./_components/Footer";
 export const metadata: Metadata = {
   metadataBase: new URL("https:/www./b-mystory.com"),
   title: {
-    template: "%s | MyStory",
-    default: "MyStory",
+    template: "%s | データ分析・経済学のビジネス活用の相談ならMyStory",
+    default: "データ分析・経済学のビジネス活用の相談ならMyStory",
   },
   description: "先端技術を活用して、あらゆるビジネス課題を解決します",
   openGraph: {
