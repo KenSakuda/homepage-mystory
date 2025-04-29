@@ -1,0 +1,48 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+.hero {
+  position: relative;
+  height: 240px;
+  background-image: url("/column.png");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 48px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.heroContent {
+  background: rgba(255, 255, 255, 0.9); /* 半透明白 */
+  border-radius: 8px;
+}
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+.description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+}
+.breadcrumb {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+.breadcrumb span {
+  margin-right: 5px;
+}
+.current {
+  font-weight: bold;
+}
+.cards {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}

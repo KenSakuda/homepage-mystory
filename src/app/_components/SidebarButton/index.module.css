@@ -1,0 +1,64 @@
+.fixedButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(125, 204, 204, 1);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  text-align: center;
+  transition: background 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+.fixedButton:hover {
+  background: #5bc2dc;
+  transform: translateY(-2px);
+}
+.fixedButton img {
+  flex-shrink: 0;
+}
+
+.sidebarButtonArea {
+  position: fixed;
+  top: 30%;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+.sidebarButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(125, 204, 204, 1);
+  color: #fff;
+  padding: 12px 8px;
+  margin: 0 5px;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+/* レスポンシブ対応：スマホだけ表示 */
+@media (max-width: 768px) {
+  .sidebarButtonArea {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: 90%;
+    width: 100%;
+    background: #fff;
+    justify-content: space-around;
+    flex-direction: inherit;
+    padding: 0.5rem;
+    border-top: 1px solid #ccc;
+  }
+}

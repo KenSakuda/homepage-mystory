@@ -3,6 +3,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
+import SidebarButton from "@/app/_components/SidebarButton";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https:/www.b-mystory.com"),
@@ -10,12 +11,13 @@ export const metadata: Metadata = {
     template: "%s | データ分析・経済学のビジネス活用の相談ならMyStory",
     default: "データ分析・経済学のビジネス活用の相談ならMyStory",
   },
-  description: "先端技術を活用して、あらゆるビジネス課題を解決します",
+  description:
+    "AIやデータ分析、ブロックチェーン、モダンアプリ開発など先端技術の力を駆使して、あらゆるビジネス課題を解決します",
   openGraph: {
     title: "MyStory",
     siteName: "MyStory",
     description:
-      "AIやブロックチェーン、モダンアプリ開発など先端技術の力を駆使して、あらゆるビジネス課題を解決します",
+      "AIやデータ分析、ブロックチェーン、モダンアプリ開発など先端技術の力を駆使して、あらゆるビジネス課題を解決します",
     type: "website",
   },
 };
@@ -37,6 +39,20 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <SidebarButton
+          buttons={[
+            {
+              href: "/contact",
+              text: "ご相談はこちら",
+              iconSrc: "/icon_mail.svg",
+            },
+            {
+              href: "/deepsports",
+              text: "『Deep Sports』へ",
+              iconSrc: "/icon_sports.svg",
+            },
+          ]}
+        />
       </body>
       <GoogleAnalytics gaId="G-65REWJ3LZB" />
     </html>

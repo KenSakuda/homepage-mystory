@@ -1,16 +1,36 @@
 import { createClient } from "microcms-js-sdk";
-import type { MicroCMSQueries, MicroCMSListContent } from "microcms-js-sdk";
+import type {
+  MicroCMSQueries,
+  MicroCMSImage,
+  MicroCMSListContent,
+} from "microcms-js-sdk";
 
-export type NewsCategory = {
+export type Category = {
   name: string;
 } & MicroCMSListContent;
 
 export type News = {
   title: string;
-  category: NewsCategory;
+  category: Category;
   date: string;
   content: string;
 } & MicroCMSListContent;
+
+export type Column = {
+  title: string;
+  category: Category;
+  keyword?: string;
+  date: string;
+  description: string;
+  content: string;
+  thumbnail: MicroCMSImage;
+  writerName?: string;
+} & MicroCMSListContent;
+
+export type RichEditor = {
+  fieldId: "richEditor";
+  richEditor: string;
+};
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
   throw new Error("MICROCMS_SERVICE_DOMAIN is required");
@@ -45,11 +65,31 @@ export const getNewsDetail = async (
   return detailData;
 };
 
+export const getColumnList = async (queries?: MicroCMSQueries) => {
+  const listData = await client.getList<Column>({
+    endpoint: "column",
+    queries,
+  });
+  return listData;
+};
+
+export const getColumnDetail = async (
+  contentId: string,
+  queries?: MicroCMSQueries
+) => {
+  const detailData = await client.getListDetail<Column>({
+    endpoint: "column",
+    contentId,
+    queries,
+  });
+  return detailData;
+};
+
 export const getCategoryDetail = async (
   contentId: string,
   queries?: MicroCMSQueries
 ) => {
-  const detailData = await client.getListDetail<NewsCategory>({
+  const detailData = await client.getListDetail<Category>({
     endpoint: "categories",
     contentId,
     queries,
@@ -65,7 +105,7 @@ export const getAllNewsList = async () => {
 };
 
 export const getAllCategoryList = async () => {
-  const listData = await client.getAllContents<NewsCategory>({
+  const listData = await client.getAllContents<Category>({
     endpoint: "categories",
   });
   return listData;

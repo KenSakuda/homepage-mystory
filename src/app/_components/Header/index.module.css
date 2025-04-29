@@ -1,29 +1,340 @@
-.header {
-  position: absolute;
-  padding: 16px 24px 8px;
-  z-index: 1000;
+/* .header {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.topBar {
+  background: #f8f8f8;
+  padding: 0.5rem 32rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 100%;
-  background-color: #f4f4f4;
+  font-size: 0.9rem;
 }
-
-.logoLink {
+.topLinks a {
+  margin-right: 1rem;
+  color: #333;
+  text-decoration: none;
+}
+.topLinks a:hover {
+  text-decoration: underline;
+}
+.topContact {
+  font-weight: bold;
+  color: #333;
+}
+.logoNav {
+  padding: 1rem 12rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.logo {
-  height: 24px;
-  width: auto;
+.logo img {
+  height: 40px;
 }
-
-.nav {
-  margin-left: auto;
+.mainNav {
+  flex-grow: 1;
+  margin-left: 80px;
 }
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  align-items: center;
+}
+.navItem {
+  position: relative;
+}
+.navItem span,
+.navItem a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  transition: border-color 0.3s;
+  border-bottom: 2px solid transparent;
+}
+.navItem span:hover,
+.navItem a:hover {
+  border-bottom: 2px solid orange;
+}
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  min-width: 200px;
+}
+.dropdownMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dropdownMenu ul li {
+  margin-bottom: 0.5rem;
+}
+.dropdownMenu ul li a {
+  color: #333;
+  font-weight: normal;
+}
+.wideDropdown {
+  width: 1000px;
+  left: 50%;
+  transform: translateX(-30%);
+}
+.dropdownRow {
+  display: flex;
+  gap: 40px;
+}
+.dropdownRow div {
+  flex: 1;
+}
+.dropdownRow p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.dropdown:hover .dropdownMenu {
+  display: block;
+}
+@media (max-width: 1024px) {
+  .topBar,
+  .logoNav {
+    padding: 0.5rem 2rem;
+  }
+  .navList {
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .topBar,
+  .logoNav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mainNav {
+    margin-left: 0;
+    width: 100%;
+  }
+  .navList {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .dropdownMenu,
+  .wideDropdown {
+    position: static;
+    transform: none;
+    width: 100%;
+    border: none;
+    padding: 0;
+    background: transparent;
+  }
+} */
 
-@media (max-width: 640px) {
-  .header {
-    padding: 24px 16px 8px;
+.header {
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+/* --- 上部バー（PCのみ） --- */
+.topBar {
+  background: #f8f8f8;
+  padding: 0.5rem 32rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+.topLinks a {
+  margin-right: 1rem;
+  color: #333;
+  text-decoration: none;
+}
+.topLinks a:hover {
+  text-decoration: underline;
+}
+.topContact {
+  font-weight: bold;
+  color: #333;
+}
+/* --- ロゴとナビゲーション（PC） --- */
+.logoNav {
+  padding: 1rem 12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  height: 40px;
+}
+/* --- PCナビ --- */
+.mainNav {
+  flex-grow: 1;
+  margin-left: 80px;
+}
+.navList {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  align-items: center;
+}
+.navItem {
+  position: relative;
+}
+.navItem span,
+.navItem a {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+.navItem span:hover,
+.navItem a:hover {
+  border-bottom: 2px solid orange;
+}
+/* --- ドロップダウン（PC） --- */
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  z-index: 1000;
+  min-width: 200px;
+}
+.dropdownMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dropdownMenu ul li {
+  margin-bottom: 0.5rem;
+}
+.dropdownMenu ul li a {
+  color: #333;
+  font-weight: normal;
+}
+/* --- 広いドロップダウン --- */
+.wideDropdown {
+  width: 1000px;
+  left: 50%;
+  transform: translateX(-30%);
+}
+.dropdownRow {
+  display: flex;
+  gap: 40px;
+}
+.dropdownRow div {
+  flex: 1;
+}
+.dropdownRow p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+/* --- ドロップダウンホバー表示 --- */
+.navItem:hover .dropdownMenu {
+  display: block;
+}
+/* --- ハンバーガー（スマホのみ） --- */
+.hamburger {
+  display: none;
+}
+.hamburgerButton {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+/* === モバイルメニュー === */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow-y: auto;
+  z-index: 2000;
+  padding: 60px 20px 100px;
+}
+.mobileLogo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.mobileNav {
+  list-style: none;
+  padding: 0;
+}
+.mobileNav li {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+.mobileNav li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+}
+.mobileNav details summary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+.mobileNav details summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+}
+.mobileNav details[open] summary::after {
+  content: "-";
+}
+.mobileNav details ul {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+.mobileBottomLinks {
+  text-align: center;
+  margin-top: 2rem;
+}
+.mobileBottomLinks a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+/* === レスポンシブ === */
+@media (max-width: 1024px) {
+  .topBar,
+  .logoNav {
+    padding: 0.5rem 2rem;
+  }
+  .navList {
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  /* PCメニュー非表示、ハンバーガー表示 */
+  .mainNav {
+    display: none;
+  }
+  .topBar {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    position: fixed;
+    bottom: 110px;
+    right: 20px;
+    z-index: 2100;
   }
 }

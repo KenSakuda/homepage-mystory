@@ -11,13 +11,14 @@ export default function Page() {
           <div className={styles.titleSeparator}></div>
           <div className={styles.recruitCards}>
             <div className={styles.recruitCard}>
-              <h2>インターン生募集</h2>
-              <p>以下の領域において学生インターンを募集しています</p>
+              <h2>正社員・契約社員募集</h2>
+              <p>以下の領域において正社員・契約社員を募集しています</p>
               <ul>
                 <li>・データ分析や機械学習モデル実装に関するプロジェクト</li>
-                <li>・AIやブロックチェーンに関するプロダクト開発</li>
+                <li>・データ分析ツール開発</li>
                 <li>
-                  ・スポーツアナリティクスに関する情報アプリの開発・コンテンツ企画
+                  ・スポーツアナリティクスに特化したニュースサイト『Deep
+                  Sports』に関するデータ分析業務
                 </li>
               </ul>
               <p>
@@ -35,7 +36,7 @@ export default function Page() {
                 </li>
               </ul>
               <Link
-                href="https://jp.indeed.com/job/%E3%83%87%E3%83%BC%E3%82%BF%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%83%86%E3%82%A3%E3%82%B9%E3%83%88-%E3%83%87%E3%83%BC%E3%82%BF%E3%82%A2%E3%83%8A%E3%83%AA%E3%82%B9%E3%83%88%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%83%E3%83%97-93b620a0f45812d0"
+                href="https://jp.indeed.com/cmp/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%EF%BD%8D%EF%BD%99%EF%BD%93%EF%BD%94%EF%BD%8F%EF%BD%92%EF%BD%99/jobs?jk=2c8acb0541c96e33&start=0"
                 className={styles.button}
               >
                 採用ページへ

@@ -12,8 +12,9 @@ export default async function Page() {
 
   return (
     <section className={styles.container}>
-      <h1 className={styles.title}>お知らせ</h1>
-      <div className={styles.titleSeparator}></div>
+      <div className={styles.hero}>
+        <h1 className={styles.heroTitle}>お知らせ</h1>
+      </div>
       <SeachField />
       <NewsList news={news} />
       <Pagination totalCount={totalCount} />
