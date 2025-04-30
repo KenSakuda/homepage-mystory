@@ -55,12 +55,11 @@
 .card {
   border: 1px solid #ccc;
   padding: 28px;
-  background-color: #fff;
-  /* position: relative; */
+  background-color: #fff5e8;
   text-align: left;
 }
 .cardTitle {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #ff9000;
   margin-bottom: 12px;

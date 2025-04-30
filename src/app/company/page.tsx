@@ -47,7 +47,7 @@ export default function Page() {
                 src="/mystory_logo_fix-03.jpg"
                 alt="MyStoryロゴ"
                 width={140}
-                height={100}
+                height={95}
                 priority
               />
             </div>
