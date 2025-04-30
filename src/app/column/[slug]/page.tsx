@@ -7,10 +7,10 @@ import styles from "./page.module.css";
 import Date from "@/app/_components/Date";
 import Category from "@/app/_components/Category";
 
-// type Props = {
-//   params: { slug: string };
-//   searchParams: { draftKey?: string };
-// };
+type Props = {
+  params: { slug: string };
+  searchParams: { draftKey?: string };
+};
 
 export const revalidate = 60;
 
@@ -35,19 +35,9 @@ export async function generateMetadata({
   };
 }
 
-// export default async function Page({ params, searchParams }: Props) {
-//   const column = await getColumnDetail(params.slug, {
-//     draftKey: searchParams.draftKey,
-//   }).catch(notFound);
-export default async function Page({
-  params,
-  searchParams,
-}: {
-  params: { slug: string };
-  searchParams?: { draftKey?: string };
-}) {
+export default async function Page({ params, searchParams }: Props) {
   const column = await getColumnDetail(params.slug, {
-    draftKey: searchParams?.draftKey,
+    draftKey: searchParams.draftKey,
   }).catch(notFound);
   return (
     <div className={styles.container}>
