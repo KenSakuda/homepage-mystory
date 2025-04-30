@@ -170,7 +170,7 @@ export default function Header() {
               <div className={`${styles.dropdownMenu} ${styles.wideDropdown}`}>
                 <div className={styles.dropdownRow}>
                   <div>
-                    <p>データ分析事業</p>
+                    <p>データコンサルティング事業</p>
                     <ul>
                       <li>
                         <Link href="/services/analytics/tools">
@@ -188,7 +188,9 @@ export default function Header() {
                     <p>デジタルメディア事業</p>
                     <ul>
                       <li>
-                        <Link href="/services/media">Deep Sports運営</Link>
+                        <Link href="/services/media">
+                          スポーツニュースサイト『Deep Sports』
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -207,7 +209,7 @@ export default function Header() {
                     <ul>
                       <li>
                         <Link href="/services/healthcare">
-                          Health Story開発
+                          ヘルスケア関連アプリ『Health Story』
                         </Link>
                       </li>
                     </ul>

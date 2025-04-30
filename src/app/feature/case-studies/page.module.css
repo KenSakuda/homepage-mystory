@@ -15,8 +15,9 @@
   align-items: center;
 }
 .heroContent {
-  background: rgba(255, 255, 255, 0.9); /* 半透明白 */
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
+  padding: 24px;
 }
 .heading {
   font-size: 2rem;
@@ -69,7 +70,7 @@
   color: #666;
   padding: 12px 16px 24px;
 }
-/* 活用事例テーブルエリア */
+/* 活用事例テーブル */
 .caseSection {
   padding: 60px 20px;
   max-width: 1200px;
@@ -94,12 +95,14 @@
   font-weight: bold;
   margin-bottom: 16px;
 }
+/* 横スクロール対応 */
 .caseTableWrapper {
   width: 100%;
   overflow-x: auto;
 }
 .caseTable {
   width: 100%;
+  min-width: 600px;
   border-collapse: collapse;
 }
 .caseTable th,
@@ -113,7 +116,7 @@
   width: 30%;
   background-color: #f5f5f5;
 }
-/* フッターボタンエリア */
+/* フッターボタン */
 .buttonLink {
   display: flex;
   flex-wrap: wrap;
@@ -121,17 +124,18 @@
   gap: 40px;
   padding: 20px 20px;
 }
-
+/* レスポンシブ */
 @media (max-width: 768px) {
   .cards {
     flex-direction: column;
     align-items: center;
   }
   .caseSection {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    width: 600px;
+    width: 100%;
+    padding: 40px 10px;
+  }
+  .caseTable {
+    min-width: 600px;
   }
   .buttonLink {
     flex-direction: column;

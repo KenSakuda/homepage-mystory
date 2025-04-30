@@ -178,6 +178,7 @@
 .categorySmallCard {
   flex: 1;
   min-width: 300px;
+  max-width: 100%;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
@@ -242,6 +243,7 @@
   }
   .columnGrid {
     grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
   }
 }
 @media (max-width: 768px) {
@@ -254,5 +256,12 @@
   }
   .columnGrid {
     grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+  .categorySmallCard {
+    width: 100%;
+  }
+  .categoryImage {
+    height: auto;
   }
 }

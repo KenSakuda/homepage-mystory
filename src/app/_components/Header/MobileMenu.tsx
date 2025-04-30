@@ -41,7 +41,7 @@ export default function MobileMenu({ setOpen }: Props) {
               </li>
               <li>
                 <Link href="/services/media" onClick={() => setOpen(false)}>
-                  Deep Sports運営
+                  スポーツニュースサイト『Deep Sports』
                 </Link>
               </li>
               <li>
@@ -49,7 +49,7 @@ export default function MobileMenu({ setOpen }: Props) {
                   href="/services/blockchain"
                   onClick={() => setOpen(false)}
                 >
-                  ポイントサービス
+                  ブロックチェーン事業
                 </Link>
               </li>
               <li>
@@ -57,7 +57,7 @@ export default function MobileMenu({ setOpen }: Props) {
                   href="/services/healthcare"
                   onClick={() => setOpen(false)}
                 >
-                  Health Story開発
+                  ヘルスケア関連アプリ『Health Story』
                 </Link>
               </li>
             </ul>
