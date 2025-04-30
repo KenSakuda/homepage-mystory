@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import ButtonLink from "@/app/_components/ButtonLink";
 
 export default function Page() {
@@ -14,6 +15,12 @@ export default function Page() {
           </p>
         </div>
       </section>
+      <div className={styles.breadcrumb}>
+        <span>
+          <Link href="/">TOPページ</Link>
+        </span>{" "}
+        &gt; <span className={styles.current}>データ分析事例集</span>
+      </div>
       {/* カードセクション */}
       <section className={styles.cardsSection}>
         <div className={styles.cards}>
@@ -120,9 +127,7 @@ export default function Page() {
           </div>
         </div>
         <div className={styles.case}>
-          <h3 className={styles.caseTitle}>
-            確からしい商品レーティング値の推定
-          </h3>
+          <h3 className={styles.caseTitle}>真の商品レーティング値の推定</h3>
           <table className={styles.caseTable}>
             <tbody>
               <tr>
@@ -130,7 +135,7 @@ export default function Page() {
                 <td>
                   レビューサイト運営会社から、数多く存在する商品それぞれに妥当性のある評価値を付けたいとご相談をいただく。
                   <br />
-                  人気の商品は多くのレビューや評価値の投稿がされているが、人気のない商品は数件程度しかの評価値しかなく、付けられた評価値をそのまま用いると件数の少ない商品が上位にきてしまうという課題があった。
+                  人気の商品は多くのレビューや評価値の投稿がされているが、人気のない商品は数件程度の評価値しかなく、付けられた評価値をそのまま用いると件数の少ない商品が上位にきてしまうという課題があった。
                   <br />
                   （例：人気商品は1000件の評価者がいて評価値の平均3.5点、人気のない商品は評価者がわずか20人で評価値の平均4.6点となっており、単純に評価値の平均で並べ替えると人気のない商品が上位にきてしまうことが頻発した）
                 </td>

@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+// import Link from "next/link";
 import ServicesHero from "../_components/Hero";
 import ServicesExample from "../_components/Example";
 
@@ -10,7 +11,12 @@ export default function Page() {
         subtitle="スポーツアナリティクスに特化したニュースサイト『Deep Sports』の企画・運営を行っております。"
         imageUrl="/deepsports.png"
       />
-
+      {/* <div className={styles.breadcrumb}>
+        <span>
+          <Link href="/">TOPページ</Link>
+        </span>{" "}
+        &gt; <span className={styles.current}>デジタルメディア事業</span>
+      </div> */}
       <ServicesExample
         sectionTitle="『Deep Sportsの3つの特徴』"
         features={[

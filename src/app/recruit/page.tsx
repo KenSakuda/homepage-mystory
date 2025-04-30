@@ -9,6 +9,12 @@ export default function Page() {
         <div className={styles.recruitContainer}>
           <h1 className={styles.title}>採用情報</h1>
           <div className={styles.titleSeparator}></div>
+          <div className={styles.breadcrumb}>
+            <span>
+              <Link href="/">TOPページ</Link>
+            </span>{" "}
+            &gt; <span className={styles.current}>採用情報</span>
+          </div>
           <div className={styles.recruitCards}>
             <div className={styles.recruitCard}>
               <h2>正社員・契約社員募集</h2>

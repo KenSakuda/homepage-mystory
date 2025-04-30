@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+// import Link from "next/link";
 import ServicesHero from "../../_components/Hero";
 import ServicesExample from "../../_components/Example";
 import ServicesProduct from "../../_components/Product";
@@ -11,7 +12,12 @@ export default function Page() {
         subtitle="MyStoryは複数のデータ分析ツールの開発・販売を行っております。回帰・分類・時系列など複数の予測モデルを実行可能な『DAVinCI LABS』、意思決定支援ツール『DAIN STATION』、時系列予測に特化した分析ツール『MyStory Forcast』のご提供が可能です。また、A/Bテストや効果検証に活用できる因果推論ツール『Causal Story』を開発しており、こちらについては2025年10月頃からご提供できる予定です。"
         imageUrl="/services_analytics_tool_hero.jpg"
       />
-
+      {/* <div className={styles.breadcrumb}>
+        <span>
+          <Link href="/">TOPページ</Link>
+        </span>{" "}
+        &gt; <span className={styles.current}>データ分析ツール</span>
+      </div> */}
       <ServicesExample
         sectionTitle="分析ツールを導入すべき理由"
         features={[

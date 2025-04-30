@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+// import Link from "next/link";
 import ServicesHero from "../../_components/Hero";
 import ServicesExample from "../../_components/Example";
 import ServicesProduct from "../../_components/Product";
@@ -11,7 +12,12 @@ export default function Page() {
         subtitle="マーケティングPDCAの各シーンに対応した数多くのソリューションや、プライシングに特化した分析ソリューション『Price Decisioning』などを提供しています。"
         imageUrl="/services_analytics_solution.jpg"
       />
-
+      {/* <div className={styles.breadcrumb}>
+        <span>
+          <Link href="/">TOPページ</Link>
+        </span>{" "}
+        &gt; <span className={styles.current}>分析ソリューション</span>
+      </div> */}
       <ServicesExample
         sectionTitle="MyStoryの分析ソリューションの特徴"
         features={[

@@ -30,6 +30,17 @@
   color: #555;
   line-height: 1.7;
 }
+.breadcrumb {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+.breadcrumb span {
+  margin-right: 5px;
+}
+.current {
+  font-weight: bold;
+}
 .cardsSection {
   padding: 80px 20px;
   background-color: #f9fafb;

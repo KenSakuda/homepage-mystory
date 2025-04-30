@@ -1,67 +1,3 @@
-// import styles from "./page.module.css";
-// import Image from "next/image";
-// import Link from "next/link";
-// import ButtonLink from "@/app/_components/ButtonLink";
-
-// export const metadata = {
-//   title: "会社概要",
-// };
-
-// export default function Page() {
-//   return (
-//     <div className={styles.container}>
-//       <div className={styles.hero}>
-//         <h1 className={styles.heroTitle}>会社概要</h1>
-//       </div>
-//       <section className={styles.about}>
-//         <h2 className={styles.sectionTitle}>MyStoryの特徴</h2>
-//         <section className={styles.features}>
-//           <div className={styles.grid}>
-//             <div className={styles.card}>
-//               <h3 className={styles.cardTitle}>実績</h3>
-//               <p>
-//                 2021年の創業以来、データ分析やブロックチェーンなど先端技術に関する専門性をもとに、多くのお客様企業のマーケティング支援をしてきました。一般消費財メーカー、金融機関、電力会社など幅広い業界の支援実績があります。
-//               </p>
-//             </div>
-//             <div className={styles.card}>
-//               <h3 className={styles.cardTitle}>規模</h3>
-//               <p>
-//                 専門性の高いデータサイエンティストが9名在籍しております。また多くの企業とパートナー契約を交わしており、チームを組成してリサーチやコンサルティング、開発など様々な案件に対応可能です。
-//               </p>
-//             </div>
-//             <div className={styles.card}>
-//               <h3 className={styles.cardTitle}>得意分野</h3>
-//               <p>
-//                 データ分析、機械学習全般対応可能ですが、特に『プライシング』、『スポーツアナリティクス』、『計量経済学分析』、『ピープルアナリティクス』に強みを持っております。
-//               </p>
-//             </div>
-//             <div className={styles.card}>
-//               <h3 className={styles.cardTitle}>加盟団体</h3>
-//               <p>
-//                 日本消費者行動研究学会、日本行動計量学会、日本統計学会
-//                 スポーツデータサイエンス分科会に加盟しております。
-//               </p>
-//             </div>
-//             <div className={styles.logoCenter}>
-//               <Image
-//                 src="/mystory_logo_fix-03.jpg"
-//                 alt="MyStoryロゴ"
-//                 width={140}
-//                 height={95}
-//                 priority
-//               />
-//             </div>
-//           </div>
-//         </section>
-//         <div className={styles.buttonWrapper}>
-//           <ButtonLink href="/feature/strength">MyStoryの強みを知る</ButtonLink>
-//         </div>
-//       </section>
-
-//     </div>
-//   );
-// }
-
 import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -74,6 +10,12 @@ export default function Page() {
     <div className={styles.container}>
       <div className={styles.hero}>
         <h1 className={styles.heroTitle}>会社概要</h1>
+      </div>
+      <div className={styles.breadcrumb}>
+        <span>
+          <Link href="/">TOPページ</Link>
+        </span>{" "}
+        &gt; <span className={styles.current}>会社概要</span>
       </div>
       <section className={styles.about}>
         <h2 className={styles.sectionTitle}>MyStoryの特徴</h2>
