@@ -91,7 +91,7 @@ export default async function Page() {
                 height={300}
                 className={styles.serviceImage}
               />
-              <h3>データ分析ツール</h3>
+              <h3>データ分析ツールの提供</h3>
               <p>特徴の異なる複数の分析ツールの開発・販売</p>
             </Link>
             <Link
@@ -105,7 +105,7 @@ export default async function Page() {
                 height={300}
                 className={styles.serviceImage}
               />
-              <h3>データ分析ソリューション</h3>
+              <h3>データ分析コンサルティング</h3>
               <p>マーケティングPDCAの各シーンに対応したソリューションを用意</p>
             </Link>
             <Link href="/services/media" className={styles.serviceCard}>
@@ -116,9 +116,9 @@ export default async function Page() {
                 height={300}
                 className={styles.serviceImage}
               />
-              <h3>デジタルメディア</h3>
+              <h3>デジタルメディアの運営</h3>
               <p>
-                スポーツアナリティクス特化型ニュースサイト「Deep Sports」の運営
+                スポーツアナリティクス特化型ニュースサイト『Deep Sports』の運営
               </p>
             </Link>
             <Link href="/services/blockchain" className={styles.serviceCard}>
@@ -129,7 +129,7 @@ export default async function Page() {
                 height={300}
                 className={styles.serviceImage}
               />
-              <h3>ブロックチェーン</h3>
+              <h3>ブロックチェーンサービスの開発</h3>
               <p>ブロックチェーン技術を活用したポイントサービスを開発中</p>
             </Link>
             <Link href="/services/healthcare" className={styles.serviceCard}>
@@ -140,8 +140,8 @@ export default async function Page() {
                 height={300}
                 className={styles.serviceImage}
               />
-              <h3>ヘルスケア</h3>
-              <p>ヘルスケア関連アプリ「Health Story」を開発中</p>
+              <h3>ヘルスケアApp開発</h3>
+              <p>ヘルスケア関連アプリ『Health Story』を開発中</p>
             </Link>
           </div>
         </div>

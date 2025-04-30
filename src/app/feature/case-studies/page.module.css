@@ -102,7 +102,6 @@
 }
 .caseTable {
   width: 100%;
-  min-width: 600px;
   border-collapse: collapse;
 }
 .caseTable th,
@@ -111,6 +110,7 @@
   padding: 12px;
   text-align: left;
   font-size: 0.95rem;
+  vertical-align: top;
 }
 .caseTable th {
   width: 30%;
@@ -135,7 +135,33 @@
     padding: 40px 10px;
   }
   .caseTable {
-    min-width: 600px;
+    display: block;
+    width: 100%;
+  }
+  .caseTable tbody {
+    display: block;
+    width: 100%;
+  }
+  .caseTable tr {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+  }
+  .caseTable th,
+  .caseTable td {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 8px 0;
+  }
+  .caseTable th {
+    font-weight: bold;
+    background-color: transparent;
+    color: #333;
+  }
+  .caseTable td {
+    padding-bottom: 16px;
   }
   .buttonLink {
     flex-direction: column;
