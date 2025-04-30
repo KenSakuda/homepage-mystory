@@ -222,6 +222,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
+  justify-content: center;
 }
 .cards > div {
   transform: scale(0.9);
