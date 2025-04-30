@@ -91,19 +91,13 @@ import { getColumnDetail } from "@/app/_libs/microcms";
 import styles from "./page.module.css";
 import Date from "@/app/_components/Date";
 import Category from "@/app/_components/Category";
-// ISR
 export const revalidate = 60;
-// Metadata
 export async function generateMetadata({
   params,
-  searchParams,
 }: {
   params: { slug: string };
-  searchParams?: { draftKey?: string };
 }): Promise<Metadata> {
-  const column = await getColumnDetail(params.slug, {
-    draftKey: searchParams?.draftKey,
-  });
+  const column = await getColumnDetail(params.slug);
   return {
     title: column.title,
     description: column.description,
@@ -114,17 +108,8 @@ export async function generateMetadata({
     },
   };
 }
-// Page Component
-export default async function Page({
-  params,
-  searchParams,
-}: {
-  params: { slug: string };
-  searchParams?: { draftKey?: string };
-}) {
-  const column = await getColumnDetail(params.slug, {
-    draftKey: searchParams?.draftKey,
-  }).catch(notFound);
+export default async function Page({ params }: { params: { slug: string } }) {
+  const column = await getColumnDetail(params.slug).catch(notFound);
   return (
     <div className={styles.container}>
       <div className={styles.breadcrumb}>
