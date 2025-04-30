@@ -48,7 +48,7 @@ export default function RootLayout({
             },
             {
               href: "/deepsports",
-              text: "『DeepSports』へ",
+              text: "Deep Sportsへ",
               iconSrc: "/icon_sports.svg",
             },
           ]}
