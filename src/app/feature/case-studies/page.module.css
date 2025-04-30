@@ -94,6 +94,10 @@
   font-weight: bold;
   margin-bottom: 16px;
 }
+.caseTableWrapper {
+  width: 100%;
+  overflow-x: auto;
+}
 .caseTable {
   width: 100%;
   border-collapse: collapse;
