@@ -42,8 +42,40 @@
   color: #333;
 }
 
-.heroImage {
-  margin-top: 24px;
+.features {
+  position: relative;
+  margin-top: 40px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  position: relative;
+}
+.card {
+  border: 1px solid #ccc;
+  padding: 28px;
+  background-color: #fff;
+  /* position: relative; */
+  text-align: left;
+}
+.cardTitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff9000;
+  margin-bottom: 12px;
+  text-align: left;
+}
+.logoCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 16px;
 }
 
 .buttonWrapper {
