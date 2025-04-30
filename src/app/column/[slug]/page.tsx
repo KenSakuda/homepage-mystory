@@ -8,8 +8,8 @@ import Date from "@/app/_components/Date";
 import Category from "@/app/_components/Category";
 
 type Props = {
-  params: { slug: string };
-  searchParams: { draftKey?: string };
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ draftKey?: string }>;
 };
 
 export const revalidate = 60;
@@ -17,12 +17,12 @@ export const revalidate = 60;
 export async function generateMetadata({
   params,
   searchParams,
-}: {
-  params: { slug: string };
-  searchParams: { draftKey?: string };
-}): Promise<Metadata> {
-  const column = await getColumnDetail(params.slug, {
-    draftKey: searchParams.draftKey,
+}: Props): Promise<Metadata> {
+  const resolvedParams = await params;
+  const resolvedSearchParams = await searchParams;
+
+  const column = await getColumnDetail(resolvedParams.slug, {
+    draftKey: resolvedSearchParams.draftKey ?? "",
   });
   return {
     title: column.title,
@@ -36,8 +36,11 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params, searchParams }: Props) {
-  const column = await getColumnDetail(params.slug, {
-    draftKey: searchParams.draftKey,
+  const resolvedParams = await params;
+  const resolvedSearchParams = await searchParams;
+
+  const column = await getColumnDetail(resolvedParams.slug, {
+    draftKey: resolvedSearchParams.draftKey,
   }).catch(notFound);
   return (
     <div className={styles.container}>
