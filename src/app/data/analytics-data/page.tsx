@@ -8,8 +8,6 @@ export default function Page() {
           <h1 className={styles.heading}>データ分析結果　※資料準備中</h1>
           <p className={styles.description}>
             MyStoryで過去に実施したデータ分析結果に関する資料を無料でダウンロードいただけます。
-            <br />
-            ダウンロード後に、資料詳細内容についてWEB会議でのご説明も可能です。
           </p>
         </div>
       </div>

@@ -199,7 +199,7 @@ export default function Header() {
                     <ul>
                       <li>
                         <Link href="/services/blockchain">
-                          ポイントサービス
+                          ポイントサービス『@Point』
                         </Link>
                       </li>
                     </ul>
@@ -209,7 +209,7 @@ export default function Header() {
                     <ul>
                       <li>
                         <Link href="/services/healthcare">
-                          ヘルスケア関連アプリ『Health Story』
+                          ヘルスケア関連アプリ『Wellness Story』
                         </Link>
                       </li>
                     </ul>
