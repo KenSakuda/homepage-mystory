@@ -6,7 +6,7 @@ export default function Page() {
     <main className={styles.main}>
       <ServicesHero
         title="ヘルスケア事業"
-        subtitle="ヘルスケア関連アプリ『Health Story』を開発中です。プロダクトのローンチは2025年11月頃を予定しております。"
+        subtitle="ヘルスケア関連アプリ『Wellness Story』を開発中です。プロダクトのローンチは2025年11月頃を予定しております。"
         imageUrl="/services_analytics_hero.jpg"
       />
     </main>

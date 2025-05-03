@@ -129,7 +129,7 @@ export default async function Page() {
                 height={300}
                 className={styles.serviceImage}
               />
-              <h3>ブロックチェーンサービスの開発</h3>
+              <h3>ブロックチェーンサービス開発</h3>
               <p>ブロックチェーン技術を活用したポイントサービスを開発中</p>
             </Link>
             <Link href="/services/healthcare" className={styles.serviceCard}>
@@ -141,7 +141,7 @@ export default async function Page() {
                 className={styles.serviceImage}
               />
               <h3>ヘルスケアApp開発</h3>
-              <p>ヘルスケア関連アプリ『Health Story』を開発中</p>
+              <p>ヘルスケア関連アプリ『Wellness Story』を開発中</p>
             </Link>
           </div>
         </div>
@@ -219,7 +219,9 @@ export default async function Page() {
       <section className={styles.news}>
         <div className={styles.newsTitle}>
           <h2>Column</h2>
-          <p>データ分析や経済学に関するコラムや用語解説をまとめています</p>
+          <p>
+            データ分析や経済学に関するコラムや、統計の用語解説などをまとめています
+          </p>
         </div>
         <div className={styles.columnGrid}>
           <ColumnCards columns={columns.contents} />
