@@ -6,14 +6,14 @@ export default function Page() {
   const data = [
     { name: "Python", src: "/tech/python.svg" },
     { name: "SQL", src: "/tech/sql.svg" },
-    { name: "HTML", src: "/tech/html5.png" },
-    { name: "CSS", src: "/tech/css3.png" },
+    { name: "HTML", src: "/tech/html5.svg" },
+    { name: "CSS", src: "/tech/css3.svg" },
     { name: "JavaScript", src: "/tech/javascript.svg" },
     { name: "TypeScript", src: "/tech/typescript.svg" },
     { name: "Next.js", src: "/tech/nextjs.svg" },
     { name: "React", src: "/tech/react.svg" },
     { name: "Django", src: "/tech/django.svg" },
-    { name: "SAS", src: "/tech/sas.png" },
+    { name: "SAS", src: "/tech/sas.svg" },
     { name: "R", src: "/tech/r.png" },
     { name: "microCMS", src: "/tech/microcms.svg" },
     { name: "Solidity", src: "/tech/solidity.svg" },
@@ -96,7 +96,7 @@ export default function Page() {
             icon: "/feature3.svg",
             title: "コンサルティング",
             description:
-              "コアコンサルティングスキルを有する人材が在籍。人気インフルエンサーと資料作成領域での業務提携契約も締結しているめ、わかりやすい資料作成も得意",
+              "コアコンサルティングスキルを有する人材が在籍。人気インフルエンサーと資料作成領域での業務提携契約を締結しており、わかりやすい資料作成も得意",
           },
         ]}
       />
