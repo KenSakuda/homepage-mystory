@@ -15,7 +15,7 @@ export default function Page() {
     { name: "Django", src: "/tech/django.svg" },
     { name: "SAS", src: "/tech/sas.svg" },
     { name: "R", src: "/tech/r.png" },
-    { name: "microCMS", src: "/tech/microcms.svg" },
+    { name: "microCMS", src: "/tech/microcms.png" },
     { name: "Solidity", src: "/tech/solidity.svg" },
     { name: "Hardhat", src: "/tech/hardhat.png" },
   ];

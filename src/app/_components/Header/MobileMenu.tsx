@@ -28,7 +28,7 @@ export default function MobileMenu({ setOpen }: Props) {
                   href="/services/analytics/tools"
                   onClick={() => setOpen(false)}
                 >
-                  データ分析ツール
+                  データ分析ツールの開発・販売
                 </Link>
               </li>
               <li>
@@ -36,12 +36,12 @@ export default function MobileMenu({ setOpen }: Props) {
                   href="/services/analytics/solutions"
                   onClick={() => setOpen(false)}
                 >
-                  データ分析ソリューション
+                  データ分析コンサルティング
                 </Link>
               </li>
               <li>
                 <Link href="/services/media" onClick={() => setOpen(false)}>
-                  スポーツニュースサイト『Deep Sports』
+                  スポーツニュースサイト『Deep Sports』の運営
                 </Link>
               </li>
               <li>
@@ -49,7 +49,7 @@ export default function MobileMenu({ setOpen }: Props) {
                   href="/services/blockchain"
                   onClick={() => setOpen(false)}
                 >
-                  ブロックチェーン事業
+                  ブロックチェーンサービスの開発
                 </Link>
               </li>
               <li>
@@ -57,7 +57,7 @@ export default function MobileMenu({ setOpen }: Props) {
                   href="/services/healthcare"
                   onClick={() => setOpen(false)}
                 >
-                  ヘルスケア関連アプリ『Health Story』
+                  ヘルスケア関連アプリ『Wellness Story』
                 </Link>
               </li>
             </ul>
