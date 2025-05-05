@@ -34,7 +34,7 @@
 .mainImage {
   /* width: 100%;
   height: auto; */
-  width: 700px;
+  max-width: 900px;
   height: 350px;
   margin: 0 auto;
   border-radius: 4px;
