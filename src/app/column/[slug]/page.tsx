@@ -65,8 +65,8 @@ export default async function Page({ params, searchParams }: Props) {
       <Image
         src={column.thumbnail.url}
         alt={column.title}
-        width={800}
-        height={300}
+        width={700}
+        height={350}
         className={styles.mainImage}
       />
       <div
