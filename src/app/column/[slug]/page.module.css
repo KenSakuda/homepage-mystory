@@ -96,3 +96,9 @@
   font-size: 0.95rem;
   color: #555;
 }
+
+@media (max-width: 768px) {
+  .mainImage {
+    width: 100%;
+  }
+}
