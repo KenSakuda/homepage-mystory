@@ -100,5 +100,6 @@
 @media (max-width: 768px) {
   .mainImage {
     width: 100%;
+    height: 300px;
   }
 }
