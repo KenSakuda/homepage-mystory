@@ -9,7 +9,7 @@ export default function Page() {
     <main className={styles.main}>
       <ServicesHero
         title="データ分析ツール"
-        subtitle="MyStoryは複数のデータ分析ツールの開発・販売を行っております。回帰・分類・時系列など複数の予測モデルを実行可能な『DAVinCI LABS』、意思決定支援ツール『DAIN STATION』、時系列予測に特化した分析ツール『MyStory Forcast』のご提供が可能です。また、A/Bテストや効果検証に活用できる因果推論ツール『Causal Story』を開発しており、こちらについては2025年10月頃からご提供できる予定です。"
+        subtitle="MyStoryは複数のデータ分析ツールの開発・販売を行っております。回帰・分類・時系列など複数の予測モデルを実行可能な『DAVinCI LABS』、意思決定支援ツール『DAIN STATION』、時系列予測に特化した分析ツール『Lead』のご提供が可能です。また、A/Bテストや効果検証に活用できる因果推論ツール『Causal Story』を開発しており、こちらについては2025年10月頃からご提供できる予定です。"
         imageUrl="/services_analytics_tool_hero.jpg"
       />
       {/* <div className={styles.breadcrumb}>
@@ -83,14 +83,14 @@ export default function Page() {
             ],
           },
           {
-            subtitle: "MyStory Forcast（仮称）",
-            image: "/MyStoryForcast.png",
+            subtitle: "Lead",
+            image: "/Lead.png",
             contents: [
               {
                 icon: "/check-mark.svg",
                 title: "時系列予測モデルに特化したAutoMLツール",
                 description:
-                  "時系列予測モデルに機能を限定したうえで、UI（ツールの見た目）を可能な限りシンプルにしたことにより、AutoMLを安く、簡単に試せます。ビジネスで時系列予測モデルを200件以上行っているデータサイエンティストが監修しているので精度は非常に高く、時系列予測のみ行いたい組織にお薦めです。",
+                  "時系列予測モデルに機能を限定したうえで、UI（ツールの見た目）を可能な限りシンプルにしたことにより、AutoMLを安く、簡単に試せます。実務で時系列予測モデルを200件以上行っているデータサイエンティストが監修しているので精度は非常に高く、時系列予測のみ行いたい組織にお薦めです。",
               },
             ],
           },
