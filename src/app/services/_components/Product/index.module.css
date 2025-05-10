@@ -1,6 +1,8 @@
 .products {
   padding: 80px 20px;
   background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .textBlock {
   text-align: center;
