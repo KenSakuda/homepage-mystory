@@ -57,7 +57,7 @@ export default async function Page() {
                 height={35}
               />
               <div>
-                2025年5月15日ローンチ！
+                2025年5月24日ローンチ！
                 <br />
                 <strong>『Deep Sports』ニュースサイトへ</strong>
               </div>
