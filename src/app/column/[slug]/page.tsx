@@ -75,7 +75,7 @@ export default async function Page({ params, searchParams }: Props) {
         dangerouslySetInnerHTML={{ __html: column.content }}
       />
       <div className={styles.buttonLink}>
-        <ButtonLink href="/contact">コラム一覧へ</ButtonLink>
+        <ButtonLink href="/contact">お問い合わせフォーム</ButtonLink>
       </div>
       <div className={styles.writer}>
         <div className={styles.writerLabel}>執筆者</div>
