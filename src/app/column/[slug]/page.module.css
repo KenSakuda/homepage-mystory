@@ -77,6 +77,10 @@
   height: auto;
   margin: 20px 0;
 }
+.buttonLink {
+  margin-top: 40px;
+  text-align: center;
+}
 .writer {
   margin-top: 60px;
   background: #f6fbf3;

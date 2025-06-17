@@ -6,6 +6,7 @@ import { getColumnDetail } from "@/app/_libs/microcms";
 import styles from "./page.module.css";
 import Date from "@/app/_components/Date";
 import Category from "@/app/_components/Category";
+import ButtonLink from "@/app/_components/ButtonLink";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -73,6 +74,9 @@ export default async function Page({ params, searchParams }: Props) {
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: column.content }}
       />
+      <div className={styles.buttonLink}>
+        <ButtonLink href="/contact">コラム一覧へ</ButtonLink>
+      </div>
       <div className={styles.writer}>
         <div className={styles.writerLabel}>執筆者</div>
         <div className={styles.writerName}>{column.writerName}</div>
