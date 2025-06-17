@@ -10,7 +10,7 @@ type Props = {
 };
 
 const MAX_TITLE_LENGTH = 42;
-const MAX_DESCRIPTION_LENGTH = 66;
+const MAX_DESCRIPTION_LENGTH = 63;
 
 export default function ColumnCard({ column }: Props) {
   const truncatedTitle =
