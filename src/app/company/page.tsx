@@ -40,7 +40,7 @@ export default function Page() {
             <div className={styles.card}>
               <h3 className={styles.cardTitle}>規模</h3>
               <p>
-                専門性の高いデータサイエンティストが9名在籍しております。また多くの企業とパートナー契約を交わしており、チームを組成してリサーチやコンサルティング、開発など様々な案件に対応可能です。
+                専門性の高いデータサイエンティストが15名在籍しております。また多くの企業とパートナー契約を交わしており、チームを組成してリサーチやコンサルティング、開発など様々な案件に対応可能です。
               </p>
             </div>
             <div className={styles.card}>
@@ -111,7 +111,7 @@ export default function Page() {
           </div>
           <div>
             <dt>従事者数</dt>
-            <dd>9名 ※正社員以外も含む</dd>
+            <dd>18名 ※正社員以外も含む</dd>
           </div>
           <div>
             <dt>資本金</dt>
