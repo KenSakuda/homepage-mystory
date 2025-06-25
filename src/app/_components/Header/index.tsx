@@ -195,21 +195,21 @@ export default function Header() {
                     </ul>
                   </div>
                   <div>
-                    <p>ブロックチェーン事業</p>
-                    <ul>
-                      <li>
-                        <Link href="/services/blockchain">
-                          ポイントサービス『@Point』
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
                     <p>ヘルスケア事業</p>
                     <ul>
                       <li>
                         <Link href="/services/healthcare">
                           ヘルスケア関連アプリ『Wellness Story』
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p>ブロックチェーン事業</p>
+                    <ul>
+                      <li>
+                        <Link href="/services/blockchain">
+                          ポイントサービス『@Point』
                         </Link>
                       </li>
                     </ul>

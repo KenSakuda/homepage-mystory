@@ -1,10 +1,10 @@
 import styles from "./page.module.css";
-import { FaThLarge, FaTabletAlt } from "react-icons/fa";
+// import { FaThLarge, FaTabletAlt } from "react-icons/fa";
 // import Link from "next/link";
 import ServicesHero from "../../_components/Hero";
 import ServicesExample from "../../_components/Example";
 import ServicesProduct from "../../_components/Product";
-import ServicesDetail from "../../_components/detail";
+// import ServicesDetail from "../../_components/detail";
 
 export default function Page() {
   return (
@@ -43,7 +43,7 @@ export default function Page() {
           },
         ]}
       />
-      <ServicesDetail
+      {/* <ServicesDetail
         heading="データ分析委託のメリット・デメリット"
         features={[
           {
@@ -61,7 +61,7 @@ export default function Page() {
         ]}
         description="透明性・再現性の高いツール設計 統計的根拠に基づいたモデル構築 そしてビジネスに即した成果物の提供を通じて、
 企業の意思決定を強力にサポートします。"
-      />
+      /> */}
       <ServicesProduct
         heading="取り扱い分析ツール一覧"
         description="当社は様々なビジネスシーンにおいて利用できる複数の分析ツールを提供しております"
@@ -134,7 +134,7 @@ export default function Page() {
           },
         ]}
       />
-      企業がデータ分析を委託する際の選定ポイント{" "}
+      {/* 企業がデータ分析を委託する際の選定ポイント{" "}
       <strong>「データ分析 委託 会社」</strong>
       を選定する際には、単に実績があるというだけでなく、使用している分析ツールの信頼性と再現性、さらには統計的根拠をもとにした効果検証ができるかどうかが重要な判断軸となります。
       例えば、MyStoryが提供する<strong>『Causal Story』</strong>
@@ -160,7 +160,7 @@ export default function Page() {
       <strong>「データ解析 マーケティング 活用」</strong>に強みを持ち、
       <strong>「データ分析 機械学習 モデル」</strong>の構築や
       <strong>「ツール」</strong>導入支援にも豊富な経験があります。
-      MyStoryは、単なる外注先ではなく、成果にこだわるパートナーとして選ばれ続けています。精度・再現性・応用性に優れた「使えるデータ分析」をお求めなら、ぜひご相談ください。
+      MyStoryは、単なる外注先ではなく、成果にこだわるパートナーとして選ばれ続けています。精度・再現性・応用性に優れた「使えるデータ分析」をお求めなら、ぜひご相談ください。 */}
     </main>
   );
 }

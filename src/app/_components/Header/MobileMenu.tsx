@@ -46,18 +46,18 @@ export default function MobileMenu({ setOpen }: Props) {
               </li>
               <li>
                 <Link
-                  href="/services/blockchain"
-                  onClick={() => setOpen(false)}
-                >
-                  ブロックチェーンサービスの開発
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/services/healthcare"
                   onClick={() => setOpen(false)}
                 >
                   ヘルスケア関連アプリ『Wellness Story』
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/blockchain"
+                  onClick={() => setOpen(false)}
+                >
+                  ブロックチェーンサービスの開発
                 </Link>
               </li>
             </ul>

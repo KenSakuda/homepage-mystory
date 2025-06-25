@@ -121,17 +121,6 @@ export default async function Page() {
                 スポーツアナリティクス特化型ニュースサイト『Deep Sports』の運営
               </p>
             </Link>
-            <Link href="/services/blockchain" className={styles.serviceCard}>
-              <Image
-                src="/services_analytics_hero.jpg"
-                alt="ブロックチェーン"
-                width={300}
-                height={300}
-                className={styles.serviceImage}
-              />
-              <h3>ブロックチェーンサービス開発</h3>
-              <p>ブロックチェーン技術を活用したポイントサービスを開発中</p>
-            </Link>
             <Link href="/services/healthcare" className={styles.serviceCard}>
               <Image
                 src="/services_analytics_hero.jpg"
@@ -142,6 +131,17 @@ export default async function Page() {
               />
               <h3>ヘルスケアApp開発</h3>
               <p>ヘルスケア関連アプリ『Wellness Story』を開発中</p>
+            </Link>
+            <Link href="/services/blockchain" className={styles.serviceCard}>
+              <Image
+                src="/services_analytics_hero.jpg"
+                alt="ブロックチェーン"
+                width={300}
+                height={300}
+                className={styles.serviceImage}
+              />
+              <h3>ブロックチェーンサービス開発</h3>
+              <p>ブロックチェーン技術を活用したポイントサービスを開発中</p>
             </Link>
           </div>
         </div>
