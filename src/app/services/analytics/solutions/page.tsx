@@ -1,16 +1,16 @@
 import styles from "./page.module.css";
-// import {
-//   FaThLarge,
-//   FaTabletAlt,
-//   FaClock,
-//   FaMoneyBillAlt,
-// } from "react-icons/fa";
+import {
+  FaThLarge,
+  FaTabletAlt,
+  FaClock,
+  FaMoneyBillAlt,
+} from "react-icons/fa";
 // import Link from "next/link";
 import ServicesHero from "../../_components/Hero";
 import ServicesExample from "../../_components/Example";
 import ServicesProduct from "../../_components/Product";
-// import ServicesDetail from "../../_components/detail";
-// import ServicesAppendix from "../../_components/Appendix";
+import ServicesDetail from "../../_components/detail";
+import ServicesAppendix from "../../_components/Appendix";
 
 export default function Page() {
   return (
@@ -49,7 +49,7 @@ export default function Page() {
           },
         ]}
       />
-      {/* <ServicesDetail
+      <ServicesDetail
         heading="データ分析委託を「マーケティングPDCA」の実行支援へ"
         description="MyStoryでは、Plan・Do・Check・Actionの各フェーズに連動したデータ分析支援で、継続的に成果につながるマーケティング実行を後押しします"
         features={[
@@ -78,7 +78,7 @@ export default function Page() {
               "データに基づいた改善案提示。次回施策への即時フィードバック。",
           },
         ]}
-      /> */}
+      />
       <ServicesProduct
         heading="分析ソリューション"
         description=""
@@ -121,7 +121,7 @@ export default function Page() {
           },
         ]}
       />
-      {/* <ServicesAppendix
+      <ServicesAppendix
         title="データ分析の委託先選びにおける「分析ソリューション」の重要性"
         subtitle="データ分析の委託を検討する企業にとって、「委託先がどのような分析ソリューションを持っているか」は、成功の鍵を握る要素の一つです。MyStoryが提供する分析ソリューションは、機械学習や因果推論といった高度な分析技術に基づきつつ、マーケティングPDCAの各フェーズに対応する実践的な提案力を強みとしています。「データ分析 委託 企業」として信頼できる要素はまさに、分析技術とビジネス知見の両立にあります。"
         testimonials={[
@@ -144,8 +144,8 @@ export default function Page() {
               "「データ分析 委託 費用」の観点から見ると、MyStoryは短納期対応や成果物のビジネス適用性（＝わかりやすいアウトプット）も評価されています。委託費用が単なる“コスト”ではなく、明確なリターンを生み出す“投資”として認識されるための設計が随所に施されています。",
           },
         ]}
-      /> */}
-      {/* <br />
+      />
+      <br />
       <br />
       データ分析の委託をご検討中の方へ MyStoryの分析支援が選ばれる理由
       データ分析を委託する際には、目的や課題に合った企業を選ぶことが重要です。
@@ -166,7 +166,7 @@ export default function Page() {
       <br />
       MyStoryは、<strong>「使いやすく、ビジネスに役立つ分析」</strong>を目指し、
       分かりやすい成果物のご提供にも努めています。
-      データ分析の外注をご検討の際は、お気軽にご相談ください。 */}
+      データ分析の外注をご検討の際は、お気軽にご相談ください。
     </main>
   );
 }
