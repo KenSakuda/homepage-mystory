@@ -1,17 +1,18 @@
 import styles from "./page.module.css";
-import { FaThLarge, FaTabletAlt } from "react-icons/fa";
 // import Link from "next/link";
 import ServicesHero from "../../_components/Hero";
 import ServicesExample from "../../_components/Example";
 import ServicesProduct from "../../_components/Product";
-import ServicesDetail from "../../_components/detail";
+import ComparisonSection from "../../_components/Comparison";
+import ButtonLink from "@/app/_components/ButtonLink";
+import AndMoreSection from "../../_components/AndMore";
 
 export default function Page() {
   return (
     <main className={styles.main}>
       <ServicesHero
         title="データ分析ツール"
-        subtitle="MyStoryは複数のデータ分析ツールの開発・販売を行っております。回帰・分類・時系列など複数の予測モデルを実行可能な『DAVinCI LABS』、意思決定支援ツール『DAIN STATION』、時系列予測に特化した分析ツール『Lead』のご提供が可能です。また、A/Bテストや効果検証に活用できる因果推論ツール『Causal Story』を開発しており、こちらについては2025年10月頃からご提供できる予定です。"
+        subtitle="MyStoryは複数のデータ分析ツールの開発・販売を行っております。回帰・分類・時系列など複数の予測モデルを実行可能な『DAVinCI LABS』、意思決定支援ツール『DAIN STATION』、時系列予測に特化した分析ツール『Lead』のご提供が可能です。また、A/Bテストや効果検証に活用できる因果推論ツール『Causal Story』を開発しており、こちらについては2026年4月頃からご提供できる予定です。"
         imageUrl="/services_analytics_tool_hero.jpg"
       />
       {/* <div className={styles.breadcrumb}>
@@ -43,24 +44,18 @@ export default function Page() {
           },
         ]}
       />
-      <ServicesDetail
-        heading="データ分析委託のメリット・デメリット"
-        features={[
-          {
-            icon: FaThLarge,
-            title: "メリット",
-            description:
-              "①専門人材や先端ツールを短期間で活用可能、②ノーコードツールで社内活用がしやすい、③時系列予測など実務に直結した課題へ応用",
-          },
-          {
-            icon: FaTabletAlt,
-            title: "デメリット",
-            description:
-              "①業務知識が共有されないと精度が低下、②手法がブラックボックス化しやすい、③費用が想定以上になる可能性がある",
-          },
+      <ComparisonSection
+        title="データ分析委託のメリット・デメリット"
+        advantages={[
+          "①専門人材や先端ツールを短期間で活用可能",
+          "②ノーコードツールで社内活用がしやすい",
+          "③時系列予測など実務に直結した課題へ応用",
         ]}
-        description="透明性・再現性の高いツール設計 統計的根拠に基づいたモデル構築 そしてビジネスに即した成果物の提供を通じて、
-企業の意思決定を強力にサポートします。"
+        disadvantages={[
+          "①業務知識が共有されないと精度が低下",
+          "②手法がブラックボックス化しやすい",
+          "③費用が想定以上になる可能性がある",
+        ]}
       />
       <ServicesProduct
         heading="取り扱い分析ツール一覧"
@@ -115,7 +110,7 @@ export default function Page() {
             ],
           },
           {
-            subtitle: "Causal Story（仮称）※2025年10月頃ローンチ予定",
+            subtitle: "Causal Story（仮称）※2026年4月頃ローンチ予定",
             image: "/comingsoon.jpg",
             contents: [
               {
@@ -134,33 +129,45 @@ export default function Page() {
           },
         ]}
       />
-      企業がデータ分析を委託する際の選定ポイント{" "}
-      <strong>「データ分析 委託 会社」</strong>
-      を選定する際には、単に実績があるというだけでなく、使用している分析ツールの信頼性と再現性、さらには統計的根拠をもとにした効果検証ができるかどうかが重要な判断軸となります。
-      例えば、MyStoryが提供する<strong>『Causal Story』</strong>
-      は、A/Bテストが困難な条件下でも因果関係を特定し、バイアスを制御しながら効果を検証できるため、マーケティング施策やプロダクト改善の場面で非常に有効です。また、
-      <strong>『DAIN STATION』</strong>
-      では、既存モデルのKPIパフォーマンス分析や意思決定ルールのシミュレーションが可能で、
-      <strong>「データ分析 委託 統計」</strong>や
-      <strong>「データ解析 マーケティング 活用」</strong>
-      といったニーズにも対応できます。
-      このような機能を備えた分析企業は、分析結果の再現性や透明性を重視するデータサイエンティストにとっても信頼できるパートナーとなるでしょう。選定時には、使用するツールやアルゴリズム、レポートの共有形式、価格体系などを必ず確認することが成功のカギとなります。
-      <br />
-      <br />
-      データ分析の委託ならMyStoryへ
-      マーケティングから機械学習まで対応可能な実力派企業
-      データ分析を委託する際、どの企業に依頼すべきか悩まれる方も多いでしょう。
-      MyStoryは<strong>「データ分析 委託 企業」</strong>
-      として、マーケティング分析、スポーツアナリティクス、ピープルアナリティクスといった多様な領域での実績を持ち、統計や機械学習に精通した分析チームが在籍する数少ない企業のひとつです。
-      <strong>「データ分析 委託 統計」</strong>や
-      <strong>「データ分析 委託 費用」</strong>
-      といったニーズに応えるだけでなく、経済学や消費者行動理論などを活用した戦略的コンサルティングも可能です。
-      特に、マーケティングPDCAの各フェーズに対応できる
-      <strong>「データ解析 マーケティング 手法」</strong>や、業務に直結する
-      <strong>「データ解析 マーケティング 活用」</strong>に強みを持ち、
-      <strong>「データ分析 機械学習 モデル」</strong>の構築や
-      <strong>「ツール」</strong>導入支援にも豊富な経験があります。
-      MyStoryは、単なる外注先ではなく、成果にこだわるパートナーとして選ばれ続けています。精度・再現性・応用性に優れた「使えるデータ分析」をお求めなら、ぜひご相談ください。
+      <AndMoreSection
+        title="企業がデータ分析を委託する際の選定ポイント"
+        paragraphs={[
+          {
+            text: "「データ分析 委託 会社」を選定する際には、単に実績があるというだけでなく、使用している分析ツールの信頼性と再現性、さらには統計的根拠をもとにした効果検証ができるかどうかが重要な判断軸となります。",
+          },
+          {
+            text: "例えば、MyStoryが提供する『Causal Story』は、A/Bテストが困難な条件下でも因果関係を特定し、バイアスを制御しながら効果を検証できるため、マーケティング施策やプロダクト改善の場面で非常に有効です。また、『DAIN STATION』では、既存モデルのKPIパフォーマンス分析や意思決定ルールのシミュレーションが可能で、「データ分析 委託 統計」や「データ解析 マーケティング 活用」といったニーズにも対応できます。",
+          },
+          {
+            text: "このような機能を備えた分析企業は、分析結果の再現性や透明性を重視するデータサイエンティストにとっても信頼できるパートナーとなるでしょう。選定時には、使用するツールやアルゴリズム、レポートの共有形式、価格体系などを必ず確認することが成功のカギとなります。",
+          },
+        ]}
+      />
+      <div className={styles.buttonLink}>
+        <ButtonLink href="/data/analytics-data">
+          データ分析結果を見る
+        </ButtonLink>
+      </div>
+      <AndMoreSection
+        title="データ分析の委託ならMyStoryへ"
+        paragraphs={[
+          {
+            text: "データ分析を委託する際、どの企業に依頼すべきか悩まれる方も多いでしょう。",
+          },
+          {
+            text: "MyStoryは「データ分析 委託 企業」として、マーケティング、スポーツ、人事といった多様な領域での実績を持ち、統計や機械学習に精通した分析チームが在籍する数少ない企業のひとつです。「データ分析 委託 統計」や「データ分析 委託 費用」といったニーズに応えるだけでなく、経済学や消費者行動理論などを活用した戦略的コンサルティングも可能です。",
+          },
+          {
+            text: "特に、マーケティングPDCAの各フェーズに対応できる「データ解析 マーケティング 手法」や、業務に直結する「データ解析 マーケティング 活用」に強みを持ち、「データ分析 機械学習 モデル」の構築や「ツール」導入支援にも豊富な経験があります。",
+          },
+          {
+            text: "MyStoryは、単なる外注先ではなく、成果にこだわるパートナーとして選ばれ続けています。精度・再現性・応用性に優れた「使えるデータ分析」をお求めなら、ぜひご相談ください。",
+          },
+        ]}
+      />
+      <div className={styles.buttonLink}>
+        <ButtonLink href="/contact">分析について相談する</ButtonLink>
+      </div>
     </main>
   );
 }

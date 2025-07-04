@@ -1,80 +1,95 @@
+.section {
+  position: relative;
+  padding: 100px 20px;
+  background-color: #fff4e5; /* 薄いオレンジ背景 */
+  width: 80%;
+  margin: 0 auto;
+}
+
+.points {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.point {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #ffdc99;
+  border-radius: 50%;
+}
+
+.point1 {
+  top: 10%;
+  left: 20%;
+}
+.point2 {
+  top: 20%;
+  left: 80%;
+}
+.point3 {
+  top: 30%;
+  left: 40%;
+}
+.point4 {
+  top: 70%;
+  left: 70%;
+}
+.point5 {
+  top: 80%;
+  left: 20%;
+}
+
 .container {
-  padding: 60px 20px;
-  background-color: #fff7f0;
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .title {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 10px;
-  color: #ff8c00;
+  margin-bottom: 24px;
 }
 
-.subtitle {
+.description {
   font-size: 1rem;
-  margin-bottom: 40px;
   color: #666;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 48px;
   line-height: 1.6;
 }
 
-.testimonials {
+.cards {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 40px;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
 }
 
-.testimonialCard {
-  background: white;
+.card {
+  width: 100%;
+  /* max-width: 700px; */
+  background: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 320px;
+  padding: 32px 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   text-align: left;
-  display: contents;
-  align-items: flex-start;
-  gap: 15px;
 }
 
-.testimonialImage {
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-
-.testimonialContent {
-  flex: 1;
-}
-
-.testimonialName {
+.cardTitle {
+  font-size: 1.25rem;
   font-weight: bold;
-  margin-bottom: 5px;
-  color: #222;
+  margin-bottom: 12px;
 }
 
-.testimonialMessage {
-  font-size: 0.95rem;
+.cardDesc {
+  font-size: 1rem;
   color: #555;
-  line-height: 1.4;
-}
-
-@media screen and (max-width: 768px) {
-  .testimonialCard {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .testimonialImage {
-    margin-bottom: 10px;
-  }
-
-  .testimonialContent {
-    text-align: center;
-  }
+  line-height: 1.7;
 }

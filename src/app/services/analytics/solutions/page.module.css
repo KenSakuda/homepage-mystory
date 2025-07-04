@@ -13,3 +13,7 @@
 .current {
   font-weight: bold;
 }
+.buttonLink {
+  margin-top: 20px;
+  text-align: center;
+}

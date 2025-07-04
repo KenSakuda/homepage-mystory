@@ -1,23 +1,68 @@
 import styles from "./page.module.css";
-import {
-  FaThLarge,
-  FaTabletAlt,
-  FaClock,
-  FaMoneyBillAlt,
-} from "react-icons/fa";
-// import Link from "next/link";
 import ServicesHero from "../../_components/Hero";
 import ServicesExample from "../../_components/Example";
 import ServicesProduct from "../../_components/Product";
-import ServicesDetail from "../../_components/detail";
-import ServicesAppendix from "../../_components/Appendix";
+import CommunitySection from "../../_components/Appendix";
+import { CommunityCard } from "../../_components/Appendix";
+import PDCAVisual, { PdcaItem } from "../../_components/PDCAVisual";
+import ButtonLink from "@/app/_components/ButtonLink";
+import AndMoreSection from "../../_components/AndMore";
+
+const pdcaItems: PdcaItem[] = [
+  {
+    title: "Plan",
+    description: "市場データを基にした戦略立案やターゲティング。仮説生成支援。",
+    icon: "/icons/plan.svg",
+    colorClass: "plan",
+  },
+  {
+    title: "Do",
+    description:
+      "機械学習による配布対象選定や施策実行支援。キャンペーン最適化。",
+    icon: "/icons/do.svg",
+    colorClass: "do",
+  },
+  {
+    title: "Check",
+    description:
+      "因果推論による効果検証（傾向スコア・RDD等）。KPI達成度の精密測定。",
+    icon: "/icons/check.svg",
+    colorClass: "check",
+  },
+  {
+    title: "Act",
+    description: "データに基づいた改善案提示。次回施策への即時フィードバック。",
+    icon: "/icons/act.svg",
+    colorClass: "act",
+  },
+];
+
+const communityCards: CommunityCard[] = [
+  {
+    title: "データ解析×マーケティング活用｜因果推論で施策の真の効果を可視化",
+    description:
+      "「データ解析 マーケティング 活用」の領域では、MyStoryは売上予測、クーポン配布対象の最適化、効果検証といったニーズに対し、傾向スコアマッチングや回帰不連続デザインなどの因果推論手法を適用。これにより、単なる数値集計では見えない「施策がどれだけ成果に寄与したか」という本質的な問いに答えることができます。",
+  },
+  {
+    title:
+      "『Price Decisioning』で実現する戦略的価格設計｜データ分析・機械学習モデルの高度活用",
+    description:
+      "「データ分析 委託 統計」や「データ分析 機械学習 モデル」といったキーワードに関心を持つデータサイエンティストにとっても、MyStoryの「Price Decisioning」は注目に値します。このソリューションでは、経済学・消費者心理学の理論に基づき、単なる価格の最適化にとどまらず、消費者行動に即した戦略的価格設計が可能です。特に、ダイナミックプライシングやバンドリング、参照価格効果の活用といった応用分析は、専門家から見ても学びが深い分野です。",
+  },
+  {
+    title:
+      "データ分析委託費用を“投資”に変える｜短納期・高品質アウトプットのMyStoryの強み",
+    description:
+      "「データ分析 委託 費用」の観点から見ると、MyStoryは短納期対応や成果物のビジネス適用性（＝わかりやすいアウトプット）も評価されています。委託費用が単なる“コスト”ではなく、明確なリターンを生み出す“投資”として認識されるための設計が随所に施されています。",
+  },
+];
 
 export default function Page() {
   return (
     <main className={styles.main}>
       <ServicesHero
-        title="分析ソリューション"
-        subtitle="マーケティングPDCAの各シーンに対応した数多くのソリューションや、プライシングに特化した分析ソリューション『Price Decisioning』などを提供しています。"
+        title="データ分析ソリューション"
+        subtitle="マーケティングPDCAの各シーンに対応した数多くのソリューションや、プライシングに特化した分析ソリューション『Price Decisioning』、生態学モデルを活用したマーケットシェア推定ソリューション『ダイナミックシェア』などを提供しています。"
         imageUrl="/services_analytics_solution.jpg"
       />
       {/* <div className={styles.breadcrumb}>
@@ -49,38 +94,18 @@ export default function Page() {
           },
         ]}
       />
-      <ServicesDetail
-        heading="データ分析委託を「マーケティングPDCA」の実行支援へ"
-        description="MyStoryでは、Plan・Do・Check・Actionの各フェーズに連動したデータ分析支援で、継続的に成果につながるマーケティング実行を後押しします"
-        features={[
-          {
-            icon: FaThLarge,
-            title: "Plan",
-            description:
-              "市場データを基にした戦略立案やターゲティング。仮説生成支援。",
-          },
-          {
-            icon: FaTabletAlt,
-            title: "Do",
-            description:
-              "機械学習による配布対象選定や施策実行支援。キャンペーン最適化。",
-          },
-          {
-            icon: FaClock,
-            title: "Check",
-            description:
-              "因果推論による効果検証（傾向スコア・RDD等）。KPI達成度の精密測定。",
-          },
-          {
-            icon: FaMoneyBillAlt,
-            title: "Action",
-            description:
-              "データに基づいた改善案提示。次回施策への即時フィードバック。",
-          },
-        ]}
+      <PDCAVisual
+        sectionTitle="データ分析委託を「マーケティングPDCA」の実行支援へ"
+        sectionDescription="MyStoryでは、Plan・Do・Check・Actの各フェーズに連動したデータ分析支援で、継続的に成果につながるマーケティング実行を後押しします。"
+        items={pdcaItems}
       />
+      <div className={styles.buttonLink}>
+        <ButtonLink href="/data/analytics-data">
+          データ分析結果を見る
+        </ButtonLink>
+      </div>
       <ServicesProduct
-        heading="分析ソリューション"
+        heading="ソリューション一覧"
         description=""
         items={[
           {
@@ -120,7 +145,7 @@ export default function Page() {
             ],
           },
           {
-            subtitle: "MyStory分析ソリューション集",
+            subtitle: "MyStoryデータ分析ソリューション集",
             image: "/analytics_solution.png",
             contents: [
               {
@@ -139,52 +164,25 @@ export default function Page() {
           },
         ]}
       />
-      <ServicesAppendix
-        title="データ分析の委託先選びにおける「分析ソリューション」の重要性"
-        subtitle="データ分析の委託を検討する企業にとって、「委託先がどのような分析ソリューションを持っているか」は、成功の鍵を握る要素の一つです。MyStoryが提供する分析ソリューションは、機械学習や因果推論といった高度な分析技術に基づきつつ、マーケティングPDCAの各フェーズに対応する実践的な提案力を強みとしています。「データ分析 委託 企業」として信頼できる要素はまさに、分析技術とビジネス知見の両立にあります。"
-        testimonials={[
+      <CommunitySection
+        sectionTitle="データ分析の委託先選びにおける「分析ソリューション」の重要性"
+        sectionDescription="データ分析の委託を検討する企業にとって、「委託先がどのような分析ソリューションを持っているか」は、成功の鍵を握る要素の一つです。MyStoryが提供する分析ソリューションは、機械学習や因果推論といった高度な分析技術に基づきつつ、マーケティングPDCAの各フェーズに対応する実践的な提案力を強みとしています。「データ分析 委託 企業」として信頼できる要素はまさに、分析技術とビジネス知見の両立にあります。"
+        cards={communityCards}
+      />
+      <AndMoreSection
+        title="データ分析の委託をご検討中の方へ"
+        paragraphs={[
           {
-            image: "/check-mark.svg",
-            name: "データ解析×マーケティング活用｜因果推論で施策の真の効果を可視化",
-            message:
-              "「データ解析 マーケティング 活用」の領域では、MyStoryは売上予測、クーポン配布対象の最適化、効果検証といったニーズに対し、傾向スコアマッチングや回帰不連続デザインなどの因果推論手法を適用。これにより、単なる数値集計では見えない「施策がどれだけ成果に寄与したか」という本質的な問いに答えることができます。",
+            text: "データ分析を委託する際には、目的や課題に合った企業を選ぶことが重要です。MyStoryでは、マーケティング、スポーツ、ピープルアナリティクスなど幅広い分野での支援実績をもとに、各企業様のご要望に応じた分析サービスをご提供しています。「データ分析 委託 企業」や「データ分析 委託 費用」といった観点でお悩みの方にも、業界特性を踏まえた柔軟な対応が可能です。",
           },
           {
-            image: "/check-mark.svg",
-            name: "「Price Decisioning」で実現する戦略的価格設計｜データ分析・機械学習モデルの高度活用",
-            message:
-              "「データ分析 委託 統計」や「データ分析 機械学習 モデル」といったキーワードに関心を持つデータサイエンティストにとっても、MyStoryの「Price Decisioning」は注目に値します。このソリューションでは、経済学・消費者心理学の理論に基づき、単なる価格の最適化にとどまらず、消費者行動に即した戦略的価格設計が可能です。特に、ダイナミックプライシングやバンドリング、参照価格効果の活用といった応用分析は、専門家から見ても学びが深い分野です。",
-          },
-          {
-            image: "/check-mark.svg",
-            name: "データ分析委託費用を“投資”に変える｜短納期・高品質アウトプットのMyStoryの強み",
-            message:
-              "「データ分析 委託 費用」の観点から見ると、MyStoryは短納期対応や成果物のビジネス適用性（＝わかりやすいアウトプット）も評価されています。委託費用が単なる“コスト”ではなく、明確なリターンを生み出す“投資”として認識されるための設計が随所に施されています。",
+            text: "統計分析から機械学習モデルの構築まで対応可能で、「データ分析 機械学習 手法」や「データ解析 マーケティング 活用」に関するご相談も多数お受けしています。また、経済学・消費者行動理論の専門知見を活かしたプライシング戦略や、定量・定性調査を組み合わせた分析設計など、多面的なサポートも行っております。MyStoryは、「使いやすく、ビジネスに役立つ分析」を目指し、分かりやすい成果物のご提供にも努めています。データ分析の外注をご検討の際は、お気軽にご相談ください。",
           },
         ]}
       />
-      <br />
-      <br />
-      データ分析の委託をご検討中の方へ MyStoryの分析支援が選ばれる理由
-      データ分析を委託する際には、目的や課題に合った企業を選ぶことが重要です。
-      MyStoryでは、マーケティング、スポーツ、ピープルアナリティクスなど
-      幅広い分野での支援実績をもとに、各企業様のご要望に応じた分析サービスをご提供しています。
-      <strong>「データ分析 委託 企業」</strong>や
-      <strong>「データ分析 委託 費用」</strong>といった観点でお悩みの方にも、
-      業界特性を踏まえた柔軟な対応が可能です。
-      <br />
-      <br />
-      統計分析から機械学習モデルの構築まで対応可能で、{" "}
-      <strong>「データ分析 機械学習 手法」</strong>や
-      <strong>「データ解析 マーケティング 活用」</strong>
-      に関するご相談も多数お受けしています。
-      また、経済学・行動理論の専門知見を活かしたプライシング戦略や、
-      定量・定性調査を組み合わせた分析設計など、多面的なサポートも行っております。
-      <br />
-      <br />
-      MyStoryは、<strong>「使いやすく、ビジネスに役立つ分析」</strong>を目指し、
-      分かりやすい成果物のご提供にも努めています。
-      データ分析の外注をご検討の際は、お気軽にご相談ください。
+      <div className={styles.buttonLink}>
+        <ButtonLink href="/contact">分析について相談する</ButtonLink>
+      </div>
     </main>
   );
 }
