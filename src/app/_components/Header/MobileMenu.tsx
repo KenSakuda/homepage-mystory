@@ -49,7 +49,7 @@ export default function MobileMenu({ setOpen }: Props) {
                   href="/services/healthcare"
                   onClick={() => setOpen(false)}
                 >
-                  ヘルスケア関連アプリ『Wellness Story』
+                  ヘルスケア関連アプリ『Story Fit』
                 </Link>
               </li>
               <li>

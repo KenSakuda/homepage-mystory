@@ -199,7 +199,7 @@ export default function Header() {
                     <ul>
                       <li>
                         <Link href="/services/healthcare">
-                          ヘルスケア関連アプリ『Wellness Story』
+                          ヘルスケア関連アプリ『Story Fit』
                         </Link>
                       </li>
                     </ul>

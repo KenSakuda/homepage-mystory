@@ -57,8 +57,6 @@ export default async function Page() {
                 height={35}
               />
               <div>
-                2025年6月25日ローンチ！
-                <br />
                 <strong>『Deep Sports』ニュースサイトへ</strong>
               </div>
             </Link>
@@ -130,7 +128,7 @@ export default async function Page() {
                 className={styles.serviceImage}
               />
               <h3>ヘルスケアApp開発</h3>
-              <p>ヘルスケア関連アプリ『Wellness Story』を開発中</p>
+              <p>ヘルスケア関連アプリ『Story Fit』を開発中</p>
             </Link>
             <Link href="/services/blockchain" className={styles.serviceCard}>
               <Image
