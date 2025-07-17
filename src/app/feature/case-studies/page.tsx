@@ -67,6 +67,11 @@ export default function Page() {
             <p className={styles.cardText}>※準備中</p>
           </a>
         </div>
+        <div className={styles.buttonLink}>
+          <ButtonLink href="/services/analytics/solutions/detail">
+            データ利活用支援詳細へ
+          </ButtonLink>
+        </div>
       </section>
       {/* 活用事例テーブルセクション */}
       <section className={styles.caseSection}>
