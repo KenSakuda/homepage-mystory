@@ -47,7 +47,7 @@ export default function RootLayout({
               iconSrc: "/icon_mail.svg",
             },
             {
-              href: "/deepsports",
+              href: "https://deepsports.b-mystory.com/",
               text: "Deep Sportsへ",
               iconSrc: "/icon_sports.svg",
             },
