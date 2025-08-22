@@ -47,7 +47,7 @@ export default async function Page() {
               </div>
             </Link>
             <Link
-              href="/deepsports"
+              href="https://deepsports.b-mystory.com/"
               className={`${styles.button} ${styles.consult}`}
             >
               <Image
