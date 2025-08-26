@@ -9,7 +9,7 @@ export default function Page() {
       <ServicesHero
         title="ヘルスケア事業"
         subtitle="ヘルスケア関連アプリ『Story Fit』を開発中です。プロダクトのローンチは2025年12月頃を予定しております。"
-        imageUrl="/services_analytics_hero.jpg"
+        imageUrl="/storyfit_meal.png"
       />
       {/* <div className={styles.breadcrumb}>
         <span>

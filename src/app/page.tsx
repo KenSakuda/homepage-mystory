@@ -121,7 +121,7 @@ export default async function Page() {
             </Link>
             <Link href="/services/healthcare" className={styles.serviceCard}>
               <Image
-                src="/services_analytics_hero.jpg"
+                src="/storyfit_top.png"
                 alt="ヘルスケア"
                 width={300}
                 height={300}
