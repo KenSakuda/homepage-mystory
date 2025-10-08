@@ -35,7 +35,7 @@
 .feat {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 24px 20px 12px;
+  padding: 24px 12px;
 }
 
 .featTitle {
@@ -480,6 +480,6 @@
   }
 
   .serviceImage {
-    max-width: 700px;
+    max-width: 100%;
   }
 }
