@@ -209,22 +209,31 @@ import {
 
 export default function Page() {
   const sidebarLinks = [
-    { href: "#", label: "受託分析 / データ分析コンサルティング" },
-    { href: "#", label: "課題・ケースから探す" },
     {
-      href: "#",
+      href: "/services/analytics/consulting",
+      label: "受託分析 / データ分析コンサルティング",
+    },
+    { href: "/services/analytics/case", label: "課題・ケースから探す" },
+    {
+      href: "/services/analytics/tools",
       label: "データ分析ツールの提供",
     },
     {
-      href: "#",
+      href: "/services/analytics/research",
       label: "リサーチアドバイザー",
     },
     {
-      href: "#",
+      href: "/services/analytics/pricing",
       label: "プライシングサービス",
     },
-    { href: "#", label: "マーケットシェア推定サービス" },
-    { href: "#", label: "ピープルアナリティクスサービス" },
+    {
+      href: "/services/analytics/share-prediction",
+      label: "マーケットシェア推定サービス",
+    },
+    {
+      href: "/services/analytics/people-analytics",
+      label: "ピープルアナリティクスサービス",
+    },
   ];
 
   // ========== リボン/カード ==========
