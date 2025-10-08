@@ -1,0 +1,485 @@
+.hero {
+  position: relative;
+}
+
+.heroImg {
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+
+.heroTitle {
+  position: absolute;
+  left: 4.8vw;
+  bottom: 20%;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.serviceImage {
+  max-width: 1200px;
+  margin: 16px auto 24px;
+  padding: 0 20px;
+}
+
+.serviceImageImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.feat {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 12px;
+}
+
+.featTitle {
+  font-size: 26px;
+  font-weight: 900;
+  color: #333;
+  display: inline-block;
+  position: relative;
+  margin: 8px 0 16px;
+}
+
+.featUnderline {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 200px;
+  background: var(--brand-orange);
+  margin-top: 6px;
+  border-radius: 3px;
+}
+
+.featList {
+  display: grid;
+  gap: 22px;
+}
+
+.featItem {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.featItemRev {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.featItemRev .featTextCol {
+  order: 2;
+}
+
+.featItemRev .featImgCol {
+  order: 1;
+}
+
+.featEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.featBadge {
+  display: inline-block;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.04em;
+  background: linear-gradient(
+    180deg,
+    #ffdc99 0%,
+    var(--brand-orange, #ff9000) 100%
+  );
+  border-radius: 999px;
+  padding: 6px 12px;
+  box-shadow: var(--shadow, 0 12px 30px rgba(229, 73, 154, 0.18));
+}
+
+.featSubtitle {
+  font-weight: 900;
+  color: #333;
+  font-size: 18px;
+}
+
+.featLead {
+  color: #222;
+  line-height: 1.95;
+  margin: 4px 0 0;
+}
+
+.featImgFrame {
+  background: #fff;
+  border: 1px solid var(--grey-hr, #e6e6e6);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft, 0 10px 24px rgba(0, 0, 0, 0.06));
+}
+
+.featImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* ====== 2カラム（左本文・右サイド） ====== */
+.mainWrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 28px;
+  align-items: start;
+}
+.mainCol {
+  min-width: 0;
+}
+.sideCol {
+  min-width: 0;
+}
+@media (max-width: 1024px) {
+  .mainWrap {
+    grid-template-columns: 1fr;
+  }
+  .featItem,
+  .featItemRev {
+    grid-template-columns: 1fr;
+  }
+  .featItemRev .featTextCol {
+    order: 0;
+  }
+  .featItemRev .featImgCol {
+    order: 0;
+  }
+}
+
+/* ====== サイドカード（薄グレー枠） ====== */
+.sideCard {
+  background: var(--grey-card, #f1f1f1);
+  border-radius: 10px;
+  margin-top: 10%;
+  border: 1px solid #ddd;
+  padding: 14px;
+}
+.sideTitle {
+  font-weight: 900;
+  color: #333;
+  margin-bottom: 10px;
+}
+.sideList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+.sideList li {
+  border-top: 1px solid #e9e9e9;
+}
+.sideList li:first-child {
+  border-top: none;
+}
+.sideList a {
+  display: block;
+  padding: 12px 4px;
+  color: #333;
+}
+
+.leadBlock {
+  position: relative;
+  margin: 25px 0 25px 0;
+}
+
+.leadTitle {
+  color: #ff8c00;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.45;
+  margin: 0 0 14px;
+}
+.body {
+  line-height: 1.95;
+  color: #222;
+}
+.hr {
+  height: 1px;
+  background: #e6e6e6;
+  margin: 16px 0;
+}
+
+/* ====== ダーク丸ボタン ====== */
+.center {
+  text-align: center;
+}
+.darkPill {
+  display: inline-block;
+  background: #2b2b2b;
+  color: #fff;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 12px 20px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+/* ====== ピンクのリボン＆タブ ====== */
+.ribbonWrap {
+  margin: 26px 0 12px;
+  text-align: center;
+}
+.ribbon {
+  display: inline-block;
+  background: linear-gradient(180deg, #f48abf 0%, #e5499a 100%);
+  color: #fff;
+  font-weight: 900;
+  padding: 8px 18px;
+  border-radius: 10px;
+  box-shadow: var(--shadow, 0 12px 30px rgba(229, 73, 154, 0.18));
+}
+.ribbonTabs {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+.ribbonTab {
+  position: relative;
+  padding: 8px 16px;
+  font-weight: 900;
+  color: #a53a6f;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #f3c2d9;
+  box-shadow: var(--shadow);
+}
+
+/* ====== 3カード（白面に薄ピンク影） ====== */
+.card3Wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 12px 0 20px;
+}
+@media (max-width: 980px) {
+  .card3Wrap {
+    grid-template-columns: 1fr;
+  }
+}
+.card3 {
+  background: #fff;
+  border: 1px solid #f7d6e6;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 14px 34px rgba(229, 73, 154, 0.18);
+}
+.card3Title {
+  color: #e5499a;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.card3List {
+  margin: 0;
+  padding-left: 1.1em;
+  line-height: 1.9;
+}
+.card3List li {
+  list-style: disc;
+}
+
+/* ====== 見出し（下にピンク下線） ====== */
+.h3 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #333;
+  display: inline-block;
+  position: relative;
+  margin: 32px 0 10px;
+}
+.h3Small {
+  font-size: 22px;
+}
+.h3Underline {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 160px;
+  background: #e5499a;
+  margin-top: 6px;
+  border-radius: 3px;
+}
+
+/* ====== プロセス帯 ====== */
+.processEyebrow {
+  color: #666;
+  margin: 6px 0;
+  font-weight: 700;
+}
+.processBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.processStep {
+  background: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+/* ====== 共通セクション要素 ====== */
+.section {
+  padding: 12px 0;
+}
+.h4 {
+  font-weight: 900;
+  color: #333;
+  margin: 14px 0 8px;
+  position: relative;
+}
+.h4::after {
+  content: "";
+  display: block;
+  width: 110px;
+  height: 3px;
+  background: #e5499a;
+  margin-top: 6px;
+  border-radius: 3px;
+}
+.bullets {
+  margin: 0;
+  padding-left: 1.2em;
+  line-height: 1.9;
+}
+
+/* ====== 小ラベル ====== */
+.smallEyebrow {
+  color: #a53a6f;
+  font-weight: 900;
+  margin: 12px 0 4px;
+}
+
+/* ====== 画像枠 ====== */
+.imgFrame {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* ====== サブボックス（オンサイト） ====== */
+.subBlocks {
+  display: grid;
+  gap: 10px;
+  margin: 8px 0 4px;
+}
+.subBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+.subLabel {
+  font-weight: 900;
+  color: #333;
+}
+.subMeta {
+  color: #555;
+}
+
+/* ====== 表 ====== */
+.tableWrap {
+  margin: 14px 0 18px;
+  overflow: auto;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.table thead th {
+  position: sticky;
+  top: 0;
+  background: #faf6f9;
+  color: #9a2e66;
+  font-weight: 900;
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+}
+.table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+}
+
+/* ====== フロー ====== */
+.flowImg {
+  margin: 10px 0;
+}
+.steps {
+  margin: 0 0 10px 1.2em;
+  line-height: 1.9;
+}
+.note {
+  color: #777;
+  font-size: 13px;
+}
+
+/* ====== フッター ====== */
+.footer {
+  background: #f8f8f8;
+  border-top: 1px solid #eee;
+}
+.footerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+.footerTitle {
+  font-weight: 900;
+  color: #333;
+  margin: 6px 0 8px;
+}
+.footerList {
+  margin: 0;
+  padding-left: 1.1em;
+  line-height: 1.9;
+}
+
+@media (max-width: 768px) {
+  .heroImg {
+    height: 140px;
+  }
+
+  .heroTitle,
+  .leadTitlem,
+  .featTitle {
+    font-size: 20px;
+  }
+
+  .featSubtitle {
+    font-size: 17px;
+  }
+
+  .body,
+  .featLead {
+    font-size: 14px;
+  }
+
+  .serviceImage {
+    max-width: 700px;
+  }
+}

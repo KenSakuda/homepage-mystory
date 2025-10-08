@@ -1,4 +1,4 @@
-.main {
+/* .main {
   width: 100%;
   overflow-x: hidden;
 }
@@ -16,4 +16,33 @@
 .buttonLink {
   margin-top: 20px;
   text-align: center;
+} */
+
+.page {
+  --brand-orange: #ff9000;
+  --brand-pink-deep: #cf2f83; /* 濃いめピンク */
+  --ink: #222; /* 本文 */
+  --muted: #6a7280; /* 補助文字 */
+  --grey-hr: #e6e6e6; /* 横罫線 */
+  --grey-card: #f1f1f1; /* サイド枠の背景 */
+  --shadow: 0 12px 30px rgba(229, 73, 154, 0.18); /* ピンクの柔らかい影 */
+  --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.06);
+
+  background: #fff;
+  color: var(--ink);
+  font-feature-settings: "palt";
+}
+
+/* 共通ブロック */
+.centerNote {
+  text-align: center;
+  margin: 22px 0 10px;
+  color: #5b5b5b;
+}
+.imgFrame {
+  background: #fff;
+  border: 1px solid var(--grey-hr);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: var(--shadow-soft);
 }
