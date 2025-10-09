@@ -13,7 +13,7 @@ import {
   AnalysisTable,
   // FlowBlock,
   FooterNav,
-} from "./components";
+} from "@/app/services/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
 
 export default function Page() {

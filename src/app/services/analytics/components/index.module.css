@@ -579,7 +579,8 @@
   .heroTitle,
   .leadTitlem,
   .featTitle,
-  .bubbleTitle .h3 {
+  .bubbleTitle,
+  .h3 {
     font-size: 20px;
   }
 
