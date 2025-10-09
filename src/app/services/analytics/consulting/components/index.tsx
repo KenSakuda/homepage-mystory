@@ -145,6 +145,39 @@ export function FeatureHighlights({
   );
 }
 
+export function BubbleNavSection({
+  title,
+  lead,
+  items,
+}: {
+  title: string;
+  lead: string;
+  items: { label: string; href: string }[];
+}) {
+  return (
+    <section className={styles.bubbleNav}>
+      <h2 className={styles.bubbleTitle}>
+        {title}
+        <span className={styles.bubbleUnderline} />
+      </h2>
+      <p className={styles.bubbleLead}>{lead}</p>
+
+      <div className={styles.bubbleRow} role="navigation" aria-label={title}>
+        {items.map((it, i) => (
+          <a
+            key={it.label + i}
+            href={it.href}
+            className={styles.bubble}
+            aria-label={it.label}
+          >
+            <span className={styles.bubbleText}>{it.label}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export function RibbonTabs({
   centerLabel,
   tabs,

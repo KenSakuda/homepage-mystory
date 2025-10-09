@@ -130,6 +130,91 @@
   border-radius: 8px;
 }
 
+.bubbleNav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 0 12px;
+}
+.bubbleTitle {
+  font-size: 26px;
+  font-weight: 900;
+  color: #333;
+  display: inline-block;
+  position: relative;
+  margin: 8px 0 12px;
+}
+.bubbleUnderline {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 200px;
+  background: var(--brand-orange);
+  margin-top: 6px;
+  border-radius: 3px;
+}
+
+.bubbleLead {
+  color: #222;
+  line-height: 1.95;
+  margin: 8px 0 18px;
+}
+
+.bubbleRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  padding: 10px 0;
+}
+
+.bubble {
+  --size: clamp(120px, 18vw, 200px);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--brand-orange, #ff9000);
+  border: 6px solid #f3f3f3; /* 外周リング */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08); /* 薄影 */
+  display: grid;
+  place-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 900;
+  position: relative;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  margin-left: -28px; /* 重ね演出（1個目は0に） */
+}
+.bubble:first-child {
+  margin-left: 0;
+}
+.bubble:hover,
+.bubble:focus-visible {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  filter: brightness(1.03);
+  outline: none;
+}
+.bubbleText {
+  padding: 0 14px;
+  line-height: 1.25;
+  white-space: pre-line;
+  font-size: clamp(10px, 1.8vw, 20px);
+}
+
+/* SPでは縦積み＆重ね解除（左右の空白は親に合わせる） */
+@media (max-width: 900px) {
+  .bubbleRow {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .bubble {
+    margin-left: 0;
+    margin: 8px;
+  }
+}
+
 /* ====== 2カラム（左本文・右サイド） ====== */
 .mainWrap {
   max-width: 1200px;
@@ -452,7 +537,8 @@
 
   .heroTitle,
   .leadTitlem,
-  .featTitle {
+  .featTitle,
+  .bubbleTitle {
     font-size: 20px;
   }
 
@@ -461,7 +547,8 @@
   }
 
   .body,
-  .featLead {
+  .featLead,
+  .bubbleLead {
     font-size: 15px;
   }
 

@@ -7,10 +7,8 @@ import {
   LeadBlock,
   ServiceImage,
   FeatureHighlights,
-  RibbonTabs,
-  ThreeFeatureCards,
+  BubbleNavSection,
   SectionTitle,
-  ServiceMenuProcess,
   ServiceSection,
   AnalysisTable,
   FlowBlock,
@@ -44,37 +42,6 @@ export default function Page() {
     {
       href: "/services/analytics/people-analytics",
       label: "ピープルアナリティクスサービス",
-    },
-  ];
-
-  // ========== リボン/カード ==========
-  const ribbonCenter = "ビジネス課題の解決";
-  const ribbonTabs = ["ノウハウの蓄積", "分析業務の最適化"];
-
-  const featureCards = [
-    {
-      title: "分析からビジネスヒントを得る",
-      bullets: [
-        "顧客の特性や購買パターンなどを明確化",
-        "売上低下やリピート率低下の要因を探る",
-        "最も効果のある施策が何かを導き出す",
-      ],
-    },
-    {
-      title: "分析ノウハウの習得",
-      bullets: [
-        "分析ツールの使い方を習得",
-        "分析結果データから読み解く力を得る",
-        "最適な分析手法がわかる",
-      ],
-    },
-    {
-      title: "分析環境／リソース不足の解消",
-      bullets: [
-        "分散しているデータを統合し最適な分析環境を構築",
-        "分析要員不足や作業負荷を軽減",
-        "分析パートナーが見つかる",
-      ],
     },
   ];
 
@@ -127,7 +94,7 @@ export default function Page() {
                 },
                 {
                   subtitle: "本質を捉えるコンサル力で“分析をビジネスに繋ぐ”",
-                  lead: "データサイエンティストは技術偏重でビジネス視点が薄い。—その課題を、コンサルティング/マーケティング経験豊富なメンバーが解決。課題定義→仮説→検証→実装の設計力により、「そもそも分析が必要か」「どこに着目すべきか」「分析結果から何をやるべきか」を明確化。KPIに紐づくアクションへ直結させ、意思決定会議での合意形成まで伴走します。",
+                  lead: "データサイエンティストは技術偏重でビジネス視点が薄い。—そんな“よくある課題”を、コンサルティング/マーケティング経験豊富なメンバーとのチーム体制でご支援することで解決。課題定義→仮説→検証→実装の設計力により、「そもそも分析が必要か」「どこに着目すべきか」「分析結果から何をやるべきか」を明確化。KPIに紐づくアクションへ直結させ、意思決定会議での合意形成まで伴走します。",
                   image: {
                     src: "/data_analytics_consulting_feature3.png",
                     alt: "コンサルティングで成果に繋げる",
@@ -148,22 +115,25 @@ export default function Page() {
               <ButtonLink href="/contact">分析について相談する</ButtonLink>
             </div>
 
-            <a id="menu" />
-            <SectionTitle title="顧客分析／データ分析サービスメニュー一覧" />
-            <ServiceMenuProcess
-              eyebrow="【顧客データ分析プロセスとサービス一覧】"
-              steps={["分析要件調査", "分析設計", "分析環境整備", "分析実施"]}
+            <BubbleNavSection
+              title="分析サービス一覧"
+              lead="主に、以下4つの領域のご支援が可能です。（クリックすると該当サービスの説明箇所に遷移します）"
+              items={[
+                { label: "データ整備・\n分析環境構築", href: "#sec-env" },
+                {
+                  label: "受託分析",
+                  href: "#sec-outsourcing",
+                },
+                { label: "プロジェクト\n型支援", href: "#sec-project" },
+                {
+                  label: "分析人材育成・\n内製化支援",
+                  href: "#sec-onsite",
+                },
+              ]}
             />
 
-            <RibbonTabs centerLabel={ribbonCenter} tabs={ribbonTabs} />
-
-            <ThreeFeatureCards cards={featureCards} />
-
-            <p className={styles.centerNote}>
-              ビジネスを成長させるための “顧客データ活用” を支援します
-            </p>
-
             {/* ===== 各サービス ===== */}
+            <a id="sec-design" />
             <SectionTitle title="分析設計支援サービス" />
             <ServiceSection
               problemsTitle="このような課題を解決します"
@@ -194,6 +164,7 @@ export default function Page() {
               }}
             />
 
+            <a id="sec-env" />
             <SectionTitle title="分析環境構築サービス" />
             <ServiceSection
               problemsTitle="このような課題を解決します"
@@ -209,6 +180,7 @@ export default function Page() {
               ]}
             />
 
+            <a id="sec-onsite" />
             <SectionTitle title="オンサイト分析サービス（分析要員の提供）" />
             <ServiceSection
               problemsTitle="このような課題を解決します"
@@ -239,6 +211,7 @@ export default function Page() {
               }}
             />
 
+            <a id="sec-outsourcing" />
             <SectionTitle title="顧客分析アウトソーシングサービス" />
             <ServiceSection
               problemsTitle="このような課題を解決します"
