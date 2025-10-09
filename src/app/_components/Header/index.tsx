@@ -178,8 +178,8 @@ export default function Header() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/analytics/solutions">
-                          データ分析ソリューション
+                        <Link href="/services/analytics/consulting">
+                          データ分析コンサルティング
                         </Link>
                       </li>
                     </ul>

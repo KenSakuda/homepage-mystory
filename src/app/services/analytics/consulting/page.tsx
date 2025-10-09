@@ -291,10 +291,10 @@ export default function Page() {
 
             <ServiceImage
               src="/data_analytics_consulting_mystory_capability.png"
-              alt="MyStoryケイパビリティ"
+              alt="MyStoryのケイパビリティ"
             />
 
-            <FeatureHighlights
+            {/* <FeatureHighlights
               title="MyStoryのデータ分析支援サービスの特徴"
               items={[
                 {
@@ -327,6 +327,45 @@ export default function Page() {
                   image: {
                     src: "/data_analytics_consulting_2.png",
                     alt: "特徴04",
+                  },
+                },
+              ]}
+            /> */}
+
+            <FeatureHighlights
+              title="MyStoryのデータ分析サービスの特徴"
+              items={[
+                {
+                  subtitle: "学際統合アプローチで“洞察→アクション”を一気通貫",
+                  lead: "『統計学・機械学習』 × 『行動経済学・消費者行動理論・社会科学』を統合。正しく分析して終わりではなく、意思決定と実行まで接続します。例：価格最適化では、コンジョイント/階層ベイズで需要曲線を推計しつつ、極端回避・おとり効果・フレーミングなどの理論を用いてプラン設計自体を最適化。レポートで終わらない“動く示唆”を提供します。",
+                  image: {
+                    src: "/data_analytics_consulting_feature3.png",
+                    alt: "学際統合アプローチ",
+                  },
+                },
+                {
+                  subtitle: "戦略から実装まで伴走し、成果が出るまでやり切る",
+                  lead: "経営・プロダクト・マーケの意思決定単位に合わせ、課題定義→仮説→実験設計→実装→検証をスプリントで運用。会議体での合意形成支援、KPI運用、ABテスト/実験デザインのレビューまで伴走。統計的に正しいだけでなく、現場が採用できる現実解へ落とし込みます。",
+                  image: {
+                    src: "/data_analytics_consulting_feature3.png",
+                    alt: "伴走型の実装支援",
+                  },
+                },
+                {
+                  subtitle:
+                    "現場で使える成果物と再現性：ダッシュボード×運用ガイド×コード資産",
+                  lead: "ダッシュボード、施策設計ガイドライン、実験テンプレート、再利用可能なコード資産を整備。分析結果の背景にある心理・社会的メカニズムも併記し、なぜ効くのかまで可視化。教育/トレーニングやレビュー体制も提供し、継続的に再現できる“内製化”を実現します。",
+                  image: {
+                    src: "/data_analytics_consulting_feature3.png",
+                    alt: "現場が使える成果物",
+                  },
+                },
+                {
+                  subtitle: "最適チーム編成で広範なテーマに対応",
+                  lead: "コンサルティング/マーケティング実務経験者とデータサイエンティストの混成チームで、課題に応じて最適編成。価格戦略、需要予測、顧客維持・育成、コミュニケーション最適化などを横断支援。分析と行動科学の両輪で、ビジネス成果に直結する打ち手を創出します。",
+                  image: {
+                    src: "/data_analytics_consulting_feature3.png",
+                    alt: "最適チームと適用領域の幅",
                   },
                 },
               ]}
@@ -365,7 +404,7 @@ export default function Page() {
               ]}
               subEyebrow="【分析設計支援サービス・基本プロセス】"
               subImage={{
-                src: "/data_analytics_consulting_2.png",
+                src: "/data_analytics_consulting_feature3.png",
                 alt: "process",
               }}
               benefitsTitle="分析設計支援サービスのメリット"
@@ -454,7 +493,7 @@ export default function Page() {
             <SectionTitle title="分析レポートイメージ" small />
             <div className={styles.imgFrame}>
               <Image
-                src="/data_analytics_consulting_2.png"
+                src="/data_analytics_consulting_feature3.png"
                 alt="report"
                 width={800}
                 height={400}
@@ -464,7 +503,7 @@ export default function Page() {
             <FlowBlock
               title="サービスフロー"
               image={{
-                src: "/data_analytics_consulting_2.png",
+                src: "/data_analytics_consulting_feature3.png",
                 alt: "flow",
               }}
               steps={[

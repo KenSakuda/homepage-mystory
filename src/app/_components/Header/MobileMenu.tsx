@@ -33,7 +33,7 @@ export default function MobileMenu({ setOpen }: Props) {
               </li>
               <li>
                 <Link
-                  href="/services/analytics/solutions"
+                  href="/services/analytics/consulting"
                   onClick={() => setOpen(false)}
                 >
                   データ分析コンサルティング
