@@ -18,7 +18,7 @@ export function Hero({
         src={image.src}
         alt={image.alt}
         width={400}
-        height={200}
+        height={350}
       />
       <h1 className={styles.heroTitle}>{title}</h1>
     </section>

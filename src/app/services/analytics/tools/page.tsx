@@ -287,7 +287,7 @@ export default function Page() {
               title="提供ツール／ソリューション一覧"
               lead="代表的な4プロダクト。クリックで詳細へ。"
               items={[
-                { label: "DAVinCI\nLABS（AutoML）", href: "#sec-davinci" },
+                { label: "DAVinCI\nLABS", href: "#sec-davinci" },
                 { label: "DEIN\nSTATION", href: "#sec-dein" },
                 { label: "Lead\n（時系列AutoML）", href: "#sec-lead" },
                 { label: "Causal Story\n（因果推論）", href: "#sec-causal" },
@@ -307,7 +307,6 @@ export default function Page() {
               overviewTitle="提供内容"
               overview={[
                 "回帰・分類・時系列に対応したAutoML。データ前処理、最適アルゴリズム選定、ハイパーパラメータチューニング、モデル作成と精度評価を自動化します。ビジネスユーザーでも扱えるノーコードUIで、データドリブンな意思決定を後押しします。",
-                "※画像は差し替え予定",
               ]}
               subEyebrow="画面イメージ"
               subImage={{
