@@ -117,7 +117,7 @@ export default function Page() {
 
             <BubbleNavSection
               title="分析サービス一覧"
-              lead="主に、以下4つの領域のご支援が可能です。（クリックすると該当サービスの説明箇所に遷移します）"
+              lead="主に、以下4つの領域のご支援が可能です。 ※クリックすると該当サービスの説明箇所に遷移します"
               items={[
                 { label: "データ整備・\n分析環境構築", href: "#sec-env" },
                 {
@@ -133,6 +133,51 @@ export default function Page() {
             />
 
             {/* ===== 各サービス ===== */}
+            <a id="sec-env" />
+            <SectionTitle title="データ整備・分析環境構築" />
+            <ServiceSection
+              problemsTitle="このような課題はありませんか？"
+              problems={bullets([
+                "・データ分析をビジネスに導入したいが、そもそもデータがない",
+                "・データはたくさんあるものの、分析に使えるデータになっていない",
+                "・手元にあるデータが欠損だらけで、どうすれば良いのかわからない",
+                "・誰でも分析できる環境を構築したい",
+              ])}
+              overviewTitle="ご支援のイメージ"
+              overview={[
+                "・分析によって解決したいビジネス課題をヒアリングさせていただいた上で、今後“どんなデータ”を“どのように”蓄積していけば良いかをコンサルティング",
+                "・データ間の関係性や特徴を把握し、欠損補完に関する専門知見をもとに分析に使えるデータに整備",
+                "・分析用環境（CDP/DWHなど）の構築と、分析ツールとの接続設定を実施。",
+              ]}
+            />
+
+            <a id="sec-outsourcing" />
+            <SectionTitle title="受託分析" />
+            <ServiceSection
+              problemsTitle="このような課題はありませんか？"
+              problems={bullets([
+                "環境や要員を自社で持てない",
+                "顧客分析業務を外部委託したい",
+              ])}
+              overviewTitle="ご支援のイメージ"
+              overview={[
+                "※差し替え：顧客データを預かり分析を実施。定型顧客分析の月次提供も可能。",
+                "【納期（顧客分析）】約1〜2ヶ月（例）／【納期（定型分析）】ご要望に応じて",
+              ]}
+            />
+
+            <AnalysisTable
+              header={["分析項目", "分析内容"]}
+              rows={[
+                ["顧客属性分析", "※差し替え：基本属性×セグメント集計。"],
+                ["RFM分析", "※差し替え：R/F/M指標のランク化と各種集計。"],
+                ["離反分析", "※差し替え：ランク変動・離反特性の可視化。"],
+                ["購入間隔分析", "※差し替え：1→2→3回目の平均日数。"],
+                ["購入経路分析", "※差し替え：チャネル/転換の傾向。"],
+                ["バスケット分析", "※差し替え：同時購入のパターン抽出。"],
+              ]}
+            />
+
             <a id="sec-design" />
             <SectionTitle title="分析設計支援サービス" />
             <ServiceSection
@@ -158,26 +203,6 @@ export default function Page() {
                 "必要最小限のデータ収集と適切なDB設計による分析業務の効率化",
                 "ビジネス課題に最適なKPIの設定と、効果の最大化",
               ])}
-              ctaInline={{
-                label: "分析サービス案内はこちら",
-                href: "#contact",
-              }}
-            />
-
-            <a id="sec-env" />
-            <SectionTitle title="分析環境構築サービス" />
-            <ServiceSection
-              problemsTitle="このような課題を解決します"
-              problems={bullets([
-                "分析環境が整っていない",
-                "分析ツールのDB接続設定がわからない",
-              ])}
-              overviewTitle="サービス概要"
-              overview={[
-                "※差し替え：CDP/DWHの構築と、分析ツールの接続設定を実施。",
-                "技術に詳しくなくても、最適な分析環境を整備可能。",
-                "【期間】3〜6ヶ月（例）／【システム構成】Google環境上に構築（例）",
-              ]}
             />
 
             <a id="sec-onsite" />
@@ -205,37 +230,6 @@ export default function Page() {
                 "リソース不足の解消",
                 "必要時だけ依頼でき、採用/人件費を削減",
               ])}
-              ctaInline={{
-                label: "分析サービス案内はこちら",
-                href: "#contact",
-              }}
-            />
-
-            <a id="sec-outsourcing" />
-            <SectionTitle title="顧客分析アウトソーシングサービス" />
-            <ServiceSection
-              problemsTitle="このような課題を解決します"
-              problems={bullets([
-                "環境や要員を自社で持てない",
-                "顧客分析業務を外部委託したい",
-              ])}
-              overviewTitle="サービス概要"
-              overview={[
-                "※差し替え：顧客データを預かり分析を実施。定型顧客分析の月次提供も可能。",
-                "【納期（顧客分析）】約1〜2ヶ月（例）／【納期（定型分析）】ご要望に応じて",
-              ]}
-            />
-
-            <AnalysisTable
-              header={["分析項目", "分析内容"]}
-              rows={[
-                ["顧客属性分析", "※差し替え：基本属性×セグメント集計。"],
-                ["RFM分析", "※差し替え：R/F/M指標のランク化と各種集計。"],
-                ["離反分析", "※差し替え：ランク変動・離反特性の可視化。"],
-                ["購入間隔分析", "※差し替え：1→2→3回目の平均日数。"],
-                ["購入経路分析", "※差し替え：チャネル/転換の傾向。"],
-                ["バスケット分析", "※差し替え：同時購入のパターン抽出。"],
-              ]}
             />
 
             <SectionTitle title="分析レポートイメージ" small />
@@ -273,10 +267,6 @@ export default function Page() {
               ])}
               overviewTitle="サービス概要"
               overview={["※差し替え：Tableau / R / 多変量解析 などWS形式。"]}
-              ctaInline={{
-                label: "分析サービス案内はこちら",
-                href: "#contact",
-              }}
             />
           </>
         }
@@ -290,7 +280,7 @@ export default function Page() {
 
       <a id="contact" />
       <FooterNav
-        blockTitle="CRMサービス"
+        blockTitle="受託分析/データ分析コンサルティング"
         links={[
           { href: "#", label: "サービス一覧・特長・実績" },
           { href: "#", label: "課題・ケースから探す" },

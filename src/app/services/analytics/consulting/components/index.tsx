@@ -266,7 +266,6 @@ export function ServiceSection({
   subImage,
   benefitsTitle,
   benefits,
-  ctaInline, // 末尾の黒ピルCTA（任意）
 }: {
   problemsTitle?: string;
   problems?: { text: string }[];
@@ -277,7 +276,6 @@ export function ServiceSection({
   subImage?: { src: string; alt: string };
   benefitsTitle?: string;
   benefits?: { text: string }[];
-  ctaInline?: { href?: string; label: string };
 }) {
   return (
     <section className={styles.section}>
@@ -335,13 +333,6 @@ export function ServiceSection({
               <li key={i}>{b.text}</li>
             ))}
           </ul>
-          {ctaInline && (
-            <div className={styles.center}>
-              <a className={styles.darkPill} href={ctaInline.href}>
-                {ctaInline.label}
-              </a>
-            </div>
-          )}
         </>
       )}
     </section>

@@ -373,6 +373,7 @@
   position: relative;
   margin: 32px 0 10px;
 }
+
 .h3Small {
   font-size: 22px;
 }
@@ -380,8 +381,8 @@
   content: "";
   display: block;
   height: 3px;
-  width: 160px;
-  background: #e5499a;
+  width: 200px;
+  background: var(--brand-orange);
   margin-top: 6px;
   border-radius: 3px;
 }
@@ -420,7 +421,7 @@
   display: block;
   width: 110px;
   height: 3px;
-  background: #e5499a;
+  background: var(--brand-orange);
   margin-top: 6px;
   border-radius: 3px;
 }
@@ -432,7 +433,7 @@
 
 /* ====== 小ラベル ====== */
 .smallEyebrow {
-  color: #a53a6f;
+  color: var(--brand-orange);
   font-weight: 900;
   margin: 12px 0 4px;
 }
@@ -486,7 +487,7 @@
   position: sticky;
   top: 0;
   background: #faf6f9;
-  color: #9a2e66;
+  color: #ff8c00;
   font-weight: 900;
   padding: 12px 14px;
   border-bottom: 1px solid #eee;
