@@ -319,8 +319,8 @@ export function ServiceSection({
           <Image
             src={subImage.src}
             alt={subImage.alt}
-            width={400}
-            height={200}
+            width={500}
+            height={300}
           />
         </div>
       )}

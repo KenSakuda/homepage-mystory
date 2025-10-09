@@ -440,11 +440,7 @@
 
 /* ====== 画像枠 ====== */
 .imgFrame {
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  max-width: 80%;
 }
 
 /* ====== サブボックス（オンサイト） ====== */
@@ -487,7 +483,7 @@
   position: sticky;
   top: 0;
   background: #faf6f9;
-  color: #ff8c00;
+  color: #222;
   font-weight: 900;
   padding: 12px 14px;
   border-bottom: 1px solid #eee;
@@ -539,7 +535,7 @@
   .heroTitle,
   .leadTitlem,
   .featTitle,
-  .bubbleTitle {
+  .bubbleTitle .h3 {
     font-size: 20px;
   }
 
