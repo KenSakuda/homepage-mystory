@@ -72,6 +72,7 @@ export default function Page() {
               alt="MyStoryのケイパビリティ"
             />
 
+            <a id="sec-feature" />
             <FeatureHighlights
               title="MyStoryのデータ分析サービスの特徴"
               items={[
@@ -115,6 +116,7 @@ export default function Page() {
               <ButtonLink href="/contact">分析について相談する</ButtonLink>
             </div>
 
+            <a id="sec-service" />
             <BubbleNavSection
               title="分析サービス一覧"
               lead="主に、以下4つの領域のご支援が可能です。 ※クリックすると該当サービスの説明箇所に遷移します"
@@ -314,6 +316,10 @@ export default function Page() {
               }}
             />
 
+            <div className={styles.contact}>
+              <ButtonLink href="/contact">分析について相談する</ButtonLink>
+            </div>
+
             {/* <a id="sec-design" />
             <SectionTitle title="分析設計支援サービス" />
             <ServiceSection
@@ -391,13 +397,12 @@ export default function Page() {
       <FooterNav
         blockTitle="受託分析/データ分析コンサルティング"
         links={[
-          { href: "#sec-env", label: "サービス一覧・特長・実績" },
-          { href: "#sec-env", label: "課題・ケースから探す" },
-          { href: "#sec-env", label: "CRM戦略検討・プランニング" },
-          { href: "#sec-env", label: "RFP作成支援" },
-          { href: "#sec-env", label: "名寄せ・データクレンジング" },
-          { href: "#sec-env", label: "顧客データ分析サービス" },
-          { href: "#sec-env", label: "システム上流設計・構築" },
+          { href: "#sec-feature", label: "MyStoryのデータ分析サービスの特徴" },
+          { href: "#sec-service", label: "分析サービス一覧" },
+          { href: "#sec-env", label: "データ整備・分析環境構築" },
+          { href: "#sec-outsourcing", label: "受託分析" },
+          { href: "#sec-project", label: "プロジェクト型支援" },
+          { href: "#sec-hr-dev", label: "分析人材育成・内製化支援" },
         ]}
       />
     </main>
