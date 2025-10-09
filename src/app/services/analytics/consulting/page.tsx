@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import Image from "next/image";
+// import Image from "next/image";
 import {
   Hero,
   MainWithSidebar,
@@ -11,7 +11,7 @@ import {
   SectionTitle,
   ServiceSection,
   AnalysisTable,
-  FlowBlock,
+  // FlowBlock,
   FooterNav,
 } from "./components";
 import ButtonLink from "@/app/_components/ButtonLink";
@@ -127,7 +127,7 @@ export default function Page() {
                 { label: "プロジェクト\n型支援", href: "#sec-project" },
                 {
                   label: "分析人材育成・\n内製化支援",
-                  href: "#sec-onsite",
+                  href: "#sec-hr-dev",
                 },
               ]}
             />
@@ -288,25 +288,30 @@ export default function Page() {
               ]}
               benefitsTitle="プロジェクト型支援サービス利用のメリット"
               benefits={bullets([
-                "今すぐ分析人材のリソース不足を解消できる",
-                "必要な時にだけ依頼でき、恒常的な採用/人件費を削減できる",
-                "即戦力の分析人材を活用できる",
+                "・今すぐ分析人材のリソース不足を解消できる",
+                "・必要な時にだけ依頼でき、恒常的な採用/人件費を削減できる",
+                "・即戦力の分析人材を活用できる",
               ])}
             />
 
-            <a id="sec-outsourcing" />
-            <SectionTitle title="受託分析" />
+            <a id="sec-hr-dev" />
+            <SectionTitle title="分析人材育成・内製化支援" />
             <ServiceSection
               problemsTitle="こんな課題はありませんか？"
               problems={bullets([
-                "環境や要員を自社で持てない",
-                "顧客分析業務を外部委託したい",
+                "・自社内に分析のプロフェッショナルを育成したい",
+                "・社内に分析ノウハウがない",
+                "・現在外部に委託している分析業務を将来的に内製化したい",
               ])}
               overviewTitle="ご支援のイメージ"
               overview={[
-                "※差し替え：顧客データを預かり分析を実施。定型顧客分析の月次提供も可能。",
-                "【納期（顧客分析）】約1〜2ヶ月（例）／【納期（定型分析）】ご要望に応じて",
+                "ご要望とご予算をヒアリングさせていただき、短期集中の研修形式、中長期のプロジェクト型の育成プログラムなど、状況に合った最適な人材育成プランを提案させていただきます。",
               ]}
+              subEyebrow="内製化のイメージ"
+              subImage={{
+                src: "/data_analytics_consulting_hr-dev.png",
+                alt: "内製化のイメージ",
+              }}
             />
 
             {/* <a id="sec-design" />
@@ -336,7 +341,7 @@ export default function Page() {
               ])}
             /> */}
 
-            <SectionTitle title="分析レポートイメージ" small />
+            {/* <SectionTitle title="分析レポートイメージ" small />
             <div className={styles.imgFrame}>
               <Image
                 src="/data_analytics_consulting_feature3.png"
@@ -344,9 +349,9 @@ export default function Page() {
                 width={800}
                 height={400}
               />
-            </div>
+            </div> */}
 
-            <FlowBlock
+            {/* <FlowBlock
               title="サービスフロー"
               image={{
                 src: "/data_analytics_consulting_feature3.png",
@@ -359,9 +364,9 @@ export default function Page() {
                 "報告会・納品",
               ]}
               note="※直近2年以上の顧客/購買データが必要（例）。"
-            />
+            /> */}
 
-            <SectionTitle title="分析トレーニングサービス" />
+            {/* <SectionTitle title="分析トレーニングサービス" />
             <ServiceSection
               problemsTitle="このような課題を解決します"
               problems={bullets([
@@ -371,7 +376,7 @@ export default function Page() {
               ])}
               overviewTitle="サービス概要"
               overview={["※差し替え：Tableau / R / 多変量解析 などWS形式。"]}
-            />
+            /> */}
           </>
         }
         sidebar={
@@ -386,13 +391,13 @@ export default function Page() {
       <FooterNav
         blockTitle="受託分析/データ分析コンサルティング"
         links={[
-          { href: "#", label: "サービス一覧・特長・実績" },
-          { href: "#", label: "課題・ケースから探す" },
-          { href: "#", label: "CRM戦略検討・プランニング" },
-          { href: "#", label: "RFP作成支援" },
-          { href: "#", label: "名寄せ・データクレンジング" },
-          { href: "#", label: "顧客データ分析サービス" },
-          { href: "#", label: "システム上流設計・構築" },
+          { href: "#sec-env", label: "サービス一覧・特長・実績" },
+          { href: "#sec-env", label: "課題・ケースから探す" },
+          { href: "#sec-env", label: "CRM戦略検討・プランニング" },
+          { href: "#sec-env", label: "RFP作成支援" },
+          { href: "#sec-env", label: "名寄せ・データクレンジング" },
+          { href: "#sec-env", label: "顧客データ分析サービス" },
+          { href: "#sec-env", label: "システム上流設計・構築" },
         ]}
       />
     </main>

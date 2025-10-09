@@ -440,7 +440,51 @@
 
 /* ====== 画像枠 ====== */
 .imgFrame {
-  max-width: 80%;
+  /* 枠が親幅を超えないように */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  /* お好みで枠の見た目（他のフレームと合わせたい場合は残す/調整） */
+  background: #fff;
+  border: 1px solid var(--grey-hr, #e6e6e6);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: var(--shadow-soft, 0 10px 24px rgba(0, 0, 0, 0.06));
+
+  /* 中身がはみ出すのを防ぐ保険 */
+  overflow: hidden;
+
+  /* デスクトップで少しだけ狭く見せたい場合は中央寄せに */
+  margin: 8px 0; /* デスクトップで中央寄せにしたいなら margin: 8px auto; */
+}
+
+.imgFrame {
+  /* 枠が親幅を超えないように */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  /* お好みで枠の見た目（他のフレームと合わせたい場合は残す/調整） */
+  background: #fff;
+  border: 1px solid var(--grey-hr, #e6e6e6);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: var(--shadow-soft, 0 10px 24px rgba(0, 0, 0, 0.06));
+
+  /* 中身がはみ出すのを防ぐ保険 */
+  overflow: hidden;
+
+  /* デスクトップで少しだけ狭く見せたい場合は中央寄せに */
+  margin: 8px 0; /* デスクトップで中央寄せにしたいなら margin: 8px auto; */
+}
+
+.imgFrame :is(img, picture, video, canvas, svg) {
+  display: block;
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 8px;
 }
 
 /* ====== サブボックス（オンサイト） ====== */
@@ -556,5 +600,13 @@
   .serviceImage {
     width: 100%;
     margin: 16px auto 0px;
+  }
+
+  @media (max-width: 768px) {
+    .imgFrame {
+      max-width: 100%;
+      padding: 8px;
+      border-radius: 10px;
+    }
   }
 }
