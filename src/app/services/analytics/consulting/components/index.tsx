@@ -145,16 +145,6 @@ export function FeatureHighlights({
   );
 }
 
-export function DarkPillCTA({ href, label }: { href: string; label: string }) {
-  return (
-    <div className={styles.center}>
-      <a href={href} className={styles.darkPill}>
-        {label}
-      </a>
-    </div>
-  );
-}
-
 export function RibbonTabs({
   centerLabel,
   tabs,

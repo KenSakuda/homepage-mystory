@@ -33,7 +33,6 @@
   font-feature-settings: "palt";
 }
 
-/* 共通ブロック */
 .centerNote {
   text-align: center;
   margin: 22px 0 10px;
@@ -45,4 +44,9 @@
   border-radius: 12px;
   padding: 10px;
   box-shadow: var(--shadow-soft);
+}
+
+.contact {
+  margin-top: 20px;
+  text-align: center;
 }

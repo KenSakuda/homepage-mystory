@@ -33,7 +33,7 @@
 }
 
 .feat {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 24px 0px;
 }
@@ -218,15 +218,6 @@
 /* ====== ダーク丸ボタン ====== */
 .center {
   text-align: center;
-}
-.darkPill {
-  display: inline-block;
-  background: #2b2b2b;
-  color: #fff;
-  font-weight: 800;
-  border-radius: 999px;
-  padding: 12px 20px;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
 }
 
 /* ====== ピンクのリボン＆タブ ====== */

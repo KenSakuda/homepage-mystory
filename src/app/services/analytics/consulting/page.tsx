@@ -198,7 +198,6 @@ import {
   FeatureHighlights,
   RibbonTabs,
   ThreeFeatureCards,
-  DarkPillCTA,
   SectionTitle,
   ServiceMenuProcess,
   ServiceSection,
@@ -206,6 +205,7 @@ import {
   FlowBlock,
   FooterNav,
 } from "./components";
+import ButtonLink from "@/app/_components/ButtonLink";
 
 export default function Page() {
   const sidebarLinks = [
@@ -333,15 +333,9 @@ export default function Page() {
               ]}
             />
 
-            <RibbonTabs centerLabel={ribbonCenter} tabs={ribbonTabs} />
-
-            <ThreeFeatureCards cards={featureCards} />
-
-            <p className={styles.centerNote}>
-              ビジネスを成長させるための “顧客データ活用” を支援します
-            </p>
-
-            <DarkPillCTA href="#contact" label="分析サービス案内はこちら" />
+            <div className={styles.contact}>
+              <ButtonLink href="/contact">分析について相談する</ButtonLink>
+            </div>
 
             <a id="menu" />
             <SectionTitle title="顧客分析／データ分析サービスメニュー一覧" />
@@ -349,6 +343,14 @@ export default function Page() {
               eyebrow="【顧客データ分析プロセスとサービス一覧】"
               steps={["分析要件調査", "分析設計", "分析環境整備", "分析実施"]}
             />
+
+            <RibbonTabs centerLabel={ribbonCenter} tabs={ribbonTabs} />
+
+            <ThreeFeatureCards cards={featureCards} />
+
+            <p className={styles.centerNote}>
+              ビジネスを成長させるための “顧客データ活用” を支援します
+            </p>
 
             {/* ===== 各サービス ===== */}
             <SectionTitle title="分析設計支援サービス" />
@@ -492,8 +494,6 @@ export default function Page() {
                 href: "#contact",
               }}
             />
-
-            <DarkPillCTA href="#contact" label="分析サービス案内はこちら" />
           </>
         }
         sidebar={
