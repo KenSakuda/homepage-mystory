@@ -469,11 +469,8 @@
     margin: 10px 0 25px 0;
   }
 
-  .feat {
-    padding: 24px;
-  }
-
   .serviceImage {
     width: 100%;
+    margin: 16px auto 0px;
   }
 }

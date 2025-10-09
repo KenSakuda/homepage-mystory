@@ -93,12 +93,12 @@ export default async function Page() {
               <p>特徴の異なる複数の分析ツールの開発・販売</p>
             </Link>
             <Link
-              href="/services/analytics/solutions"
+              href="/services/analytics/consulting"
               className={styles.serviceCard}
             >
               <Image
                 src="/services_analytics_solution.jpg"
-                alt="データ分析ソリューション"
+                alt="データ分析コンサルティング"
                 width={300}
                 height={300}
                 className={styles.serviceImage}
