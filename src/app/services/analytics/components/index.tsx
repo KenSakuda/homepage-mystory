@@ -97,6 +97,7 @@ export function FeatureHighlights({
     subtitle: string;
     lead: string;
     image: { src: string; alt: string };
+    links?: { label: string; href: string; external?: boolean }[];
   }[];
 }) {
   return (
@@ -131,12 +132,33 @@ export function FeatureHighlights({
                   <Image
                     src={it.image.src}
                     alt={it.image.alt}
-                    width={800}
-                    height={480}
+                    width={400}
+                    height={250}
                     className={styles.featImg}
                   />
                 </div>
               </div>
+
+              {it.links && it.links.length > 0 && (
+                <div
+                  className={styles.featLinksRow}
+                  role="group"
+                  aria-label={`${it.subtitle} の関連リンク`}
+                >
+                  {it.links.map((l, j) => (
+                    <a
+                      key={`${l.label}-${j}`}
+                      href={l.href}
+                      className={styles.featLink}
+                      {...(l.external
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                    >
+                      {l.label}
+                    </a>
+                  ))}
+                </div>
+              )}
             </article>
           );
         })}
@@ -319,8 +341,8 @@ export function ServiceSection({
           <Image
             src={subImage.src}
             alt={subImage.alt}
-            width={500}
-            height={300}
+            width={400}
+            height={250}
           />
         </div>
       )}
@@ -419,5 +441,106 @@ export function FooterNav({
         </div>
       </div>
     </footer>
+  );
+}
+
+export function AnalyticsOutsourceSection() {
+  return (
+    <section
+      className={styles.appendSection}
+      aria-labelledby="outsource-append-title"
+    >
+      {/* タイトル＆リード */}
+      <h2 id="outsource-append-title" className={styles.h3}>
+        データ分析の外部委託（委託・外注）をご検討中の方へ
+        <span className={styles.h3Underline} />
+      </h2>
+      <p className={styles.body}>
+        ビジネス課題に合ったデータ分析の委託先を選ぶポイントは、「何を解決したいか」に対して最短距離で価値を出せるかどうかです。
+        MyStoryは、データ分析と行動経済学／消費者行動理論／社会科学の専門性を掛け合わせ、マーケティングをはじめとする幅広い領域で成果に直結する分析設計→実装→意思決定支援までを一気通貫で提供してきました。データ解析の委託をご検討の企業様に対し、課題定義から仮説設計、モデル構築、ダッシュボード化、運用内製化まで、目的に応じた最適なスコープでご支援します。
+      </p>
+
+      {/* 選ばれる理由（定義リスト＋柔らかいカード） */}
+      <div className={styles.h4}>MyStoryが選ばれる理由</div>
+      <div className={styles.appendCard}>
+        <dl className={styles.dlList}>
+          <div className={styles.dlRow}>
+            <dt>専門性の掛け合わせ</dt>
+            <dd>
+              「統計学・機械学習」と「消費者の行動科学」に関する知見を統合し、「単に分析する」だけでなく意思決定可能な示唆へ落とし込み
+            </dd>
+          </div>
+          <div className={styles.dlRow}>
+            <dt>業種横断の実績</dt>
+            <dd>
+              マーケティング領域におけるデータ解析はもちろん、スポーツアナリティクス、ピープルアナリティクスなど多領域での支援実績
+            </dd>
+          </div>
+          <div className={styles.dlRow}>
+            <dt>現場実装まで伴走</dt>
+            <dd>
+              PoCに留まらず、業務フローへの実装、指標設計、可視化、運用ガイドまで内製化を見据えて支援
+            </dd>
+          </div>
+          <div className={styles.dlRow}>
+            <dt>透明性の高い進め方</dt>
+            <dd>
+              課題定義→データ可用性→分析アプローチ→成果物→評価指標を明確化し、委託費用の根拠を可視化
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      {/* 費用カード */}
+      <div className={styles.h4}>委託費用について</div>
+      <p className={styles.body}>
+        データ分析 委託
+        費用は、①課題の複雑性、②データ量と前処理難度、③モデルの高度性、④成果物（集計表のみ/レポートあり／ダッシュボード化／API接続等）、⑤期間と体制によって変動します。
+        弊社は、初回ヒアリングで
+        <strong>
+          目的・評価指標（KPI/KGI）と制約条件（データ・期間・体制）
+        </strong>
+        を整理し、<strong>段階的見積り（スモールスタート可能）</strong>
+        をご提示します。まずは要件の可視化からお気軽にご相談ください。
+      </p>
+
+      {/* FAQ（details/summaryで軽量アコーディオン） */}
+      <div className={styles.h4}>よくあるご相談</div>
+      <div className={styles.faqWrap}>
+        <details className={styles.acItem}>
+          <summary className={styles.acSummary}>
+            社内にあるデータを利活用したいが、何から始めるべきか分からない
+          </summary>
+          <div className={styles.acPanel}>
+            <p className={styles.body}>
+              →
+              課題仮説の棚卸しと、取得済みデータの診断から最短スコープをご提案します
+            </p>
+          </div>
+        </details>
+        <details className={styles.acItem}>
+          <summary className={styles.acSummary}>
+            マーケティング向けのデータ解析を委託し、売上・効率を上げたい
+          </summary>
+          <div className={styles.acPanel}>
+            <p className={styles.body}>
+              →
+              施策効果検証（A/Bテスト設計・因果推論）、メディア最適化、LTV最大化モデルを設計・実装など課題に応じた分析手法をご提案します
+            </p>
+          </div>
+        </details>
+        <details className={styles.acItem}>
+          <summary className={styles.acSummary}>
+            自社に分析人材が不足している
+          </summary>
+          <div className={styles.acPanel}>
+            <p className={styles.body}>
+              →
+              伴走型の内製化支援／教育（コード・分析設計レビュー、運用プロセス整備）にも対応しています
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
   );
 }

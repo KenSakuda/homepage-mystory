@@ -37,7 +37,6 @@
   margin: 0 auto;
   padding: 24px 0px 12px;
 }
-
 .featTitle {
   font-size: 26px;
   font-weight: 900;
@@ -46,7 +45,6 @@
   position: relative;
   margin: 8px 0 16px;
 }
-
 .featUnderline {
   content: "";
   display: block;
@@ -56,31 +54,25 @@
   margin-top: 6px;
   border-radius: 3px;
 }
-
 .featList {
   display: grid;
   gap: 22px;
 }
-
 .featItem {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 24px;
   align-items: center;
 }
-
 .featItemRev {
   grid-template-columns: 0.9fr 1.1fr;
 }
-
 .featItemRev .featTextCol {
   order: 2;
 }
-
 .featItemRev .featImgCol {
   order: 1;
 }
-
 .featEyebrow {
   display: flex;
   align-items: center;
@@ -88,7 +80,6 @@
   margin-bottom: 8px;
   flex-wrap: wrap;
 }
-
 .featBadge {
   display: inline-block;
   font-weight: 900;
@@ -103,13 +94,11 @@
   padding: 6px 12px;
   box-shadow: var(--shadow, 0 12px 30px rgba(229, 187, 73, 0.18));
 }
-
 .featSubtitle {
   font-weight: 900;
   color: #333;
   font-size: 18px;
 }
-
 .featLead {
   color: #222;
   line-height: 1.95;
@@ -121,13 +110,37 @@
   border: 1px solid var(--grey-hr, #e6e6e6);
   border-radius: 12px;
   box-shadow: var(--shadow-soft, 0 10px 24px rgba(0, 0, 0, 0.06));
+  overflow: hidden;
+  width: 100%;
 }
 
 .featImg {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain; /* 図表の文字つぶれを避けて均一枠に収める */
   display: block;
   border-radius: 8px;
+}
+
+.featLinksRow {
+  grid-column: 1 / -1; /* 左右カラムを跨ぐ */
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column; /* 1行=1リンク */
+  gap: 10px;
+}
+.featLink {
+  display: inline-block;
+  color: var(--brand-blue, #0070f3);
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.featLink:hover,
+.featLink:focus-visible {
+  filter: brightness(1.05);
+  outline: none;
 }
 
 .bubbleNav {
@@ -235,15 +248,36 @@
   .mainWrap {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 1024px) {
   .featItem,
   .featItemRev {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .featItemRev .featTextCol {
     order: 0;
   }
   .featItemRev .featImgCol {
     order: 0;
+  }
+
+  /* 記事内の表示順を明示（1:テキスト、2:画像、3:リンク） */
+  .featTextCol {
+    order: 1;
+  }
+  .featImgCol {
+    order: 2;
+  }
+  .featLinksRow {
+    order: 3;
+  }
+}
+
+@media (max-width: 640px) {
+  .featImgFrame {
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -459,26 +493,6 @@
   margin: 8px 0; /* デスクトップで中央寄せにしたいなら margin: 8px auto; */
 }
 
-.imgFrame {
-  /* 枠が親幅を超えないように */
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-
-  /* お好みで枠の見た目（他のフレームと合わせたい場合は残す/調整） */
-  background: #fff;
-  border: 1px solid var(--grey-hr, #e6e6e6);
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: var(--shadow-soft, 0 10px 24px rgba(0, 0, 0, 0.06));
-
-  /* 中身がはみ出すのを防ぐ保険 */
-  overflow: hidden;
-
-  /* デスクトップで少しだけ狭く見せたい場合は中央寄せに */
-  margin: 8px 0; /* デスクトップで中央寄せにしたいなら margin: 8px auto; */
-}
-
 .imgFrame :is(img, picture, video, canvas, svg) {
   display: block;
   max-width: 100% !important;
@@ -610,4 +624,72 @@
       border-radius: 10px;
     }
   }
+}
+
+.appendSection {
+  max-width: 1200px;
+  margin: 8px auto 28px;
+  padding: 16px 20px 28px;
+  border-radius: 14px;
+}
+
+/* 柔らかい枠カード */
+.appendCard {
+  border: 1px solid var(--grey-hr, #e6e6e6);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 8px 0 12px;
+}
+
+/* 定義リスト（理由の行） */
+.dlList {
+  margin: 0;
+  padding: 0;
+}
+.dlRow {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+}
+.dlRow:first-child {
+  border-top: none;
+}
+.dlRow dt {
+  font-weight: 900;
+  color: #333;
+}
+.dlRow dd {
+  margin: 0;
+  color: #222;
+  line-height: 1.9;
+}
+
+/* FAQ（details/summary） */
+.faqWrap {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  margin: 8px 0 12px;
+}
+.acItem + .acItem {
+  border-top: 1px solid #eee;
+}
+.acSummary {
+  list-style: none;
+  cursor: pointer;
+  padding: 12px 14px;
+  font-weight: 800;
+  color: #333;
+}
+.acSummary::-webkit-details-marker {
+  display: none;
+}
+.acItem[open] .acSummary {
+  background: #fff7ec;
+}
+.acPanel {
+  padding: 0 14px 12px;
 }

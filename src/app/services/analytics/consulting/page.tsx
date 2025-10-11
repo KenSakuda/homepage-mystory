@@ -13,6 +13,7 @@ import {
   AnalysisTable,
   // FlowBlock,
   FooterNav,
+  AnalyticsOutsourceSection,
 } from "@/app/services/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
 
@@ -83,6 +84,28 @@ export default function Page() {
                     src: "/data_analytics_consulting_feature1.png",
                     alt: "統計・機械学習の技術基盤",
                   },
+                  // links: [
+                  //   {
+                  //     label: "MyStoryの“特徴量エンジニアリング”の特色はこちら",
+                  //     href: "/cases/anomaly",
+                  //   },
+                  //   {
+                  //     label: "MyStoryの“データ前処理”の特色はこちら",
+                  //     href: "/tech-stack",
+                  //   },
+                  //   {
+                  //     label: "MyStoryの“モデル作成”の特色はこちら",
+                  //     href: "/tech-stack",
+                  //   },
+                  //   {
+                  //     label: "MyStoryの“モデル精度評価”の特色はこちら",
+                  //     href: "/tech-stack",
+                  //   },
+                  //   {
+                  //     label: "MyStoryの“効果検証”の特色はこちら",
+                  //     href: "/tech-stack",
+                  //   },
+                  // ],
                 },
                 {
                   subtitle:
@@ -282,10 +305,10 @@ export default function Page() {
                 "弊社所属のデータサイエンティスト・データアナリスト・エンジニアが貴社に出向いて、分析作業の支援をします。業務範囲や役割、期間は目的や内容に応じて相談可能なので、貴社の分析人員リソース不足を解消することができます。",
               ]}
               subBlocks={[
-                { label: "分析設計支援", meta: "【期間】2〜3ヶ月（例）" },
+                { label: "分析設計支援", meta: "【期間】1〜3ヶ月（例）" },
                 {
                   label: "分析作業支援",
-                  meta: "【期間】要望に応じて決定（1ヶ月〜数年単位）",
+                  meta: "【期間】要望に応じて決定",
                 },
               ]}
               benefitsTitle="プロジェクト型支援サービス利用のメリット"
@@ -315,6 +338,8 @@ export default function Page() {
                 alt: "内製化のイメージ",
               }}
             />
+
+            <AnalyticsOutsourceSection />
 
             <div className={styles.contact}>
               <ButtonLink href="/contact">分析について相談する</ButtonLink>
