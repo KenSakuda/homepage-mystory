@@ -452,7 +452,7 @@ export function AnalyticsOutsourceSection() {
     >
       {/* タイトル＆リード */}
       <h2 id="outsource-append-title" className={styles.h3}>
-        データ分析の委託・外注をご検討中の方へ
+        データ分析の委託・外注を検討中の方へ
         <span className={styles.h3Underline} />
       </h2>
       <p className={styles.body}>
@@ -494,8 +494,7 @@ export function AnalyticsOutsourceSection() {
       {/* 費用カード */}
       <div className={styles.h4}>委託費用について</div>
       <p className={styles.body}>
-        データ分析 委託
-        費用は、①課題の複雑性、②データ量と前処理難度、③モデルの高度性、④成果物（集計表のみ/レポートあり／ダッシュボード化／API接続等）、⑤期間と体制によって変動します。
+        データ分析の委託費用は、①課題の複雑性、②データ量と前処理難度、③モデルの高度性、④成果物（集計表のみ/レポートあり／ダッシュボード化／API接続など）、⑤期間と体制によって変動します。
         弊社は、初回ヒアリングで
         <strong>
           目的・評価指標（KPI/KGI）と制約条件（データ・期間・体制）

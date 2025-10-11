@@ -43,49 +43,78 @@ export default async function Page({ params, searchParams }: Props) {
   const column = await getColumnDetail(resolvedParams.slug, {
     draftKey: resolvedSearchParams.draftKey,
   }).catch(notFound);
+
   return (
-    <div className={styles.container}>
-      <div className={styles.breadcrumb}>
+    <article className={styles.container}>
+      {/* パンくず */}
+      <nav className={styles.breadcrumb} aria-label="breadcrumb">
         <span>
           <Link href="/">TOPページ</Link>
-        </span>{" "}
-        &gt;{" "}
+        </span>
+        <span className={styles.sep}>›</span>
         <span>
           <Link href="/column">コラム</Link>
-        </span>{" "}
-        &gt;{" "}
-        {/* <span> <Link href={`/column/category/${column.category.id}`}>{column.category?.name}</Link></span> &gt;{" "} */}
-        <span className={styles.current}>{column.title}</span>
-      </div>
+        </span>
+        <span className={styles.sep}>›</span>
+        <span className={styles.current} aria-current="page">
+          {column.title}
+        </span>
+      </nav>
+
+      {/* メタ（カテゴリ／日付／キーワード） */}
       <div className={styles.meta}>
-        {column.category && <Category category={column.category} />}
-        <Date date={column.date} />
-        キーワード： {column.keyword}
+        <div className={styles.metaTop}>
+          <div className={styles.metaLeft}>
+            {column.category && <Category category={column.category} />}
+          </div>
+          <div className={styles.metaRight}>
+            <Date date={column.date} />
+          </div>
+        </div>
+        <div className={styles.keywords} aria-label="キーワード">
+          <span className={styles.kwLabel}>キーワード：</span>
+          <span className={styles.kwText}>{column.keyword}</span>
+        </div>
       </div>
+
+      {/* タイトル */}
       <h1 className={styles.title}>{column.title}</h1>
-      <Image
-        src={column.thumbnail.url}
-        alt={column.title}
-        width={700}
-        height={350}
-        className={styles.mainImage}
-      />
+
+      {/* メインイメージ */}
+      <figure className={styles.hero}>
+        <Image
+          src={column.thumbnail.url}
+          alt={column.title}
+          width={1200}
+          height={630}
+          className={styles.mainImage}
+          priority
+        />
+      </figure>
+
+      {/* 本文 */}
       <div
         className={styles.content}
         dangerouslySetInnerHTML={{ __html: column.content }}
       />
+
+      {/* CTA */}
       <div className={styles.buttonLink}>
         <ButtonLink href="/contact">お問い合わせフォーム</ButtonLink>
       </div>
-      <div className={styles.writer}>
-        <div className={styles.writerLabel}>執筆者</div>
-        <div className={styles.writerName}>{column.writerName}</div>
-        <div className={styles.writerDesc}>
+
+      {/* 著者情報 */}
+      <aside className={styles.writer}>
+        <div className={styles.writerHeader}>
+          <div className={styles.writerBadge}>Author</div>
+          <div className={styles.writerName}>{column.writerName}</div>
+        </div>
+        <p className={styles.writerDesc}>
           株式会社MyStory マーケティングチーム コミュニケーションG
           <br />
           MyStoryのコーポレートサイトや広報・PR関連のコンテンツの企画を担当
-        </div>
-      </div>
-    </div>
+        </p>
+      </aside>
+    </article>
   );
 }
