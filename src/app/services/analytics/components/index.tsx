@@ -132,8 +132,8 @@ export function FeatureHighlights({
                   <Image
                     src={it.image.src}
                     alt={it.image.alt}
-                    width={400}
-                    height={250}
+                    width={800}
+                    height={480}
                     className={styles.featImg}
                   />
                 </div>

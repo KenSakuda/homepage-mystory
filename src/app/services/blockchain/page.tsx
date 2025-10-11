@@ -1,13 +1,47 @@
 import styles from "./page.module.css";
-import ServicesHero from "../_components/Hero";
+// import Image from "next/image";
+import {
+  Hero,
+  MainWithSidebar,
+  SidebarNavCard,
+  LeadBlock,
+} from "@/app/services/analytics/components";
+import ButtonLink from "@/app/_components/ButtonLink";
 
 export default function Page() {
+  const sidebarLinks = [
+    {
+      href: "/services/blockchain",
+      label: "ブロックチェーン事業",
+    },
+  ];
   return (
-    <main className={styles.main}>
-      <ServicesHero
+    <main className={styles.page}>
+      <Hero
+        image={{ src: "/data_analytics_consulting_hero.png", alt: "hero" }}
         title="ブロックチェーン事業"
-        subtitle="MyStoryでは、これまで数多くのスマートコントラクトの受託開発を請け負ってきました。現在はブロックチェーン技術を活用したポイントサービス『＠Point』を開発中です。ポイント制度の導入には大きなコストがかかり、資金面に余裕のある大手企業以外では難しいことが多いです。初期コストをかけられない企業においても、ブロックチェーン技術を活用することでポイント制度の仕組みを構築可能です。プロダクトのローンチは2026年3月頃を予定しております。"
-        imageUrl="/services_analytics_hero.jpg"
+      />
+
+      <MainWithSidebar
+        main={
+          <>
+            <LeadBlock
+              title="長年のブロックチェーン開発経験をもとにプロダクト開発中"
+              body={[
+                "MyStoryでは、これまで数多くのスマートコントラクトの受託開発を請け負ってきました。現在はブロックチェーン技術を活用したポイントサービス『＠Point』を開発中です。",
+                "　",
+                "ポイント制度の導入には大きなコストがかかり、資金面に余裕のある大手企業以外では難しいことが多いです。初期コストをかけられない企業においても、ブロックチェーン技術を活用することでポイント制度の仕組みを構築可能です。プロダクトのローンチは2026年3月頃を予定しております。",
+              ]}
+            />
+
+            <div className={styles.contact}>
+              <ButtonLink href="/contact">お問い合わせフォーム</ButtonLink>
+            </div>
+          </>
+        }
+        sidebar={
+          <SidebarNavCard title="ブロックチェーン事業" items={sidebarLinks} />
+        }
       />
     </main>
   );
