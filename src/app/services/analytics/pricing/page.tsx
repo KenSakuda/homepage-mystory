@@ -59,11 +59,11 @@ export default function Page() {
         main={
           <>
             <LeadBlock
-              title="価格で売上/利益を最大化する。「データ分析」×「行動経済学」の実践的プライシングを実現"
+              title="価格戦略で売上/利益を最大化する。「データ分析」×「行動経済学」の実践的プライシングを実現"
               body={[
-                "『Price Decisioning』は、データ分析による需要曲線の推定と、行動経済学・消費者行動理論に基づく意思決定デザインを統合した価格戦略ソリューションです。価格はマーケティング4Pの中でも唯一“短期に自社で変えられ”、利益に最も大きく効く変数であり（例：10%値上げで数量が10%減でも利益は大きく増え得る）、戦略の中核です。", // 4Pでの重要性の趣旨（参照価格や価格の特殊性）→ file 141/142
+                "『Price Decisioning』は、データ分析による需要曲線の推定と、行動経済学に基づく意思決定デザインを統合した総合価格戦略ソリューションです。価格はマーケティング4Pの中でも唯一“短期に自社で変更”することができ、利益に最も大きく効く変数（例：10%値上げして売上数量が10%減でも利益は大きく増え得る）でもあるので、企業のマーケティング戦略の中核となります。",
                 "　",
-                "私たちは、顕示選好法（実売データ）／表明選好法（調査・コンジョイント）を使い分けて“いくらの時にいくつ売れるか”を精緻化し、価格差別・ダイナミックプライシング・バンドリング・値引き／ポイント付与の最適配分まで設計します。意思決定は、統計学・機械学習による推定と、参照価格・損失回避・フレーミング等の行動バイアス理解を組み合わせ、現場で運用できる形に落とし込みます。", // 需要曲線・顕示/表明・行動経済学→ file 140/141/142
+                "私たちは、実売データをもとにした顕示選好法と、コンジョイント分析などの調査結果をもとにした表明選好法を使い分けて、“いくらの時にいくつ売れるか”を精緻に推定し、要望に応じてセグメントごとの価格差別/ダイナミックプライシング/バンドル販売など応用的な価格分析まで行います。意思決定は、機械学習を用いた推定と、参照価格・損失回避・フレーミング等の消費者の認知・行動に関する知見を組み合わせ、現場で運用できる形に落とし込みます。",
               ]}
             />
 
@@ -155,7 +155,7 @@ export default function Page() {
               ])}
               subEyebrow="イメージ"
               subImage={{
-                src: "/data_analytics_consulting_outsourcing.png",
+                src: "/data_analytics_pricing_需要曲線の推定.png",
                 alt: "Demand Curve",
               }}
             />
@@ -175,7 +175,7 @@ export default function Page() {
               ])}
               subEyebrow="イメージ"
               subImage={{
-                src: "/data_analytics_consulting_feature2.png",
+                src: "/data_analytics_pricing_ダイナミックプライシング.png",
                 alt: "Dynamic Pricing",
               }}
             />
@@ -194,7 +194,7 @@ export default function Page() {
               ])}
               subEyebrow="イメージ"
               subImage={{
-                src: "/data_analytics_consulting_feature1.png",
+                src: "/data_analytics_pricing_バンドル販売.png",
                 alt: "Bundling & Discrimination",
               }}
             />
@@ -213,7 +213,7 @@ export default function Page() {
               ])}
               subEyebrow="イメージ"
               subImage={{
-                src: "/data_analytics_consulting_feature3.png",
+                src: "/data_analytics_pricing_行動経済学.png",
                 alt: "Behavioral Design",
               }}
             />
