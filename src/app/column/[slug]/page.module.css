@@ -421,11 +421,17 @@
     height: 34vw;
   }
   .content::after {
-    right: -30vw;
-    bottom: -6rem;
-    width: 60vw;
-    height: 30vw;
+    right: -40vw;
+    bottom: -14rem;
+    opacity: 0.45;
   }
+
+  .buttonLink {
+    position: relative;
+    z-index: 5;
+    isolation: isolate;
+  }
+
   .content h2:nth-of-type(2)::before {
     left: -32vw;
     top: -3rem;
