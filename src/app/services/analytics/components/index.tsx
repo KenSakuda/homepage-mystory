@@ -452,7 +452,7 @@ export function AnalyticsOutsourceSection() {
     >
       {/* タイトル＆リード */}
       <h2 id="outsource-append-title" className={styles.h3}>
-        データ分析の外部委託（委託・外注）をご検討中の方へ
+        データ分析の委託・外注をご検討中の方へ
         <span className={styles.h3Underline} />
       </h2>
       <p className={styles.body}>

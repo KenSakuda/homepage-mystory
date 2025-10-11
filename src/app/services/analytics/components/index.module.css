@@ -693,3 +693,23 @@
 .acPanel {
   padding: 0 14px 12px;
 }
+
+@media (max-width: 768px) {
+  .dlRow {
+    grid-template-columns: 32px 1fr; /* 見出しを細く、本文を広く */
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .dlRow dt {
+    writing-mode: vertical-rl; /* 縦書き */
+    text-orientation: mixed; /* 日本語縦組み */
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .dlRow dd {
+    writing-mode: horizontal-tb; /* 明示的に横書き */
+    line-height: 1.9;
+  }
+}
