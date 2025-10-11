@@ -110,16 +110,20 @@
   border: 1px solid var(--grey-hr, #e6e6e6);
   border-radius: 12px;
   box-shadow: var(--shadow-soft, 0 10px 24px rgba(0, 0, 0, 0.06));
-  overflow: hidden;
-  width: 100%;
 }
 
 .featImg {
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* 図表の文字つぶれを避けて均一枠に収める */
+  height: auto;
   display: block;
   border-radius: 8px;
+}
+
+--- .featImgFrame {
+  background: #fff;
+  border: 1px solid var(--grey-hr, #e6e6e6);
+  border-radius: 12px;
+  box-shadow: var(--shadow-soft, 0 10px 24px rgba(0, 0, 0, 0.06));
 }
 
 .featLinksRow {
