@@ -6,11 +6,11 @@ import {
   LeadBlock,
   ServiceImage,
   FeatureHighlights,
-  BubbleNavSection,
   SectionTitle,
   ServiceSection,
   AnalysisTable,
   FooterNav,
+  AnalyticsOutsourceSection,
 } from "@/app/services/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
 
@@ -49,65 +49,60 @@ export default function Page() {
     <main className={styles.page}>
       <Hero
         image={{
-          src: "/data_analytics_consulting_hero.png",
-          alt: "Price Decisioning",
+          src: "/data_analytics_pricing_hero.png",
+          alt: "『Price Decisioning』Hero",
         }}
-        title="Price Decisioning（価格分析ソリューション）"
+        title="価格分析ソリューション『Price Decisioning』"
       />
 
       <MainWithSidebar
         main={
           <>
-            {/* リード */}
             <LeadBlock
-              title="データ分析×プライシングで利潤最大化を実現。需要曲線に基づく価格戦略を“意思決定”まで伴走"
+              title="価格で売上/利益を最大化する。「データ分析」×「行動経済学」の実践的プライシングを実現"
               body={[
-                "Price Decisioning は、需要曲線と費用構造を統合した利潤最大化の原理に沿って、最適価格・割引・クーポン・バンドル販売・ダイナミックプライシングまでを科学する価格分析ソリューションです。統計モデリングと機械学習、行動経済学の知見を組み合わせ、BtoC/BtoB双方で「いくらで売ると利益が最大化するか」をデータで導きます。", // 需要曲線×利潤の考え方
-                "観測データ（顕示選好）と調査データ（表明選好）を使い分けて価格弾力性を推定し、セグメント別のWTP（支払意思額）や参照価格効果も考慮。時系列に応じたダイナミックプライシング、地域・顧客属性による価格差別、プランのバンドル最適化など、実務運用に耐える“価格の意思決定”へ落とし込みます。", // 顕示/表明・価格差別・ダイナミック
+                "Price Decisioning は、データ分析による需要曲線の推定と、行動経済学・消費者行動理論に基づく意思決定デザインを統合した価格戦略ソリューションです。価格はマーケティング4Pの中でも唯一“短期に自社で変えられ”、利益に最も大きく効く変数であり（例：10%値上げで数量が10%減でも利益は大きく増え得る）、戦略の中核です。", // 4Pでの重要性の趣旨（参照価格や価格の特殊性）→ file 141/142
+                "　",
+                "私たちは、顕示選好法（実売データ）／表明選好法（調査・コンジョイント）を使い分けて“いくらの時にいくつ売れるか”を精緻化し、価格差別・ダイナミックプライシング・バンドリング・値引き／ポイント付与の最適配分まで設計します。意思決定は、統計学・機械学習による推定と、参照価格・損失回避・フレーミング等の行動バイアス理解を組み合わせ、現場で運用できる形に落とし込みます。", // 需要曲線・顕示/表明・行動経済学→ file 140/141/142
               ]}
             />
 
-            {/* 能力マップ（画像は差替え前提） */}
-            <ServiceImage
-              src="/data_analytics_consulting_mystory_capability.png"
-              alt="Price Decisioning Capability Map"
-            />
-
-            {/* 特徴 */}
-            <a id="sec-feature" />
+            {/* 特徴（4本） */}
+            <a id="feature" />
             <FeatureHighlights
               title="Price Decisioning の特徴"
               items={[
                 {
-                  subtitle: "需要曲線×費用曲線で“利益”を最大化",
-                  lead: "価格変更が需要・売上・利益に与える影響を、需要曲線と費用曲線から一貫モデリング。最適価格の探索だけでなく、価格改定による利益の変化、在庫・生産制約下での現実的な打ち手まで提示します（ダイナミックプライシング/セグメント別価格にも対応）。",
+                  subtitle: "需要曲線の推定と“利益最大化”に直結する価格設計",
+                  lead: "価格×数量の関係（需要曲線）を、顕示選好法ではPOS/在庫/販促・競合・季節要因を織り込んだ回帰・時系列・状態空間・機械学習で推定。表明選好法ではコンジョイントで支払意思額（WTP）を金額ベースで測定し、属性ごとの金銭換算効用も算出します。推定した需要曲線とコスト制約から利潤関数を構築し、最適価格・価格帯を特定します。", // 需要曲線・WTP・最適価格→ file 140/141
                   image: {
-                    src: "/data_analytics_consulting_feature1.png",
-                    alt: "需要曲線・費用曲線",
+                    src: "/data_analytics_pricing_feature1.png",
+                    alt: "Demand & Profit",
                   },
                 },
                 {
-                  subtitle: "機械学習×統計を組み合わせた価格弾力性推定",
-                  lead: "回帰・一般化線形モデル、状態空間・時系列モデル、ツリー系/ブースティングなどの機械学習を適材適所で適用。顕示選好データと表明選好データを使い分け、既存品から新製品までの価格感応度を高精度に推定します（クロス価格弾力/カニバリも考慮）。",
+                  subtitle:
+                    "ダイナミックプライシング／価格差別・バンドリングまで拡張",
+                  lead: "容量制約・予約制・日次変動が大きい等の条件ではダイナミックプライシングが有効です。学割・地域・時間帯などの第3種価格差別、クーポンの“誰にどの深さで配布すべきか”の個別値引き設計、バンドル販売（固定＋従量、数量割引、プラン設計）まで、事業特性に合わせて運用可能なルールへ落とします。", // DPの適用条件/注意、第3種価格差別、個別値引き→ file 140/141/142
                   image: {
-                    src: "/data_analytics_consulting_feature2.png",
-                    alt: "機械学習・統計",
+                    src: "/data_analytics_pricing_feature2.png",
+                    alt: "Dynamic & Discrimination",
                   },
                 },
                 {
-                  subtitle: "行動経済学に基づく“受け入れられる値付け”",
-                  lead: "参照価格・損失回避・フレーミング等の行動経済学的効果を考慮し、顧客が受け入れやすい価格提示や販促（値引/ポイント/クーポン）設計をガイド。単発の最適価格に留まらず、長期的に価格資産を毀損しない運用を支援します。",
+                  subtitle: "行動経済学で“受容される価格”をデザイン",
+                  lead: "参照価格・損失回避・極端回避・おとり効果・フレーミング・アンカリング等の知見を踏まえ、価格と提示の仕方を最適化。値引きとポイント付与の選択、表示順序や比較群の設計など、“合理性×受容性”を両立させる価格コミュニケーションを設計します。", // 参照価格/ポイントの効果、提示設計→ file 142
                   image: {
-                    src: "/data_analytics_consulting_feature3.png",
-                    alt: "行動経済学",
+                    src: "/data_analytics_pricing_feature3.png",
+                    alt: "Behavioral Pricing",
                   },
                 },
                 {
-                  subtitle: "価格戦略の実装まで伴走（PoC→業務運用）",
-                  lead: "データ整備、モデル実装、意思決定ルールとダッシュボード化、ABテスト/効果検証、ガバナンス整備まで一気通貫で支援。運用テンプレートと内製化トレーニングもセットで、価格戦略の“継続運用”を可能にします。",
+                  subtitle: "運用・ダッシュボード・内製化まで一気通貫",
+                  lead: "需要予測や弾力性の更新、価格テーブル配信、A/Bテスト／因果推論による効果検証までの仕組み化を支援。KPI・監視指標・例外処理を整備し、ダッシュボード・運用ガイド・コードを提供。現場で再現できる形で内製化まで伴走します。", // 運用と効果検証
                   image: {
-                    src: "/data_analytics_consulting_feature4.png",
-                    alt: "実装伴走",
+                    src: "/analytics_solution_2.アップリフトモデリング.png",
+                    alt: "Ops & Enablement",
                   },
                 },
               ]}
@@ -117,125 +112,129 @@ export default function Page() {
               <ButtonLink href="/contact">分析について相談する</ButtonLink>
             </div>
 
-            {/* ナビ（ページ内ジャンプ） */}
-            <a id="sec-service" />
-            <BubbleNavSection
-              title="提供メニュー"
-              lead="クリックで該当セクションへ移動"
-              items={[
-                { label: "需要曲線\n推定", href: "#sec-demand" },
-                { label: "ダイナミック\nプライシング", href: "#sec-dp" },
-                { label: "バンドル／\nプラン最適化", href: "#sec-bundle" },
-                { label: "販促・割引・\nクーポン最適化", href: "#sec-promo" },
-              ]}
+            <SectionTitle title="プライシング（価格戦略）の代表的な分析テーマ" />
+            <ServiceImage
+              src="/data_analytics_pricing_application_method.png"
+              alt="プライシング応用手法"
             />
-
-            {/* ===== 各サービス ===== */}
-            <a id="sec-demand" />
-            <SectionTitle title="需要曲線推定（価格弾力性の推定）" />
-            <ServiceSection
-              problemsTitle="こんな課題はありませんか？"
-              problems={bullets([
-                "・価格を上げたいが、売上・利益への影響が読めない",
-                "・カテゴリ/商品/セグメント別に価格感応度を把握したい",
-                "・新製品で実績データが乏しく、価格の起点が決められない",
-              ])}
-              overviewTitle="ご支援のイメージ"
-              overview={[
-                "POS・受注などの顕示選好データと、調査ベースの表明選好データを使い分けて、価格弾力性とWTPを推定。クロス価格弾力やカニバリ、在庫・生産制約も組み込んだうえで、利益最大化の最適価格帯を提示します。", // 需要×費用×最適化
-                "既存品は顕示選好（回帰・GLM・状態空間モデル・機械学習）、新製品は表明選好（PSM/コンジョイント/離散選択実験）を活用し、現実的な精度と解釈性のバランスを確保します。",
-              ]}
-            />
-
-            <a id="sec-dp" />
-            <SectionTitle title="ダイナミックプライシング設計" />
-            <ServiceSection
-              problemsTitle="こんな課題はありませんか？"
-              problems={bullets([
-                "・需要の波に合わせて価格を動かしたい（在庫/座席/期間）",
-                "・価格変動に対する顧客の納得感や公平感が懸念",
-              ])}
-              overviewTitle="ご支援のイメージ"
-              overview={[
-                "需要の時間変動とキャパ制約を踏まえ、販売時期別に価格を最適化。変動幅や表示の設計、コミュニケーションの工夫により、“受け入れられるダイナミックプライシング”を実装します。",
-              ]}
-            />
-
-            <a id="sec-bundle" />
-            <SectionTitle title="バンドル販売／プラン・価格表の最適化" />
-            <ServiceSection
-              problemsTitle="こんな課題はありませんか？"
-              problems={bullets([
-                "・単品販売とバンドル販売のどちらが利益最大か分からない",
-                "・“おとり効果”やラインナップの並べ方を理論的に最適化したい",
-              ])}
-              overviewTitle="ご支援のイメージ"
-              overview={[
-                "相補・代替関係やWTP分布を踏まえ、プラン数・価格差・機能束ねを最適化。行動経済学のフレーミングや極端回避への配慮も取り込み、選ばれやすく利益を最大化する“価格表”を共創します。",
-              ]}
-            />
-
-            <a id="sec-promo" />
-            <SectionTitle title="販促・割引・クーポン最適化（価格とポイントの使い分け）" />
-            <ServiceSection
-              problemsTitle="こんな課題はありませんか？"
-              problems={bullets([
-                "・一律値引きの採算が合わない／ROIが読めない",
-                "・ポイントと値引き、どちらが効くのか判断できない",
-              ])}
-              overviewTitle="ご支援のイメージ"
-              overview={[
-                "価格弾力性とプロモ弾力性を併せて推定し、誰に・いつ・どの深さでクーポン/ポイント/ディスカウントを出すとROIが最大かを設計。参照価格を毀損しない運用ルールまで定義します。",
-              ]}
-            />
-
-            {/* 方法論テーブル（SEOも意識） */}
-            <SectionTitle title="主な分析メニュー（例）" />
             <AnalysisTable
-              header={["分析メニュー", "分析内容概要"]}
+              header={["テーマ", "概要"]}
               rows={[
                 [
-                  "需要曲線の推定／価格弾力性",
-                  "価格×数量（顕示/表明）から弾力性・WTPを推定し、費用曲線と統合して利潤最大化価格を算出。ダイナミックプライシングやセグメント別価格の基盤に。",
+                  "需要曲線の推定",
+                  "顕示選好（実売データ）／表明選好（コンジョイント）で価格×数量の関係を特定し、最適価格と利益を最大化。",
                 ],
                 [
                   "ダイナミックプライシング",
-                  "キャパ制約・時期要因・外部需要ドライバを加味し、販売期間別の最適価格を最適化。受容可能な変動幅・表示やルールまで設計。",
+                  "容量制約・需要変動に応じて価格を動的に最適化。上限下限・変動幅・告知方法までルール化。",
                 ],
                 [
-                  "バンドル最適化／ラインナップ設計",
-                  "プラン数・機能束ね・価格階段を同時最適化。おとり効果・極端回避に配慮した“選ばれる価格表”を設計。",
+                  "バンドル販売・価格差別",
+                  "第二種／第三種価格差別、固定＋従量、数量割引、個別値引きの配布最適化で収益性を高める。",
                 ],
                 [
-                  "プロモーション最適化",
-                  "値引・ポイント・クーポンの弾力性と参照価格影響を比較し、個客×タイミングのきめ細かな配布でROI最大化。",
+                  "値引き／ポイント付与",
+                  "即時効果と参照価格の長期影響を踏まえて使い分け。損失回避・フレーミングに配慮した表現設計。",
                 ],
               ]}
             />
 
-            <div className={styles.contact}>
-              <ButtonLink href="/contact">分析について相談する</ButtonLink>
-            </div>
+            {/* ===== 各モジュール ===== */}
+            <a id="demand" />
+            <SectionTitle title="需要曲線の推定（顕示選好法／表明選好法）" />
+            <ServiceSection
+              overviewTitle="ご支援のイメージ"
+              overview={[
+                "顕示選好法：実売データ（価格・数量・販促・競合・季節）から価格弾力性を推定し、SKU〜カテゴリ単位で需要曲線を構築。状態空間モデルや機械学習も適用し、非線形・非定常性に対応します。",
+                "表明選好法：コンジョイントでWTPと属性別効用を金額換算し、新製品やデータ不足時でも価格帯を設計。推定された需要曲線とコストから利潤最大となる最適価格を導出します。",
+              ]}
+              benefitsTitle="アウトプット"
+              benefits={bullets([
+                "最適価格／価格帯、弾力性、利益曲線・感度分析",
+                "価格改定シナリオ（上げ／下げ）別の数量・利益シミュレーション",
+              ])}
+              subEyebrow="イメージ"
+              subImage={{
+                src: "/data_analytics_consulting_outsourcing.png",
+                alt: "Demand Curve",
+              }}
+            />
+
+            <a id="dp" />
+            <SectionTitle title="ダイナミックプライシング" />
+            <ServiceSection
+              overviewTitle="ご支援のイメージ"
+              overview={[
+                "容量制約・予約制・需要の時系列変動が大きい等の条件で、価格変動ルールを設計。需要の平準化・売り切り最適化を目的に、上限下限・変動間隔・告知方法を含む運用ガイドを整備します。",
+                "注意点（過度変動による反発、受容域からの乖離、不公平感の回避）も併せて対策を実装します。",
+              ]}
+              benefitsTitle="アウトプット"
+              benefits={bullets([
+                "価格変動ルール・制御パラメータ・アラート指標",
+                "A/Bテスト設計と因果推論による効果検証テンプレート",
+              ])}
+              subEyebrow="イメージ"
+              subImage={{
+                src: "/data_analytics_consulting_feature2.png",
+                alt: "Dynamic Pricing",
+              }}
+            />
+
+            <a id="bundling" />
+            <SectionTitle title="バンドル販売／価格差別（学割・地域・時間帯・個別値引き）" />
+            <ServiceSection
+              overviewTitle="ご支援のイメージ"
+              overview={[
+                "第二種（数量・二部料金）、第三種（セグメント別）を中心に、収益最大化と公平感の両立を目指したルール設計を実施。クーポンは“誰にどの深さ”で配布するかを学習し、ROIを最大化します。",
+              ]}
+              benefitsTitle="アウトプット"
+              benefits={bullets([
+                "セグメント別価格・クーポン深さの配布ポリシー",
+                "プラン／バンドルの最適構成（固定＋従量・機能差プラン）",
+              ])}
+              subEyebrow="イメージ"
+              subImage={{
+                src: "/data_analytics_consulting_feature1.png",
+                alt: "Bundling & Discrimination",
+              }}
+            />
+
+            <a id="behavior" />
+            <SectionTitle title="行動経済学に基づく価格コミュニケーション" />
+            <ServiceSection
+              overviewTitle="ご支援のイメージ"
+              overview={[
+                "参照点価格・損失回避・フレーミング・おとり効果・極端回避・アンカリング等の理論を設計に反映。表示順序や比較群、値引き／ポイント付与の使い分け、B2Bの見積・交渉現場における参照価格対策など、受容される提示をデザインします。",
+              ]}
+              benefitsTitle="アウトプット"
+              benefits={bullets([
+                "価格表現ガイドライン（表示順序・比較群・文言例）",
+                "値引きとポイント付与の適用基準（即時／継続の効果差を考慮）",
+              ])}
+              subEyebrow="イメージ"
+              subImage={{
+                src: "/data_analytics_consulting_feature3.png",
+                alt: "Behavioral Design",
+              }}
+            />
+
+            <AnalyticsOutsourceSection />
           </>
         }
         sidebar={
-          <SidebarNavCard
-            title="価格分析ソリューション（Price Decisioning）"
-            items={sidebarLinks}
-          />
+          <SidebarNavCard title="Price Decisioning" items={sidebarLinks} />
         }
       />
 
-      {/* フッターの目次 */}
+      <a id="contact" />
       <FooterNav
-        blockTitle="価格分析ソリューション（Price Decisioning）"
+        blockTitle="Price Decisioning｜価格戦略"
         links={[
-          { href: "#sec-feature", label: "特徴" },
-          { href: "#sec-service", label: "提供メニュー" },
-          { href: "#sec-demand", label: "需要曲線推定" },
-          { href: "#sec-dp", label: "ダイナミックプライシング" },
-          { href: "#sec-bundle", label: "バンドル／プラン最適化" },
-          { href: "#sec-promo", label: "販促・割引最適化" },
+          { href: "#feature", label: "特徴" },
+          { href: "#demand", label: "需要曲線推定" },
+          { href: "#dp", label: "ダイナミックプライシング" },
+          { href: "#bundling", label: "バンドリング・価格差別" },
+          { href: "#behavior", label: "行動経済学×価格" },
         ]}
       />
     </main>
