@@ -628,7 +628,7 @@
 
 .appendSection {
   max-width: 1200px;
-  margin: 8px auto 28px;
+  margin: 0 auto;
   padding: 16px 20px 28px;
   border-radius: 14px;
 }
