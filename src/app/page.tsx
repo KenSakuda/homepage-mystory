@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import AutoPlayVideo from "@/app/_components/AutoPlayVideo";
 import { getNewsList, getColumnList } from "@/app/_libs/microcms";
 import { TOP_NEWS_LIMIT } from "@/app/_constants";
 import NewsList from "@/app/_components/NewsList";
@@ -15,28 +16,33 @@ export default async function Page() {
   return (
     <>
       <section className={styles.hero}>
-        <video
+        <AutoPlayVideo
           className={styles.bgVideo}
-          src="/hero.gif"
-          poster="/hero.gif"
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
+          poster="/hero.gif"
+          crossOrigin="anonymous"
+          sources={[
+            { src: "/hero.webm", type: "video/webm" },
+            { src: "/hero.mp4", type: "video/mp4" },
+          ]}
         />
         <div className={styles.heroOverlay} />
 
         <div className={styles.heroInner}>
           <h1 className={styles.heroTitle}>
             <span className={styles.kicker}>
-              先端技術と経済学で、意思決定をもっと強く・スマートに
+              先端技術と経済学で、意思決定をもっとスマートに
             </span>
             <span className={styles.headline}>
               データに基づいた
               <em> 意思決定を支援</em>
             </span>
             <span className={styles.subcopy}>
-              データ分析や経済学のビジネス活用のご相談ならMyStory
+              データ分析や経済学のビジネス活用の相談ならMyStory
             </span>
           </h1>
 
