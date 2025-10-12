@@ -25,10 +25,7 @@ export default async function Page() {
           preload="auto"
           poster="/hero.gif"
           crossOrigin="anonymous"
-          sources={[
-            { src: "/hero.webm", type: "video/webm" },
-            { src: "/hero.mp4", type: "video/mp4" },
-          ]}
+          sources={[{ src: "/hero.gif", type: "video/gif" }]}
         />
         <div className={styles.heroOverlay} />
 
