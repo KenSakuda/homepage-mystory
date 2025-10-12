@@ -215,16 +215,19 @@ export default async function Page() {
           </div>
         </div>
       </section>
-      <section className={styles.news}>
-        <div className={styles.newsTitle}>
+
+      <section className={`${styles.news} ${styles.showcase}`}>
+        <div className={styles.showcaseHeader}>
           <h2>Column</h2>
           <p>
             データ分析や経済学に関するコラムや、統計の用語解説などをまとめています
           </p>
         </div>
-        <div className={styles.columnGrid}>
+
+        <div className={styles.showcaseTrack}>
           <ColumnCards columns={columns.contents} />
         </div>
+
         <div className={styles.newsLink}>
           <ButtonLink href="/column">コラム一覧へ</ButtonLink>
         </div>
