@@ -119,7 +119,7 @@
   border-radius: 8px;
 }
 
---- .featImgFrame {
+.featImgFrame {
   background: #fff;
   border: 1px solid var(--grey-hr, #e6e6e6);
   border-radius: 12px;

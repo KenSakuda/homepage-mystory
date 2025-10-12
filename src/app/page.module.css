@@ -30,10 +30,14 @@
   line-height: 1.4;
 }
 .small {
-  font-size: 1.4rem;
+  font-size: 20px;
+  line-height: 1.95;
 }
 .orenge {
   color: #ff9000;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.45;
 }
 .mainText p {
   font-size: 1.05rem;
@@ -264,5 +268,11 @@
   }
   .categoryImage {
     height: auto;
+  }
+  .small {
+    font-size: 17px;
+  }
+  .orenge {
+    font-size: 20px;
   }
 }
