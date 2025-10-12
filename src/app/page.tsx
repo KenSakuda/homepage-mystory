@@ -10,67 +10,62 @@ import ContactSection from "./_components/ContactSection";
 
 export default async function Page() {
   const news = await getNewsList({ limit: TOP_NEWS_LIMIT });
-  const columns = await getColumnList({ limit: TOP_NEWS_LIMIT });
+  const columns = await getColumnList({ limit: 100 });
 
   return (
     <>
-      <section className={styles.mainVisual}>
-        <div className={styles.mainTextWrapper}>
-          <div className={styles.mainText}>
-            <h2>
-              <span className={styles.small}>
-                先端技術の力で世の中を「ちょっと楽しく」＆「ちょっと便利に」
-              </span>
-              <br />
-              <span className={styles.orenge}>
-                データに基づいた意思決定を支援
-              </span>
-            </h2>
-            <p>
+      <section className={styles.hero}>
+        <video
+          className={styles.bgVideo}
+          src="/hero.gif"
+          poster="/hero.gif"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+        <div className={styles.heroOverlay} />
+
+        <div className={styles.heroInner}>
+          <h1 className={styles.heroTitle}>
+            <span className={styles.kicker}>
+              先端技術と経済学で、意思決定をもっと強く・スマートに
+            </span>
+            <span className={styles.headline}>
+              データに基づいた
+              <em> 意思決定を支援</em>
+            </span>
+            <span className={styles.subcopy}>
               データ分析や経済学のビジネス活用のご相談ならMyStory
-              <br className={styles.sp} />
-              マーケティング、ピープルアナリティクス、スポーツアナリティクスなど幅広い領域に対応可能
-            </p>
-          </div>
-          <div className={styles.buttonArea}>
-            <Link href="/contact" className={styles.button}>
-              <Image
-                src="/icon_mail.svg"
-                alt="estimate"
-                width={35}
-                height={35}
-              />
-              <div>
+            </span>
+          </h1>
+
+          {/* 2CTA（フォーム＆DeepSports） */}
+          <div className={styles.ctaRow}>
+            <Link
+              href="/contact"
+              className={`${styles.cta} ${styles.ctaPrimary}`}
+            >
+              <Image src="/icon_mail.svg" alt="" width={28} height={28} />
+              <span>
                 詳しく話を聞きたい
-                <br />
                 <strong>ご相談はこちら</strong>
-              </div>
+              </span>
             </Link>
             <Link
               href="https://deepsports.b-mystory.com/"
-              className={`${styles.button} ${styles.consult}`}
+              className={`${styles.cta} ${styles.ctaGhost}`}
             >
-              <Image
-                src="/icon_sports.svg"
-                alt="consult"
-                width={35}
-                height={35}
-              />
-              <div>
-                <strong>『Deep Sports』ニュースサイトへ</strong>
-              </div>
+              <Image src="/icon_sports.svg" alt="" width={28} height={28} />
+              <span>
+                『Deep Sports』
+                <strong>ニュースサイトへ</strong>
+              </span>
             </Link>
           </div>
         </div>
-        <Image
-          className={styles.bgimg}
-          src="/hero.png"
-          alt="Hero Background"
-          width={4000}
-          height={1200}
-          priority
-        />
       </section>
+
       <section className={styles.service}>
         <div className={styles.inner}>
           <h2 className={styles.sectionTitle}>

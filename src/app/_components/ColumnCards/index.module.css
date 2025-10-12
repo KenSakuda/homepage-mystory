@@ -1,5 +1,21 @@
-.cards {
+/* .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 32px;
+} */
+
+.cards {
+  /* Showcase風：横スライダー。マウスホイールでも横に流せます */
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: clamp(260px, 32vw, 360px);
+  gap: 18px;
+  overflow-x: auto;
+  padding: 6px 12px 14px;
+  margin: 0 -12px; /* 端まで広げる */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.cards > li {
+  scroll-snap-align: start;
 }

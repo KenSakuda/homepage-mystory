@@ -46,3 +46,12 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 32px;
 }
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 20px;
+  }
+  .description {
+    font-size: 15px;
+  }
+}

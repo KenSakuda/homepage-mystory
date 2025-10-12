@@ -17,19 +17,16 @@
   --color-button-primary: #ff8c00;
   --border-radius: 10px;
 }
-
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
 }
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic,
     "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo,
@@ -37,16 +34,13 @@ body {
   color: var(--color-text-main);
   line-height: 1.8;
 }
-
 code {
   font-family: menlo, inconsolata, monospace;
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
 ol,
 ul {
   list-style: none;

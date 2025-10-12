@@ -6,7 +6,7 @@ import Footer from "./_components/Footer";
 import SidebarButton from "@/app/_components/SidebarButton";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https:/www.b-mystory.com"),
+  metadataBase: new URL("https://www.b-mystory.com"),
   title: {
     template: "%s | データ分析・経済学のビジネス活用の相談ならMyStory",
     default: "データ分析・経済学のビジネス活用の相談ならMyStory",
