@@ -24,16 +24,22 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="ja">
-      <head>…</head>
+      {" "}
+      <head>
+        {" "}
+        <meta
+          name="google-site-verification"
+          content="nTKt9Ds83hQ8GyrbKfRYlKHNTrBWzWUbMmDlGUyN4ZU"
+        />{" "}
+      </head>{" "}
       <body>
+        {" "}
         <Header />
         {children}
-        <Footer />
+        <Footer />{" "}
         <SidebarButton
           buttons={[
             {
@@ -47,9 +53,9 @@ export default function RootLayout({
               iconSrc: "/icon_sports.svg",
             },
           ]}
-        />
-      </body>
-      <GoogleAnalytics gaId="G-65REWJ3LZB" />
+        />{" "}
+      </body>{" "}
+      <GoogleAnalytics gaId="G-65REWJ3LZB" />{" "}
     </html>
   );
 }
