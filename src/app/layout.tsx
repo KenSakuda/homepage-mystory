@@ -32,7 +32,7 @@ export default function RootLayout({
       <head>…</head>
       <body>
         <Header />
-        <main>{children}</main>
+        {children}
         <Footer />
         <SidebarButton
           buttons={[
