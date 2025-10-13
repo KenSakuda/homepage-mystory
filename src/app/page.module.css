@@ -232,12 +232,12 @@
   justify-content: center;
 }
 .categoryLinks {
-  padding: 80px 20px;
+  padding: 60px 15px;
 }
 .categoryGrid {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 .categoryLargeCard {
   position: relative;
@@ -247,7 +247,7 @@
 }
 .categorySmallCards {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -317,6 +317,9 @@
 @media (max-width: 768px) {
   .buttonArea {
     flex-direction: column;
+  }
+  .categoryLinks {
+    padding: 5px 10px;
   }
   .categorySmallCard {
     width: 100%;

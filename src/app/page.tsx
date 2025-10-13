@@ -159,6 +159,7 @@ export default async function Page() {
           <ButtonLink href="/news">お知らせ一覧</ButtonLink>
         </div>
       </section>
+
       <section className={styles.categoryLinks}>
         <div className={styles.inner}>
           <div className={styles.categoryGrid}>

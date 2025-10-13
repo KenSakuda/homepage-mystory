@@ -71,7 +71,7 @@
   padding: 1rem;
   border: 1px solid #ccc;
   z-index: 1000;
-  min-width: 200px;
+  min-width: 400px;
 }
 .dropdownMenu ul {
   list-style: none;
@@ -87,7 +87,7 @@
 }
 /* --- 広いドロップダウン --- */
 .wideDropdown {
-  width: 1000px;
+  width: 1200px;
   left: 50%;
   transform: translateX(-30%);
 }
