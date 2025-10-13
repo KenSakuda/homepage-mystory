@@ -1,7 +1,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 20px 10px;
 }
 .hero {
   position: relative;
@@ -9,7 +9,7 @@
   background-image: url("/feature_casestudies.jpg");
   background-size: cover;
   background-position: center;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -83,7 +83,7 @@
 }
 /* 活用事例テーブル */
 .caseSection {
-  padding: 60px 20px;
+  padding: 20px 10px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -91,7 +91,7 @@
   font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .caseHeading span {
   font-size: 1rem;
@@ -137,6 +137,15 @@
 }
 /* レスポンシブ */
 @media (max-width: 768px) {
+  .heading {
+    font-size: 20px;
+  }
+  .caseHeading {
+    font-size: 17px;
+  }
+  .description {
+    font-size: 15px;
+  }
   .cards {
     flex-direction: column;
     align-items: center;
