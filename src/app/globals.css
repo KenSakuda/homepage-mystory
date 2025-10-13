@@ -16,6 +16,7 @@
   --color-current: #eee;
   --color-button-primary: #ff8c00;
   --border-radius: 10px;
+  --floating-bar-h: 88px;
 }
 * {
   box-sizing: border-box;
@@ -44,4 +45,18 @@ a {
 ol,
 ul {
   list-style: none;
+}
+
+@media (max-width: 768px) {
+  .siteMain {
+    padding-bottom: calc(
+      var(--floating-bar-h) + 8px + env(safe-area-inset-bottom, 0px)
+    );
+  }
+  footer {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .siteMain > section:last-child {
+    margin-bottom: 12px;
+  }
 }

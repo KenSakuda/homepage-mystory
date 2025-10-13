@@ -208,14 +208,14 @@
 }
 .news {
   background: #f8f8f8;
-  padding: 80px 20px;
+  padding: 20px 20px;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
 .newsTitle {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .newsTitle h2 {
   font-size: 2.5rem;
@@ -232,7 +232,7 @@
   justify-content: center;
 }
 .categoryLinks {
-  padding: 60px 15px;
+  padding: 40px 15px;
 }
 .categoryGrid {
   display: flex;
@@ -401,5 +401,71 @@
   }
   .newsLink {
     margin-top: 16px; /* ボタンとの距離も詰める */
+  }
+}
+
+@media (max-width: 680px) {
+  /* セクションの左右余白を縮小 */
+  .categoryLinks {
+    padding: 32px 0;
+  }
+  .categoryLinks .inner {
+    padding: 0 12px;
+  }
+
+  /* 40pxのギャップを詰める */
+  .categoryGrid {
+    gap: 16px;
+  }
+
+  /* 中の3カードを“中央寄せflex”→“1列grid”にしてフル幅化 */
+  .categorySmallCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    justify-content: stretch; /* 念のためフル幅 */
+  }
+
+  /* カードは角大きめ・フル幅 */
+  .categoryLargeCard,
+  .categorySmallCard {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  /* 画像の比率・高さをスマホ向けに */
+  .categoryImage {
+    width: 100%;
+    height: clamp(180px, 56vw, 280px); /* 端末幅に応じて可変 */
+    object-fit: cover;
+  }
+
+  /* オーバーレイの濃さと位置を“左下寄せ”に変更（読みやすい） */
+  .categoryLargeCard::before,
+  .categorySmallCard::before {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.15) 20%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+  }
+  .categoryText {
+    left: 16px;
+    right: 16px;
+    bottom: 14px;
+    top: auto;
+    transform: none; /* 中央配置→左下固定 */
+    text-align: left;
+  }
+  .categoryText h3 {
+    font-size: clamp(18px, 7vw, 26px);
+    line-height: 1.2;
+    margin-bottom: 6px;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+  .categoryText p {
+    font-size: clamp(12px, 3.6vw, 14px);
+    opacity: 0.95;
   }
 }

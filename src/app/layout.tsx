@@ -24,20 +24,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="ja">
-      <head>
-        <meta
-          name="google-site-verification"
-          content="nTKt9Ds83hQ8GyrbKfRYlKHNTrBWzWUbMmDlGUyN4ZU"
-        />
-      </head>
+      <head>…</head>
       <body>
         <Header />
-        {children}
+        <main className="siteMain">{children}</main>
         <Footer />
         <SidebarButton
           buttons={[

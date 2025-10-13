@@ -15,7 +15,7 @@ import ContactSection from "./_components/ContactSection";
 
 export default async function Page() {
   const news = await getNewsList({ limit: TOP_NEWS_LIMIT });
-  const columns = await getColumnList({ limit: 100 });
+  const columns = await getColumnList({ limit: TOP_NEWS_LIMIT });
 
   const cards: ServiceCard[] = [
     {
@@ -130,7 +130,7 @@ export default async function Page() {
       <ServiceSectionVisual
         eyebrow="ヘルスケア事業"
         title="データ×行動科学で健康行動を後押しするヘルスケア関連アプリ『StoryFit』を開発中"
-        description="栄養・運動・睡眠・ストレス状況をアプリで可視化し、一人ひとりの性格特性や生活データに合わせたナッジで行動変容を支援するアプリ『StoryFit』を開発中です。理学療法士・栄養士など“健康の専門家”とも連携し、対面での健康増進コンサルティングサービスや個別レポートも提供する予定で、個人の健康改善から法人・自治体の健康経営の支援も可能なアプリです。（2026年3月ローンチ予定）"
+        description="栄養・運動・睡眠・ストレス状況をアプリで可視化し、一人ひとりの性格特性や生活データに合わせたナッジで行動変容を支援するアプリ『StoryFit』を開発中です。理学療法士・栄養士など“健康の専門家”とも連携し、対面での健康増進コンサルティングサービスや個別レポートも提供する予定で、個人の健康改善から法人・自治体の健康経営の支援も可能なアプリです。"
         image={{
           src: "/storyfit_top.png",
           alt: "StoryFir画面",
@@ -141,7 +141,7 @@ export default async function Page() {
       <ServiceSectionVisual
         eyebrow="ブロックチェーン事業"
         title="Web3・NFT活用で価値創出するブロックチェーン事業"
-        description="これまで培ってきたブロックチェーン開発の知見をもとに、ブロックチェーン型ポイントサービス『＠Point』を開発中です。"
+        description="これまで培ってきたブロックチェーン開発の知見をもとに、ブロックチェーン型ポイントサービス『＠Point』を開発中です。（2026年6月ローンチ予定）"
         image={{
           src: "/services_analytics_hero.jpg",
           alt: "NoImage",
