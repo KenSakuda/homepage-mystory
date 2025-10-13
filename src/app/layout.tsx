@@ -32,7 +32,7 @@ export default function RootLayout({
       <head>…</head>
       <body>
         <Header />
-        <main className="siteMain">{children}</main>
+        <main>{children}</main>
         <Footer />
         <SidebarButton
           buttons={[
