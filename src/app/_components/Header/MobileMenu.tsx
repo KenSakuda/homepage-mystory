@@ -25,18 +25,50 @@ export default function MobileMenu({ setOpen }: Props) {
             <ul>
               <li>
                 <Link
-                  href="/services/analytics/tools"
+                  href="/services/analytics/consulting"
                   onClick={() => setOpen(false)}
                 >
-                  データ分析ツールの開発・販売
+                  受託分析・データ利活用支援
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/analytics/consulting"
+                  href="/services/analytics/tools"
                   onClick={() => setOpen(false)}
                 >
-                  データ分析コンサルティング
+                  データ分析ツールの提供
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/analytics/research"
+                  onClick={() => setOpen(false)}
+                >
+                  リサーチアドバイザー
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/analytics/pricing"
+                  onClick={() => setOpen(false)}
+                >
+                  プライシングサービス
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/analytics/share-prediction"
+                  onClick={() => setOpen(false)}
+                >
+                  マーケットシェア推定サービス
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/analytics/people-analytics"
+                  onClick={() => setOpen(false)}
+                >
+                  ピープルアナリティクスサービス
                 </Link>
               </li>
               <li>

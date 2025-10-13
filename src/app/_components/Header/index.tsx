@@ -170,16 +170,36 @@ export default function Header() {
               <div className={`${styles.dropdownMenu} ${styles.wideDropdown}`}>
                 <div className={styles.dropdownRow}>
                   <div>
-                    <p>データコンサルティング事業</p>
+                    <p>データ分析コンサルティング事業</p>
                     <ul>
                       <li>
-                        <Link href="/services/analytics/tools">
-                          データ分析ツール
+                        <Link href="/services/analytics/consulting">
+                          受託分析・データ利活用支援
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/analytics/consulting">
-                          データ分析コンサルティング
+                        <Link href="/services/analytics/tools">
+                          データ分析ツールの提供
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/services/analytics/research">
+                          リサーチアドバイザー
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/services/analytics/pricing">
+                          プライシングサービス
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/services/analytics/share-prediction">
+                          マーケットシェア推定サービス
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/services/analytics/people-analytics">
+                          ピープルアナリティクスサービス
                         </Link>
                       </li>
                     </ul>
