@@ -119,18 +119,18 @@ export default async function Page() {
       <ServiceSectionVisual
         eyebrow="デジタルメディア事業"
         title="スポーツアナリティクス特化型ニュースサイト『Deep Sports』の運営"
-        description="スポーツアナリティクス特化のデジタルメディア『Deep Sports』を企画・運営。データで“観る”深い考察記事、経済学を学べる解説、Jリーグや競馬の予測モデルを発信し、データ活用で新しい観戦体験を提供します。"
+        description="スポーツアナリティクスに特化したデジタルメディア『Deep Sports』を企画・運営。各種スポーツ競技のプレーや試合結果をデータで“観る”深い考察記事や、経済学の観点からスポーツの制度や歴史を学ぶ記事のほか、AIによるJリーグや競馬の結果予測などを発信し、データ活用で新しいスポーツ観戦体験を提供します。"
         image={{
           src: "/deepsports.png",
-          alt: "CRMの概念図",
+          alt: "Deep Sports画面",
         }}
         visualLink={{ href: "/services/media" }}
       />
 
       <ServiceSectionVisual
         eyebrow="ヘルスケア事業"
-        title="データ×行動科学で健康行動を後押しするヘルスケア関連アプリを開発中"
-        description="栄養・運動・睡眠・ストレスをアプリで可視化し、性格特性や生活データに合わせたナッジで行動変容を支援。理学療法士・栄養士と連携した健康コンサルや個別レポートを提供し、個人の改善から法人・自治体の健康経営まで伴走します。"
+        title="データ×行動科学で健康行動を後押しするヘルスケア関連アプリ『StoryFit』を開発中"
+        description="栄養・運動・睡眠・ストレス状況をアプリで可視化し、一人ひとりの性格特性や生活データに合わせたナッジで行動変容を支援するアプリ『StoryFit』を開発中です。理学療法士・栄養士など“健康の専門家”とも連携し、対面での健康増進コンサルティングサービスや個別レポートも提供する予定で、個人の健康改善から法人・自治体の健康経営の支援も可能なアプリです。（2026年3月ローンチ予定）"
         image={{
           src: "/storyfit_top.png",
           alt: "CRMの概念図",
@@ -141,7 +141,7 @@ export default async function Page() {
       <ServiceSectionVisual
         eyebrow="ブロックチェーン事業"
         title="Web3・NFT活用で価値創出するブロックチェーン事業"
-        description="ブロックチェーンの専門知見で、Web3/NFT戦略設計からスマートコントラクト開発、ウォレット・オンチェーン分析、トークングラフ／トークノミクス設計、CRM連携まで一気通貫支援。ファンコミュニティ活性化と新規収益創出を実現します。"
+        description="これまで培ってきたブロックチェーン開発の知見をもとに、ブロックチェーン型ポイントサービス『＠Point』を開発中です。"
         image={{
           src: "/services_analytics_hero.jpg",
           alt: "CRMの概念図",

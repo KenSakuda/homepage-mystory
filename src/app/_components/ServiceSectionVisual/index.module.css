@@ -40,33 +40,40 @@
 /* 右（画像ボックス） */
 .right {
   align-self: start;
+  display: grid;
+  place-items: center;
 }
 .visual {
   display: block;
 }
+
+/* 白枠：PCはインライン style の width/height を採用 */
 .visualCard {
   position: relative;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 16px;
-  padding: clamp(10px, 1.8vw, 14px);
+  padding: 6px; /* 余白は少し絞る */
   box-shadow: 0 1px 0 rgba(255, 255, 255, 1) inset;
   transition: transform 0.16s ease, box-shadow 0.16s ease;
+  display: grid;
+  place-items: center;
 }
 .visualCard:hover {
   transform: translateY(-2px);
   box-shadow: 0 16px 28px rgba(0, 0, 0, 0.08);
 }
 
+/* 画像は枠内に収める（比率維持） */
 .image {
   width: 100%;
-  height: 250px;
-  display: block;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 220px;
+  object-fit: contain; /* ← 画像が小さくても余白が美しく残る */
+  /* border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.05); */
 }
 
-/* 右上のグレーの丸矢印（参照サイトのナビ風） */
+/* 矢印 */
 .visualChevron {
   position: absolute;
   right: 12px;
@@ -85,6 +92,15 @@
 @media (max-width: 980px) {
   .inner {
     grid-template-columns: 1fr;
+  }
+  .visualCard {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
 @media (max-width: 520px) {
