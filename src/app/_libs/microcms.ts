@@ -110,3 +110,10 @@ export const getAllCategoryList = async () => {
   });
   return listData;
 };
+
+export const getAllcolumnList = async () => {
+  const listData = await client.getAllContents<Column>({
+    endpoint: "column",
+  });
+  return listData;
+};
