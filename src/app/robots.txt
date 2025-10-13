@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://www.b-mystory.com/sitemap.xml
