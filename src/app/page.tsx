@@ -2,6 +2,10 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import AutoPlayVideo from "@/app/_components/AutoPlayVideo";
+import ServiceSectionGrid, {
+  ServiceCard,
+} from "@/app/_components/ServiceSectionGrid";
+import ServiceSectionVisual from "@/app/_components/ServiceSectionVisual";
 import { getNewsList, getColumnList } from "@/app/_libs/microcms";
 import { TOP_NEWS_LIMIT } from "@/app/_constants";
 import NewsList from "@/app/_components/NewsList";
@@ -12,6 +16,39 @@ import ContactSection from "./_components/ContactSection";
 export default async function Page() {
   const news = await getNewsList({ limit: TOP_NEWS_LIMIT });
   const columns = await getColumnList({ limit: 100 });
+
+  const cards: ServiceCard[] = [
+    {
+      href: "/services/analytics/consulting",
+      title: "受託分析/データ利活用支援",
+      iconSrc: "/service_data-analytics_icon1.png",
+    },
+    {
+      href: "/services/analytics/tools",
+      title: "データ分析ツールの提供",
+      iconSrc: "/service_data-analytics_icon2.png",
+    },
+    {
+      href: "/services/analytics/research",
+      title: "リサーチアドバイザー",
+      iconSrc: "/service_data-analytics_icon3.png",
+    },
+    {
+      href: "/services/analytics/pricing",
+      title: "プライシングサービス",
+      iconSrc: "/service_data-analytics_icon4.png",
+    },
+    {
+      href: "/services/analytics/share-prediction",
+      title: "シェア推定サービス",
+      iconSrc: "/service_data-analytics_icon5.png",
+    },
+    {
+      href: "/services/analytics/people-analytics",
+      title: "ピープルアナリティクス",
+      iconSrc: "/service_data-analytics_icon6.png",
+    },
+  ];
 
   return (
     <>
@@ -72,79 +109,46 @@ export default async function Page() {
         </div>
       </section>
 
-      <section className={styles.service}>
-        <div className={styles.inner}>
-          <h2 className={styles.sectionTitle}>
-            SERVICE
-            <span>当社の取り扱いサービスについてご紹介します</span>
-          </h2>
-          <div className={styles.serviceCards}>
-            <Link
-              href="/services/analytics/tools"
-              className={styles.serviceCard}
-            >
-              <Image
-                src="/services_analytics_tool_hero.jpg"
-                alt="データ分析ツール"
-                width={300}
-                height={300}
-                className={styles.serviceImage}
-              />
-              <h3>データ分析ツールの提供</h3>
-              <p>特徴の異なる複数の分析ツールの開発・販売</p>
-            </Link>
-            <Link
-              href="/services/analytics/consulting"
-              className={styles.serviceCard}
-            >
-              <Image
-                src="/services_analytics_solution.jpg"
-                alt="データ分析コンサルティング"
-                width={300}
-                height={300}
-                className={styles.serviceImage}
-              />
-              <h3>データ分析コンサルティング</h3>
-              <p>マーケティングPDCAの各シーンに対応したソリューションを用意</p>
-            </Link>
-            <Link href="/services/media" className={styles.serviceCard}>
-              <Image
-                src="/deepsports.png"
-                alt="デジタルメディア"
-                width={300}
-                height={300}
-                className={styles.serviceImage}
-              />
-              <h3>デジタルメディアの運営</h3>
-              <p>
-                スポーツアナリティクス特化型ニュースサイト『Deep Sports』の運営
-              </p>
-            </Link>
-            <Link href="/services/healthcare" className={styles.serviceCard}>
-              <Image
-                src="/storyfit_top.png"
-                alt="ヘルスケア"
-                width={300}
-                height={300}
-                className={styles.serviceImage}
-              />
-              <h3>ヘルスケアApp開発</h3>
-              <p>ヘルスケア関連アプリ『Story Fit』を開発中</p>
-            </Link>
-            <Link href="/services/blockchain" className={styles.serviceCard}>
-              <Image
-                src="/services_analytics_hero.jpg"
-                alt="ブロックチェーン"
-                width={300}
-                height={300}
-                className={styles.serviceImage}
-              />
-              <h3>ブロックチェーンサービス開発</h3>
-              <p>ブロックチェーン技術を活用したポイントサービスを開発中</p>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ServiceSectionGrid
+        eyebrow="データ分析コンサルティング事業"
+        title="データ分析で課題解決・収益成長を加速する伴走支援"
+        description="CRMや購買・Web行動などの顧客データを統合し、課題特定から分析設計、機械学習構築、ダッシュボード整備、運用定着まで一気通貫。価格最適化や市場シェア推定ツールも活用し、データ活用による意思決定とKPI改善を実現するデータ分析コンサルティングです。"
+        cards={cards}
+      />
+
+      <ServiceSectionVisual
+        eyebrow="デジタルメディア事業"
+        title="スポーツアナリティクス特化型ニュースサイト『Deep Sports』の運営"
+        description="スポーツアナリティクス特化のデジタルメディア『Deep Sports』を企画・運営。データで“観る”深い考察記事、経済学を学べる解説、Jリーグや競馬の予測モデルを発信し、データ活用で新しい観戦体験を提供します。"
+        image={{
+          src: "/deepsports.png",
+          alt: "CRMの概念図",
+        }}
+        visualLink={{ href: "/services/media" }}
+      />
+
+      <ServiceSectionVisual
+        eyebrow="ヘルスケア事業"
+        title="データ×行動科学で健康行動を後押しするヘルスケア関連アプリを開発中"
+        description="栄養・運動・睡眠・ストレスをアプリで可視化し、性格特性や生活データに合わせたナッジで行動変容を支援。理学療法士・栄養士と連携した健康コンサルや個別レポートを提供し、個人の改善から法人・自治体の健康経営まで伴走します。"
+        image={{
+          src: "/storyfit_top.png",
+          alt: "CRMの概念図",
+        }}
+        visualLink={{ href: "/services/healthcare" }}
+      />
+
+      <ServiceSectionVisual
+        eyebrow="ブロックチェーン事業"
+        title="Web3・NFT活用で価値創出するブロックチェーン事業"
+        description="ブロックチェーンの専門知見で、Web3/NFT戦略設計からスマートコントラクト開発、ウォレット・オンチェーン分析、トークングラフ／トークノミクス設計、CRM連携まで一気通貫支援。ファンコミュニティ活性化と新規収益創出を実現します。"
+        image={{
+          src: "/services_analytics_hero.jpg",
+          alt: "CRMの概念図",
+        }}
+        visualLink={{ href: "/services/blockchain" }}
+      />
+
       <section className={styles.news}>
         <div className={styles.newsTitle}>
           <h2>News</h2>

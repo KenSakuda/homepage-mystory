@@ -1,0 +1,119 @@
+/* 外枠（淡グレー・太い丸角・薄い枠） */
+.wrap {
+  padding: clamp(18px, 3vw, 24px);
+}
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: #f4f5f6; /* 参照サイトの淡グレー */
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  padding: clamp(18px, 3.4vw, 28px);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr; /* 左：本文 / 右：カード群 */
+  gap: clamp(16px, 3vw, 28px);
+}
+
+/* 左カラム（見出し・本文） */
+.left {
+  align-self: start;
+}
+.eyebrow {
+  color: #ff8c00;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  font-size: clamp(12px, 1.8vw, 14px);
+}
+.title {
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1.25;
+  font-size: 24px;
+  margin-bottom: clamp(10px, 2vw, 14px);
+}
+.desc {
+  color: #4b5563;
+  line-height: 1.9;
+  font-size: clamp(14px, 1.9vw, 15.5px);
+}
+
+/* 右カラム（6カード） */
+.right {
+  align-self: start;
+}
+.grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列×3行 = 6枚 */
+  gap: 14px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 14px 14px 14px 12px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 1) inset;
+  transition: transform 0.16s ease, box-shadow 0.16s ease,
+    border-color 0.16s ease, background 0.16s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+.icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+}
+.cardTitle {
+  color: #111827;
+  font-weight: 700;
+  line-height: 1.35;
+  font-size: 14.5px;
+}
+.chev {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #ff8c00;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* レスポンシブ（スマホは上下縦並び、カードは2列） */
+@media (max-width: 980px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 520px) {
+  .inner {
+    padding: 16px;
+  }
+  .grid {
+    gap: 10px;
+  }
+  .card {
+    padding: 12px;
+    grid-template-columns: 40px 1fr auto;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .cardTitle {
+    font-size: 14px;
+  }
+}

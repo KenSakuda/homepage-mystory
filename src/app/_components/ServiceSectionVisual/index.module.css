@@ -1,0 +1,97 @@
+.wrap {
+  padding: clamp(18px, 3vw, 24px);
+}
+.inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: #f4f5f6;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  padding: clamp(18px, 3.4vw, 28px);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(16px, 3vw, 28px);
+}
+
+/* 左（見出し・本文） */
+.left {
+  align-self: start;
+}
+.eyebrow {
+  color: #ff8c00;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  font-size: clamp(12px, 1.8vw, 14px);
+}
+.title {
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1.25;
+  font-size: 24px;
+  margin-bottom: clamp(10px, 2vw, 14px);
+}
+.desc {
+  color: #4b5563;
+  line-height: 1.9;
+  font-size: clamp(14px, 1.9vw, 15.5px);
+}
+
+/* 右（画像ボックス） */
+.right {
+  align-self: start;
+}
+.visual {
+  display: block;
+}
+.visualCard {
+  position: relative;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: clamp(10px, 1.8vw, 14px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 1) inset;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+.visualCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.08);
+}
+
+.image {
+  width: 100%;
+  height: 250px;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* 右上のグレーの丸矢印（参照サイトのナビ風） */
+.visualChevron {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #ff8c00;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+/* レスポンシブ（スマホでは上下縦並び） */
+@media (max-width: 980px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .inner {
+    padding: 16px;
+  }
+  .visualCard {
+    padding: 10px;
+  }
+}
