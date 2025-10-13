@@ -1,7 +1,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 10px 10px;
 }
 .hero {
   position: relative;
@@ -9,7 +9,7 @@
   background-image: url("/whitepaper_hero.webp");
   background-size: cover;
   background-position: center;
-  margin-bottom: 48px;
+  margin-bottom: 10px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -22,10 +22,19 @@
   font-size: 2rem;
   font-weight: bold;
   color: #ff8c00;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .description {
   font-size: 1rem;
   color: #555;
   line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 20px;
+  }
+  .description {
+    font-size: 15px;
+  }
 }
