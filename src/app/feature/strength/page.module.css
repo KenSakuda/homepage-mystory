@@ -1,138 +1,211 @@
+/* ===== 基本レイアウト ===== */
 .container {
-  max-width: 1200px;
+  --max: 1200px;
+  --pad-x: clamp(16px, 4vw, 28px);
+  --brand: #ff8c00;
+  --ink: #111827;
+  --muted: #6b7280;
+  --card: #fff;
+  --line: #e5e7eb;
+
+  max-width: var(--max);
   margin: 0 auto;
-  padding: 20px 10px;
+  padding: 24px var(--pad-x) 72px;
+  color: var(--ink);
 }
+
+/* ===== HERO ===== */
 .hero {
   position: relative;
-  height: 240px;
-  background-image: url("/whitepaper_hero.webp");
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 24px;
-  display: flex;
-  align-items: center;
+  min-height: clamp(260px, 42vw, 220px);
+  background: url("/whitepaper_hero.webp") center/cover no-repeat;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: clamp(28px, 5vw, 48px);
+}
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(17, 24, 39, 0.36) 0%,
+    rgba(17, 24, 39, 0.48) 100%
+  );
+}
+.heroInner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: clamp(20px, 4vw, 40px);
 }
 .heroContent {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 100px;
-  border-radius: 8px;
+  max-width: 780px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(3px);
+  padding: clamp(18px, 3.6vw, 28px) clamp(18px, 4.2vw, 40px);
+  border-radius: 14px;
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.14);
 }
 .heading {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ff8c00;
-  margin-bottom: 20px;
+  font-size: clamp(22px, 4.2vw, 40px);
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  color: var(--brand);
+  margin: 0 0 10px;
 }
 .description {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.7;
+  font-size: clamp(14px, 1.8vw, 16.5px);
+  color: #374151;
+  line-height: 1.9;
 }
-/* Development Options Cards */
-.devOptionsSection {
-  padding: 20px 10px;
+
+/* ===== セクション見出し ===== */
+.devOptionsSection,
+.techSection {
+  margin-top: clamp(28px, 6vw, 60px);
   text-align: center;
-  background: #ffffff;
 }
-.devOptionsTitle {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 40px;
+.devOptionsTitle,
+.techTitle {
+  font-size: clamp(20px, 3.4vw, 30px);
+  font-weight: 900;
+  letter-spacing: 0.005em;
+  margin-bottom: 10px;
 }
 .devOptionsTitle span {
-  color: #ff9000;
+  color: var(--brand);
 }
+.techDescription,
+.devOptionsSection .techDescription {
+  font-size: clamp(14px, 1.8vw, 16px);
+  color: var(--muted);
+  max-width: 880px;
+  margin: 8px auto 24px;
+  line-height: 1.9;
+}
+
+/* ===== 3カード：グリッド化＋高さ揃え ===== */
 .devCardGrid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 3vw, 22px);
+  margin-top: clamp(22px, 4vw, 26px);
 }
+@media (max-width: 960px) {
+  .devCardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .devCardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .devCard {
-  background-color: #f9f9ff;
+  background: var(--card);
+  border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 30px 24px;
-  max-width: 320px;
+  padding: clamp(16px, 2.8vw, 22px);
   text-align: left;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
+.devCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand), #ffac3b);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .devCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+  }
+}
+
 .devCardHeading {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #ff9000;
-  margin-bottom: 8px;
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 800;
+  color: var(--ink);
+  margin: 0 0 4px;
 }
 .devCardSubheading {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 16px;
+  font-size: clamp(13px, 1.8vw, 15px);
+  font-weight: 700;
+  color: var(--brand);
+  margin: 0 0 10px;
 }
 .devCardBody {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 24px;
+  font-size: clamp(14px, 1.8vw, 15.5px);
+  color: #374151;
+  line-height: 1.85;
+  margin: 6px 0 0;
+  /* 高さ揃え：最大行数で打ち切り */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 9; /* PC */
+  line-clamp: 9;
+  overflow: hidden;
 }
-/* Tech Section */
+@media (max-width: 640px) {
+  .devCardBody {
+    -webkit-line-clamp: 10;
+    line-clamp: 10;
+  }
+}
+
+/* ===== 技術スタック：整然としたカード ===== */
 .techSection {
-  padding: 20px 10px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-.techTitle {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.techDescription {
-  font-size: 1rem;
-  color: #666;
-  max-width: 1000px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
+  background: #fafafa;
+  border-radius: 18px;
+  padding: clamp(20px, 4.5vw, 40px) var(--pad-x);
 }
 .techGrid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: clamp(12px, 2.6vw, 18px);
+  margin-top: clamp(12px, 3vw, 18px);
 }
 .techCard {
-  width: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  text-align: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 14px;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  min-height: 120px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+.techCard img {
+  filter: grayscale(0.12);
 }
 .techCard span {
   font-size: 0.95rem;
-  color: #333;
+  color: #1f2937;
 }
-/* Responsive */
+@media (prefers-reduced-motion: no-preference) {
+  .techCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+    filter: none;
+  }
+}
+
+/* ===== 細かい調整 ===== */
 @media (max-width: 768px) {
-  .heading {
-    font-size: 20px;
-  }
-  .devOptionsTitle,
-  .techTitle {
-    font-size: 17px;
-  }
-  .description,
-  .techDescription,
-  .techDescription {
-    font-size: 15px;
-  }
-  .devCardGrid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .techGrid {
-    gap: 24px;
+  .container {
+    padding-bottom: 64px;
   }
 }

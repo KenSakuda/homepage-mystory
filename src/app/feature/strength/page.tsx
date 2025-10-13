@@ -23,13 +23,14 @@ export default function Page() {
   return (
     <main className={styles.container}>
       <div className={styles.hero}>
-        <div className={styles.heroContent}>
-          <h1 className={styles.heading}>MyStoryの強み</h1>
-          <p className={styles.description}>
-            日本国内には数多くのデータ分析会社がありますが、それぞれ強みとする領域は異なります。
-            <br />
-            簡単ではありますが、当社の強みや特徴についてまとめています。
-          </p>
+        <div className={styles.heroOverlay} />
+        <div className={styles.heroInner}>
+          <div className={styles.heroContent}>
+            <h1 className={styles.heading}>MyStoryの強み</h1>
+            <p className={styles.description}>
+              日本国内には数多くのデータ分析会社がありますが、それぞれ強みとする領域は異なります。簡単ではありますが、当社の強みや特徴についてまとめています。
+            </p>
+          </div>
         </div>
       </div>
       <section className={styles.devOptionsSection}>
@@ -38,7 +39,6 @@ export default function Page() {
         </h2>
         <p className={styles.techDescription}>
           マーケティング領域の分析に対応可能な企業は数多くありますが、複数の領域において高品質の分析を提供できる企業は限られています。
-          <br />
           これまでの各領域のご支援経験をもとにした豊富なノウハウを有しており、ご満足いただける分析を提供することをお約束します。
         </p>
         <div className={styles.devCardGrid}>
@@ -46,10 +46,7 @@ export default function Page() {
             <h3 className={styles.devCardHeading}>マーケティング分析</h3>
             <p className={styles.devCardSubheading}>マーケティングPDCAに対応</p>
             <p className={styles.devCardBody}>
-              データサイエンティストの多くは技術偏重で、ビジネスへの理解が乏しいことを理由として、データ分析をビジネスに上手く活用できていない企業が目立ちます。
-              <br />
-              <br />
-              当社には技術力のある人材だけでなく、ビジネス経験が非常に豊富で、コンサルティングスキルを有する人材も在籍しておりますので、「使えるデータ分析」の実施・支援が可能です。
+              データサイエンティストの多くは技術偏重で、ビジネスへの理解が乏しいことを理由として、データ分析をビジネスに上手く活用できていない企業が目立ちます。当社には技術力のある人材だけでなく、ビジネス経験が非常に豊富で、コンサルティングスキルを有する人材も在籍しておりますので、「使えるデータ分析」の実施・支援が可能です。
             </p>
           </div>
           <div className={styles.devCard}>
@@ -58,21 +55,14 @@ export default function Page() {
               SportsTechニュースサイトを運営
             </p>
             <p className={styles.devCardBody}>
-              スポーツアナリティクスにおいては、データサイエンスの専門性は当然のこととして、スポーツのプレー技術や各種制度に関する深い造詣も必要になってきます。
-              <br />
-              <br />
-              スポーツ雑誌を発行している出版社に在籍していたデータサイエンティストが編集長を務める『Deep
-              Sports』の運営のほか、プロスポーツクラブからの受託分析も請け負っています。
+              スポーツアナリティクスにおいては、データサイエンスの専門性は当然のこととして、スポーツのプレー技術や各種制度に関する深い造詣も必要になってきます。スポーツ雑誌を発行している出版社に在籍していたデータサイエンティストが編集長を務める『DeepSports』の運営のほか、プロスポーツクラブからの受託分析も請け負っています。
             </p>
           </div>
           <div className={styles.devCard}>
             <h3 className={styles.devCardHeading}>ピープルアナリティクス</h3>
             <p className={styles.devCardSubheading}>人事データの分析</p>
             <p className={styles.devCardBody}>
-              人事データは様々なバイアスを含んでいることが多く、手元にあるデータを適切な処理を施さずにそのまま分析してしまうと、実態と大いに乖離する結果となってしまいます。
-              <br />
-              <br />
-              目に見えている結果の裏に潜む様々なバイアスを適切に処理しするためには、計量経済学モデルをはじめとした各種統計モデルと、定量・定性調査をもとにした要因の深堀りが必要です。
+              人事データは様々なバイアスを含んでいることが多く、手元にあるデータを適切な処理を施さずにそのまま分析してしまうと、実態と大いに乖離する結果となってしまいます。目に見えている結果の裏に潜む様々なバイアスを適切に処理しするためには、計量経済学モデルをはじめとした各種統計モデルと、定量・定性調査をもとにした要因の深堀りが必要です。
             </p>
           </div>
         </div>
@@ -103,9 +93,7 @@ export default function Page() {
       <section className={styles.techSection}>
         <h2 className={styles.techTitle}>技術スタック</h2>
         <p className={styles.techDescription}>
-          『データ分析』、『App開発』、『ブロックチェーン開発』など、目的や用途に応じた幅広い技術スタックに対応しています。
-          <br />
-          サービス・プロダクトの内容や、お客様の環境に合わせて最適な技術を選定いたします。
+          『データ分析』、『App開発』、『ブロックチェーン開発』など、目的や用途に応じた幅広い技術スタックに対応しています。サービス・プロダクトの内容や、お客様の環境に合わせて最適な技術を選定いたします。
         </p>
         <div className={styles.techGrid}>
           {data.map((tech) => (
