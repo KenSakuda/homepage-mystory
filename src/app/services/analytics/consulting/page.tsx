@@ -21,7 +21,7 @@ export default function Page() {
   const sidebarLinks = [
     {
       href: "/services/analytics/consulting",
-      label: "受託分析 / データ分析コンサルティング",
+      label: "受託分析 / データ利活用支援",
     },
     { href: "/services/analytics/case", label: "課題・ケースから探す" },
     {
@@ -53,7 +53,7 @@ export default function Page() {
     <main className={styles.page}>
       <Hero
         image={{ src: "/data_analytics_consulting_hero.png", alt: "hero" }}
-        title="受託分析 / データ分析コンサルティング"
+        title="受託分析 / データ利活用支援"
       />
 
       <MainWithSidebar

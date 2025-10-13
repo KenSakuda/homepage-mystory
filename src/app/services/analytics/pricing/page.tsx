@@ -17,7 +17,7 @@ export default function Page() {
   const sidebarLinks = [
     {
       href: "/services/analytics/consulting",
-      label: "受託分析 / データ分析コンサルティング",
+      label: "受託分析 / データ利活用支援",
     },
     { href: "/services/analytics/case", label: "課題・ケースから探す" },
     {
