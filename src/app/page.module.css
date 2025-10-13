@@ -319,7 +319,7 @@
     flex-direction: column;
   }
   .categoryLinks {
-    padding: 5px 10px;
+    padding: none;
   }
   .categorySmallCard {
     width: 100%;
@@ -379,5 +379,27 @@
     margin-top: 10px;
     padding: 10px;
     border-radius: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .news {
+    padding: 28px 16px; /* 80px → 28px に圧縮 */
+  }
+  .newsTitle {
+    margin-bottom: 16px; /* タイトル下の余白を短く */
+  }
+  .newsTitle h2 {
+    font-size: clamp(22px, 6.4vw, 30px);
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+  .newsTitle p {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+  }
+  .newsLink {
+    margin-top: 16px; /* ボタンとの距離も詰める */
   }
 }

@@ -111,8 +111,8 @@ export default async function Page() {
 
       <ServiceSectionGrid
         eyebrow="データ分析コンサルティング事業"
-        title="データ分析で課題解決・収益成長を加速する伴走支援"
-        description="CRMや購買・Web行動などの顧客データを統合し、課題特定から分析設計、機械学習構築、ダッシュボード整備、運用定着まで一気通貫。価格最適化や市場シェア推定ツールも活用し、データ活用による意思決定とKPI改善を実現するデータ分析コンサルティングです。"
+        title="データ分析でビジネス課題解決・収益成長を加速させる伴走支援"
+        description="MyStoryのデータ分析コンサルティング事業は、統計学・機械学習といった技術面の専門性と、行動経済学・消費者行動理論といった行動科学の専門知見を掛け合わせた“意思決定に繋がる”データ分析を提供できることが特徴です。プライシング、ピープルアナリティクスなど各種分析ソリューションのほか、データ分析ツールの開発・販売も行っています。"
         cards={cards}
       />
 
@@ -133,7 +133,7 @@ export default async function Page() {
         description="栄養・運動・睡眠・ストレス状況をアプリで可視化し、一人ひとりの性格特性や生活データに合わせたナッジで行動変容を支援するアプリ『StoryFit』を開発中です。理学療法士・栄養士など“健康の専門家”とも連携し、対面での健康増進コンサルティングサービスや個別レポートも提供する予定で、個人の健康改善から法人・自治体の健康経営の支援も可能なアプリです。（2026年3月ローンチ予定）"
         image={{
           src: "/storyfit_top.png",
-          alt: "CRMの概念図",
+          alt: "StoryFir画面",
         }}
         visualLink={{ href: "/services/healthcare" }}
       />
@@ -144,7 +144,7 @@ export default async function Page() {
         description="これまで培ってきたブロックチェーン開発の知見をもとに、ブロックチェーン型ポイントサービス『＠Point』を開発中です。"
         image={{
           src: "/services_analytics_hero.jpg",
-          alt: "CRMの概念図",
+          alt: "NoImage",
         }}
         visualLink={{ href: "/services/blockchain" }}
       />

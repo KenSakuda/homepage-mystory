@@ -32,27 +32,64 @@
   margin-left: 10px;
 }
 
-/* @media (max-width: 1000px) {
-  .news {
-    width: calc(100% - 160px);
-  }
-} */
-
 @media (max-width: 640px) {
+  .list {
+    position: relative;
+    padding: 14px 0 14px 18px; /* 左にドット用の余白 */
+    border-bottom: 1px dotted #d8d8d8; /* 実線→点線で軽く */
+    font-size: 1rem;
+  }
+  .list:last-child {
+    border-bottom: none;
+  }
+
+  /* 左の小さなアクセントドット（Nintendoの赤丸イメージをブランド色で） */
+  .list::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-button-primary, #ff8c00);
+  }
+
+  /* リンクは縦積みでOK */
   .link {
     display: block;
-    padding: 16px 0;
   }
 
+  /* 本文ブロックをグリッドでキュッと詰める */
+  .content {
+    display: grid;
+    gap: 6px;
+  }
+
+  /* タイトルは2行まで・行間を詰める */
   .title {
-    font-size: 1rem;
+    font-size: 2opx;
     font-weight: bold;
-    margin-bottom: 0.4rem;
+    font-weight: 800;
+    line-height: 1.45;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* 3行→2行でコンパクトに */
+    overflow: hidden;
   }
 
+  /* メタ情報（カテゴリ＆日付）を小さく横並びに */
   .meta {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
+    font-size: 0.86rem;
+    color: #6b7280;
+  }
+
+  /* カテゴリバッジのトーンを抑える（Category側のCSSを壊さず軽く上書き） */
+  .meta :where(span, a) {
+    font-weight: 600;
   }
 }
