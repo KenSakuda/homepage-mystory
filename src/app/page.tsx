@@ -149,17 +149,6 @@ export default async function Page() {
         visualLink={{ href: "/services/blockchain" }}
       />
 
-      <section className={styles.news}>
-        <div className={styles.newsTitle}>
-          <h2>News</h2>
-          <p>お知らせ</p>
-        </div>
-        <NewsList news={news.contents} />
-        <div className={styles.newsLink}>
-          <ButtonLink href="/news">お知らせ一覧</ButtonLink>
-        </div>
-      </section>
-
       <section className={styles.categoryLinks}>
         <div className={styles.inner}>
           <div className={styles.categoryGrid}>
@@ -218,6 +207,17 @@ export default async function Page() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className={styles.news}>
+        <div className={styles.newsTitle}>
+          <h2>News</h2>
+          <p>お知らせ</p>
+        </div>
+        <NewsList news={news.contents} />
+        <div className={styles.newsLink}>
+          <ButtonLink href="/news">お知らせ一覧</ButtonLink>
         </div>
       </section>
 
