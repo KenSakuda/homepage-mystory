@@ -420,7 +420,7 @@ export default function Page() {
 
       <a id="contact" />
       <FooterNav
-        blockTitle="受託分析/データ分析コンサルティング"
+        blockTitle="受託分析/データ利活用支援"
         links={[
           { href: "#sec-feature", label: "MyStoryのデータ分析サービスの特徴" },
           { href: "#sec-service", label: "分析サービス一覧" },
