@@ -4,13 +4,11 @@ import {
   MainWithSidebar,
   SidebarNavCard,
   LeadBlock,
-  ServiceImage,
   FeatureHighlights,
-  BubbleNavSection,
   SectionTitle,
   ServiceSection,
-  AnalysisTable,
   FooterNav,
+  AnalyticsOutsourceSection,
 } from "@/app/services/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
 
@@ -40,67 +38,44 @@ export default function Page() {
     <main className={styles.page}>
       <Hero
         image={{
-          src: "/data_analytics_consulting_hero.png",
+          src: "/data_analytics_share-prediction_hero.png",
           alt: "Dynamic Share",
         }}
-        title="ダイナミックシェア（マーケットシェア推定ソリューション）"
+        title="マーケットシェア推定ソリューション『ダイナミックシェア』"
       />
 
       <MainWithSidebar
         main={
           <>
-            {/* リード：SEO語を自然に埋め込む */}
             <LeadBlock
-              title="時間×競争のダイナミクスまで捉える『データ分析 シェア推定』。マーケットシェアを“動的”に予測"
+              title="マーケットシェアの推移を“動的”に予測。「時間×競争」の概念を組み込んだ生態学モデルをもとに、新商品上市時・価格変更時も精緻なシェア予測を可能に"
               body={[
-                "ダイナミックシェアは、『データ分析 シェア推定／シェア予測』に特化したソリューションです。微分方程式（ロトカ・ヴォルテラモデル）を用いてブランド間の競争関係と時間変化をモデル化し、従来の時系列回帰では扱いづらい“新規参入”“競合の値下げ”“広告減衰”といった要因まで織り込んでマーケットシェアの将来推移を推定します。",
-                "コンジョイント分析やロジット需要の効用構造と結びつけることで、価格・プロモーション・製品属性の変更がシェアに与える影響を定量化。『データ分析 マーケットシェア』の意思決定を、理論と現実運用の両面から支援します。",
+                "『ダイナミックシェア』は、「時間 × 競争」のダイナミクスをモデルに埋め込むことで、現実の市場で起きるシェアの揺れ――消費者の選好変化、広告効果の減衰、競合の値下げや新規参入といった非定常な事象――まで捉えるシェア推定分析ソリューションです。生態学由来のロトカ・ヴォルテラ型モデルで“限られた市場での取り合い”を数理的に表現し、従来の定常モデルでは難しかった精緻な将来シェアの予測と、施策効果の見極めを可能にします。",
+                "　",
+                "さらに、コンジョイント分析やロジット需要モデルと結合することで、価格・プロモーション・商品属性の変更がシェアに与える影響を定量化。既存商品の将来推移だけでなく、新商品のシェア推定や発売時期・広告投下量などのシナリオ比較にも対応します。たとえば「競合が値上げしたら」「機能訴求を切り替えたら」といった仮説を、時間軸つきの市場構造の中で検証でき、投資判断・価格戦略・商品設計まで意思決定を一貫して支援します。",
               ]}
             />
 
-            {/* 能力イメージ（差し替え前提） */}
-            <ServiceImage
-              src="/data_analytics_consulting_mystory_capability.png"
-              alt="Dynamic Share Capability Map"
-            />
-
-            {/* 特徴 */}
             <a id="sec-feature" />
             <FeatureHighlights
-              title="ダイナミックシェアの特徴"
+              title="『ダイナミックシェア』の特徴"
               items={[
                 {
                   subtitle:
-                    "競争と時間変化を同時にモデル化（ロトカ・ヴォルテラモデル）",
-                  lead: "ブランド間の相互作用（競合・補完・捕食関係など）と飽和・外部要因を連立常微分方程式で表現。係数を時変化として扱えるため、戦略・規制・技術ショックによる競争構造の変化を反映できます。解析解が得られるクラスを用い、推定とシミュレーションを高速に反復可能。",
+                    "競争×時間を組み込んだ生態学モデルで“非定常”を精緻に予測",
+                  lead: "ロトカ・ヴォルテラ型の生態学モデルを導入し、ブランド間の競争関係と時間変化を同時に表現します。連立微分方程式で成長率・飽和・相互作用（競合/補完）を記述し、係数を時変として扱うことで、新規参入・価格改定・広告効果の減衰・供給制約などのショックをモデルに反映。従来の定常モデルでは平均化され見落としがちだったシェアのうねりを追従し、現実に即した将来シェアの推定と施策シミュレーションを高速に実行可能です。",
                   image: {
-                    src: "/data_analytics_consulting_feature1.png",
-                    alt: "LV dynamics",
+                    src: "/data_analytics_share-prediction_feature1.png",
+                    alt: "時間×競争の概念",
                   },
                 },
                 {
                   subtitle:
-                    "ロジット需要・効用と接続し“施策→効用→シェア”を一気通貫",
-                  lead: "価格・属性・プロモーションを含む効用関数とロトカ・ヴォルテラモデルを接続することで、施策の効用変化がどの程度シェアに波及するかを直接可視化。Outside option（市場外）も扱え、現実的な総和制約（シェア合計≤100%）を満たす推定が可能です。",
+                    "コンジョイント分析で“効用”を推定し、新商品や価格変更後のシェアまで予測",
+                  lead: "コンジョイント分析にもとづき、消費者の全体効用と属性別効用（価格・機能・ブランドなど）を推定。この効用をロジットモデルに接続し、生態学モデルへ投入することで、既存商品だけでなく新商品の投入や価格改定・仕様変更の影響も定量的にシェアへ変換できます。市場外選択も扱えるため、シェアの総和≤100%という現実的な制約を満たしつつ、「施策 → 効用変化 → シェア推移」を一気通貫で可視化・予測します。",
                   image: {
-                    src: "/data_analytics_consulting_feature2.png",
-                    alt: "Logit linkage",
-                  },
-                },
-                {
-                  subtitle: "新製品のシェア予測にも対応（表明選好×顕示選好）",
-                  lead: "新規参入は過去データが乏しく予測が難題。ダイナミックシェアはコンジョイント等の表明選好とPOS等の顕示選好を状況に応じて使い分け、初期効用の推定からダイナミクス接続まで設計します。実務的な設問設計や限界支払意志額（WTP）の算出にも対応。",
-                  image: {
-                    src: "/data_analytics_consulting_feature3.png",
-                    alt: "New product",
-                  },
-                },
-                {
-                  subtitle: "意思決定に直結する“シナリオ×感度分析”",
-                  lead: "価格改定・広告投下・販促・SKU追加／統合などのシナリオで中長期のシェア推移を比較。パラメータ感度分析と合わせ、最適な投資配分・参入／撤退判断・ブランドポジショニング検討を支援します。",
-                  image: {
-                    src: "/data_analytics_consulting_feature4.png",
-                    alt: "Scenario & sensitivity",
+                    src: "/data_analytics_share-prediction_feature2.png",
+                    alt: "コンジョイント分析による効用推定",
                   },
                 },
               ]}
@@ -109,19 +84,6 @@ export default function Page() {
             <div className={styles.contact}>
               <ButtonLink href="/contact">分析ついて相談する</ButtonLink>
             </div>
-
-            {/* ナビ（ページ内ジャンプ） */}
-            <a id="sec-service" />
-            <BubbleNavSection
-              title="提供メニュー"
-              lead="クリックで該当セクションへ移動"
-              items={[
-                { label: "モデル設計\n（需要×LV）", href: "#sec-model" },
-                { label: "新製品シェア\n予測", href: "#sec-new" },
-                { label: "シナリオ\nシミュレーション", href: "#sec-scenario" },
-                { label: "ダッシュボード\n・運用化", href: "#sec-bi" },
-              ]}
-            />
 
             {/* ===== 各サービス ===== */}
             <a id="sec-model" />
@@ -167,43 +129,7 @@ export default function Page() {
               ]}
             />
 
-            <a id="sec-bi" />
-            <SectionTitle title="ダッシュボード化・運用／内製化支援" />
-            <ServiceSection
-              problemsTitle="こんな課題はありませんか？"
-              problems={bullets([
-                "・意思決定の現場で“すぐ回せる”ダッシュボードが欲しい",
-                "・社内定着（再現性・ナレッジ化・教育）まで進めたい",
-              ])}
-              overviewTitle="ご支援のイメージ"
-              overview={[
-                "更新自動化（ETL）と可視化（BI）を整備し、パラメータ更新で即座に予測刷新。分析手順・検証手順をドキュメント化して内製運用へ移行できるよう伴走します。",
-              ]}
-            />
-
-            {/* 方法論テーブル（SEO強化） */}
-            <SectionTitle title="主な分析メニュー（例）" />
-            <AnalysisTable
-              header={["分析メニュー", "分析内容概要"]}
-              rows={[
-                [
-                  "データ分析 シェア推定（ロトカ・ヴォルテラモデル×ロジットモデル）",
-                  "ロジット需要（価格・属性・販促）とロトカ・ヴォルテラモデルの競争式を接続。相互作用と時間減衰を含む『データ分析 マーケットシェア／シェア予測』を実現。解析解クラスで高速シミュレーション。",
-                ],
-                [
-                  "新製品のシェア予測（SP/RP統合）",
-                  "コンジョイントから効用を推定し初期シェアを設定。外部オプション・競争係数・広告減衰を組み込み、発売後の動的推移を予測。",
-                ],
-                [
-                  "シナリオ・感度分析",
-                  "価格改定・広告量・販促深さ・発売時期・競合反応などのシナリオ比較とパラメータ感度を提示。意思決定の根拠を可視化。",
-                ],
-                [
-                  "ダッシュボード化／内製化",
-                  "ETL自動化とBIで“誰でも回せる”運用を提供。更新のたびに最新のシェア予測が反映され、再現性を担保。",
-                ],
-              ]}
-            />
+            <AnalyticsOutsourceSection />
 
             <div className={styles.contact}>
               <ButtonLink href="/contact">分析について相談する</ButtonLink>
@@ -212,22 +138,19 @@ export default function Page() {
         }
         sidebar={
           <SidebarNavCard
-            title="ダイナミックシェア（シェア推定）"
+            title="マーケットシェア推定サービス"
             items={sidebarLinks}
           />
         }
       />
 
-      {/* フッターの目次 */}
       <FooterNav
-        blockTitle="ダイナミックシェア（シェア推定）"
+        blockTitle="マーケットシェア推定サービス"
         links={[
           { href: "#sec-feature", label: "特徴" },
-          { href: "#sec-service", label: "提供メニュー" },
           { href: "#sec-model", label: "モデル設計" },
           { href: "#sec-new", label: "新製品シェア予測" },
           { href: "#sec-scenario", label: "シナリオシミュレーション" },
-          { href: "#sec-bi", label: "ダッシュボード・運用化" },
         ]}
       />
     </main>

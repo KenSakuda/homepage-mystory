@@ -488,7 +488,7 @@ export function AnalyticsOutsourceSection() {
           <div className={styles.dlRow}>
             <dt>透明性の高い進め方</dt>
             <dd>
-              課題定義→データ可用性→分析アプローチ→成果物→評価指標を明確化し、委託費用の根拠を可視化。プロセス全体を透明に進行します。
+              課題定義→データ可用性→分析アプローチ→成果物→評価指標を明確化し、委託費用の根拠を可視化。プロセス全体を透明に進行します
             </dd>
           </div>
         </dl>
@@ -499,6 +499,8 @@ export function AnalyticsOutsourceSection() {
       <p className={styles.body}>
         データ分析の委託費用は、①課題の複雑性、②データ量と前処理難度、③モデルの高度性、④成果物（レポート／ダッシュボード／API連携など）、⑤期間と体制によって変動します。
         一般的には、小規模なスポットでの統計解析では数十万円〜百万円台、中規模の統計モデル構築やレポート作成では数百万円規模、大規模プロジェクトでは数千万単位となる場合もあります。
+        <br></br>
+        <br></br>
         MyStoryでは、初回ヒアリングで
         <strong>
           目的・評価指標（KPI/KGI）と制約条件（データ・期間・体制）
@@ -534,7 +536,7 @@ export function AnalyticsOutsourceSection() {
         </details>
         <details className={styles.acItem}>
           <summary className={styles.acSummary}>
-            自社の分析人材が不足している・外注で統計業務を進めたい
+            自社の分析人材が不足している・データ分析業務を外注したい
           </summary>
           <div className={styles.acPanel}>
             <p className={styles.body}>
