@@ -178,9 +178,6 @@ import {
   MainWithSidebar,
   SidebarNavCard,
   LeadBlock,
-  ServiceImage,
-  FeatureHighlights,
-  BubbleNavSection,
   SectionTitle,
   ServiceSection,
   AnalysisTable,
@@ -220,7 +217,6 @@ export default function Page() {
       <MainWithSidebar
         main={
           <>
-            {/* リード：ツール群の総覧 */}
             <LeadBlock
               title="ノーコード×AutoML×意思決定支援。現場で“使われ続ける”分析ツールを。"
               body={[
@@ -230,71 +226,28 @@ export default function Page() {
               ]}
             />
 
-            {/* 能力図（差し替え可） */}
-            <ServiceImage
-              src="/data_analytics_consulting_mystory_capability.png"
-              alt="MyStoryのツール提供ケイパビリティ"
-            />
-
-            {/* 特徴（SEOワードを自然に内包） */}
-            <a id="sec-feature" />
-            <FeatureHighlights
-              title="MyStoryの分析ツール提供の特徴"
-              items={[
-                {
-                  subtitle: "“精度×再現性×解釈性”を両立した機械学習運用",
-                  lead: "データ前処理・特徴量エンジニアリング・ハイパーパラメータ最適化・評価指標（AUC/MAE/SMAPE等）・SHAPによる説明性を標準装備。AutoMLでもブラックボックス化を回避し、再現性あるML Opsを実現します。",
-                  image: {
-                    src: "/data_analytics_consulting_feature1.png",
-                    alt: "ML運用のベストプラクティス",
-                  },
-                },
-                {
-                  subtitle: "意思決定のための“使い勝手”を最優先",
-                  lead: "役割別KPIと権限、ダッシュボード、シナリオ比較、通知・アラートまで設計。分析ツールが日次の意思決定フローに自然に溶け込み、現場のアクションへ直結します。",
-                  image: {
-                    src: "/data_analytics_consulting_feature2.png",
-                    alt: "意思決定に直結するUI/UX",
-                  },
-                },
-                {
-                  subtitle: "時系列予測・因果推論など実務直結の領域に強い",
-                  lead: "需要予測・在庫最適化・解約抑止・価格最適化・ABテスト設計など、現場での利用頻度が高いユースケースに特化したテンプレートとガイドを同梱。導入初月から成果創出を狙えます。",
-                  image: {
-                    src: "/data_analytics_consulting_feature3.png",
-                    alt: "実務ユースケースに最適化",
-                  },
-                },
-                {
-                  subtitle:
-                    "内製化と標準化：テンプレ/コード/運用ドキュメントを提供",
-                  lead: "ワークフロー、実験テンプレ、モデル比較治具、権限・監査ログ設計を提供。担当者が変わっても運用が継続できる“標準プロセス”を作ります。",
-                  image: {
-                    src: "/data_analytics_consulting_feature4.png",
-                    alt: "内製化・標準化の支援",
-                  },
-                },
+            <AnalysisTable
+              header={["カテゴリ", "提供内容（例）"]}
+              rows={[
+                [
+                  "AutoML（回帰・分類・時系列）",
+                  "データ前処理〜アルゴリズム選定〜ハイパーパラメータ最適化〜評価・説明性の自動化。ノーコードでモデル作成と比較が可能。",
+                ],
+                [
+                  "モデル精査／シミュレーション",
+                  "誤差の集中条件を特定し、スコア閾値・配布ルール変更時のKPIを事前に試算。監査ログ・指標を自動出力。",
+                ],
+                [
+                  "時系列予測",
+                  "需要予測・在庫最適化・販促需要見込みに。ARIMA/ETS/Prophet/ツリー系を自動比較し、SMAPE等で精度管理。",
+                ],
+                [
+                  "因果推論／効果検証",
+                  "A/Bテストのサンプルサイズ設計、観測データでの因果効果推定（DID・PS・DRなど）を支援。",
+                ],
               ]}
             />
 
-            <div className={styles.contact}>
-              <ButtonLink href="/contact">ツール導入について相談</ButtonLink>
-            </div>
-
-            {/* ナビ（製品一覧） */}
-            <a id="sec-service" />
-            <BubbleNavSection
-              title="提供ツール／ソリューション一覧"
-              lead="代表的な4プロダクト。クリックで詳細へ。"
-              items={[
-                { label: "DAVinCI\nLABS", href: "#sec-davinci" },
-                { label: "DEIN\nSTATION", href: "#sec-dein" },
-                { label: "Lead\n（時系列AutoML）", href: "#sec-lead" },
-                { label: "Causal Story\n（因果推論）", href: "#sec-causal" },
-              ]}
-            />
-
-            {/* ===== 各ツール ===== */}
             <a id="sec-davinci" />
             <SectionTitle title="DAVinCI LABS（ノーコードAutoML）" />
             <ServiceSection
@@ -399,44 +352,22 @@ export default function Page() {
               ])}
             />
 
-            {/* ツール比較（表） */}
-            <AnalysisTable
-              header={["カテゴリ", "提供内容（例）"]}
-              rows={[
-                [
-                  "AutoML（回帰・分類・時系列）",
-                  "データ前処理〜アルゴリズム選定〜ハイパーパラメータ最適化〜評価・説明性の自動化。ノーコードでモデル作成と比較が可能。",
-                ],
-                [
-                  "モデル精査／シミュレーション",
-                  "誤差の集中条件を特定し、スコア閾値・配布ルール変更時のKPIを事前に試算。監査ログ・指標を自動出力。",
-                ],
-                [
-                  "時系列予測",
-                  "需要予測・在庫最適化・販促需要見込みに。ARIMA/ETS/Prophet/ツリー系を自動比較し、SMAPE等で精度管理。",
-                ],
-                [
-                  "因果推論／効果検証",
-                  "A/Bテストのサンプルサイズ設計、観測データでの因果効果推定（DID・PS・DRなど）を支援。",
-                ],
-              ]}
-            />
-
             <div className={styles.contact}>
               <ButtonLink href="/contact">ツール導入について相談</ButtonLink>
             </div>
           </>
         }
         sidebar={
-          <SidebarNavCard title="データ分析サービス" items={sidebarLinks} />
+          <SidebarNavCard
+            title="データ分析コンサルティング"
+            items={sidebarLinks}
+          />
         }
       />
 
       <FooterNav
         blockTitle="データ分析ツールの提供"
         links={[
-          { href: "#sec-feature", label: "MyStoryの分析ツール提供の特徴" },
-          { href: "#sec-service", label: "提供ツール／ソリューション一覧" },
           { href: "#sec-davinci", label: "DAVinCI LABS（AutoML）" },
           { href: "#sec-dein", label: "DEIN STATION" },
           { href: "#sec-lead", label: "Lead（時系列AutoML）" },
