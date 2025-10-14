@@ -21,12 +21,10 @@
 
 @media (max-width: 640px) {
   .title {
-    text-align: left;
     font-size: 20px;
   }
 
   .text {
-    text-align: left;
     font-size: 15px;
   }
   .container {
