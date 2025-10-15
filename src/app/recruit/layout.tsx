@@ -13,7 +13,7 @@ export default function RootLayout({ children }: Props) {
     <div
       style={{
         minHeight: "100vh",
-        padding: "40px 0",
+        padding: "10px 0",
       }}
     >
       <Sheet>{children}</Sheet>;
