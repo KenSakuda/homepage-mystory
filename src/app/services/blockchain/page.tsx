@@ -18,7 +18,7 @@ export default function Page() {
   return (
     <main className={styles.page}>
       <Hero
-        image={{ src: "/data_analytics_consulting_hero.png", alt: "hero" }}
+        image={{ src: "/blockchain_hero.png", alt: "hero" }}
         title="ブロックチェーン事業"
       />
 

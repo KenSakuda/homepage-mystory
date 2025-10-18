@@ -20,7 +20,7 @@ export default function Page() {
   return (
     <main className={styles.page}>
       <Hero
-        image={{ src: "/data_analytics_consulting_hero.png", alt: "hero" }}
+        image={{ src: "/healthcare_hero.png", alt: "hero" }}
         title="ヘルスケア事業"
       />
 
