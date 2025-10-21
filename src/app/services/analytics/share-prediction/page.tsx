@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import styles from "./page.module.css";
 import {
   Hero,
@@ -11,6 +12,29 @@ import {
   AnalyticsOutsourceSection,
 } from "@/app/services/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
+
+export const revalidate = 86400;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "マーケットシェア推定サービス | MyStory";
+  const description =
+    "マーケットシェアの推移を“動的”に予測。「時間×競争」の概念を組み込んだ生態学モデルをもとに、新商品上市時・価格変更時も精緻なシェア予測を可能に";
+  const url = "https://www.b-mystory.com/services/analytics/share-prediction";
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      images: [{ url: "/data_analytics_share-prediction_hero.png" }],
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 export default function Page() {
   const sidebarLinks = [

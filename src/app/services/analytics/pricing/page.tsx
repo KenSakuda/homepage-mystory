@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import styles from "./page.module.css";
 import {
   Hero,
@@ -12,6 +13,29 @@ import {
   AnalyticsOutsourceSection,
 } from "@/app/services/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
+
+export const revalidate = 86400;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "プライシングサービス | MyStory";
+  const description =
+    "価格戦略で売上/利益を最大化する。「データ分析」×「行動経済学」の実践的プライシングを実現";
+  const url = "https://www.b-mystory.com/services/analytics/pricing";
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      images: [{ url: "/data_analytics_pricing_hero.png" }],
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 export default function Page() {
   const sidebarLinks = [

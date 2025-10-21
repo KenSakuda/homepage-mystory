@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import styles from "./page.module.css";
 // import Image from "next/image";
 import {
@@ -11,6 +12,29 @@ import {
   AnalyticsOutsourceSection,
 } from "@/app/services/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
+
+export const revalidate = 86400;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "ピープルアナリティクスサービス | MyStory";
+  const description =
+    "「人事」×「データサイエンス」で、“人”にまつわる意思決定を科学する。採用・配置・育成・定着を最適化するピープルアナリティクス支援";
+  const url = "https://www.b-mystory.com/services/analytics/people-analytics";
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      images: [{ url: "/data_analytics_consulting_hero.png" }],
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 export default function Page() {
   const sidebarLinks = [

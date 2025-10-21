@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import styles from "./page.module.css";
 // import Image from "next/image";
 import {
@@ -7,6 +8,28 @@ import {
   LeadBlock,
 } from "@/app/services/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
+
+export const revalidate = 86400;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "ブロックチェーン事業 | MyStory";
+  const description = "長年のブロックチェーン開発経験をもとにプロダクト開発中";
+  const url = "https://www.b-mystory.com/services/blockchain";
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      images: [{ url: "/blockchain_hero.png" }],
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 export default function Page() {
   const sidebarLinks = [

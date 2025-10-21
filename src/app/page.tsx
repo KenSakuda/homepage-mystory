@@ -48,6 +48,11 @@ export default async function Page() {
       title: "ピープルアナリティクス",
       iconSrc: "/service_data-analytics_icon6.png",
     },
+    // {
+    //   href: "/services/analytics/ai-agent",
+    //   title: "AIエージェント",
+    //   iconSrc: "/service_data-analytics_icon7.png",
+    // },
   ];
 
   return (

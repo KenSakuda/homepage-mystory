@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import styles from "./page.module.css";
 // import Image from "next/image";
 import {
@@ -8,6 +9,29 @@ import {
   FeatureHighlights,
 } from "@/app/services/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
+
+export const revalidate = 86400;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "デジタルメディア事業 | MyStory";
+  const description =
+    "データで“観る”スポーツの新体験　スポーツアナリティクス特化型ニュースサイト『Deep Sports』をローンチ";
+  const url = "https://www.b-mystory.com/services/media";
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      images: [{ url: "/data_analytics_consulting_hero.png" }],
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 export default function Page() {
   const sidebarLinks = [

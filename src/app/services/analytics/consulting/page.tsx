@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import type { Metadata } from "next";
 // import Image from "next/image";
 import {
   Hero,
@@ -16,6 +17,29 @@ import {
   AnalyticsOutsourceSection,
 } from "@/app/services/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
+
+export const revalidate = 86400;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "受託分析 / データ利活用支援 | MyStory";
+  const description =
+    "統計学・機械学習と行動経済学・消費者行動理論・社会科学を掛け合わせたデータ分析を提供";
+  const url = "https://www.b-mystory.com/services/analytics/consulting";
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      images: [{ url: "/data_analytics_consulting_hero.png" }],
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 export default function Page() {
   const sidebarLinks = [
