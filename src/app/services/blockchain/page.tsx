@@ -12,7 +12,7 @@ import ButtonLink from "@/app/_components/ButtonLink";
 export const revalidate = 86400;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "ブロックチェーン事業 | MyStory";
+  const title = "ブロックチェーン事業";
   const description = "長年のブロックチェーン開発経験をもとにプロダクト開発中";
   const url = "https://www.b-mystory.com/services/blockchain";
 

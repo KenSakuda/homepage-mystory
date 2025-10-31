@@ -16,7 +16,7 @@ import ButtonLink from "@/app/_components/ButtonLink";
 export const revalidate = 86400;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "マーケットシェア推定サービス | MyStory";
+  const title = "マーケットシェア推定サービス";
   const description =
     "マーケットシェアの推移を“動的”に予測。「時間×競争」の概念を組み込んだ生態学モデルをもとに、新商品上市時・価格変更時も精緻なシェア予測を可能に";
   const url = "https://www.b-mystory.com/services/analytics/share-prediction";

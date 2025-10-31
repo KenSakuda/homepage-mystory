@@ -13,7 +13,7 @@ import ButtonLink from "@/app/_components/ButtonLink";
 export const revalidate = 86400;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "デジタルメディア事業 | MyStory";
+  const title = "デジタルメディア事業";
   const description =
     "データで“観る”スポーツの新体験　スポーツアナリティクス特化型ニュースサイト『Deep Sports』をローンチ";
   const url = "https://www.b-mystory.com/services/media";

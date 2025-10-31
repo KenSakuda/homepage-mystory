@@ -15,7 +15,7 @@ type AnalyticsReport = {
 const data: AnalyticsReport[] = [
   {
     id: "1",
-    title: "ポイント制度導入がKPIに与えた影響の効果検証",
+    title: "施策導入がKPIに与えた影響の効果検証",
     categories: ["データ分析", "時系列予測", "グレンジャー因果性検定"],
     date: "2025/7/5",
     imageUrl: "/data_analytics_consulting_outsourcing.png",

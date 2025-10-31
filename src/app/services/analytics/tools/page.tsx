@@ -15,7 +15,7 @@ import ButtonLink from "@/app/_components/ButtonLink";
 export const revalidate = 86400;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "データ分析ツールの提供 | MyStory";
+  const title = "データ分析ツールの提供";
   const description =
     "ノーコード×AutoML×意思決定支援。現場で“使われ続ける”分析ツールを。";
   const url = "https://www.b-mystory.com/services/analytics/tools";

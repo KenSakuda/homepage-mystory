@@ -13,7 +13,7 @@ import ButtonLink from "@/app/_components/ButtonLink";
 export const revalidate = 86400;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "ヘルスケア事業 | MyStory";
+  const title = "ヘルスケア事業";
   const description = "「行動変容を促進」するヘルスケア関連アプリを開発中";
   const url = "https://www.b-mystory.com/services/healthcare";
 

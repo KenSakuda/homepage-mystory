@@ -84,10 +84,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
     },
     {
-      url: buildUrl("/feature/strength"),
-      lastModified: now,
-    },
-    {
       url: buildUrl("/feature/case-studies"),
       lastModified: now,
     },
