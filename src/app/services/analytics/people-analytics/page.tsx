@@ -97,7 +97,7 @@ export default function Page() {
                   subtitle: "配属の最適マッチングを設計",
                   lead: "個人のスキル・経験・志向性と、部署/職務ごとの要求スキル・文化・成果期待値を両面から捉え、最も成果を出しやすい配置をレコメンドします。背景にあるのは経済学のメカニズムデザイン（マッチング理論）で、本人の希望と組織の受け入れ可能性の“安定マッチ”を探索し、特定部署への偏りや現場の取り合いを最小化しながら、組織全体のパフォーマンスを最大化します。勘と根回しで決まっていた「誰をどこに置くか」を、説明可能な根拠をもった配属戦略に変えます。",
                   image: {
-                    src: "/comingsoon.jpg",
+                    src: "/noimage.jpg",
                     alt: "Optimal Assignment / Matching",
                   },
                 },
@@ -121,7 +121,7 @@ export default function Page() {
                   subtitle: "採用戦略を利益目線で最適化",
                   lead: "「どの人材を・どこから・いくらのコストで・どの職務に採るべきか」は、採用広報や母集団形成だけの話ではありません。産業組織論や人事経済学の考え方をベースに、(1)どのポジションが事業価値にどれだけ寄与しているか、(2)そのポジションは外部採用か内部育成か、(3)報酬・働き方・スキル要件をどう提示すれば惹きつけられるか、まで定量的に示します。倍率や応募単価だけでなく、“採ったあとにどれだけ活躍・定着するのか”まで含めた採用ポートフォリオを、人事と経営の共通言語にします。",
                   image: {
-                    src: "/comingsoon.jpg",
+                    src: "/noimage.jpg",
                     alt: "Recruiting Strategy Optimization",
                   },
                 },
@@ -183,70 +183,6 @@ export default function Page() {
             <div className={styles.contact}>
               <ButtonLink href="/contact">分析について相談する</ButtonLink>
             </div>
-
-            {/* <a id="sec-design" />
-            <SectionTitle title="分析設計支援サービス" />
-            <ServiceSection
-              problemsTitle="このような課題を解決します"
-              problems={bullets([
-                "顧客データ活用をしていきたいが、分析手法がわからない",
-                "有効な分析結果を導き出したい",
-                "データ分析業務を効率化したい",
-              ])}
-              overviewTitle="サービス概要"
-              overview={[
-                "※差し替え：課題から最適なKPIの設定、データの取得方法や最適な分析手法の定義までを支援。",
-                "分析設計（要件定義）を整えることで後工程の不測や目的ブレを防止。",
-              ]}
-              subEyebrow="【分析設計支援サービス・基本プロセス】"
-              subImage={{
-                src: "/data_analytics_consulting_feature3.png",
-                alt: "process",
-              }}
-              benefitsTitle="分析設計支援サービスのメリット"
-              benefits={bullets([
-                "ビジネス課題解決期間の短縮化",
-                "必要最小限のデータ収集と適切なDB設計による分析業務の効率化",
-                "ビジネス課題に最適なKPIの設定と、効果の最大化",
-              ])}
-            /> */}
-
-            {/* <SectionTitle title="分析レポートイメージ" small />
-            <div className={styles.imgFrame}>
-              <Image
-                src="/data_analytics_consulting_feature3.png"
-                alt="report"
-                width={800}
-                height={400}
-              />
-            </div> */}
-
-            {/* <FlowBlock
-              title="サービスフロー"
-              image={{
-                src: "/data_analytics_consulting_feature3.png",
-                alt: "flow",
-              }}
-              steps={[
-                "目的・内容・アウトプットの合意",
-                "データ授受・処理・DB整備",
-                "顧客分析の実施とレポート作成",
-                "報告会・納品",
-              ]}
-              note="※直近2年以上の顧客/購買データが必要（例）。"
-            /> */}
-
-            {/* <SectionTitle title="分析トレーニングサービス" />
-            <ServiceSection
-              problemsTitle="このような課題を解決します"
-              problems={bullets([
-                "ノウハウがない",
-                "人材を教育したい",
-                "将来は内製化したい",
-              ])}
-              overviewTitle="サービス概要"
-              overview={["※差し替え：Tableau / R / 多変量解析 などWS形式。"]}
-            /> */}
           </>
         }
         sidebar={
@@ -261,12 +197,7 @@ export default function Page() {
       <FooterNav
         blockTitle="ピープルアナリティクス"
         links={[
-          //   { href: "#sec-feature", label: "MyStoryのデータ分析サービスの特徴" },
-          //   { href: "#sec-service", label: "分析サービス一覧" },
-          //   { href: "#sec-env", label: "データ整備・分析環境構築" },
-          //   { href: "#sec-outsourcing", label: "受託分析" },
-          //   { href: "#sec-project", label: "プロジェクト型支援" },
-          //   { href: "#sec-hr-dev", label: "分析人材育成・内製化支援" },
+          { href: "#sec-feature", label: "特徴" },
           { href: "#sec-outsource", label: "委託・外注を検討中の方へ" },
         ]}
       />

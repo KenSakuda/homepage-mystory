@@ -71,14 +71,6 @@
   max-width: 70%;
 }
 
-/* .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 30px auto;
-  width: 100%;
-  margin-top: 30px; */
-
 .recruitCard a:hover {
   background-color: #e55a00;
 }
