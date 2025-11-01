@@ -108,28 +108,28 @@ export default function Page() {
                     src: "/data_analytics_consulting_feature1.png",
                     alt: "統計・機械学習の技術基盤",
                   },
-                  // links: [
-                  //   {
-                  //     label: "MyStoryの“特徴量エンジニアリング”の特色はこちら",
-                  //     href: "/cases/anomaly",
-                  //   },
-                  //   {
-                  //     label: "MyStoryの“データ前処理”の特色はこちら",
-                  //     href: "/tech-stack",
-                  //   },
-                  //   {
-                  //     label: "MyStoryの“モデル作成”の特色はこちら",
-                  //     href: "/tech-stack",
-                  //   },
-                  //   {
-                  //     label: "MyStoryの“モデル精度評価”の特色はこちら",
-                  //     href: "/tech-stack",
-                  //   },
-                  //   {
-                  //     label: "MyStoryの“効果検証”の特色はこちら",
-                  //     href: "/tech-stack",
-                  //   },
-                  // ],
+                  links: [
+                    // {
+                    //   label: "MyStoryの“特徴量エンジニアリング”の特色はこちら",
+                    //   href: "/cases/anomaly",
+                    // },
+                    {
+                      label: "MyStoryの“データ前処理”の特色はこちら",
+                      href: "https://www.b-mystory.com/column/wjqldgfs4o",
+                    },
+                    // {
+                    //   label: "MyStoryの“モデル作成”の特色はこちら",
+                    //   href: "/tech-stack",
+                    // },
+                    // {
+                    //   label: "MyStoryの“モデル精度評価”の特色はこちら",
+                    //   href: "/tech-stack",
+                    // },
+                    // {
+                    //   label: "MyStoryの“効果検証”の特色はこちら",
+                    //   href: "/tech-stack",
+                    // },
+                  ],
                 },
                 {
                   subtitle:
