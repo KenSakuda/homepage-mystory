@@ -125,11 +125,11 @@ export default function Page() {
                         "【コラム】「どちらでもない」が増える理由と対策――中間選択のリスクと向き合う はこちら",
                       href: "https://www.b-mystory.com/column/homzubfbk8d4",
                     },
-                    // {
-                    //   label:
-                    //     "【コラム】「どちらでもない」が増える理由と対策――中間選択のリスクと向き合う はこちら",
-                    //   href: "https://www.b-mystory.com/column/homzubfbk8d4",
-                    // },
+                    {
+                      label:
+                        "【コラム】ストレートライニングとは？調査データの品質を保つための検出法 はこちら",
+                      href: "https://www.b-mystory.com/column/et-fw107vpj1",
+                    },
                   ],
                 },
                 {
