@@ -100,6 +100,13 @@ export default function Page() {
                     src: "/noimage.jpg",
                     alt: "Optimal Assignment / Matching",
                   },
+                  links: [
+                    {
+                      label:
+                        "【コラム】マッチング理論で配属を最適化！人と部署のチカラを引き出す出会いの創出 はこちら",
+                      href: "https://www.b-mystory.com/column/76b8riktjgb",
+                    },
+                  ],
                 },
                 {
                   subtitle: "ハイパフォーマーの再現条件を特定",

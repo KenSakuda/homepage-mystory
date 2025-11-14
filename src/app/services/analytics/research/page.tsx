@@ -117,7 +117,7 @@ export default function Page() {
                   links: [
                     {
                       label:
-                        "【コラム】「複数選択でお答えください」は本当に正しい聞き方？ ──回答形式の違いと“最小限化”から考える、信頼できるアンケート設計 はこちら",
+                        "【コラム】回答形式間の差異から考えるアンケート設計のポイント はこちら",
                       href: "https://www.b-mystory.com/column/wm0rmtjlgw8",
                     },
                     {
