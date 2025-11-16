@@ -48,6 +48,11 @@ export default async function Page() {
       title: "ピープルアナリティクス",
       iconSrc: "/service_data-analytics_icon6.png",
     },
+    {
+      href: "/services/analytics/image-recognition",
+      title: "画像・動画認識サービス",
+      iconSrc: "/service_data-analytics_icon7.png",
+    },
     // {
     //   href: "/services/analytics/ai-agent",
     //   title: "AIエージェント",
@@ -117,7 +122,7 @@ export default async function Page() {
       <ServiceSectionGrid
         eyebrow="データ分析コンサルティング事業"
         title="データ分析でビジネス課題解決・収益成長を加速させる伴走支援"
-        description="MyStoryのデータ分析コンサルティング事業は、統計学・機械学習といった技術面の専門性と、行動経済学・消費者行動理論といった行動科学の専門知見を掛け合わせた“意思決定に繋がる”データ分析を提供できることが特徴です。プライシング、ピープルアナリティクスなど各種分析ソリューションのほか、データ分析ツールの開発・販売も行っています。"
+        description="MyStoryのデータ分析コンサルティング事業は、統計学・機械学習といった技術面の専門性と、行動経済学・消費者行動理論といった行動科学の専門知見を掛け合わせた“意思決定に繋がる”データ分析を提供できることが特徴です。プライシング、ピープルアナリティクスに加え、画像・動画認識やAIエージェントによる業務プロセスの高度化など各種分析ソリューションを展開しており、あわせてデータ分析ツールの開発・販売も行っています。"
         cards={cards}
       />
 

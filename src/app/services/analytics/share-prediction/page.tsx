@@ -54,6 +54,10 @@ export default function Page() {
       href: "/services/analytics/people-analytics",
       label: "ピープルアナリティクスサービス",
     },
+    {
+      href: "/services/analytics/image-recognition",
+      label: "画像・動画認識サービス",
+    },
   ];
 
   const bullets = (a: string[]) => a.map((text) => ({ text }));

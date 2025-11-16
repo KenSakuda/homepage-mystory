@@ -72,6 +72,14 @@ export default function MobileMenu({ setOpen }: Props) {
                 </Link>
               </li>
               <li>
+                <Link
+                  href="/services/analytics/image-recognition"
+                  onClick={() => setOpen(false)}
+                >
+                  画像・動画認識サービス
+                </Link>
+              </li>
+              <li>
                 <Link href="/services/media" onClick={() => setOpen(false)}>
                   スポーツニュースサイト『Deep Sports』の運営
                 </Link>

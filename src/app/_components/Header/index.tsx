@@ -202,6 +202,11 @@ export default function Header() {
                           ピープルアナリティクスサービス
                         </Link>
                       </li>
+                      <li>
+                        <Link href="/services/analytics/image-recognition">
+                          画像・動画認識サービス
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div>
