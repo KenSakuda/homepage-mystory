@@ -207,6 +207,11 @@ export default function Header() {
                           画像・動画認識サービス
                         </Link>
                       </li>
+                      <li>
+                        <Link href="/services/analytics/ai-agent">
+                          AIエージェント
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div>

@@ -67,6 +67,10 @@ export default function Page() {
       href: "/services/analytics/image-recognition",
       label: "画像・動画認識サービス",
     },
+    {
+      href: "/services/analytics/ai-agent",
+      label: "AIエージェントサービス",
+    },
   ];
 
   return (
