@@ -55,7 +55,7 @@ export default async function Page() {
     },
     {
       href: "/services/analytics/ai-agent",
-      title: "AIエージェント",
+      title: "AIエージェントの開発",
       iconSrc: "/service_data-analytics_icon8.png",
     },
   ];

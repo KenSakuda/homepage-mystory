@@ -70,7 +70,7 @@ export default function Page() {
     },
     {
       href: "/services/analytics/ai-agent",
-      label: "AIエージェントサービス",
+      label: "AIエージェントの開発",
     },
   ];
 
@@ -83,7 +83,7 @@ export default function Page() {
           src: "/data_analytics_agent_hero.png",
           alt: "『AIエージェントサービス』Hero",
         }}
-        title="AIエージェントサービス"
+        title="AIエージェントの開発"
       />
 
       <MainWithSidebar
@@ -100,7 +100,7 @@ export default function Page() {
 
             <a id="feature" />
             <FeatureHighlights
-              title="MyStoryのAIエージェントサービスの特徴"
+              title="AIエージェントサービスの特徴"
               items={[
                 {
                   subtitle: "現場業務に組み込める“実務エージェント”設計",
@@ -312,7 +312,7 @@ export default function Page() {
 
       <a id="contact" />
       <FooterNav
-        blockTitle="AIエージェントサービス"
+        blockTitle="AIエージェントの開発"
         links={[
           { href: "#feature", label: "特徴" },
           { href: "#workflow", label: "アーキテクチャ" },

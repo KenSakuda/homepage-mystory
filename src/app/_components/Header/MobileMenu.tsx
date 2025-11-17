@@ -84,7 +84,7 @@ export default function MobileMenu({ setOpen }: Props) {
                   href="/services/analytics/ai-agent"
                   onClick={() => setOpen(false)}
                 >
-                  AIエージェント
+                  AIエージェントの開発
                 </Link>
               </li>
               <li>

@@ -59,7 +59,7 @@ export default function Page() {
     },
     {
       href: "/services/analytics/ai-agent",
-      label: "AIエージェントサービス",
+      label: "AIエージェントの開発",
     },
   ];
 

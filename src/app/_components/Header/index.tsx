@@ -209,7 +209,7 @@ export default function Header() {
                       </li>
                       <li>
                         <Link href="/services/analytics/ai-agent">
-                          AIエージェント
+                          AIエージェントの開発
                         </Link>
                       </li>
                     </ul>
