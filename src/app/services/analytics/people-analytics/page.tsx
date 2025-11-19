@@ -16,8 +16,7 @@ import ButtonLink from "@/app/_components/ButtonLink";
 export const revalidate = 86400;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title =
-    "ピープルアナリティクスサービス｜人事データ分析・アナリティクス支援";
+  const title = "ピープルアナリティクスサービス";
   const description =
     "「人事」×「データサイエンス」で、“人”にまつわる意思決定を科学するピープルアナリティクスサービス。人事データ分析を通じて採用・配置・育成・定着を最適化。ピープルアナリティクスの委託・外注にも対応。";
   const url = "https://www.b-mystory.com/services/analytics/people-analytics";
