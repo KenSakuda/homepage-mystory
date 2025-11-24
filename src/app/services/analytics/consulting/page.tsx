@@ -121,6 +121,10 @@ export default function Page() {
                   },
                   links: [
                     {
+                      label: "MyStoryの“特徴量エンジニアリング”の特色はこちら",
+                      href: "https://www.b-mystory.com/column/009qn5izavh",
+                    },
+                    {
                       label: "MyStoryの“データ前処理”の特色はこちら",
                       href: "https://www.b-mystory.com/column/wjqldgfs4o",
                     },

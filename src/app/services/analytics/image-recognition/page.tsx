@@ -169,7 +169,7 @@ export default function Page() {
             />
 
             <a id="classification" />
-            <SectionTitle title="画像分類・画像識別」" />
+            <SectionTitle title="画像分類・画像識別" />
             <ServiceSection
               overviewTitle="分析概要"
               overview={[
@@ -191,7 +191,7 @@ export default function Page() {
             />
 
             <a id="detection" />
-            <SectionTitle title="物体検出・セグメンテーション」" />
+            <SectionTitle title="物体検出・セグメンテーション" />
             <ServiceSection
               overviewTitle="分析概要"
               overview={[
@@ -213,7 +213,7 @@ export default function Page() {
             />
 
             <a id="video" />
-            <SectionTitle title="動画認識・行動認識」" />
+            <SectionTitle title="動画認識・行動認識" />
             <ServiceSection
               overviewTitle="分析概要"
               overview={[
@@ -256,7 +256,7 @@ export default function Page() {
             />
 
             <a id="tech" />
-            <SectionTitle title="技術的な特色（Vision Transformer / 深層学習）」" />
+            <SectionTitle title="技術的な特色" />
             <ServiceSection
               overviewTitle="概要"
               overview={[
@@ -273,7 +273,7 @@ export default function Page() {
               subEyebrow="技術構成イメージ"
               subImage={{
                 src: "/noimage.jpg",
-                alt: "技術的な構成イメージ（Vision Transformerを含む）",
+                alt: "技術的な構成イメージ",
               }}
             />
 
