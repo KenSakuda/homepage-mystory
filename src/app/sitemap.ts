@@ -13,17 +13,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const columnContents = await getAllcolumnList();
 
   const newsUrls: MetadataRoute.Sitemap = newsContents.map((content) => ({
-    url: buildUrl("/news/${content.id}"),
+    url: buildUrl(`/news/${content.id}`),
     lastModified: content.category.revisedAt,
   }));
   const categoryUrls: MetadataRoute.Sitemap = categoryContents.map(
     (content) => ({
-      url: buildUrl("/news/category/${content.id}"),
+      url: buildUrl(`/news/category/${content.id}`),
       lastModified: content.revisedAt,
     })
   );
   const columnUrls: MetadataRoute.Sitemap = columnContents.map((content) => ({
-    url: buildUrl("/column/${content.id}"),
+    url: buildUrl(`/column/${content.id}`),
     lastModified: content.revisedAt,
   }));
 
@@ -62,7 +62,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: buildUrl("/services/analytics/people-analytics"),
       lastModified: now,
     },
-
+    {
+      url: buildUrl("/services/analytics/image-recognition"),
+      lastModified: now,
+    },
     {
       url: buildUrl("/services/analytics/ai-agent"),
       lastModified: now,
@@ -124,7 +127,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
     },
     {
-      url: buildUrl("privacypolicy"),
+      url: buildUrl("/privacypolicy"),
       lastModified: now,
     },
     ...newsUrls,
