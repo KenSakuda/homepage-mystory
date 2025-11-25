@@ -17,7 +17,7 @@ export const revalidate = 86400;
 export async function generateMetadata(): Promise<Metadata> {
   const title = "データ分析ツールの提供";
   const description =
-    "ノーコード×AutoML×意思決定支援。現場で“使われ続ける”分析ツールを。";
+    "ノーコード×AutoML×意思決定支援で、現場で“使われ続ける”データ分析ツールを提供。データ分析・機械学習ツールとして、回帰・分類・時系列などの機械学習モデル構築と運用を支援します。";
   const url = "https://www.b-mystory.com/services/analytics/tools";
 
   return {
@@ -68,7 +68,10 @@ export default function Page() {
   return (
     <main className={styles.page}>
       <Hero
-        image={{ src: "/data_analytics_tools_hero.png", alt: "hero" }}
+        image={{
+          src: "/data_analytics_tools_hero.png",
+          alt: "データ分析ツールと機械学習モデル運用のイメージ",
+        }}
         title="データ分析ツールの提供"
       />
 
@@ -76,11 +79,11 @@ export default function Page() {
         main={
           <>
             <LeadBlock
-              title="ノーコード×AutoML×意思決定支援。現場で“使われ続ける”分析ツールを。"
+              title="ノーコード×AutoML×意思決定支援。現場で“使われ続ける”データ分析ツールを。"
               body={[
-                "MyStoryは、機械学習のノーコードAutoMLから、モデル監査・意思決定シミュレーション、時系列予測特化ツール、因果推論によるA/Bテスト・効果検証まで、ビジネスの現場で使えるデータ分析ツール群をご提供します。",
+                "MyStoryは、非技術者でも簡単に機械学習モデルを構築できるAutoMLから、モデル監査・意思決定シミュレーション、時系列予測特化ツール、因果推論によるA/Bテスト・効果検証まで、ビジネスの現場で使えるデータ分析ツール・機械学習ツール群をご提供します。",
                 "　",
-                "『DAVinCI LABS』（回帰・分類・時系列などのAutoML）／『DEIN STATION』（モデル精査・KPIシミュレーション）／『Lead』（時系列予測特化AutoML）に加え、因果推論ツール『Causal Story』（仮称・2026年4月頃提供予定）をラインアップ。要件定義・実装・運用・教育まで一気通貫で伴走し、ツール導入のROIを最大化します。",
+                "『DAVinCI LABS』（回帰・分類・時系列などのAutoML）／『DEIN STATION』（モデル精査・KPIシミュレーション）／『Lead』（時系列予測特化AutoML）に加え、因果推論ツール『Causal Story』（仮称・2026年4月頃提供予定）をラインアップ。要件定義・実装・運用・教育まで伴走し、現場で運用されるデータ分析・機械学習モデルのROIを最大化します。",
               ]}
             />
 
@@ -89,25 +92,25 @@ export default function Page() {
               rows={[
                 [
                   "DAVinCI LABS",
-                  "データ前処理〜アルゴリズム選定〜ハイパーパラメータ最適化〜評価・説明性の自動化。ノーコードでモデル作成と比較が可能。",
+                  "データ前処理〜アルゴリズム選定〜ハイパーパラメータ最適化〜評価・説明性の自動化。ノーコードでデータ分析・機械学習モデルの作成と比較が可能なデータ分析ツールです。",
                 ],
                 [
                   "DEIN STATION",
-                  "誤差の集中条件を特定し、スコア閾値・配布ルール変更時のKPIを事前に試算。監査ログ・指標を自動出力。",
+                  "誤差の集中条件を特定し、スコア閾値・配布ルール変更時のKPIを事前に試算。構築済みの機械学習モデルを監査し、意思決定シミュレーションを行うための分析ツールです。",
                 ],
                 [
                   "Lead",
-                  "需要予測・在庫最適化・販促需要見込みに。ARIMA/ETS/Prophet/ツリー系を自動比較し、SMAPE等で精度管理。",
+                  "需要予測・在庫最適化・販促需要見込みに。ARIMA/ETS/Prophet/ツリー系を自動比較し、SMAPE等で精度管理する時系列予測特化のデータ分析・機械学習ツールです。",
                 ],
                 [
                   "Causal Story",
-                  "A/Bテストのサンプルサイズ設計、観測データでの因果効果推定（DID・PS・DRなど）を支援。",
+                  "A/Bテストのサンプルサイズ設計、観測データでの因果効果推定（差分の差分法・傾向スコアマッチング・回帰不連続デザインなど）を支援する因果推論データ分析ツールです。",
                 ],
               ]}
             />
 
             <a id="sec-davinci" />
-            <SectionTitle title="DAVinCI LABS（ノーコードAutoML）" />
+            <SectionTitle title="DAVinCI LABS（AutoML・データ分析／機械学習ツール）" />
             <ServiceSection
               problemsTitle="こんな課題はありませんか？"
               problems={bullets([
@@ -117,23 +120,23 @@ export default function Page() {
               ])}
               overviewTitle="提供内容"
               overview={[
-                "回帰・分類・時系列に対応したAutoML。データ前処理、最適アルゴリズム選定、ハイパーパラメータチューニング、モデル作成と精度評価を自動化します。ビジネスユーザーでも扱えるノーコードUIで、データドリブンな意思決定を後押しします。",
+                "回帰・分類・時系列などに対応したAutoML型のデータ分析ツール。データ前処理、最適アルゴリズム選定、ハイパーパラメータチューニング、機械学習モデルの作成と精度評価を自動化します。ビジネスユーザーでも扱えるノーコードUIで、データドリブンな意思決定を後押しします。",
               ]}
               subEyebrow="画面イメージ"
               subImage={{
                 src: "/DAVInci LABS.avif",
-                alt: "DAVinCI LABS UI",
+                alt: "DAVinCI LABS データ分析・機械学習ツールのUI",
               }}
               benefitsTitle="主な特長"
               benefits={bullets([
-                "・複数アルゴリズム（ARIMA/LSTM/XGBoost等）を一括比較、ベストモデル選定",
+                "・複数アルゴリズム（ARIMA/LSTM/XGBoost等）を一括比較し、最適な機械学習モデルを選定",
                 "・評価指標・変数重要度・説明性（SHAP）を自動出力",
                 "・ノーコード操作で現場導入が容易、PoC→本番展開まで短期化",
               ])}
             />
 
             <a id="sec-dein" />
-            <SectionTitle title="DEIN STATION（モデル精査／意思決定シミュレーション）" />
+            <SectionTitle title="DEIN STATION（モデル精査／意思決定シミュレーションツール）" />
             <ServiceSection
               problemsTitle="こんな課題はありませんか？"
               problems={bullets([
@@ -143,23 +146,23 @@ export default function Page() {
               ])}
               overviewTitle="提供内容"
               overview={[
-                "構築済み機械学習モデルのKPIパフォーマンスを分解表示。誤差の出やすい条件を特定し、閾値や配布ルールを変更した場合のビジネスKPIをシミュレーションできます。モデル運用の“見える化”に最適です。",
+                "構築済みデータ分析・機械学習モデルのKPIパフォーマンスを分解表示。誤差の出やすい条件を特定し、閾値や配布ルールを変更した場合のビジネスKPIをシミュレーションできます。機械学習モデル運用の“見える化”に最適な分析ツールです。",
               ]}
               subEyebrow="分析画面イメージ"
               subImage={{
                 src: "/deinstation.png",
-                alt: "DEIN STATION UI",
+                alt: "DEIN STATION モデル精査データ分析ツールのUI",
               }}
               benefitsTitle="主な特長"
               benefits={bullets([
-                "・誤差の集中領域を特定、モデルトラブルの早期発見",
+                "・誤差の集中領域を特定し、モデルトラブルの早期発見に貢献",
                 "・意思決定ルール変更時のKPI改善幅を事前検証（シナリオ比較）",
                 "・監査ログ／評価指標の自動出力で再現性を担保",
               ])}
             />
 
             <a id="sec-lead" />
-            <SectionTitle title="Lead（時系列予測に特化したAutoML）" />
+            <SectionTitle title="Lead（時系列予測特化型データ分析ツール）" />
             <ServiceSection
               problemsTitle="こんな課題はありませんか？"
               problems={bullets([
@@ -169,12 +172,12 @@ export default function Page() {
               ])}
               overviewTitle="提供内容"
               overview={[
-                "時系列予測に機能を限定した軽量AutoML。UIを極力シンプルにし、短時間で予測・比較・配信まで到達できます。実務で数百件規模の時系列案件を監修した知見を反映し、高い精度と運用のしやすさを両立します。",
+                "時系列予測に機能を限定した軽量AutoML型データ分析ツール。UIを極力シンプルにし、短時間で予測・比較・配信まで到達できます。実務で数百件規模の時系列案件を監修した知見を反映し、高い精度と運用のしやすさを両立します。",
               ]}
               subEyebrow="予測画面イメージ"
               subImage={{
                 src: "/Lead.png",
-                alt: "Lead UI",
+                alt: "Lead 時系列予測データ分析ツールのUI",
               }}
               benefitsTitle="主な特長"
               benefits={bullets([
@@ -185,7 +188,7 @@ export default function Page() {
             />
 
             <a id="sec-causal" />
-            <SectionTitle title="Causal Story（因果推論ツール）※2026年4月頃ローンチ予定" />
+            <SectionTitle title="Causal Story（因果推論データ分析ツール）※2026年4月頃ローンチ予定" />
             <ServiceSection
               problemsTitle="こんな課題はありませんか？"
               problems={bullets([
@@ -195,12 +198,12 @@ export default function Page() {
               ])}
               overviewTitle="提供内容"
               overview={[
-                "A/Bテストの必要サンプル数を条件入力だけで算出。差分の差分や傾向スコア、ダブルロバスト等の因果推論アプローチで、ランダム化が難しい環境でも“明らかにしたい効果”を推定します。",
+                "A/Bテストの必要サンプル数を条件入力だけで算出。差分の差分や傾向スコア、ダブルロバスト等の因果推論アプローチで、ランダム化が難しい環境でも“明らかにしたい効果”を推定します。因果推論に特化したデータ分析ツールとして、施策の意思決定を支援します。",
               ]}
               subEyebrow="画面イメージ（開発中）"
               subImage={{
                 src: "/comingsoon.jpg",
-                alt: "Causal Story UI",
+                alt: "Causal Story 因果推論データ分析ツールのUI",
               }}
               benefitsTitle="主な特長"
               benefits={bullets([
@@ -224,7 +227,7 @@ export default function Page() {
       />
 
       <FooterNav
-        blockTitle="データ分析ツールの提供"
+        blockTitle="データ分析ツールの提供（ノーコードAutoML・機械学習モデル）"
         links={[
           { href: "#sec-davinci", label: "DAVinCI LABS（AutoML）" },
           { href: "#sec-dein", label: "DEIN STATION" },
