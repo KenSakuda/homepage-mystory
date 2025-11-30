@@ -11,7 +11,7 @@ import {
   AnalysisTable,
   FooterNav,
   AnalyticsOutsourceSection,
-} from "@/app/services/analytics/components";
+} from "@/app/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
 
 export const revalidate = 86400;
@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const title = "画像・動画認識サービス";
   const description =
     "画像認識・動画認識・画像識別のAI技術で、外観検査やインフラ点検、売場・物流の可視化などを自動化するデータ分析コンサルティングサービス。Vision Transformerをはじめとした最新の画像認識技術を活用し、ビジネス課題に直結するデータ分析・機械学習モデルの構築から運用まで一気通貫で支援します。";
-  const url = "https://www.b-mystory.com/services/analytics/image-recognition";
+  const url = "https://www.b-mystory.com/analytics/image-recognition";
 
   return {
     title,
@@ -40,36 +40,36 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
   const sidebarLinks = [
     {
-      href: "/services/analytics/consulting",
+      href: "/analytics/consulting",
       label: "受託分析 / データ利活用支援",
     },
-    { href: "/services/analytics/case", label: "課題・ケースから探す" },
+    { href: "/analytics", label: "課題・ケースから探す" },
     {
-      href: "/services/analytics/tools",
+      href: "/analytics/tools",
       label: "データ分析ツールの提供",
     },
     {
-      href: "/services/analytics/research",
+      href: "/analytics/research",
       label: "リサーチアドバイザー",
     },
     {
-      href: "/services/analytics/pricing",
+      href: "/analytics/pricing",
       label: "プライシングサービス",
     },
     {
-      href: "/services/analytics/share-prediction",
+      href: "/analytics/share-prediction",
       label: "マーケットシェア推定サービス",
     },
     {
-      href: "/services/analytics/people-analytics",
+      href: "/analytics/people-analytics",
       label: "ピープルアナリティクスサービス",
     },
     {
-      href: "/services/analytics/image-recognition",
+      href: "/analytics/image-recognition",
       label: "画像・動画認識サービス",
     },
     {
-      href: "/services/analytics/ai-agent",
+      href: "/analytics/ai-agent",
       label: "AIエージェントの開発",
     },
   ];

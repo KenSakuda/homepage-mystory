@@ -25,39 +25,30 @@ export default function MobileMenu({ setOpen }: Props) {
             <ul>
               <li>
                 <Link
-                  href="/services/analytics/consulting"
+                  href="/analytics/consulting"
                   onClick={() => setOpen(false)}
                 >
                   受託分析・データ利活用支援
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services/analytics/tools"
-                  onClick={() => setOpen(false)}
-                >
+                <Link href="/analytics/tools" onClick={() => setOpen(false)}>
                   データ分析ツールの提供
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services/analytics/research"
-                  onClick={() => setOpen(false)}
-                >
+                <Link href="/analytics/research" onClick={() => setOpen(false)}>
                   リサーチアドバイザー
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services/analytics/pricing"
-                  onClick={() => setOpen(false)}
-                >
+                <Link href="/analytics/pricing" onClick={() => setOpen(false)}>
                   プライシングサービス
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/analytics/share-prediction"
+                  href="/analytics/share-prediction"
                   onClick={() => setOpen(false)}
                 >
                   マーケットシェア推定サービス
@@ -65,7 +56,7 @@ export default function MobileMenu({ setOpen }: Props) {
               </li>
               <li>
                 <Link
-                  href="/services/analytics/people-analytics"
+                  href="/analytics/people-analytics"
                   onClick={() => setOpen(false)}
                 >
                   ピープルアナリティクスサービス
@@ -73,38 +64,29 @@ export default function MobileMenu({ setOpen }: Props) {
               </li>
               <li>
                 <Link
-                  href="/services/analytics/image-recognition"
+                  href="/analytics/image-recognition"
                   onClick={() => setOpen(false)}
                 >
                   画像・動画認識サービス
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services/analytics/ai-agent"
-                  onClick={() => setOpen(false)}
-                >
+                <Link href="/analytics/ai-agent" onClick={() => setOpen(false)}>
                   AIエージェントの開発
                 </Link>
               </li>
               <li>
-                <Link href="/services/media" onClick={() => setOpen(false)}>
+                <Link href="/media" onClick={() => setOpen(false)}>
                   スポーツニュースサイト『Deep Sports』の運営
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services/healthcare"
-                  onClick={() => setOpen(false)}
-                >
+                <Link href="/healthcare" onClick={() => setOpen(false)}>
                   ヘルスケア関連アプリ『Story Fit』
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services/blockchain"
-                  onClick={() => setOpen(false)}
-                >
+                <Link href="/blockchain" onClick={() => setOpen(false)}>
                   ブロックチェーンサービスの開発
                 </Link>
               </li>
@@ -116,15 +98,12 @@ export default function MobileMenu({ setOpen }: Props) {
             <summary>MyStoryの特徴・実績</summary>
             <ul>
               <li>
-                <Link href="/feature/strength" onClick={() => setOpen(false)}>
+                <Link href="/strength" onClick={() => setOpen(false)}>
                   MyStoryの強み
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/feature/case-studies"
-                  onClick={() => setOpen(false)}
-                >
+                <Link href="/case-studies" onClick={() => setOpen(false)}>
                   分析事例集
                 </Link>
               </li>
@@ -141,15 +120,12 @@ export default function MobileMenu({ setOpen }: Props) {
             <summary>公開データ・資料</summary>
             <ul>
               <li>
-                <Link href="/data/whitepaper" onClick={() => setOpen(false)}>
+                <Link href="/whitepaper" onClick={() => setOpen(false)}>
                   お役立ち資料
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/data/analytics-data"
-                  onClick={() => setOpen(false)}
-                >
+                <Link href="/analytics-data" onClick={() => setOpen(false)}>
                   分析データ
                 </Link>
               </li>

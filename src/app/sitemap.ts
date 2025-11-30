@@ -35,59 +35,59 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
     },
     {
-      url: buildUrl("/services"),
+      url: buildUrl("/analytics"),
       lastModified: now,
     },
     {
-      url: buildUrl("/services/analytics/consulting"),
+      url: buildUrl("/analytics/consulting"),
       lastModified: now,
     },
     {
-      url: buildUrl("/services/analytics/tools"),
+      url: buildUrl("/analytics/tools"),
       lastModified: now,
     },
     {
-      url: buildUrl("/services/analytics/research"),
+      url: buildUrl("/analytics/research"),
       lastModified: now,
     },
     {
-      url: buildUrl("/services/analytics/pricing"),
+      url: buildUrl("/analytics/pricing"),
       lastModified: now,
     },
     {
-      url: buildUrl("/services/analytics/share-prediction"),
+      url: buildUrl("/analytics/share-prediction"),
       lastModified: now,
     },
     {
-      url: buildUrl("/services/analytics/people-analytics"),
+      url: buildUrl("/analytics/people-analytics"),
       lastModified: now,
     },
     {
-      url: buildUrl("/services/analytics/image-recognition"),
+      url: buildUrl("/analytics/image-recognition"),
       lastModified: now,
     },
     {
-      url: buildUrl("/services/analytics/ai-agent"),
+      url: buildUrl("/analytics/ai-agent"),
       lastModified: now,
     },
     {
-      url: buildUrl("/services/media"),
+      url: buildUrl("/media"),
       lastModified: now,
     },
     {
-      url: buildUrl("/services/healthcare"),
+      url: buildUrl("/healthcare"),
       lastModified: now,
     },
     {
-      url: buildUrl("/services/blockchain"),
+      url: buildUrl("/blockchain"),
       lastModified: now,
     },
     {
-      url: buildUrl("/feature/strength"),
+      url: buildUrl("/strength"),
       lastModified: now,
     },
     {
-      url: buildUrl("/feature/case-studies"),
+      url: buildUrl("/case-studies"),
       lastModified: now,
     },
     {
@@ -119,11 +119,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: now,
     },
     {
-      url: buildUrl("/data/whitepaper"),
+      url: buildUrl("/whitepaper"),
       lastModified: now,
     },
     {
-      url: buildUrl("/data/analytics-data"),
+      url: buildUrl("/analytics-data"),
       lastModified: now,
     },
     {

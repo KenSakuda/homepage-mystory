@@ -15,7 +15,7 @@ import {
   // FlowBlock,
   FooterNav,
   AnalyticsOutsourceSection,
-} from "@/app/services/analytics/components";
+} from "@/app/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
 
 export const revalidate = 86400;
@@ -24,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const title = "受託分析 / データ利活用支援";
   const description =
     "データ分析の委託・外注やデータ解析のパートナーを検討している企業向けのサービスです。統計学・機械学習と行動経済学・消費者行動理論・社会科学を掛け合わせたデータ分析を提供。";
-  const url = "https://www.b-mystory.com/services/analytics/consulting";
+  const url = "https://www.b-mystory.com/analytics/consulting";
 
   return {
     title,
@@ -44,36 +44,36 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
   const sidebarLinks = [
     {
-      href: "/services/analytics/consulting",
+      href: "/analytics/consulting",
       label: "受託分析 / データ利活用支援",
     },
-    { href: "/services/analytics/case", label: "課題・ケースから探す" },
+    { href: "/analytics", label: "課題・ケースから探す" },
     {
-      href: "/services/analytics/tools",
+      href: "/analytics/tools",
       label: "データ分析ツールの提供",
     },
     {
-      href: "/services/analytics/research",
+      href: "/analytics/research",
       label: "リサーチアドバイザー",
     },
     {
-      href: "/services/analytics/pricing",
+      href: "/analytics/pricing",
       label: "プライシングサービス",
     },
     {
-      href: "/services/analytics/share-prediction",
+      href: "/analytics/share-prediction",
       label: "マーケットシェア推定サービス",
     },
     {
-      href: "/services/analytics/people-analytics",
+      href: "/analytics/people-analytics",
       label: "ピープルアナリティクスサービス",
     },
     {
-      href: "/services/analytics/image-recognition",
+      href: "/analytics/image-recognition",
       label: "画像・動画認識サービス",
     },
     {
-      href: "/services/analytics/ai-agent",
+      href: "/analytics/ai-agent",
       label: "AIエージェントの開発",
     },
   ];

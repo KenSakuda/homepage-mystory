@@ -14,7 +14,7 @@ export default function Menu() {
       <nav className={styles.nav} id="navigation" aria-hidden={!isOpen}>
         <ul className={styles.items}>
           <li>
-            <Link href="/services">サービス</Link>
+            <Link href="/analytics/consulting">サービス</Link>
           </li>
           <li>
             <Link href="/company">会社概要</Link>

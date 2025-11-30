@@ -7,7 +7,7 @@ import {
   SidebarNavCard,
   LeadBlock,
   FeatureHighlights,
-} from "@/app/services/analytics/components";
+} from "@/app/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
 
 export const revalidate = 86400;
@@ -15,7 +15,7 @@ export const revalidate = 86400;
 export async function generateMetadata(): Promise<Metadata> {
   const title = "ヘルスケア事業";
   const description = "「行動変容を促進」するヘルスケア関連アプリを開発中";
-  const url = "https://www.b-mystory.com/services/healthcare";
+  const url = "https://www.b-mystory.com/healthcare";
 
   return {
     title,
@@ -35,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
   const sidebarLinks = [
     {
-      href: "/services/healthcare",
+      href: "/healthcare",
       label: "ヘルスケア事業",
     },
   ];

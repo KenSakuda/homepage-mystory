@@ -7,7 +7,7 @@ import {
   SidebarNavCard,
   LeadBlock,
   FeatureHighlights,
-} from "@/app/services/analytics/components";
+} from "@/app/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
 
 export const revalidate = 86400;
@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const title = "デジタルメディア事業";
   const description =
     "データで“観る”スポーツの新体験　スポーツアナリティクス特化型ニュースサイト『Deep Sports』をローンチ";
-  const url = "https://www.b-mystory.com/services/media";
+  const url = "https://www.b-mystory.com/media";
 
   return {
     title,
@@ -36,7 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
   const sidebarLinks = [
     {
-      href: "/services/media",
+      href: "/media",
       label: "デジタルメディア事業",
     },
   ];

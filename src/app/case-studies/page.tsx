@@ -24,7 +24,7 @@ export default function Page() {
       {/* カードセクション */}
       <section className={styles.cardsSection}>
         <div className={styles.cards}>
-          <a href="/feature/case-study/case1" className={styles.card}>
+          <a href="/case-studies/case1" className={styles.card}>
             <div className={styles.cardImage}>
               <Image
                 src="/dummy-images.jpg"
@@ -40,7 +40,7 @@ export default function Page() {
               ※準備中
             </p>
           </a>
-          <a href="/feature/case-study/case2" className={styles.card}>
+          <a href="/case-studies/case2" className={styles.card}>
             <div className={styles.cardImage}>
               <Image
                 src="/dummy-images.jpg"
@@ -53,7 +53,7 @@ export default function Page() {
             </div>
             <p className={styles.cardText}>※準備中</p>
           </a>
-          <a href="/feature/case-study/case3" className={styles.card}>
+          <a href="/case-studies/case3" className={styles.card}>
             <div className={styles.cardImage}>
               <Image
                 src="/dummy-images.jpg"

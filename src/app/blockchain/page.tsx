@@ -6,7 +6,7 @@ import {
   MainWithSidebar,
   SidebarNavCard,
   LeadBlock,
-} from "@/app/services/analytics/components";
+} from "@/app/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
 
 export const revalidate = 86400;
@@ -14,7 +14,7 @@ export const revalidate = 86400;
 export async function generateMetadata(): Promise<Metadata> {
   const title = "ブロックチェーン事業";
   const description = "長年のブロックチェーン開発経験をもとにプロダクト開発中";
-  const url = "https://www.b-mystory.com/services/blockchain";
+  const url = "https://www.b-mystory.com/blockchain";
 
   return {
     title,
@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
   const sidebarLinks = [
     {
-      href: "/services/blockchain",
+      href: "/blockchain",
       label: "ブロックチェーン事業",
     },
   ];

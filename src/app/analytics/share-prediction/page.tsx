@@ -10,7 +10,7 @@ import {
   ServiceSection,
   FooterNav,
   AnalyticsOutsourceSection,
-} from "@/app/services/analytics/components";
+} from "@/app/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
 
 export const revalidate = 86400;
@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const title = "マーケットシェア推定サービス";
   const description =
     "マーケットシェアの推移を“動的”に予測。時間×競争の概念を組み込んだ生態学モデルで、マーケットシェア予測・需要予測を一体的に支援。新商品上市や価格変更、プロモーション施策まで織り込んだ精緻なシェア予測を実現します。";
-  const url = "https://www.b-mystory.com/services/analytics/share-prediction";
+  const url = "https://www.b-mystory.com/analytics/share-prediction";
 
   return {
     title,
@@ -39,27 +39,36 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
   const sidebarLinks = [
     {
-      href: "/services/analytics/consulting",
+      href: "/analytics/consulting",
       label: "受託分析 / データ利活用支援",
     },
-    { href: "/services/analytics/case", label: "課題・ケースから探す" },
-    { href: "/services/analytics/tools", label: "データ分析ツールの提供" },
-    { href: "/services/analytics/research", label: "リサーチアドバイザー" },
-    { href: "/services/analytics/pricing", label: "プライシングサービス" },
+    { href: "/analytics", label: "課題・ケースから探す" },
     {
-      href: "/services/analytics/share-prediction",
+      href: "/analytics/tools",
+      label: "データ分析ツールの提供",
+    },
+    {
+      href: "/analytics/research",
+      label: "リサーチアドバイザー",
+    },
+    {
+      href: "/analytics/pricing",
+      label: "プライシングサービス",
+    },
+    {
+      href: "/analytics/share-prediction",
       label: "マーケットシェア推定サービス",
     },
     {
-      href: "/services/analytics/people-analytics",
+      href: "/analytics/people-analytics",
       label: "ピープルアナリティクスサービス",
     },
     {
-      href: "/services/analytics/image-recognition",
+      href: "/analytics/image-recognition",
       label: "画像・動画認識サービス",
     },
     {
-      href: "/services/analytics/ai-agent",
+      href: "/analytics/ai-agent",
       label: "AIエージェントの開発",
     },
   ];

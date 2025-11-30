@@ -69,7 +69,7 @@ export default function RootLayout({
         "@type": "SiteNavigationElement",
         position: 2,
         name: "事業内容（データ利活用支援）",
-        url: "https://www.b-mystory.com/services/analytics/consulting",
+        url: "https://www.b-mystory.com/analytics/consulting",
       },
       {
         "@type": "SiteNavigationElement",

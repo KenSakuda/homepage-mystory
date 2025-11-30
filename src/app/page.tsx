@@ -19,42 +19,42 @@ export default async function Page() {
 
   const cards: ServiceCard[] = [
     {
-      href: "/services/analytics/consulting",
+      href: "/analytics/consulting",
       title: "受託分析/データ利活用支援",
       iconSrc: "/service_data-analytics_icon1.png",
     },
     {
-      href: "/services/analytics/tools",
+      href: "/analytics/tools",
       title: "データ分析ツールの提供",
       iconSrc: "/service_data-analytics_icon2.png",
     },
     {
-      href: "/services/analytics/research",
+      href: "/analytics/research",
       title: "リサーチアドバイザー",
       iconSrc: "/service_data-analytics_icon3.png",
     },
     {
-      href: "/services/analytics/pricing",
+      href: "/analytics/pricing",
       title: "プライシングサービス",
       iconSrc: "/service_data-analytics_icon4.png",
     },
     {
-      href: "/services/analytics/share-prediction",
+      href: "/analytics/share-prediction",
       title: "シェア推定サービス",
       iconSrc: "/service_data-analytics_icon5.png",
     },
     {
-      href: "/services/analytics/people-analytics",
+      href: "/analytics/people-analytics",
       title: "ピープルアナリティクス",
       iconSrc: "/service_data-analytics_icon6.png",
     },
     {
-      href: "/services/analytics/image-recognition",
+      href: "/analytics/image-recognition",
       title: "画像・動画認識サービス",
       iconSrc: "/service_data-analytics_icon7.png",
     },
     {
-      href: "/services/analytics/ai-agent",
+      href: "/analytics/ai-agent",
       title: "AIエージェントの開発",
       iconSrc: "/service_data-analytics_icon8.png",
     },
@@ -134,7 +134,7 @@ export default async function Page() {
           src: "/deepsports.png",
           alt: "Deep Sports画面",
         }}
-        visualLink={{ href: "/services/media" }}
+        visualLink={{ href: "/media" }}
       />
 
       <ServiceSectionVisual
@@ -145,7 +145,7 @@ export default async function Page() {
           src: "/storyfit_top.png",
           alt: "StoryFir画面",
         }}
-        visualLink={{ href: "/services/healthcare" }}
+        visualLink={{ href: "/healthcare" }}
       />
 
       <ServiceSectionVisual
@@ -156,13 +156,13 @@ export default async function Page() {
           src: "/services_analytics_hero.jpg",
           alt: "NoImage",
         }}
-        visualLink={{ href: "/services/blockchain" }}
+        visualLink={{ href: "/blockchain" }}
       />
 
       <section className={styles.categoryLinks}>
         <div className={styles.inner}>
           <div className={styles.categoryGrid}>
-            <Link href="/data/whitepaper" className={styles.categoryLargeCard}>
+            <Link href="/whitepaper" className={styles.categoryLargeCard}>
               <Image
                 src="/marketing-content.webp"
                 alt="whitepaper"

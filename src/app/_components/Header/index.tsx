@@ -1,132 +1,3 @@
-// "use client";
-
-// import Image from "next/image";
-// import Link from "next/link";
-// import styles from "./index.module.css";
-
-// export default function Header() {
-//   return (
-//     <header className={styles.header}>
-//       <div className={styles.topBar}>
-//         <div className={styles.topLinks}>
-//           <Link href="/recruit">採用情報</Link>
-//           <Link href="/news">お知らせ</Link>
-//           <Link href="/company">会社概要</Link>
-//         </div>
-//         <div className={styles.topContact}>
-//           <span>問い合わせ: contact@b-mystory.com</span>
-//         </div>
-//       </div>
-//       <div className={styles.logoNav}>
-//         <div className={styles.logo}>
-//           <Link href="/">
-//             <Image
-//               src="/logo_mystory.jpg"
-//               alt="MyStory"
-//               width={200}
-//               height={40}
-//               priority
-//             />
-//           </Link>
-//         </div>
-//         <nav className={styles.mainNav}>
-//           <ul className={styles.navList}>
-//             <li className={`${styles.navItem} ${styles.dropdown}`}>
-//               <span>サービス</span>
-//               <div className={`${styles.dropdownMenu} ${styles.wideDropdown}`}>
-//                 <div className={styles.dropdownRow}>
-//                   <div>
-//                     <p>データ分析事業</p>
-//                     <ul>
-//                       <li>
-//                         <Link href="/services/analytics">
-//                           データ分析コンサルティング
-//                         </Link>
-//                       </li>
-//                       <li>
-//                         <Link href="/services/analytics/tools">
-//                           データ分析ツール
-//                         </Link>
-//                       </li>
-//                       <li>
-//                         <Link href="/services/analytics/solutions">
-//                           データ分析ソリューション
-//                         </Link>
-//                       </li>
-//                     </ul>
-//                   </div>
-//                   <div>
-//                     <p>デジタルメディア事業</p>
-//                     <ul>
-//                       <li>
-//                         <Link href="/services/media">
-//                           スポーツニュースサイト『Deep Sports』
-//                         </Link>
-//                       </li>
-//                     </ul>
-//                   </div>
-//                   <div>
-//                     <p>ブロックチェーン事業</p>
-//                     <ul>
-//                       <li>
-//                         <Link href="/services/blockchain">
-//                           ポイントサービス
-//                         </Link>
-//                       </li>
-//                     </ul>
-//                   </div>
-//                   <div>
-//                     <p>ヘルスケア事業</p>
-//                     <ul>
-//                       <li>
-//                         <Link href="/services/healthcare">
-//                           ヘルスケア関連アプリ『Health Story』
-//                         </Link>
-//                       </li>
-//                     </ul>
-//                   </div>
-//                 </div>
-//               </div>
-//             </li>
-//             <li className={`${styles.navItem} ${styles.dropdown}`}>
-//               <span>MyStoryの特徴・実績</span>
-//               <div className={styles.dropdownMenu}>
-//                 <ul>
-//                   <li>
-//                     <Link href="/feature/strength">MyStoryの強み</Link>
-//                   </li>
-//                   <li>
-//                     <Link href="/feature/case-studies">分析事例集</Link>
-//                   </li>
-//                 </ul>
-//               </div>
-//             </li>
-//             <li className={styles.navItem}>
-//               <Link href="/movie">動画コンテンツ</Link>
-//             </li>
-//             <li className={`${styles.navItem} ${styles.dropdown}`}>
-//               <span>公開データ・資料</span>
-//               <div className={styles.dropdownMenu}>
-//                 <ul>
-//                   <li>
-//                     <Link href="/data/whitepaper">お役立ち資料</Link>
-//                   </li>
-//                   <li>
-//                     <Link href="/data/analytics-data">分析データ</Link>
-//                   </li>
-//                 </ul>
-//               </div>
-//             </li>
-//             <li className={styles.navItem}>
-//               <Link href="/column">コラム</Link>
-//             </li>
-//           </ul>
-//         </nav>
-//       </div>
-//     </header>
-//   );
-// }
-
 "use client";
 
 import { useState } from "react";
@@ -140,7 +11,6 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <header className={styles.header}>
-      {/* 上部ナビゲーション（PCのみ表示） */}
       <div className={styles.topBar}>
         <div className={styles.topLinks}>
           <Link href="/recruit">採用情報</Link>
@@ -173,42 +43,42 @@ export default function Header() {
                     <p>データ分析コンサルティング事業</p>
                     <ul>
                       <li>
-                        <Link href="/services/analytics/consulting">
+                        <Link href="/analytics/consulting">
                           受託分析・データ利活用支援
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/analytics/tools">
+                        <Link href="/analytics/tools">
                           データ分析ツールの提供
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/analytics/research">
+                        <Link href="/analytics/research">
                           リサーチアドバイザー
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/analytics/pricing">
+                        <Link href="/analytics/pricing">
                           プライシングサービス
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/analytics/share-prediction">
+                        <Link href="/analytics/share-prediction">
                           マーケットシェア推定サービス
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/analytics/people-analytics">
+                        <Link href="/analytics/people-analytics">
                           ピープルアナリティクスサービス
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/analytics/image-recognition">
+                        <Link href="/analytics/image-recognition">
                           画像・動画認識サービス
                         </Link>
                       </li>
                       <li>
-                        <Link href="/services/analytics/ai-agent">
+                        <Link href="/analytics/ai-agent">
                           AIエージェントの開発
                         </Link>
                       </li>
@@ -218,7 +88,7 @@ export default function Header() {
                     <p>デジタルメディア事業</p>
                     <ul>
                       <li>
-                        <Link href="/services/media">
+                        <Link href="/media">
                           スポーツニュースサイト『Deep Sports』
                         </Link>
                       </li>
@@ -228,7 +98,7 @@ export default function Header() {
                     <p>ヘルスケア事業</p>
                     <ul>
                       <li>
-                        <Link href="/services/healthcare">
+                        <Link href="/healthcare">
                           ヘルスケア関連アプリ『Story Fit』
                         </Link>
                       </li>
@@ -238,7 +108,7 @@ export default function Header() {
                     <p>ブロックチェーン事業</p>
                     <ul>
                       <li>
-                        <Link href="/services/blockchain">
+                        <Link href="/blockchain">
                           ポイントサービス『@Point』
                         </Link>
                       </li>
@@ -252,10 +122,10 @@ export default function Header() {
               <div className={styles.dropdownMenu}>
                 <ul>
                   <li>
-                    <Link href="/feature/strength">MyStoryの強み</Link>
+                    <Link href="/strength">MyStoryの強み</Link>
                   </li>
                   <li>
-                    <Link href="/feature/case-studies">分析事例集</Link>
+                    <Link href="/case-studies">分析事例集</Link>
                   </li>
                 </ul>
               </div>
@@ -268,10 +138,10 @@ export default function Header() {
               <div className={styles.dropdownMenu}>
                 <ul>
                   <li>
-                    <Link href="/data/whitepaper">お役立ち資料</Link>
+                    <Link href="/whitepaper">お役立ち資料</Link>
                   </li>
                   <li>
-                    <Link href="/data/analytics-data">分析データ</Link>
+                    <Link href="/analytics-data">分析データ</Link>
                   </li>
                 </ul>
               </div>

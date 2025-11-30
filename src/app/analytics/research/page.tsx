@@ -11,7 +11,7 @@ import {
   AnalysisTable,
   FooterNav,
   AnalyticsOutsourceSection,
-} from "@/app/services/analytics/components";
+} from "@/app/analytics/components";
 import ButtonLink from "@/app/_components/ButtonLink";
 
 export const revalidate = 86400;
@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const title = "リサーチアドバイザー｜調査設計支援・リサーチャー業務委託";
   const description =
     "従業員サーベイ／顧客アンケートを“経営に使える証拠”へ。調査企画・リサーチ設計支援から分析・示唆化まで一気通貫で伴走するリサーチアドバイザーサービス。専任リサーチャー不在でも、業務委託のかたちで調査設計・分析をアウトソースいただけます。";
-  const url = "https://www.b-mystory.com/services/analytics/research";
+  const url = "https://www.b-mystory.com/analytics/research";
 
   return {
     title,
@@ -40,36 +40,36 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
   const sidebarLinks = [
     {
-      href: "/services/analytics/consulting",
+      href: "/analytics/consulting",
       label: "受託分析 / データ利活用支援",
     },
-    { href: "/services/analytics/case", label: "課題・ケースから探す" },
+    { href: "/analytics", label: "課題・ケースから探す" },
     {
-      href: "/services/analytics/tools",
+      href: "/analytics/tools",
       label: "データ分析ツールの提供",
     },
     {
-      href: "/services/analytics/research",
+      href: "/analytics/research",
       label: "リサーチアドバイザー",
     },
     {
-      href: "/services/analytics/pricing",
+      href: "/analytics/pricing",
       label: "プライシングサービス",
     },
     {
-      href: "/services/analytics/share-prediction",
+      href: "/analytics/share-prediction",
       label: "マーケットシェア推定サービス",
     },
     {
-      href: "/services/analytics/people-analytics",
+      href: "/analytics/people-analytics",
       label: "ピープルアナリティクスサービス",
     },
     {
-      href: "/services/analytics/image-recognition",
+      href: "/analytics/image-recognition",
       label: "画像・動画認識サービス",
     },
     {
-      href: "/services/analytics/ai-agent",
+      href: "/analytics/ai-agent",
       label: "AIエージェントの開発",
     },
   ];
