@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import Image from "next/image";
-import ServicesExample from "@/app/analytics/_components/Example";
+import ServicesExample from "@/app/strength/_FeatureComponents/Example";
 
 export default function Page() {
   const data = [
