@@ -27,18 +27,17 @@ export default function Page() {
           <a href="/case-studies/case1" className={styles.card}>
             <div className={styles.cardImage}>
               <Image
-                src="/dummy-images.jpg"
-                alt="動的個人モデルを用いた家庭内在庫量の推定"
+                src="/casestudy_case1.png"
+                alt="動的個人モデルによる購買生起行動の解析とOne to Oneマーケティングへの実装"
                 width={200}
                 height={150}
                 className={styles.image}
               />
-              <h4>動的個人モデルを用いた家庭内在庫量の推定</h4>
+              <h4>
+                動的個人モデルによる購買生起行動の解析とOne to
+                Oneマーケティングへの実装
+              </h4>
             </div>
-            <p className={styles.cardText}>
-              {/* 家庭内在庫量をID別に推定するとともに、ID別の販促感度を推定した事例をご紹介 */}
-              ※準備中
-            </p>
           </a>
           <a href="/case-studies/case2" className={styles.card}>
             <div className={styles.cardImage}>
