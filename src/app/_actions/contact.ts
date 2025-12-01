@@ -45,10 +45,22 @@ export async function createContactData(
     return { status: "error", message: "お問い合わせ内容を入力してください" };
   }
 
-  // ---- HubSpot 送信 ----
-  const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${process.env.HUBSPOT_PORTAL_ID}/${process.env.HUBSPOT_FORM_ID}`;
+  const portalId = process.env.HUBSPOT_PORTAL_ID;
+  const formId = process.env.HUBSPOT_FORM_ID;
 
-  let json: unknown;
+  // ★ まず環境変数が入っているかチェック
+  if (!portalId || !formId) {
+    console.error(
+      "HubSpot env missing. HUBSPOT_PORTAL_ID or HUBSPOT_FORM_ID is not set."
+    );
+    return {
+      status: "error",
+      message:
+        "システム設定エラーが発生しました。時間をおいて再度お試しください。",
+    };
+  }
+
+  const endpoint = `https://share.hsforms.com/1bm8rqvuES4-F75Jj1b7BTgt3z2g/${portalId}/${formId}`;
 
   try {
     const result = await fetch(endpoint, {
@@ -97,13 +109,16 @@ export async function createContactData(
       }),
     });
 
-    json = await result.json().catch((e) => {
+    let body: unknown = null;
+    try {
+      body = await result.json();
+    } catch (e) {
+      // JSON で返ってこない場合も一応ログ
       console.error("HubSpot response JSON parse error:", e);
-      throw e;
-    });
+    }
 
     if (!result.ok) {
-      console.error("HubSpot API error:", result.status, json);
+      console.error("HubSpot API error:", result.status, body);
       return {
         status: "error",
         message: "お問い合わせに失敗しました",
