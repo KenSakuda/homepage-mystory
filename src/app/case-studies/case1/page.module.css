@@ -1,0 +1,475 @@
+.page {
+  --brand-orange: #ff9000;
+  --brand-pink-deep: #cf2f83; /* 濃いめピンク */
+  --ink: #222; /* 本文 */
+  --muted: #6a7280; /* 補助文字 */
+  --grey-hr: #e6e6e6; /* 横罫線 */
+  --grey-card: #f1f1f1; /* サイド枠の背景 */
+  --shadow: 0 12px 30px rgba(229, 73, 154, 0.18); /* ピンクの柔らかい影 */
+  --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.06);
+
+  background: #fff;
+  color: var(--ink);
+  font-feature-settings: "palt";
+  padding: 32px 16px 64px;
+}
+
+.inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+/* ========== Breadcrumb ========== */
+
+.breadcrumb {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.breadcrumbList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.breadcrumbItem::after {
+  content: "›";
+  margin-left: 4px;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.breadcrumbItem:last-child::after {
+  content: "";
+  margin: 0;
+}
+
+.breadcrumbItem a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
+.breadcrumbItem span[aria-current="page"] {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* ========== Hero ========== */
+
+.hero {
+  padding: 20px 18px 22px;
+  border-radius: 18px;
+  background: radial-gradient(
+      circle at top left,
+      rgba(255, 144, 0, 0.12),
+      transparent 60%
+    ),
+    #ffffff;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #f3f3f3;
+  margin-bottom: 28px;
+}
+
+.heroEyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-pink-deep);
+  margin-bottom: 8px;
+}
+
+.heroTitle {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.heroLead {
+  font-size: 0.96rem;
+  line-height: 1.9;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.heroTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.heroTag {
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #fff7ee;
+  color: #b85a00;
+  border: 1px solid #ffe2be;
+}
+
+/* ========== Layout (Main + Sidebar) ========== */
+
+.twoColumn {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 0.9fr);
+  gap: 28px;
+}
+
+.twoColumnMain {
+  min-width: 0;
+}
+
+.twoColumnSub {
+  min-width: 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ========== Sections ========== */
+
+.section {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--grey-hr);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.sectionKicker {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.sectionTitle {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.sectionBody {
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.sectionBody p {
+  margin: 0 0 10px;
+}
+
+/* 共通リスト */
+
+.list {
+  margin: 10px 0 0;
+  padding-left: 1.1em;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.list li {
+  margin-bottom: 4px;
+}
+
+/* ========== Case Meta ========== */
+
+.caseMeta {
+  margin: 0;
+}
+
+.caseMetaRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.caseMetaRow:last-child {
+  border-bottom: none;
+}
+
+.caseMetaLabel {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.caseMetaValue {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ========== KPI ========== */
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.kpiItem {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px 12px 10px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid #f3f3f3;
+}
+
+.kpiLabel {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.kpiValue {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--brand-pink-deep);
+  margin-bottom: 4px;
+}
+
+.kpiDescription {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ========== Process Timeline ========== */
+
+.processList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.processItem {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px 14px;
+  padding: 10px 0;
+}
+
+.processLabel {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--brand-orange);
+  padding-top: 3px;
+}
+
+.processContent {
+  min-width: 0;
+}
+
+.processTitle {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.processText {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ========== Insights ========== */
+
+.insightGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.insightCard {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px 12px 10px;
+  border: 1px solid #f0f0f0;
+}
+
+.insightTitle {
+  font-size: 0.96rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.insightText {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ========== Sidebar Cards ========== */
+
+.sidebarCard {
+  background: var(--grey-card);
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.sidebarCardTitle {
+  font-size: 0.94rem;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.sidebarCardBody {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.sidebarList {
+  list-style: disc;
+  padding-left: 1.1em;
+  margin: 4px 0 0;
+}
+
+.sidebarList li {
+  margin-bottom: 4px;
+}
+
+.sidebarListLinks {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+}
+
+.sidebarListLinks li {
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.sidebarListLinks a {
+  color: var(--brand-pink-deep);
+  text-decoration: none;
+}
+
+.sidebarListLinks a:hover {
+  text-decoration: underline;
+}
+
+/* ========== CTA ========== */
+
+.ctaSection {
+  margin-top: 40px;
+}
+
+.ctaInner {
+  border-radius: 18px;
+  padding: 22px 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 144, 0, 0.12),
+    rgba(207, 47, 131, 0.09)
+  );
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+}
+
+.ctaTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.ctaText {
+  font-size: 0.94rem;
+  line-height: 1.9;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.ctaActions {
+  display: flex;
+  justify-content: center;
+}
+
+/* ========== 共通: 参考でいただいたクラス ========== */
+
+.centerNote {
+  text-align: center;
+  margin: 10px 0 4px;
+  color: #5b5b5b;
+  font-size: 0.8rem;
+}
+
+.imgFrame {
+  background: #fff;
+  border: 1px solid var(--grey-hr);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: var(--shadow-soft);
+}
+
+.contact {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* ========== Responsive ========== */
+
+@media (max-width: 879px) {
+  .twoColumn {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sidebar {
+    order: -1;
+  }
+
+  .hero {
+    padding: 18px 14px 20px;
+  }
+
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+
+  .kpiGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .insightGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 880px) {
+  .page {
+    padding-top: 40px;
+  }
+
+  .hero {
+    padding: 24px 24px 22px;
+  }
+
+  .heroTitle {
+    font-size: 1.9rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+}
