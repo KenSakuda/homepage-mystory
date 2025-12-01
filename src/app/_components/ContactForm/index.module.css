@@ -22,12 +22,15 @@
   font-size: 14px;
 }
 
+/* iOSの自動ズーム対策で font-size:16px 以上＆ box-sizing */
 .textfield {
   border: 1px solid var(--color-border);
   padding: 8px;
   border-radius: 4px;
   line-height: 1.5;
   width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 .textarea {
@@ -36,6 +39,9 @@
   border-radius: 4px;
   line-height: 1.5;
   width: 100%;
+  min-height: 160px;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 .actions {
@@ -70,8 +76,25 @@
   margin-bottom: 8px;
 }
 
+/* スマホ時のレスポンシブ調整 */
 @media (max-width: 640px) {
   .success {
     text-align: left;
+  }
+
+  .horizontal {
+    flex-direction: column; /* 性・名を縦並びに */
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .item {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .textarea {
+    min-height: 180px;
   }
 }

@@ -16,7 +16,7 @@ export default function RootLayout({ children }: Props) {
         padding: "20px 0",
       }}
     >
-      <Sheet>{children}</Sheet>;
+      <Sheet>{children}</Sheet>
     </div>
   );
 }
