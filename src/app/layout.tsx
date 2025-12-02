@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "AIやデータ分析、ブロックチェーン、モダンアプリ開発など先端技術の力を駆使して、あらゆるビジネス課題を解決します",
   openGraph: {
-    title: "データ分析・経済学のビジネス活用なら株式会社MyStory",
+    title: "データ分析・経済学のビジネス活用の相談なら株式会社MyStory",
     siteName: "株式会社MyStory",
     description:
       "AIやデータ分析、ブロックチェーン、モダンアプリ開発など先端技術の力を駆使して、あらゆるビジネス課題を解決します",
