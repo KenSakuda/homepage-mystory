@@ -19,52 +19,58 @@ export async function createContactData(
     message: formData.get("message") as string,
   };
 
-  // ---- バリデーション ----
   if (!rawFormData.lastname) {
-    return { status: "error", message: "性を入力してください" };
-  }
-  if (!rawFormData.firstname) {
-    return { status: "error", message: "名を入力してください" };
-  }
-  if (!rawFormData.company) {
-    return { status: "error", message: "所属組織を入力してください" };
-  }
-  if (!rawFormData.jobtitle) {
-    return { status: "error", message: "部署・役職を入力してください" };
-  }
-  if (!rawFormData.phone) {
-    return { status: "error", message: "電話番号を入力してください" };
-  }
-  if (!rawFormData.email) {
-    return { status: "error", message: "メールアドレスを入力してください" };
-  }
-  if (!validateEmail(rawFormData.email)) {
-    return { status: "error", message: "メールアドレスの形式が誤っています" };
-  }
-  if (!rawFormData.message) {
-    return { status: "error", message: "お問い合わせ内容を入力してください" };
-  }
-
-  const portalId = process.env.HUBSPOT_PORTAL_ID;
-  const formId = process.env.HUBSPOT_FORM_ID;
-
-  // ★ まず環境変数が入っているかチェック
-  if (!portalId || !formId) {
-    console.error(
-      "HubSpot env missing. HUBSPOT_PORTAL_ID or HUBSPOT_FORM_ID is not set."
-    );
     return {
       status: "error",
-      message:
-        "システム設定エラーが発生しました。時間をおいて再度お試しください。",
+      message: "性を入力してください",
+    };
+  }
+  if (!rawFormData.firstname) {
+    return {
+      status: "error",
+      message: "名を入力してください",
+    };
+  }
+  if (!rawFormData.company) {
+    return {
+      status: "error",
+      message: "所属組織を入力してください",
+    };
+  }
+  if (!rawFormData.jobtitle) {
+    return {
+      status: "error",
+      message: "部署・役職を入力してください",
+    };
+  }
+  if (!rawFormData.phone) {
+    return {
+      status: "error",
+      message: "電話番号を入力してください",
+    };
+  }
+  if (!rawFormData.email) {
+    return {
+      status: "error",
+      message: "メールアドレスを入力してください",
+    };
+  }
+  if (!validateEmail(rawFormData.email)) {
+    return {
+      status: "error",
+      message: "メールアドレスの形式が誤っています",
+    };
+  }
+  if (!rawFormData.message) {
+    return {
+      status: "error",
+      message: "お問い合わせ内容を入力してください",
     };
   }
 
-  // const endpoint = `https://share.hsforms.com/1bm8rqvuES4-F75Jj1b7BTgt3z2g/${portalId}/${formId}`;
-  const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
-
-  try {
-    const result = await fetch(endpoint, {
+  const result = await fetch(
+    `https://api.hsforms.com/submissions/v3/integration/submit/${process.env.HUBSPOT_PORTAL_ID}/${process.env.HUBSPOT_FORM_ID}`,
+    {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -108,30 +114,17 @@ export async function createContactData(
           },
         ],
       }),
-    });
-
-    let body: unknown = null;
-    try {
-      body = await result.json();
-    } catch (e) {
-      // JSON で返ってこない場合も一応ログ
-      console.error("HubSpot response JSON parse error:", e);
     }
+  );
 
-    if (!result.ok) {
-      console.error("HubSpot API error:", result.status, body);
-      return {
-        status: "error",
-        message: "お問い合わせに失敗しました",
-      };
-    }
+  try {
+    await result.json();
   } catch (e) {
-    console.error("HubSpot API request failed:", e);
+    console.log(e);
     return {
       status: "error",
       message: "お問い合わせに失敗しました",
     };
   }
-
   return { status: "success", message: "OK" };
 }
