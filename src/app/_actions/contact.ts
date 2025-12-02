@@ -60,7 +60,8 @@ export async function createContactData(
     };
   }
 
-  const endpoint = `https://share.hsforms.com/1bm8rqvuES4-F75Jj1b7BTgt3z2g/${portalId}/${formId}`;
+  // const endpoint = `https://share.hsforms.com/1bm8rqvuES4-F75Jj1b7BTgt3z2g/${portalId}/${formId}`;
+  const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
 
   try {
     const result = await fetch(endpoint, {
