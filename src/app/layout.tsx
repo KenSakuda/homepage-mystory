@@ -8,8 +8,8 @@ import SidebarButton from "@/app/_components/SidebarButton";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.b-mystory.com"),
   title: {
-    template: "%s | データ分析・経済学のビジネス活用なら株式会社MyStory",
-    default: "データ分析・経済学のビジネス活用なら株式会社MyStory",
+    template: "%s | データ分析・経済学のビジネス活用の相談なら株式会社MyStory",
+    default: "データ分析・経済学のビジネス活用の相談なら株式会社MyStory",
   },
   description:
     "AIやデータ分析、ブロックチェーン、モダンアプリ開発など先端技術の力を駆使して、あらゆるビジネス課題を解決します",
