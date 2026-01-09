@@ -69,7 +69,7 @@ export default async function Page() {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="none"
           poster="/Hero.png"
           crossOrigin="anonymous"
           sources={[

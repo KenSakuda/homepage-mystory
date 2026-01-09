@@ -20,7 +20,7 @@ export default function Footer() {
           </li>
         </ul>
       </nav>
-      <p className={styles.cr}>© 2025 MyStory Inc. All Rights Reserved.</p>
+      <p className={styles.cr}>© 2026 MyStory Inc. All Rights Reserved.</p>
     </footer>
   );
 }
