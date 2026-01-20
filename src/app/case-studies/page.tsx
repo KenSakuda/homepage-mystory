@@ -42,15 +42,16 @@ export default function Page() {
           <a href="/case-studies/case2" className={styles.card}>
             <div className={styles.cardImage}>
               <Image
-                src="/dummy-images.jpg"
-                alt="ミクロ経済学モデルを活用したプライシング分析"
+                src="/casestudy_case2.png"
+                alt="行動経済学にもとづくポイントと値引きプロモーションの最適設計"
                 width={200}
                 height={150}
                 className={styles.image}
               />
-              <h4>ミクロ経済学モデルを活用したプライシング分析</h4>
+              <h4>
+                行動経済学にもとづくポイントと値引きプロモーションの最適設計
+              </h4>
             </div>
-            <p className={styles.cardText}>※準備中</p>
           </a>
           <a href="/case-studies/case3" className={styles.card}>
             <div className={styles.cardImage}>
