@@ -161,6 +161,11 @@ export default function Page() {
                         "【コラム】ポイントと値引きの違い 〜行動経済学で読み解くプロモーション施策の本質〜 はこちら",
                       href: "https://www.b-mystory.com/column/d1uun_2n9qib",
                     },
+                    {
+                      label:
+                        "【分析事例】行動経済学にもとづくポイントと値引きプロモーションの最適設計 はこちら",
+                      href: "https://www.b-mystory.com/case-studies/case2",
+                    },
                   ],
                 },
               ]}

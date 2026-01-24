@@ -40,6 +40,8 @@ type SidebarCardProps = {
   children: ReactNode;
 };
 
+export const revalidate = 86400;
+
 export async function generateMetadata(): Promise<Metadata> {
   const title = "分析事例 - 動的個人モデルによるOne to One マーケティング";
   const description =

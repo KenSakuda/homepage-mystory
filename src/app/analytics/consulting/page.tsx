@@ -146,6 +146,13 @@ export default function Page() {
                     src: "/data_analytics_consulting_feature3.png",
                     alt: "コンサルティングで成果に繋げるデータ分析会社のイメージ",
                   },
+                  links: [
+                    {
+                      label:
+                        "【分析事例】動的個人モデルによる購買生起行動の解析とOne to Oneマーケティングへの実装 はこちら",
+                      href: "https://www.b-mystory.com/case-studies/case1",
+                    },
+                  ],
                 },
                 {
                   subtitle: "技術力×ビジネス力の掛け合わせ＋育成・内製化支援",
