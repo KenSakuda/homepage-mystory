@@ -111,11 +111,11 @@ export default function Page() {
           </div>
           <div>
             <dt>従事者数</dt>
-            <dd>18名 ※正社員以外も含む</dd>
+            <dd>14名 ※正社員以外も含む</dd>
           </div>
           <div>
-            <dt>資本金</dt>
-            <dd>300万円</dd>
+            <dt>インボイス登録番号</dt>
+            <dd>T9010401163279</dd>
           </div>
           <div>
             <dt>加盟学会</dt>
