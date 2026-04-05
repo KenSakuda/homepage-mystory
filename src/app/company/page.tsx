@@ -44,7 +44,7 @@ export default function Page() {
             <div className={styles.card}>
               <h3 className={styles.cardTitle}>規模</h3>
               <p>
-                専門性の高いデータサイエンティストが15名在籍しております。また多くの企業とパートナー契約を交わしており、チームを組成してリサーチやコンサルティング、開発など様々な案件に対応可能です。
+                専門性の高いデータサイエンティストが11名在籍しております。また多くの企業とパートナー契約を交わしており、チームを組成してリサーチやコンサルティング、開発など様々な案件に対応可能です。
               </p>
             </div>
             <div className={styles.card}>
@@ -150,8 +150,8 @@ export default function Page() {
           <Image
             src="/sales_trends.png"
             alt="MyStoryの売上推移グラフ"
-            width={1200}
-            height={675}
+            width={800}
+            height={450}
             className={styles.salesTrendImg}
           />
         </div>
