@@ -149,6 +149,21 @@
   border-top: 1px solid #ffdc99;
   margin-top: 40px;
 }
+
+.salesTrendImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.salesTrendImg {
+  width: 100%;
+  max-width: 960px;
+  height: auto;
+  display: block;
+}
+
 /* --- スマホ対応 --- */
 @media (max-width: 768px) {
   .hero {

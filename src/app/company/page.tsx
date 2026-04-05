@@ -2,9 +2,11 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import ButtonLink from "@/app/_components/ButtonLink";
+
 export const metadata = {
   title: "会社概要",
 };
+
 export default function Page() {
   return (
     <div className={styles.container}>
@@ -17,6 +19,7 @@ export default function Page() {
         </span>{" "}
         &gt; <span className={styles.current}>会社概要</span>
       </div>
+
       <section className={styles.about}>
         <h2 className={styles.sectionTitle}>MyStoryの特徴</h2>
         {/* スマホ表示時のロゴ */}
@@ -29,6 +32,7 @@ export default function Page() {
             priority
           />
         </div>
+
         <section className={styles.features}>
           <div className={styles.grid}>
             <div className={styles.card}>
@@ -68,10 +72,12 @@ export default function Page() {
             </div>
           </div>
         </section>
+
         <div className={styles.buttonWrapper}>
           <ButtonLink href="/feature/strength">MyStoryの強みを知る</ButtonLink>
         </div>
       </section>
+
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>企業情報</h2>
         <dl className={styles.infoTable}>
@@ -136,6 +142,21 @@ export default function Page() {
           </div>
         </dl>
       </section>
+
+      {/* 売上推移グラフ */}
+      <section className={styles.section}>
+        <h2 className={styles.sectionTitle}>売上推移</h2>
+        <div className={styles.salesTrendImage}>
+          <Image
+            src="/sales_trends.png"
+            alt="MyStoryの売上推移グラフ"
+            width={1200}
+            height={675}
+            className={styles.salesTrendImg}
+          />
+        </div>
+      </section>
+
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>ミッション</h2>
         <p className={styles.text}>
