@@ -27,6 +27,11 @@ export type Column = {
   writerName?: string;
 } & MicroCMSListContent;
 
+export type solutions = {
+  title: string;
+  content: string;
+} & MicroCMSListContent;
+
 export type RichEditor = {
   fieldId: "richEditor";
   richEditor: string;
@@ -55,7 +60,7 @@ export const getNewsList = async (queries?: MicroCMSQueries) => {
 
 export const getNewsDetail = async (
   contentId: string,
-  queries?: MicroCMSQueries
+  queries?: MicroCMSQueries,
 ) => {
   const detailData = await client.getListDetail<News>({
     endpoint: "news",
@@ -75,7 +80,7 @@ export const getColumnList = async (queries?: MicroCMSQueries) => {
 
 export const getColumnDetail = async (
   contentId: string,
-  queries?: MicroCMSQueries
+  queries?: MicroCMSQueries,
 ) => {
   const detailData = await client.getListDetail<Column>({
     endpoint: "column",
@@ -85,9 +90,21 @@ export const getColumnDetail = async (
   return detailData;
 };
 
+export const getHrConsultingDetail = async (
+  contentId: string,
+  queries?: MicroCMSQueries,
+) => {
+  const detailData = await client.getListDetail<solutions>({
+    endpoint: "solutions",
+    contentId,
+    queries,
+  });
+  return detailData;
+};
+
 export const getCategoryDetail = async (
   contentId: string,
-  queries?: MicroCMSQueries
+  queries?: MicroCMSQueries,
 ) => {
   const detailData = await client.getListDetail<Category>({
     endpoint: "categories",
