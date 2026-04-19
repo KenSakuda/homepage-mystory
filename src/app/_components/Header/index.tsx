@@ -53,11 +53,6 @@ export default function Header() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/analytics/research">
-                          リサーチアドバイザー
-                        </Link>
-                      </li>
-                      <li>
                         <Link href="/analytics/pricing">
                           プライシングサービス
                         </Link>
@@ -77,9 +72,14 @@ export default function Header() {
                           画像・動画認識サービス
                         </Link>
                       </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <p>人事コンサルティング事業</p>
+                    <ul>
                       <li>
-                        <Link href="/analytics/ai-agent">
-                          AIエージェントの開発
+                        <Link href="/hr-consulting">
+                          人事・組織領域に関するコンサルティング
                         </Link>
                       </li>
                     </ul>

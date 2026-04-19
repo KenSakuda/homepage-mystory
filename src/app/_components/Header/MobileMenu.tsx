@@ -37,11 +37,6 @@ export default function MobileMenu({ setOpen }: Props) {
                 </Link>
               </li>
               <li>
-                <Link href="/analytics/research" onClick={() => setOpen(false)}>
-                  リサーチアドバイザー
-                </Link>
-              </li>
-              <li>
                 <Link href="/analytics/pricing" onClick={() => setOpen(false)}>
                   プライシングサービス
                 </Link>
@@ -71,8 +66,8 @@ export default function MobileMenu({ setOpen }: Props) {
                 </Link>
               </li>
               <li>
-                <Link href="/analytics/ai-agent" onClick={() => setOpen(false)}>
-                  AIエージェントの開発
+                <Link href="/hr-consulting" onClick={() => setOpen(false)}>
+                  人事・組織領域に関するコンサルティング
                 </Link>
               </li>
               <li>

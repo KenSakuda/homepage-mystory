@@ -50,10 +50,6 @@ export default function Page() {
       label: "データ分析ツールの提供",
     },
     {
-      href: "/analytics/research",
-      label: "リサーチアドバイザー",
-    },
-    {
       href: "/analytics/pricing",
       label: "プライシングサービス",
     },
@@ -68,10 +64,6 @@ export default function Page() {
     {
       href: "/analytics/image-recognition",
       label: "画像・動画認識サービス",
-    },
-    {
-      href: "/analytics/ai-agent",
-      label: "AIエージェントの開発",
     },
   ];
 

@@ -150,8 +150,8 @@ export default function Page() {
           <Image
             src="/sales_trends.png"
             alt="MyStoryの売上推移グラフ"
-            width={800}
-            height={450}
+            width={650}
+            height={350}
             className={styles.salesTrendImg}
           />
         </div>

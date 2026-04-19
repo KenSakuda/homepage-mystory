@@ -29,11 +29,6 @@ export default async function Page() {
       iconSrc: "/service_data-analytics_icon2.png",
     },
     {
-      href: "/analytics/research",
-      title: "リサーチアドバイザー",
-      iconSrc: "/service_data-analytics_icon3.png",
-    },
-    {
       href: "/analytics/pricing",
       title: "プライシングサービス",
       iconSrc: "/service_data-analytics_icon4.png",
@@ -52,11 +47,6 @@ export default async function Page() {
       href: "/analytics/image-recognition",
       title: "画像・動画認識サービス",
       iconSrc: "/service_data-analytics_icon7.png",
-    },
-    {
-      href: "/analytics/ai-agent",
-      title: "AIエージェントの開発",
-      iconSrc: "/service_data-analytics_icon8.png",
     },
   ];
 
@@ -124,6 +114,17 @@ export default async function Page() {
         title="データ分析でビジネス課題解決・収益成長を加速させる伴走支援"
         description="MyStoryのデータ分析コンサルティング事業は、統計学・機械学習といった技術面の専門性と、行動経済学・消費者行動理論といった行動科学の専門知見を掛け合わせた“意思決定に繋がる”データ分析を提供できることが特徴です。プライシング、ピープルアナリティクスに加え、画像・動画認識やAIエージェントによる業務プロセスの高度化など各種分析ソリューションを展開しており、あわせてデータ分析ツールの開発・販売も行っています。"
         cards={cards}
+      />
+
+      <ServiceSectionVisual
+        eyebrow="人事コンサルティング事業"
+        title="組織・人事領域の制度策定に関するコンサルティング"
+        description=""
+        image={{
+          src: "/deepsports.png",
+          alt: "Deep Sports画面",
+        }}
+        visualLink={{ href: "/hr-consulting" }}
       />
 
       <ServiceSectionVisual
