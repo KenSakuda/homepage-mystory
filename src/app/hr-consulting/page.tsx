@@ -11,18 +11,22 @@ const solutionCategories = [
     items: [
       {
         title: "ジョブ型 / スキルベース人事制度構築",
+        href: "/hr-consulting/jobtype",
         text: "職務・役割・保有スキルをもとに、人材要件と処遇の接続を整理。制度設計だけでなく、運用時の定義の曖昧さや現場負荷にも配慮して構築します。",
       },
       {
         title: "報酬（インセンティブ）設計",
+        href: "/hr-consulting/incentive",
         text: "固定給・賞与・インセンティブのバランスを見直し、納得感と行動変容の両立を目指します。人件費の持続可能性や評価制度との整合も踏まえて設計します。",
       },
       {
         title: "役割等級制度構築",
+        href: "/hr-consulting/grade",
         text: "年功的な運用から脱却し、期待役割と責任の大きさに応じた等級制度を設計。等級定義・昇降格基準・職種横断の整理まで支援します。",
       },
       {
         title: "人事評価制度構築",
+        href: "/hr-consulting/evaluation",
         text: "成果・行動・能力評価の考え方を整理し、会社の成長フェーズに合った評価制度へ。評価項目の設計だけでなく、評価のブレを抑える運用面も重視します。",
       },
     ],
@@ -36,14 +40,17 @@ const solutionCategories = [
     items: [
       {
         title: "人材ポートフォリオ検討支援",
+        href: "/hr-consulting/portfolio",
         text: "事業戦略や組織課題に対して、どのような人材を・どの程度・どこに配置すべきかを整理。将来の必要人材像まで見据えた検討を支援します。",
       },
       {
         title: "人材採用コンサルティング",
+        href: "/hr-consulting/recruiting",
         text: "採用ターゲットの再定義、訴求軸の整理、選考設計の見直しなどを通じて、採用競争力の向上を支援。採用後の定着や活躍まで含めて検討します。",
       },
       {
         title: "教育研修（& 効果検証）",
+        href: "/hr-consulting/training",
         text: "研修を実施して終わりにせず、事前課題・受講後の変化・現場実装まで設計。必要に応じてアンケートや評価データを用いた効果検証も行います。",
       },
     ],
@@ -57,18 +64,22 @@ const solutionCategories = [
     items: [
       {
         title: "人件費シミュレーション",
+        href: "/hr-consulting/personnel-cost",
         text: "昇給・賞与・採用計画・等級変更などが人件費にどう影響するかを可視化。複数シナリオを比較し、意思決定に使いやすい形で整理します。",
       },
       {
         title: "ピープルアナリティクス",
+        href: "/analytics/people-analytics",
         text: "退職予測、ハイパフォーマー分析、配置最適化、評価傾向分析など、人事課題に応じた分析テーマを設計。現場で使える示唆につなげます。",
       },
       {
         title: "エンゲージメントサーベイ / スキルチェックシート",
+        href: "/hr-consulting/engagement-survey",
         text: "サーベイやチェックシートの設計、実施、集計、示唆抽出まで支援。目的に応じて設問設計を見直し、施策立案につながるアウトプットを整えます。",
       },
       {
-        title: "データ補正方法（アンカリングヴィネットなど）",
+        title: "データ整備 / 補正方法",
+        href: "/hr-consulting/data-adjustment",
         text: "自己評価や上司評価のバイアスを考慮し、より妥当な比較や評価解釈を目指す補正アプローチを導入。評価データをそのまま使うことの限界にも向き合います。",
       },
     ],
@@ -128,9 +139,6 @@ export default function HrConsultingSolutionPage() {
             <Link href="/contact" className={styles.primaryButton}>
               ご相談・お問い合わせ
             </Link>
-            <a href="#solution-list" className={styles.secondaryButton}>
-              ソリューション一覧を見る
-            </a>
           </div>
         </div>
       </section>
@@ -191,7 +199,7 @@ export default function HrConsultingSolutionPage() {
         </div>
       </section>
 
-      <section id="solution-list" className={styles.solutionSection}>
+      <section className={styles.solutionSection}>
         <div className={styles.sectionHeader}>
           <p className={styles.sectionLabel}>Solutions</p>
           <h2 className={styles.sectionTitle}>ソリューション一覧</h2>
@@ -216,13 +224,18 @@ export default function HrConsultingSolutionPage() {
 
               <div className={styles.cardGrid}>
                 {category.items.map((item) => (
-                  <article key={item.title} className={styles.solutionCard}>
+                  <Link
+                    key={item.title}
+                    href={item.href}
+                    className={styles.solutionCard}
+                  >
                     <div className={styles.cardTop}>
                       <span className={styles.cardBadge}>{category.title}</span>
                     </div>
                     <h4 className={styles.cardTitle}>{item.title}</h4>
                     <p className={styles.cardText}>{item.text}</p>
-                  </article>
+                    <span className={styles.cardArrow}>詳細を見る</span>
+                  </Link>
                 ))}
               </div>
             </section>
