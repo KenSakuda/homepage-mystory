@@ -438,6 +438,47 @@
   text-decoration: underline;
 }
 
+.cardAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff9900 0%, #ff7f11 100%);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(255, 136, 0, 0.2);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
+  width: fit-content;
+}
+
+.cardActionIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 0.95rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cardActionText {
+  line-height: 1;
+}
+
+.solutionCard:hover .cardAction {
+  transform: translateX(4px);
+  box-shadow: 0 12px 24px rgba(255, 136, 0, 0.28);
+}
+
 @media (max-width: 1024px) {
   .introGrid,
   .categoryHeading,

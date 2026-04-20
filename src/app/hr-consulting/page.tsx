@@ -125,14 +125,9 @@ export default function HrConsultingSolutionPage() {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <p className={styles.eyebrow}>HR Consulting Solutions</p>
-          <h1 className={styles.heroTitle}>
-            人事コンサルティング事業のソリューション
-          </h1>
+          <h1 className={styles.heroTitle}>ソリューション</h1>
           <p className={styles.heroLead}>
-            制度設計、人材採用・育成、人事データ分析まで。
-            <br />
-            MyStoryは、組織・人事の課題を構想だけで終わらせず、
-            実行しやすい仕組みへ落とし込む支援を行います。
+            制度設計、人材採用・育成、人事データ分析まで。MyStoryは、組織・人事の課題を構想だけで終わらせず、実行しやすい仕組みへ落とし込む支援を行います。
           </p>
 
           <div className={styles.heroButtons}>
@@ -234,7 +229,10 @@ export default function HrConsultingSolutionPage() {
                     </div>
                     <h4 className={styles.cardTitle}>{item.title}</h4>
                     <p className={styles.cardText}>{item.text}</p>
-                    <span className={styles.cardArrow}>詳細を見る</span>
+                    <div className={styles.cardAction}>
+                      <span className={styles.cardActionIcon}>→</span>
+                      <span className={styles.cardActionText}>詳細を見る</span>
+                    </div>
                   </Link>
                 ))}
               </div>
