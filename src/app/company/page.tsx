@@ -102,6 +102,9 @@ export default function Page() {
               ・データ分析ツールの開発、並びに販売
               <br />
               <br />
+              ・人事コンサルティング
+              <br />
+              <br />
               ・スポーツニュースサイト『Deep Sports』の運営
               <br />
               <br />

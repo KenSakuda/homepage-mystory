@@ -121,8 +121,8 @@ export default async function Page() {
         title="組織・人事領域の制度策定に関するコンサルティング"
         description=""
         image={{
-          src: "/deepsports.png",
-          alt: "Deep Sports画面",
+          src: "/services_analytics_hero.jpg",
+          alt: "NoImage",
         }}
         visualLink={{ href: "/hr-consulting" }}
       />

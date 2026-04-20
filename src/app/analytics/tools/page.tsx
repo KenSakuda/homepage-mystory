@@ -41,7 +41,6 @@ export default function Page() {
       href: "/analytics/consulting",
       label: "受託分析 / データ利活用支援",
     },
-    { href: "/analytics", label: "課題・ケースから探す" },
     {
       href: "/analytics/tools",
       label: "データ分析ツールの提供",
