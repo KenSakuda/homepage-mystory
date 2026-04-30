@@ -50,28 +50,28 @@ export default async function Page() {
     },
   ];
 
-  const blockchain_cards: ServiceCard[] = [
-    {
-      href: "/blockchain/membership-nft",
-      title: "会員証NFT・デジタル会員権 開発",
-      iconSrc: "/service_blockchain_icon1.png",
-    },
-    {
-      href: "/blockchain/token-loyalty",
-      title: "トークンでポイント制度・ロイヤルティ構築",
-      iconSrc: "/service_blockchain_icon2.png",
-    },
-    {
-      href: "/blockchain/smart-contract-development",
-      title: "スマートコントラクト受託開発",
-      iconSrc: "/service_blockchain_icon3.png",
-    },
-    {
-      href: "/blockchain/dao-governance",
-      title: "DAO/コミュニティ運営基盤 構築",
-      iconSrc: "/service_blockchain_icon4.png",
-    },
-  ];
+  // const blockchain_cards: ServiceCard[] = [
+  //   {
+  //     href: "/blockchain/membership-nft",
+  //     title: "会員証NFT・デジタル会員権 開発",
+  //     iconSrc: "/service_blockchain_icon1.png",
+  //   },
+  //   {
+  //     href: "/blockchain/token-loyalty",
+  //     title: "トークンでポイント制度・ロイヤルティ構築",
+  //     iconSrc: "/service_blockchain_icon2.png",
+  //   },
+  //   {
+  //     href: "/blockchain/smart-contract-development",
+  //     title: "スマートコントラクト受託開発",
+  //     iconSrc: "/service_blockchain_icon3.png",
+  //   },
+  //   {
+  //     href: "/blockchain/dao-governance",
+  //     title: "DAO/コミュニティ運営基盤 構築",
+  //     iconSrc: "/service_blockchain_icon4.png",
+  //   },
+  // ];
 
   return (
     <>
@@ -172,12 +172,12 @@ export default async function Page() {
         visualLink={{ href: "/healthcare" }}
       />
 
-      <ServiceSectionGrid
+      {/* <ServiceSectionGrid
         eyebrow="ブロックチェーン事業"
         title="ブロックチェーンで新しい顧客体験・事業モデルを形にする伴走開発支援"
         description="MyStoryのブロックチェーン事業は、スマートコントラクト開発を中心に、会員証NFTやトークンを活用したポイント制度など、企業の“実運用”に耐えるWeb3施策・プロダクトを企画から実装まで一気通貫で支援できることが特徴です。NFT/DeFi/DAOといった技術要素を、要件定義・セキュリティ設計・運用ルールに落とし込み、PoCで終わらないプロダクト開発へつなげます。将来的にはブロックチェーン機能を搭載した自社プロダクトの開発・提供も見据え、受託開発とプロダクト開発の両輪で価値創出を進めています。"
         cards={blockchain_cards}
-      />
+      /> */}
 
       <section className={styles.categoryLinks}>
         <div className={styles.inner}>
