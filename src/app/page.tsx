@@ -17,7 +17,7 @@ export default async function Page() {
   const news = await getNewsList({ limit: TOP_NEWS_LIMIT });
   const columns = await getColumnList({ limit: TOP_NEWS_LIMIT });
 
-  const cards: ServiceCard[] = [
+  const analytics_cards: ServiceCard[] = [
     {
       href: "/analytics/consulting",
       title: "受託分析/データ利活用支援",
@@ -47,6 +47,29 @@ export default async function Page() {
       href: "/analytics/image-recognition",
       title: "画像・動画認識サービス",
       iconSrc: "/service_data-analytics_icon7.png",
+    },
+  ];
+
+  const blockchain_cards: ServiceCard[] = [
+    {
+      href: "/blockchain/membership-nft",
+      title: "会員証NFT・デジタル会員権 開発",
+      iconSrc: "/service_blockchain_icon1.png",
+    },
+    {
+      href: "/blockchain/token-loyalty",
+      title: "トークンでポイント制度・ロイヤルティ構築",
+      iconSrc: "/service_blockchain_icon2.png",
+    },
+    {
+      href: "/blockchain/smart-contract-development",
+      title: "スマートコントラクト受託開発",
+      iconSrc: "/service_blockchain_icon3.png",
+    },
+    {
+      href: "/blockchain/dao-governance",
+      title: "DAO/コミュニティ運営基盤 構築",
+      iconSrc: "/service_blockchain_icon4.png",
     },
   ];
 
@@ -113,7 +136,7 @@ export default async function Page() {
         eyebrow="データ分析コンサルティング事業"
         title="データ分析でビジネス課題解決・収益成長を加速させる伴走支援"
         description="MyStoryのデータ分析コンサルティング事業は、統計学・機械学習といった技術面の専門性と、行動経済学・消費者行動理論といった行動科学の専門知見を掛け合わせた“意思決定に繋がる”データ分析を提供できることが特徴です。プライシング、ピープルアナリティクスなど各種分析ソリューションを展開しており、あわせてデータ分析ツールの開発・販売も行っています。"
-        cards={cards}
+        cards={analytics_cards}
       />
 
       <ServiceSectionVisual
@@ -149,15 +172,11 @@ export default async function Page() {
         visualLink={{ href: "/healthcare" }}
       />
 
-      <ServiceSectionVisual
+      <ServiceSectionGrid
         eyebrow="ブロックチェーン事業"
-        title="Web3・NFT活用で価値創出するブロックチェーン事業"
-        description="これまで培ってきたブロックチェーン開発の知見をもとに、ブロックチェーン型ポイントサービス『＠Point』を開発中です。（2026年6月ローンチ予定）"
-        image={{
-          src: "/services_analytics_hero.jpg",
-          alt: "NoImage",
-        }}
-        visualLink={{ href: "/blockchain" }}
+        title="ブロックチェーンで新しい顧客体験・事業モデルを形にする伴走開発支援"
+        description="MyStoryのブロックチェーン事業は、スマートコントラクト開発を中心に、会員証NFTやトークンを活用したポイント制度など、企業の“実運用”に耐えるWeb3施策・プロダクトを企画から実装まで一気通貫で支援できることが特徴です。NFT/DeFi/DAOといった技術要素を、要件定義・セキュリティ設計・運用ルールに落とし込み、PoCで終わらないプロダクト開発へつなげます。将来的にはブロックチェーン機能を搭載した自社プロダクトの開発・提供も見据え、受託開発とプロダクト開発の両輪で価値創出を進めています。"
+        cards={blockchain_cards}
       />
 
       <section className={styles.categoryLinks}>

@@ -87,16 +87,27 @@
 }
 /* --- 広いドロップダウン --- */
 .wideDropdown {
-  width: 1200px;
+  width: 1500px; /* 1200 → 拡張 */
+  max-width: calc(100vw - 80px); /* 画面端ではみ出し防止 */
   left: 50%;
-  transform: translateX(-30%);
+  transform: translateX(-35%);
+  padding: 2rem 2.5rem; /* 内側余白も少し増やす */
 }
+
 .dropdownRow {
   display: flex;
-  gap: 40px;
+  gap: 56px; /* 40 → 少し広げる */
+  align-items: flex-start;
 }
+
 .dropdownRow div {
   flex: 1;
+  min-width: 240px; /* 各カラム幅確保 */
+}
+
+.dropdownRow ul li {
+  white-space: nowrap; /* 2行折返し防止 */
+  line-height: 1.8;
 }
 .dropdownRow p {
   font-weight: bold;

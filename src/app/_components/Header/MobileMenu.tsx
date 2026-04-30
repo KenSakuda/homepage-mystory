@@ -81,8 +81,35 @@ export default function MobileMenu({ setOpen }: Props) {
                 </Link>
               </li>
               <li>
-                <Link href="/blockchain" onClick={() => setOpen(false)}>
-                  ブロックチェーンサービスの開発
+                <Link
+                  href="/blockchain/membership-nft"
+                  onClick={() => setOpen(false)}
+                >
+                  会員証NFT・デジタル会員権 開発
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blockchain/token-loyalty"
+                  onClick={() => setOpen(false)}
+                >
+                  トークンでポイント制度・ロイヤルティ構築
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blockchain/smart-contract-development"
+                  onClick={() => setOpen(false)}
+                >
+                  スマートコントラクト受託開発
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blockchain/dao-governance"
+                  onClick={() => setOpen(false)}
+                >
+                  DAO/コミュニティ運営基盤 構築
                 </Link>
               </li>
             </ul>

@@ -108,8 +108,23 @@ export default function Header() {
                     <p>ブロックチェーン事業</p>
                     <ul>
                       <li>
-                        <Link href="/blockchain">
-                          ポイントサービス『@Point』
+                        <Link href="/blockchain/membership-nft">
+                          会員証NFT・デジタル会員権 開発
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/blockchain/token-loyalty">
+                          トークンでポイント制度・ロイヤルティ構築
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/blockchain/smart-contract-development">
+                          スマートコントラクト受託開発
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/blockchain/dao-governance">
+                          DAO/コミュニティ運営基盤 構築
                         </Link>
                       </li>
                     </ul>
