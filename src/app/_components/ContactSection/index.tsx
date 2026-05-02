@@ -46,7 +46,7 @@ export default function ContactSection() {
           </div>
 
           <p className={styles.lead}>
-            まだ詳細が決まっていない段階でも問題ありません。
+            詳細が決まっていない段階でも問題ありません。
             <br />
             無料でご相談・お見積もり対応しています。
           </p>
