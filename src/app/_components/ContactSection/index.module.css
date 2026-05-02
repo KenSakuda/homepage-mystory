@@ -1,44 +1,239 @@
 .section {
+  position: relative;
   margin-top: 30px;
-  padding: 30px 20px;
-  background-color: #ff8c00;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  display: flex;
+  overflow: hidden;
+  background: linear-gradient(120deg, #ff9a1f, #ff8c00, #ffb347, #f57c00);
+  background-size: 300% 300%;
+  animation: orangeGradient 12s ease-in-out infinite;
 }
 
-.title {
-  text-align: center;
-  margin-bottom: 20px;
+.inner {
+  position: relative;
+  min-height: 520px;
+  padding: 90px 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: min(520px, 48%);
   color: #fff;
 }
 
-.title h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.title {
+  margin-bottom: 34px;
 }
 
-.title p {
-  font-size: 1rem;
-  margin-bottom: 10px;
+.title h2 {
+  font-size: clamp(1rem, 2.2vw, 2.5rem);
+  line-height: 1.35;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.listBox {
+  width: 100%;
+  max-width: 440px;
+  padding: 24px 34px;
+  margin-bottom: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+}
+
+.listBox ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.listBox li {
+  font-size: 1.05rem;
+  line-height: 2;
+  font-weight: 700;
+}
+
+.lead {
+  margin: 0 0 42px;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  font-weight: 700;
 }
 
 .button {
-  margin-top: 10px;
-  max-width: 100%;
+  width: fit-content;
 }
 
-/* レスポンシブ対応 */
+.visual {
+  position: absolute;
+  top: 50%;
+  right: -2%;
+  width: min(760px, 48vw);
+  height: 760px;
+  transform: translateY(-50%) rotate(22deg);
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  gap: 28px;
+}
+
+.mockupColumn {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columnOne {
+  animation: mockupFlowUp 10s linear infinite;
+}
+
+.columnTwo {
+  transform: translateY(-160px);
+  animation: mockupFlowDown 12s linear infinite;
+}
+
+@keyframes mockupFlowUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes mockupFlowDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.mockupCard {
+  width: 300px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: none;
+  /* border: 1px solid rgba(255, 255, 255, 0.12); */
+  flex-shrink: 0;
+}
+
+.mockupCard img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes orangeGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  35% {
+    background-position: 60% 50%;
+  }
+  70% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* タブレット */
+@media screen and (max-width: 1024px) {
+  .inner {
+    padding: 80px 7vw;
+  }
+
+  .content {
+    width: 55%;
+  }
+
+  .visual {
+    right: -18%;
+    width: 54vw;
+  }
+
+  .mockupCard {
+    width: 440px;
+  }
+}
+
+/* スマホ */
 @media screen and (max-width: 768px) {
   .section {
-    text-align: center;
+    margin-top: 24px;
+  }
+
+  .inner {
+    min-height: auto;
+    padding: 72px 24px;
+    display: block;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .title {
+    margin-bottom: 32px;
+  }
+
+  .title h2 {
+    font-size: 2.25rem;
+    line-height: 1.45;
+  }
+
+  .listBox {
+    max-width: none;
+    padding: 24px 26px;
+    margin-bottom: 34px;
+    border-radius: 12px;
+  }
+
+  .listBox li {
+    font-size: 1rem;
+    line-height: 2.1;
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    line-height: 2;
+    margin-bottom: 40px;
   }
 
   .button {
     width: 100%;
-    justify-content: center;
     display: flex;
-    width: 100%;
+    justify-content: center;
+  }
+
+  .visual {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .inner {
+    padding: 64px 20px;
+  }
+
+  .title h2 {
+    font-size: 2rem;
+  }
+
+  .listBox {
+    padding: 22px 22px;
+  }
+
+  .lead {
+    font-size: 1rem;
   }
 }
