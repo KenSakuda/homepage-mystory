@@ -26,6 +26,8 @@ const mockupImages = [
   "/analytics_solution.png",
   "/analytics_solution2.png",
   "/analytics_solution3.png",
+  "/data_analytics_share-prediction_活用イメージ.png",
+  "/data_analytics_share-prediction_feature2.png",
 ];
 
 export default function ContactSection() {

@@ -16,9 +16,9 @@ import ButtonLink from "@/app/_components/ButtonLink";
 export const revalidate = 86400;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "スマートコントラクト受託開発（外注・委託）";
+  const title = "スマートコントラクト受託開発・監査";
   const description =
-    "スマートコントラクト（Solidity等）の受託開発。要件定義、テスト、監査対応、運用設計まで一気通貫で支援。NFT/トークン/決済/権限管理などに対応します。";
+    "スマートコントラクトを外注したい企業向け。NFT/DeFi/DAOの設計・開発・テスト・監査観点まで一気通貫で支援。要件定義から運用まで“破綻しない実装”を提供します。";
   const url = "https://www.b-mystory.com/blockchain/smart-contract-development";
 
   return {
@@ -38,21 +38,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Page() {
   const sidebarLinks = [
+    { href: "/blockchain/membership-nft", label: "会員証NFT・チケットNFT開発" },
+    { href: "/blockchain/token-points", label: "トークン・ポイント制度構築" },
+    { href: "/blockchain/dao", label: "DAO・コミュニティ基盤構築" },
     {
-      href: "/blockchain/membership-nft",
-      label: "会員証NFT・デジタル会員権 開発",
-    },
-    {
-      href: "/blockchain/token-loyalty",
-      label: "トークンでポイント制度・ロイヤルティ構築",
-    },
-    {
-      href: "/blockchain/smart-contract-development",
+      href: "/blockchain/smart-contract",
       label: "スマートコントラクト受託開発",
-    },
-    {
-      href: "/blockchain/dao-governance",
-      label: "DAO/コミュニティ運営基盤 構築",
     },
   ];
 
@@ -63,20 +54,20 @@ export default function Page() {
       <Hero
         image={{
           src: "/blockchain_hero.png",
-          alt: "スマートコントラクト受託開発のイメージ",
+          alt: "スマートコントラクト受託開発・監査のイメージ",
         }}
-        title="スマートコントラクトを“事故らない仕様”で受託開発"
+        title="スマートコントラクト受託開発・監査サービス"
       />
 
       <MainWithSidebar
         main={
           <>
             <LeadBlock
-              title="仕様化・テスト・監査対応まで。スマートコントラクト開発を外注したい方へ"
+              title="NFT/DeFi/DAOの中核を“安全に”つくる。要件定義からテスト・監査観点まで一体のスマートコントラクト開発"
               body={[
-                "スマートコントラクトは、一度デプロイすると改修が難しく、バグが直接的な損失や信用毀損につながります。そのため「実装」よりも前に、仕様の曖昧さを潰し、テスト戦略と運用を含めて設計することが重要です。",
+                "スマートコントラクトは、仕様の曖昧さやテスト不足が、そのまま資金・信用のリスクにつながる領域です。「とりあえず作る」ではなく、権限設計、例外時の挙動、アップグレード方針、監視・運用まで含めた設計が必要になります。",
                 "　",
-                "MyStoryは、要件定義→仕様化→実装→テスト→監査対応→運用設計まで一気通貫で支援します。NFT/トークン/権限管理/決済・ポイントなど、ビジネス要件に合わせて最適な構成を提案します。",
+                "MyStoryでは、NFT（発行/譲渡/特典）、DeFi（入出金/金利/担保/手数料）、DAO（投票/委任/予算配分）などのユースケースに合わせて、仕様策定→実装→テスト→デプロイ→運用設計までを一気通貫で支援します。企業担当者が発注しやすい形で、要件の言語化から伴走し、破綻しないスマートコントラクトを提供します。",
               ]}
             />
 
@@ -85,107 +76,100 @@ export default function Page() {
               title="スマートコントラクト受託開発の特徴"
               items={[
                 {
-                  subtitle: "要件を“仕様”に落とし込む",
-                  lead: "権限、例外処理、アップグレード方針、イベントログ、運用フローを含めて仕様化します。",
+                  subtitle: "仕様の言語化（要件定義）から一緒に",
+                  lead: "発注側が困るのは「何を決めればよいかが分からない」ことです。権限、譲渡、上限、手数料、例外、管理者操作、アップグレードなど論点を整理し、仕様書に落とし込んだうえで実装します。後工程での手戻りを減らし、品質を担保します。",
                   image: {
-                    src: "/blockchain_smart_contract_feature1.png",
-                    alt: "要件定義と仕様化のイメージ",
+                    src: "/noimage.jpg",
+                    alt: "要件定義と仕様策定",
                   },
                 },
                 {
-                  subtitle: "テストと監査対応を前提に実装",
-                  lead: "テスト設計、脆弱性観点、監査で見られる論点を前提に実装・ドキュメント化します。",
+                  subtitle: "テストと監査観点（安全性）を最初から組み込む",
+                  lead: "単体テスト・統合テスト・シナリオテストを前提に、攻撃パターンや権限逸脱などのリスクを想定して実装します。監査対応が必要な場合は、監査観点のドキュメント整備や修正対応まで含めて支援します。",
                   image: {
-                    src: "/blockchain_smart_contract_feature2.png",
-                    alt: "テストと監査対応のイメージ",
-                  },
-                },
-                {
-                  subtitle: "運用設計（鍵管理・権限・監視）まで含める",
-                  lead: "マルチシグ、権限分離、アラート指標など、運用事故を防ぐ設計まで整備します。",
-                  image: {
-                    src: "/blockchain_smart_contract_feature3.png",
-                    alt: "運用設計のイメージ",
+                    src: "/noimage.jpg",
+                    alt: "テストと監査観点の実装",
                   },
                 },
               ]}
             />
 
             <div className={styles.contact}>
-              <ButtonLink href="/contact">相談する</ButtonLink>
+              <ButtonLink href="/contact">開発について相談する</ButtonLink>
             </div>
 
-            <a id="sec-modules" />
-            <SectionTitle title="対応範囲" />
+            <a id="sec-use-image" />
+            <SectionTitle title="開発・導入のイメージ" />
             <ServiceSection
               overviewTitle="概要"
               overview={[
-                "NFT発行、トークン設計、ポイント/権限、DAO投票、決済など、ビジネス要件に応じて実装します。必要に応じてバックエンド/APIやフロントの連携も支援可能です。",
+                "スマートコントラクト開発は、①要件定義（仕様の言語化）→②設計（権限/例外/アップグレード）→③実装→④テスト→⑤デプロイ→⑥運用設計（監視/アラート/権限運用）の順で進めます。NFT/DeFi/DAOいずれも、運用の論点を先に固めることが品質の鍵です。",
               ]}
               benefitsTitle="アウトプット"
               benefits={bullets([
-                "要件定義・仕様書（権限/例外/運用含む）",
-                "スマートコントラクト実装（テストコード含む）",
-                "デプロイ手順・運用手順（鍵管理/監視）",
-                "監査対応用ドキュメント（必要に応じて）",
+                "仕様書（権限/状態遷移/例外/手数料/上限など）",
+                "スマートコントラクト実装・テストコード・デプロイ手順",
+                "運用ガイド（権限運用、監視、緊急時対応）",
               ])}
-              subEyebrow="実装イメージ"
+              subEyebrow="活用シーン"
               subImage={{
-                src: "/blockchain_smart_contract_modules.png",
-                alt: "スマートコントラクト開発の範囲",
+                src: "/noimage.jpg",
+                alt: "スマートコントラクト開発の活用イメージ",
               }}
             />
 
             <a id="sec-outsource" />
             <AnalyticsOutsourceSection
-              title="スマートコントラクト開発を委託（外注）したい方へ"
+              title="スマートコントラクト開発の外部パートナーをお探しの方へ"
               leads={[
-                "スマートコントラクトは“動けばOK”ではありません。仕様の曖昧さ、例外処理、権限設計、運用設計が抜けると、後から取り返しがつかない問題になります。",
+                "スマートコントラクトは、品質の失敗が致命傷になりやすい領域です。MyStoryでは、要件定義・テスト・運用まで含めた“現実に耐える実装”を提供します。",
                 "　",
-                "MyStoryは、仕様化とテストを重視し、監査対応や運用まで含めて安全にリリースできる形へ落とし込みます。",
+                "NFT/DeFi/DAOなど個別テーマが決まっていない段階でも、「Web3新規事業として何ができるか」から整理し、最短で価値が出る形へ落とし込みます。",
               ]}
               reasonsTitle="MyStoryが選ばれる理由"
               reasons={[
                 {
-                  term: "仕様化が強い",
-                  desc: "ビジネス要件を安全な仕様に落とします。",
+                  term: "要件定義から伴走",
+                  desc: "発注者が決めづらい論点を整理し、仕様書に落とし込んでから実装します。手戻りを減らします。",
                 },
                 {
-                  term: "テスト重視",
-                  desc: "テスト戦略を前提に実装し品質を担保します。",
+                  term: "テスト前提の開発",
+                  desc: "単体・統合・シナリオテストを前提に、壊れにくい実装へ。監査対応も見据えます。",
                 },
                 {
-                  term: "運用設計まで",
-                  desc: "鍵管理・権限・監視まで含めて事故を防ぎます。",
+                  term: "運用設計まで含める",
+                  desc: "権限運用、監視、緊急時対応など、ローンチ後に必要な運用を先に設計します。",
                 },
                 {
-                  term: "周辺連携も対応",
-                  desc: "API/アプリ/CRM連携まで含めて相談可能です。",
+                  term: "テーマ未確定でもOK",
+                  desc: "NFT/DeFi/DAOのどれを選ぶべきかから相談可能。事業要件から最短ルートを提案します。",
                 },
               ]}
               costTitle="委託費用の目安と進め方"
               costBodies={[
-                "費用は、仕様の複雑性、機能数、監査対応の有無、連携範囲で変動します。まずは要件を整理し、最小構成での検証→本番の段階計画を提案します。",
+                "費用は、①仕様の複雑性、②監査要件、③フロント/管理画面の要否、④既存システム連携、⑤運用設計の範囲によって変動します。まずは要件定義フェーズで論点を整理し、段階的に開発範囲を確定する進め方が安全です。",
+                "　",
+                "標準フローは【ヒアリング→要件定義→設計→開発→テスト→ローンチ→運用】。必要に応じて監査対応も含めて進行します。",
               ]}
               faqTitle="よくあるご相談"
               faqs={[
                 {
-                  q: "監査（Audit）は必須ですか？",
-                  a: "→ リスクと規模によります。監査前提の実装・ドキュメント整備は可能です。",
+                  q: "NFT/DeFi/DAOのどれをやるべきか決まっていません",
+                  a: "→ 目的（収益化/継続率/提携/資金効率化）と制約（法務/運用/UX）を整理し、最短で価値が出るテーマへ落とし込みます。",
                 },
                 {
-                  q: "既存コントラクトの改修や保守は？",
-                  a: "→ 状況を確認し、アップグレード方針を含めて提案します。",
+                  q: "監査は必須ですか？",
+                  a: "→ 取り扱う資金や影響範囲により判断します。まずはリスク評価を行い、必要な対策（テスト強化・設計変更・監査）を整理します。",
                 },
                 {
-                  q: "NFTやポイント制度のコントラクトも依頼できますか？",
-                  a: "→ 可能です。ビジネス要件と合わせて設計します。",
+                  q: "既存アプリや会員DBと連携できますか？",
+                  a: "→ 可能です。段階導入を前提に、既存システムと共存できる形で設計します。",
                 },
               ]}
             />
 
             <div className={styles.contact}>
-              <ButtonLink href="/contact">相談する</ButtonLink>
+              <ButtonLink href="/contact">開発について相談する</ButtonLink>
             </div>
           </>
         }
@@ -195,10 +179,10 @@ export default function Page() {
       />
 
       <FooterNav
-        blockTitle="スマートコントラクト受託開発"
+        blockTitle="スマートコントラクト受託開発・監査"
         links={[
           { href: "#sec-feature", label: "特徴" },
-          { href: "#sec-modules", label: "対応範囲" },
+          { href: "#sec-use-image", label: "開発イメージ" },
           { href: "#sec-outsource", label: "委託・外注を検討中の方へ" },
         ]}
       />
