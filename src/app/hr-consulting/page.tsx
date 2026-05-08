@@ -20,6 +20,11 @@ const solutionCategories = [
         text: "基本給・賞与・手当を含めた賃金制度全体を整理し、等級制度・評価制度と連動した賃金制度設計を行います。人件費の最適化と処遇の納得感を両立する賃金制度構築を支援します。",
       },
       {
+        title: "インセンティブ制度設計コンサルティング",
+        href: "/hr-consulting/incentive",
+        text: "成果・行動・評価と連動した動機づけの仕組みを構築します。各ステークホルダーの行動変容を促し、組織成果の最大化と持続的なモチベーション向上を両立するインセンティブ設計を支援します",
+      },
+      {
         title: "役割等級制度構築",
         href: "/hr-consulting/grade",
         text: "年功的な運用から脱却し、期待役割と責任の大きさに応じた等級制度を設計。等級定義・昇降格基準・職種横断の整理まで支援します。",
@@ -164,7 +169,7 @@ export default function HrConsultingSolutionPage() {
               <span className={styles.summaryLabel}>Solution Categories</span>
             </div>
             <div className={styles.summaryCard}>
-              <span className={styles.summaryNumber}>11</span>
+              <span className={styles.summaryNumber}>12</span>
               <span className={styles.summaryLabel}>Service Menus</span>
             </div>
           </div>
