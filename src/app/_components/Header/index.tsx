@@ -104,7 +104,7 @@ export default function Header() {
                       </li>
                     </ul>
                   </div>
-                  {/* <div>
+                  <div>
                     <p>ブロックチェーン事業</p>
                     <ul>
                       <li>
@@ -128,7 +128,7 @@ export default function Header() {
                         </Link>
                       </li>
                     </ul>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             </li>

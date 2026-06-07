@@ -80,7 +80,7 @@ export default function MobileMenu({ setOpen }: Props) {
                   ヘルスケア関連アプリ『Story Fit』
                 </Link>
               </li>
-              {/* <li>
+              <li>
                 <Link
                   href="/blockchain/membership-nft"
                   onClick={() => setOpen(false)}
@@ -111,7 +111,7 @@ export default function MobileMenu({ setOpen }: Props) {
                 >
                   DAO/コミュニティ運営基盤 構築
                 </Link>
-              </li> */}
+              </li>
             </ul>
           </details>
         </li>
