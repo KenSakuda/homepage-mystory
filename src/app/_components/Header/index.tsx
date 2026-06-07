@@ -43,13 +43,6 @@ export default function Header() {
               <div
                 className={`${styles.dropdownMenu} ${styles.serviceDropdown}`}
               >
-                <div className={styles.serviceHeader}>
-                  <Link href="/services" className={styles.serviceListLink}>
-                    <span>サービス一覧を見る</span>
-                    <span aria-hidden="true">→</span>
-                  </Link>
-                </div>
-
                 <div className={styles.serviceGrid}>
                   <div className={styles.serviceGroup}>
                     <div className={styles.serviceGroupIcon}>D</div>
