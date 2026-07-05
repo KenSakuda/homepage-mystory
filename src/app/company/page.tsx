@@ -147,7 +147,7 @@ export default function Page() {
       </section>
 
       {/* 売上推移グラフ */}
-      <section className={styles.section}>
+      {/* <section className={styles.section}>
         <h2 className={styles.sectionTitle}>売上推移</h2>
         <div className={styles.salesTrendImage}>
           <Image
@@ -158,7 +158,7 @@ export default function Page() {
             className={styles.salesTrendImg}
           />
         </div>
-      </section>
+      </section> */}
 
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>ミッション</h2>
