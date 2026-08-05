@@ -88,7 +88,7 @@ export default function Page() {
     <main className={styles.page}>
       <Hero
         image={{
-          src: "/data_analytics_ai_agent_hero.png",
+          src: "/data_analytics_consulting_hero.png",
           alt: "業務自動化やシステム連携に対応するAIエージェント開発サービスのイメージ",
         }}
         title="AIエージェント開発・導入支援サービス"
@@ -116,7 +116,7 @@ export default function Page() {
                   subtitle: "業務課題とKPIから逆算して開発",
                   lead: "最初から「何でもできるAI」を目指すのではなく、対象業務をタスク単位に分解し、AIに任せる部分、既存システムやルールベースで処理する部分、人が判断する部分を明確にします。業務時間、処理件数、応答時間、受注率、解決率、エラー率、売上、コストなどのKPIを設定し、PoC段階から投資対効果を検証できるAIエージェントを設計します。特定のAI製品やモデルありきではなく、クライアント企業の事業課題と現場業務に適した方式を選定します。",
                   image: {
-                    src: "/data_analytics_ai_agent_feature1.png",
+                    src: "/noimage.jpg",
                     alt: "業務課題とKPIから設計するAIエージェント開発",
                   },
                 },
@@ -124,7 +124,7 @@ export default function Page() {
                   subtitle: "社内データ・既存システムと連携して業務を実行",
                   lead: "API、データベース、RPA、MCPなどを活用し、CRM・SFA・ERP・DWH・BI・メール・チャット・グループウェア・ファイルストレージなどと接続します。情報検索や回答だけで終わらず、データ取得、内容確認、資料作成、システム登録、ファイル更新、通知、後続タスクの起票までを一つのワークフローとして実行します。既存システムの一部にAIエージェント機能を組み込む開発にも対応可能です。",
                   image: {
-                    src: "/data_analytics_ai_agent_feature2.png",
+                    src: "/noimage.jpg",
                     alt: "MCPやAPIによるAIエージェントと業務システムの連携",
                   },
                 },
@@ -132,7 +132,7 @@ export default function Page() {
                   subtitle: "最新技術と安定した業務運用を両立",
                   lead: "単一のAIエージェントだけでなく、調査・分析・レビュー・実行を役割分担するマルチエージェント、電話や受付に対応する音声AIエージェント、ブラウザや業務画面を操作するComputer Use型、異なるエージェントやシステムをつなぐMCP・A2Aなどにも対応します。一方で、構成が複雑になるほどコストや障害リスクも高まるため、固定ワークフローや従来型プログラムも組み合わせ、業務要件に対して最も安定しやすい構成を選びます。",
                   image: {
-                    src: "/data_analytics_ai_agent_feature3.png",
+                    src: "/noimage.jpg",
                     alt: "マルチエージェント・音声AI・Computer Useの構成",
                   },
                 },
@@ -140,7 +140,7 @@ export default function Page() {
                   subtitle: "評価・監視・権限管理まで含めた本番設計",
                   lead: "AIエージェントは回答精度だけでなく、業務を正しく完了できたかを評価する必要があります。タスク完了率、ツール実行成功率、誤操作率、処理時間、利用コスト、人による修正率などを測定し、実行ステップ・参照データ・判断履歴を記録します。最小権限、実行前承認、処理件数や金額の上限、禁止操作、異常時停止などを組み込み、企業が安全に管理できるシステムとして実装します。",
                   image: {
-                    src: "/data_analytics_ai_agent_feature4.png",
+                    src: "/noimage.jpg",
                     alt: "AIエージェントの評価・監視・権限管理",
                   },
                 },
@@ -149,7 +149,7 @@ export default function Page() {
 
             <div className={styles.contact}>
               <ButtonLink href="/contact">
-                AIエージェント開発について相談
+                AIエージェント開発について相談する
               </ButtonLink>
             </div>
 
@@ -463,7 +463,7 @@ export default function Page() {
 
             <div className={styles.contact}>
               <ButtonLink href="/contact">
-                AIエージェント開発について相談
+                AIエージェント開発について相談する
               </ButtonLink>
             </div>
           </>
