@@ -148,9 +148,7 @@ export default function Page() {
             />
 
             <div className={styles.contact}>
-              <ButtonLink href="/contact">
-                AIエージェント開発について相談する
-              </ButtonLink>
+              <ButtonLink href="/contact">開発について相談する</ButtonLink>
             </div>
 
             <SectionTitle title="AIエージェント開発の代表的な活用テーマ" />
@@ -462,9 +460,7 @@ export default function Page() {
             />
 
             <div className={styles.contact}>
-              <ButtonLink href="/contact">
-                AIエージェント開発について相談する
-              </ButtonLink>
+              <ButtonLink href="/contact">開発について相談する</ButtonLink>
             </div>
           </>
         }
