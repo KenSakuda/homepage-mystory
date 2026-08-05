@@ -66,6 +66,11 @@ export default function MobileMenu({ setOpen }: Props) {
                 </Link>
               </li>
               <li>
+                <Link href="/analytics/ai-agent" onClick={() => setOpen(false)}>
+                  AIエージェントの開発
+                </Link>
+              </li>
+              <li>
                 <Link href="/hr-consulting" onClick={() => setOpen(false)}>
                   人事・組織領域に関するコンサルティング
                 </Link>

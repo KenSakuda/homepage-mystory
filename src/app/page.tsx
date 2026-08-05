@@ -48,6 +48,11 @@ export default async function Page() {
       title: "画像・動画認識サービス",
       iconSrc: "/service_data-analytics_icon7.png",
     },
+    {
+      href: "/analytics/ai-agent",
+      title: "AIエージェントの開発",
+      iconSrc: "/service_data-analytics_icon8.png",
+    },
   ];
 
   const blockchain_cards: ServiceCard[] = [

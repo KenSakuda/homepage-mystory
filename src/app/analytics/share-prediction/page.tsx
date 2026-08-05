@@ -62,6 +62,10 @@ export default function Page() {
       href: "/analytics/image-recognition",
       label: "画像・動画認識サービス",
     },
+    {
+      href: "/analytics/ai-agent",
+      label: "AIエージェント開発サービス",
+    },
   ];
 
   const bullets = (a: string[]) => a.map((text) => ({ text }));
