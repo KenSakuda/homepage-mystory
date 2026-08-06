@@ -26,6 +26,20 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title,
     description,
+    keywords: [
+      "プライシング",
+      "プライシング 委託",
+      "プライシング 外注",
+      "プライシング 委託 企業",
+      "プライシング支援会社",
+      "価格分析",
+      "価格分析 委託",
+      "価格分析 外注",
+      "価格分析 委託 企業",
+      "ダイナミックプライシング",
+      "バンドリング",
+      "ポイント 値引き",
+    ],
     alternates: { canonical: url },
     openGraph: {
       title,

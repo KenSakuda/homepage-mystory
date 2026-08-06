@@ -24,6 +24,17 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title,
     description,
+    keywords: [
+      "マーケットシェア",
+      "マーケットシェア推定",
+      "マーケットシェア推定 委託",
+      "マーケットシェア推定 委託 企業",
+      "シェア推定",
+      "シェア推定 委託",
+      "シェア推定 委託 企業",
+      "需要予測",
+      "需要予測 委託 企業",
+    ],
     alternates: { canonical: url },
     openGraph: {
       title,
