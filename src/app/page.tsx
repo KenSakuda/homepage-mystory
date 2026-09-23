@@ -57,6 +57,11 @@ export default async function Page() {
 
   const blockchain_cards: ServiceCard[] = [
     {
+      href: "/blockchain/passport",
+      title: "Battery Passport対応支援",
+      iconSrc: "/service_blockchain_icon3.png",
+    },
+    {
       href: "/blockchain/membership-nft",
       title: "会員証NFT・デジタル会員権 開発",
       iconSrc: "/service_blockchain_icon1.png",
@@ -65,11 +70,6 @@ export default async function Page() {
       href: "/blockchain/token-loyalty",
       title: "トークンでポイント制度・ロイヤルティ構築",
       iconSrc: "/service_blockchain_icon2.png",
-    },
-    {
-      href: "/blockchain/smart-contract-development",
-      title: "スマートコントラクト受託開発",
-      iconSrc: "/service_blockchain_icon3.png",
     },
     {
       href: "/blockchain/dao-governance",

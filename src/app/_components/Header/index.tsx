@@ -144,6 +144,11 @@ export default function Header() {
                       </p>
                       <ul>
                         <li>
+                          <Link href="/blockchain/passport">
+                            Battery Passport対応支援
+                          </Link>
+                        </li>
+                        <li>
                           <Link href="/blockchain/membership-nft">
                             会員証NFT・デジタル会員権 開発
                           </Link>
@@ -151,11 +156,6 @@ export default function Header() {
                         <li>
                           <Link href="/blockchain/token-loyalty">
                             トークンでポイント制度・ロイヤルティ構築
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/blockchain/smart-contract-development">
-                            スマートコントラクト受託開発
                           </Link>
                         </li>
                         <li>

@@ -155,7 +155,7 @@ export function Hero() {
               EU Battery Passport対応
             </div>
             <h1>
-              EU Battery Passport対応を、
+              EU Battery Passport対応を
               <br />
               <span>データからシンプルに。</span>
             </h1>
@@ -271,7 +271,7 @@ export function ProblemSection() {
         <SectionHeading
           eyebrow="CHALLENGES"
           title="Battery Passport対応で、このような課題はありませんか？"
-          description="DPP対応の難しさは、QRコードを発行することではなく、必要なデータを社内外から正しい形で集めることにあります。"
+          description="DPP対応の難しさはQRコードを発行することではなく、必要なデータを社内外から正しい形で集めることにあります。"
           align="center"
         />
         <div className={styles.problemGrid}>
@@ -298,7 +298,7 @@ export function OverviewSection() {
           <div>
             <SectionHeading
               eyebrow="SECTION 1"
-              title="MyStory Passportなら、一つの画面で管理できます。"
+              title="MyStory Passportなら一つの画面で管理できます。"
               description="社内システム、Excel、Supplierから集めたデータを一元化。DPP用データへ変換し、検証・公開・Registry連携までを一つの流れにします。"
             />
             <div className={styles.checkList}>
@@ -401,7 +401,7 @@ export function ReadinessSection() {
             <SectionHeading
               eyebrow="SECTION 3"
               title="Battery Passport対応状況を自動チェック"
-              description="現在登録されている情報と必要項目を照合。何が揃っていて、何が不足しているかを一目で確認できます。"
+              description="現在登録されている情報と必要項目を照合。何が揃っていて何が不足しているかを一目で確認できます。"
             />
           </div>
           <div className={styles.readinessCard}>
@@ -486,7 +486,7 @@ export function SupplierSection() {
             <div className={styles.miniFeature}>
               <strong>Supplier Portal</strong>
               <p>
-                取引先には必要項目だけを見せる、シンプルな入力画面を提供できます。
+                取引先には必要項目だけを見せるシンプルな入力画面を提供できます。
               </p>
             </div>
           </div>
@@ -571,7 +571,7 @@ export function RegistrySection() {
             <SectionHeading
               eyebrow="SECTION 6"
               title="EU DPP Registryと連携"
-              description="Registry登録に必要な情報を管理し、API連携を前提とした設計に。詳細なDPPデータとRegistry向けデータを分けて扱います。"
+              description="Registry登録に必要な情報を管理しAPI連携を前提とした設計に。詳細なDPPデータとRegistry向けデータを分けて扱います。"
             />
             <p className={styles.noteText}>
               既存の業務システムとの接続を見据え、データモデル・API・履歴管理を分離します。
@@ -592,7 +592,7 @@ export function DiagnosisSection() {
             <p className={styles.eyebrow}>SECTION 7</p>
             <h2>まずは現在の対応状況を確認しませんか？</h2>
             <p className={styles.lead}>
-              Battery Passport対応 無料診断。30分程度のヒアリングをもとに、
+              Battery Passport対応 無料診断。30分程度のヒアリングをもとに
               現在の対応状況と優先課題を整理します。
             </p>
             <PrimaryCta>無料診断を申し込む</PrimaryCta>
@@ -625,7 +625,7 @@ export function PocSection() {
           <div>
             <SectionHeading
               eyebrow="SECTION 8"
-              title="本格導入前に、小さく検証できます。"
+              title="本格導入前に小さく検証できます。"
               description="まずは限られた製品・データでPoCを実施し、データ整備の難所や運用負荷を確認します。"
             />
           </div>
@@ -657,8 +657,8 @@ export function FinalCta() {
         <Container>
           <SectionHeading
             eyebrow="SECTION 9"
-            title="DPP対応の難しさは、QRコードの発行ではありません。"
-            description="必要な製品・サプライチェーンデータを、正しい形で揃えること。MyStory Passportは、そのデータ整備から支援します。"
+            title="DPP対応の難しさはQRコードの発行ではありません。"
+            description="必要な製品・サプライチェーンデータを正しい形で揃えること。MyStory Passportはそのデータ整備から支援します。"
             align="center"
           />
           <div className={styles.valueGrid}>
@@ -696,7 +696,7 @@ export function FinalCta() {
         <Container>
           <div className={styles.finalCtaInner}>
             <p className={styles.eyebrow}>GET READY FOR 2027</p>
-            <h2>2027年2月18日の対応を、今から。</h2>
+            <h2>2027年2月18日の対応を今から。</h2>
             <p>
               MyStory Passportで、Battery Passport対応に必要なデータ整備を
               シンプルに始めましょう。

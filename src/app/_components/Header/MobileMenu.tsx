@@ -87,6 +87,14 @@ export default function MobileMenu({ setOpen }: Props) {
               </li>
               <li>
                 <Link
+                  href="/blockchain/passport"
+                  onClick={() => setOpen(false)}
+                >
+                  Battery Passport対応支援
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/blockchain/membership-nft"
                   onClick={() => setOpen(false)}
                 >
@@ -99,14 +107,6 @@ export default function MobileMenu({ setOpen }: Props) {
                   onClick={() => setOpen(false)}
                 >
                   トークンでポイント制度・ロイヤルティ構築
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blockchain/smart-contract-development"
-                  onClick={() => setOpen(false)}
-                >
-                  スマートコントラクト受託開発
                 </Link>
               </li>
               <li>
