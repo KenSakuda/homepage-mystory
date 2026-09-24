@@ -118,7 +118,7 @@ const useCases = [
   {
     icon: "strategy" as IconName,
     title: "経営・事業戦略",
-    text: "競合参入、市場変化、プロジェクト遅延などの不確実性を、共通の確率尺度で定量化します。",
+    text: "競合参入、市場変化、プロジェクト遅延などの不確実性を共通の確率尺度で定量化します。",
     metric: "戦略リスク",
   },
 ];
@@ -129,21 +129,21 @@ const steps = [
     title: "Forecast",
     jp: "予測する",
     icon: "forecast" as IconName,
-    text: "意思決定に必要な問いを、結果を検証できる予測問題へ分解。社員・専門家・AIが確率で回答します。",
+    text: "意思決定に必要な問いを結果を検証できる予測問題へ分解。社員・専門家・AIが確率で回答します。",
   },
   {
     number: "02",
     title: "Aggregate",
     jp: "統合する",
     icon: "aggregate" as IconName,
-    text: "単純平均ではなく、過去の予測精度やCalibrationなどを考慮し、複数の予測を統計的に統合します。",
+    text: "単純平均ではなく過去の予測精度やCalibrationなどを考慮し、複数の予測を統計的に統合します。",
   },
   {
     number: "03",
     title: "Decide",
     jp: "意思決定する",
     icon: "decide" as IconName,
-    text: "成功確率だけで終わらせず、Expected ValueやValue of Informationを使って選択肢を比較します。",
+    text: "成功確率だけで終わらせずExpected ValueやValue of Informationを使って選択肢を比較します。",
   },
   {
     number: "04",
@@ -174,12 +174,11 @@ export default function DecisionIntelligencePage() {
 
               <h1>
                 会議で決める前に、
-                <br />
                 <span>確率で考える。</span>
               </h1>
 
               <p className={styles.heroLead}>
-                社員・専門家・AIが持つ知識を確率として引き出し、
+                社員・専門家・AIが持つ知識を確率として引き出し
                 統計的に統合。新規事業やR&Dの不確実な意思決定を、
                 「誰がそう思うか」から「どれくらい起こりそうか」へ変えます。
               </p>
@@ -298,7 +297,7 @@ export default function DecisionIntelligencePage() {
 
           <p className={styles.centerLead}>
             経験豊富な役員。現場に近い担当者。市場を分析する専門家。
-            それぞれが重要な情報を持っています。しかし会議では、それらが
+            それぞれが重要な情報を持っています。しかし会議ではそれらが
             「意見」として語られ、精度を後から検証することもほとんどありません。
           </p>
         </div>
@@ -309,7 +308,7 @@ export default function DecisionIntelligencePage() {
               <span>01</span>
               <h3>Expert Bias</h3>
               <p>
-                経験豊富な人でも、楽観バイアス、過信、アンカリングから完全には逃れられません。
+                経験豊富な人でも楽観バイアス、過信、アンカリングから完全には逃れられません。
               </p>
             </div>
 
@@ -317,7 +316,7 @@ export default function DecisionIntelligencePage() {
               <span>02</span>
               <h3>Hidden Information</h3>
               <p>
-                顧客や開発現場に近い人が持つ重要な情報が、組織階層の中で埋もれてしまいます。
+                顧客や開発現場に近い人が持つ重要な情報が組織階層の中で埋もれてしまいます。
               </p>
             </div>
 
@@ -325,7 +324,7 @@ export default function DecisionIntelligencePage() {
               <span>03</span>
               <h3>No Feedback Loop</h3>
               <p>
-                「誰の判断が正しかったか」を測定しないため、組織の予測能力が蓄積されません。
+                「誰の判断が正しかったか」を測定しないため組織の予測能力が蓄積されません。
               </p>
             </div>
           </div>
@@ -346,7 +345,7 @@ export default function DecisionIntelligencePage() {
             </div>
             <p>
               Decision Intelligence Platformは、未来を当てるためだけの
-              予測ツールではありません。不確実性を定量化し、
+              予測ツールではありません。不確実性を定量化し
               その不確実性のもとで何をすべきかまで分析します。
             </p>
           </div>
@@ -385,7 +384,7 @@ export default function DecisionIntelligencePage() {
               </h2>
 
               <p>
-                同じ成功確率44%でも、成功時の価値、失敗時の損失、
+                同じ成功確率44%でも成功時の価値、失敗時の損失、
                 追加情報を得るコストによって最適な行動は変わります。
               </p>
 
@@ -474,7 +473,7 @@ export default function DecisionIntelligencePage() {
               <p>
                 現場の暗黙知を持つ人間、外部情報を継続的に処理するAI、
                 過去データから得られるBase Rate。
-                独立した複数の予測シグナルを統合することで、
+                独立した複数の予測シグナルを統合することで
                 一つの意見への依存を減らします。
               </p>
             </div>
@@ -614,7 +613,7 @@ export default function DecisionIntelligencePage() {
               </h2>
 
               <p>
-                予測と実績を蓄積すると、「誰が、どの領域について、
+                予測と実績を蓄積すると「誰がどの領域について
                 どのような判断傾向を持つか」が見えてきます。
               </p>
 
@@ -644,7 +643,7 @@ export default function DecisionIntelligencePage() {
             <span className={styles.sectionLabel}>
               FROM OPINION TO EVIDENCE
             </span>
-            <h2>従来の会議から、学習する意思決定へ。</h2>
+            <h2>従来の会議から学習する意思決定へ。</h2>
           </div>
 
           <div className={styles.tableWrap}>
@@ -700,7 +699,7 @@ export default function DecisionIntelligencePage() {
             <span className={styles.ctaEyebrow}>PROOF OF CONCEPT</span>
 
             <h2>
-              御社の実際の新規事業で、
+              御社の実際の新規事業で
               <br />
               意思決定を科学してみませんか。
             </h2>
