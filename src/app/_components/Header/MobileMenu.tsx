@@ -95,18 +95,18 @@ export default function MobileMenu({ setOpen }: Props) {
               </li>
               <li>
                 <Link
-                  href="/blockchain/membership-nft"
+                  href="/blockchain/decision-intelligence"
                   onClick={() => setOpen(false)}
                 >
-                  会員証NFT・デジタル会員権 開発
+                  クラウドソーシング予測による意思決定支援
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/blockchain/token-loyalty"
+                  href="/blockchain/membership-nft"
                   onClick={() => setOpen(false)}
                 >
-                  トークンでポイント制度・ロイヤルティ構築
+                  会員証NFT・デジタル会員権 開発
                 </Link>
               </li>
               <li>

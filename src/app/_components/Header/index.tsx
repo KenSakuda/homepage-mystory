@@ -149,13 +149,13 @@ export default function Header() {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/blockchain/membership-nft">
-                            会員証NFT・デジタル会員権 開発
+                          <Link href="/blockchain/decision-intelligence">
+                            クラウドソーシング予測による意思決定支援
                           </Link>
                         </li>
                         <li>
-                          <Link href="/blockchain/token-loyalty">
-                            トークンでポイント制度・ロイヤルティ構築
+                          <Link href="/blockchain/membership-nft">
+                            会員証NFT・デジタル会員権 開発
                           </Link>
                         </li>
                         <li>
