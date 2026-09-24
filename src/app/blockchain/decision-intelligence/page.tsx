@@ -173,8 +173,8 @@ export default function DecisionIntelligencePage() {
               </div>
 
               <h1>
-                会議で決める前に、
-                <span>確率で考える。</span>
+                会議で決める前に
+                <span>確率で考える</span>
               </h1>
 
               <p className={styles.heroLead}>
