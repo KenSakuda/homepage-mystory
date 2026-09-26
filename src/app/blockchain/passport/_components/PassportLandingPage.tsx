@@ -1,50 +1,150 @@
-"use client";
-
 import styles from "../page.module.css";
 
-const issues = [
+type IconName =
+  | "grid"
+  | "database"
+  | "link"
+  | "check"
+  | "shield"
+  | "factory"
+  | "truck"
+  | "battery"
+  | "leaf"
+  | "scan"
+  | "arrow"
+  | "file"
+  | "users"
+  | "api";
+
+const challenges = [
   {
-    title: "必要なデータがどこにあるか分からない",
-    body: "製品情報、BOM、Carbon Footprint、Recycled Content等がERP・PLM・Excelなどに分散。",
-    icon: "data",
+    title: "必要データが社内に散在",
+    body: "製品情報、BOM、Carbon Footprint、Recycled ContentなどがERP・PLM・Excelに分散。",
+    icon: "database" as IconName,
   },
   {
-    title: "Supplierからデータが集まらない",
-    body: "原材料情報やRecycle ContentをメールとExcelで収集。回答状況の把握にも手間がかかります。",
-    icon: "supplier",
+    title: "Supplierデータが集まらない",
+    body: "原材料やRecycle Contentなど、社外から取得すべき情報が多く、メールとExcelの往復が発生。",
+    icon: "users" as IconName,
   },
   {
-    title: "EU規制のどの項目に何を入れればいいか分からない",
-    body: "制度資料と社内データの対応付けに時間がかかり、担当者の属人的な知識に依存しがちです。",
-    icon: "regulation",
+    title: "EU要求項目との対応付けが難しい",
+    body: "規制文書と自社データの対応関係が分かりづらく、担当者の属人的な判断に依存しやすい。",
+    icon: "grid" as IconName,
   },
   {
-    title: "大量の製品情報を手作業で登録できない",
-    body: "個体単位のBattery Passport管理では、手入力中心の運用は現実的ではありません。",
-    icon: "scale",
+    title: "個体単位の管理が重い",
+    body: "大量の製品を個体単位で更新・確認する運用は、手作業では継続しにくい。",
+    icon: "scan" as IconName,
   },
 ];
 
-const readinessItems = [
-  ["Identity", "ready"],
-  ["Carbon Footprint", "ready"],
-  ["Recycled Content", "warning"],
-  ["Supplier Data", "error"],
-  ["Performance", "ready"],
-  ["End-of-Life", "ready"],
-] as const;
+const industryCards = [
+  {
+    title: "バッテリー・Battery Pack",
+    description:
+      "Battery Passport対応の中心となる製品群。モデル情報と個体情報の両方を継続管理。",
+    risks: [
+      "製品・個体データの分散",
+      "Carbon Footprint",
+      "Recycled Content",
+      "Supplier証明",
+    ],
+    icon: "battery" as IconName,
+  },
+  {
+    title: "EV・モビリティ",
+    description:
+      "車両・部品・電池のデータが複数企業を跨ぐため、サプライチェーン連携が重要。",
+    risks: ["Tier間のデータ連携", "個体識別", "履歴管理", "アクセス権"],
+    icon: "truck" as IconName,
+  },
+  {
+    title: "ESS・産業用蓄電",
+    description:
+      "2kWh超の産業用バッテリーでは、設置後の運用や保守も含めた情報管理が必要。",
+    risks: ["長期運用", "更新データ", "保守・再利用情報", "複数拠点"],
+    icon: "leaf" as IconName,
+  },
+  {
+    title: "素材・部材メーカー",
+    description:
+      "完成品メーカーへ提供する原材料・再生材・CFP関連データの整備が求められる。",
+    risks: ["証明情報の提出", "取引先ごとの様式差", "更新依頼", "根拠資料管理"],
+    icon: "factory" as IconName,
+  },
+];
 
-const supplierRows = [
-  ["Material Origin", "Pending"],
-  ["Carbon Footprint", "Received"],
-  ["Recycled Content", "Pending"],
-  ["Due Diligence", "Received"],
-] as const;
+const services = [
+  {
+    no: "01",
+    title: "Readiness診断",
+    body: "現状のデータ保有状況と不足項目を整理し、対応優先度を可視化します。",
+    icon: "check" as IconName,
+  },
+  {
+    no: "02",
+    title: "Data Mapping",
+    body: "Excel / CSV / ERP / PLMの項目をDPPデータモデルへ対応付けします。",
+    icon: "grid" as IconName,
+  },
+  {
+    no: "03",
+    title: "Supplier Data Collection",
+    body: "Supplierへ必要情報を依頼し、回答状況・不足・証憑を一元管理します。",
+    icon: "users" as IconName,
+  },
+  {
+    no: "04",
+    title: "Passport生成",
+    body: "必要情報を検証し、QR / Data Carrierから確認できるPassportを生成します。",
+    icon: "scan" as IconName,
+  },
+  {
+    no: "05",
+    title: "Registry連携",
+    body: "EU DPP Registry向けの情報を整理し、API連携を前提とした構成で管理します。",
+    icon: "api" as IconName,
+  },
+  {
+    no: "06",
+    title: "PoC・導入支援",
+    body: "限定された製品・データから小さく始め、運用課題を確認しながら拡張します。",
+    icon: "shield" as IconName,
+  },
+];
 
-function Icon({ name }: { name: string }) {
+const faq = [
+  [
+    "どの企業がBattery Passportの対象になりますか？",
+    "2027年2月18日から、EU市場に投入・使用開始されるLMTバッテリー、2kWh超の産業用バッテリー、EVバッテリーにBattery Passportが必要です。自社製品が該当するかは、製品区分や商流を確認したうえで判断する必要があります。",
+  ],
+  [
+    "ブロックチェーンは必須ですか？",
+    "必須ではありません。MyStory Passportでは、まず規制対応に必要なデータ整備・相互運用・アクセス制御を中心に設計し、真正性や監査性に追加価値がある場合に暗号学的証明や分散台帳技術の活用を検討します。",
+  ],
+  [
+    "既存のExcelから始められますか？",
+    "はい。初期導入ではExcel / CSVから開始できる設計を想定しています。将来的にERP・PLM・基幹DBとのAPI連携へ段階的に拡張できます。",
+  ],
+  [
+    "Supplier側にもアカウントが必要ですか？",
+    "Supplier Portal方式を基本としつつ、導入初期はセキュアリンクやCSV回収など、取引先の負担を抑える方法も選択できる構成を想定しています。",
+  ],
+  [
+    "EU DPP Registryには何を登録しますか？",
+    "Registryには識別子や登録情報・メタデータ等を連携し、詳細なPassportデータは役割に応じて別レイヤーで保持する構成を前提とします。",
+  ],
+];
+
+function Container({ children }: { children: React.ReactNode }) {
+  return <div className={styles.container}>{children}</div>;
+}
+
+function Icon({ name, size = 26 }: { name: IconName; size?: number }) {
   const common = {
-    width: 24,
-    height: 24,
+    width: size,
+    height: size,
     viewBox: "0 0 24 24",
     fill: "none",
     stroke: "currentColor",
@@ -53,69 +153,110 @@ function Icon({ name }: { name: string }) {
     strokeLinejoin: "round" as const,
     "aria-hidden": true,
   };
-
-  if (name === "data") {
-    return (
-      <svg {...common}>
+  const paths: Record<IconName, React.ReactNode> = {
+    grid: (
+      <>
+        <rect x="3" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="3" width="7" height="7" rx="1" />
+        <rect x="3" y="14" width="7" height="7" rx="1" />
+        <rect x="14" y="14" width="7" height="7" rx="1" />
+      </>
+    ),
+    database: (
+      <>
         <ellipse cx="12" cy="5" rx="7" ry="3" />
         <path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5" />
         <path d="M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" />
-      </svg>
-    );
-  }
-  if (name === "supplier") {
-    return (
-      <svg {...common}>
-        <path d="M4 20V9l8-5 8 5v11" />
-        <path d="M8 20v-6h8v6" />
-        <path d="M9 9h.01M12 9h.01M15 9h.01" />
-      </svg>
-    );
-  }
-  if (name === "regulation") {
-    return (
-      <svg {...common}>
-        <path d="M7 3h8l3 3v15H7z" />
-        <path d="M15 3v4h4M10 11h5M10 15h5" />
-      </svg>
-    );
-  }
-  return (
-    <svg {...common}>
-      <path d="M4 18h16M6 15V9M10 15V5M14 15v-3M18 15V7" />
-    </svg>
-  );
+      </>
+    ),
+    link: (
+      <>
+        <path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1 1" />
+        <path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1-1" />
+      </>
+    ),
+    check: <path d="M5 12.5l4 4L19 6.5" />,
+    shield: (
+      <>
+        <path d="M12 3l7 3v5c0 4.7-2.7 8.1-7 10-4.3-1.9-7-5.3-7-10V6z" />
+        <path d="M9 12l2 2 4-4" />
+      </>
+    ),
+    factory: (
+      <>
+        <path d="M3 21V9l6 3V8l6 3V5l6 3v13z" />
+        <path d="M7 17h2M12 17h2M17 17h2" />
+      </>
+    ),
+    truck: (
+      <>
+        <path d="M3 7h11v10H3zM14 11h4l3 3v3h-7z" />
+        <circle cx="7" cy="18" r="2" />
+        <circle cx="18" cy="18" r="2" />
+      </>
+    ),
+    battery: (
+      <>
+        <rect x="4" y="6" width="15" height="12" rx="2" />
+        <path d="M19 10h2v4h-2M8 10v4M11 12H5" />
+      </>
+    ),
+    leaf: (
+      <>
+        <path d="M20 4c-8 .5-13 4.4-13 10 0 3 2 5 5 5 5.6 0 9.5-5 8-15z" />
+        <path d="M5 21c2-5 6-9 12-12" />
+      </>
+    ),
+    scan: (
+      <>
+        <path d="M8 3H4a1 1 0 0 0-1 1v4M16 3h4a1 1 0 0 1 1 1v4M8 21H4a1 1 0 0 1-1-1v-4M16 21h4a1 1 0 0 0 1-1v-4" />
+        <path d="M7 12h10" />
+      </>
+    ),
+    arrow: <path d="M5 12h14M14 7l5 5-5 5" />,
+    file: (
+      <>
+        <path d="M6 3h8l4 4v14H6z" />
+        <path d="M14 3v5h5M9 12h6M9 16h6" />
+      </>
+    ),
+    users: (
+      <>
+        <circle cx="9" cy="8" r="3" />
+        <path d="M3 20c.5-4 2.7-6 6-6s5.5 2 6 6" />
+        <path d="M16 6.5a3 3 0 0 1 0 5.5M17 14c2.3.7 3.7 2.5 4 5" />
+      </>
+    ),
+    api: (
+      <>
+        <path d="M8 7l-4 5 4 5M16 7l4 5-4 5M14 4l-4 16" />
+      </>
+    ),
+  };
+  return <svg {...common}>{paths[name]}</svg>;
 }
 
-function Container({ children }: { children: React.ReactNode }) {
-  return <div className={styles.container}>{children}</div>;
-}
-
-function SectionHeading({
+function SectionIntro({
   eyebrow,
   title,
-  description,
-  align = "left",
+  body,
+  center = false,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
-  description?: string;
-  align?: "left" | "center";
+  body?: string;
+  center?: boolean;
 }) {
   return (
-    <div
-      className={`${styles.sectionHeading} ${
-        align === "center" ? styles.centered : ""
-      }`}
-    >
-      <p className={styles.eyebrow}>{eyebrow}</p>
+    <div className={`${styles.sectionIntro} ${center ? styles.center : ""}`}>
+      {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
       <h2>{title}</h2>
-      {description ? <p className={styles.lead}>{description}</p> : null}
+      {body && <p className={styles.sectionLead}>{body}</p>}
     </div>
   );
 }
 
-function PrimaryCta({
+function PrimaryButton({
   children,
   href = "/contact",
 }: {
@@ -123,140 +264,60 @@ function PrimaryCta({
   href?: string;
 }) {
   return (
-    <a className={styles.primaryButton} href={href}>
+    <a href={href} className={styles.primaryButton}>
       {children}
-      <span aria-hidden="true">→</span>
+      <Icon name="arrow" size={18} />
     </a>
   );
 }
 
-function SecondaryCta({
-  children,
-  href = "#service",
-}: {
-  children: React.ReactNode;
-  href?: string;
-}) {
+function Header() {
   return (
-    <a className={styles.secondaryButton} href={href}>
-      {children}
-    </a>
+    <>
+      <div className={styles.deadlineBar}>
+        <Container>
+          <div className={styles.deadlineInner}>
+            <span>2027.02.18</span>
+            <strong>
+              EU Battery Passport 義務化まで、準備期間は限られています。
+            </strong>
+          </div>
+        </Container>
+      </div>
+    </>
   );
 }
 
-export function Hero() {
+function Hero() {
   return (
     <section className={styles.hero}>
       <Container>
         <div className={styles.heroGrid}>
           <div className={styles.heroCopy}>
-            <div className={styles.badge}>
-              <span className={styles.badgeDot} />
-              EU Battery Passport対応
-            </div>
+            <p className={styles.kicker}>EU BATTERY PASSPORT / DPP</p>
             <h1>
-              EU Battery Passport対応を
+              規制対応を、
               <br />
               <span>データからシンプルに。</span>
             </h1>
             <p className={styles.heroLead}>
-              2027年2月18日、EU Battery Passport義務化。
-              <br />
-              MyStory
-              Passportは、Excel・ERP・PLM・Supplierに分散した製品情報を整理し、
-              Battery Passport対応を支援する日本企業向けプラットフォームです。
+              Excel・ERP・PLM・Supplierに散らばる情報を整理し、Battery
+              Passport対応状況の可視化からPassport生成・Registry連携まで。
             </p>
             <div className={styles.heroActions}>
-              <PrimaryCta>無料で対応状況を診断する</PrimaryCta>
-              <SecondaryCta>サービスを見る</SecondaryCta>
+              <PrimaryButton>無料で対応状況を相談する</PrimaryButton>
+              <a href="#solution" className={styles.secondaryButton}>
+                サービスを見る
+              </a>
             </div>
-            <p className={styles.heroNote}>
-              対象：LMT Battery、2kWh超のIndustrial Battery、EV Battery
-            </p>
+            <div className={styles.heroMeta}>
+              <span>対象：LMT</span>
+              <span>産業用 &gt; 2kWh</span>
+              <span>EV Battery</span>
+            </div>
           </div>
-
-          <div
-            className={styles.heroVisual}
-            aria-label="MyStory Passport dashboard preview"
-          >
-            <div className={styles.mockWindow}>
-              <div className={styles.mockTopbar}>
-                <div className={styles.mockDots}>
-                  <span />
-                  <span />
-                  <span />
-                </div>
-                <span className={styles.mockProduct}>MyStory Passport</span>
-                <span className={styles.mockStatus}>Live data</span>
-              </div>
-              <div className={styles.mockBody}>
-                <div className={styles.mockSidebar}>
-                  <div className={styles.mockLogoMark}>M</div>
-                  {[
-                    "Dashboard",
-                    "Batteries",
-                    "Suppliers",
-                    "Imports",
-                    "Registry",
-                  ].map((item, index) => (
-                    <div
-                      className={`${styles.mockNavItem} ${
-                        index === 0 ? styles.mockNavActive : ""
-                      }`}
-                      key={item}
-                    >
-                      <span className={styles.mockNavIcon} />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className={styles.mockContent}>
-                  <div className={styles.mockHeading}>
-                    <div>
-                      <span>Dashboard</span>
-                      <strong>Battery readiness</strong>
-                    </div>
-                    <span className={styles.mockDate}>Updated today</span>
-                  </div>
-                  <div className={styles.mockCards}>
-                    <div>
-                      <span>Total Batteries</span>
-                      <strong>12,482</strong>
-                    </div>
-                    <div>
-                      <span>Passport Ready</span>
-                      <strong>79.2%</strong>
-                    </div>
-                    <div>
-                      <span>Issues</span>
-                      <strong>2,601</strong>
-                    </div>
-                  </div>
-                  <div className={styles.mockPanel}>
-                    <div className={styles.mockPanelTitle}>
-                      <span>Passport readiness</span>
-                      <strong>82%</strong>
-                    </div>
-                    <div className={styles.progressTrack}>
-                      <span style={{ width: "82%" }} />
-                    </div>
-                    <div className={styles.mockRows}>
-                      {[
-                        ["Identity", "99%"],
-                        ["Carbon", "82%"],
-                        ["Recycled", "61%"],
-                        ["Supply Chain", "53%"],
-                      ].map(([label, value]) => (
-                        <div key={label}>
-                          <span>{label}</span>
-                          <strong>{value}</strong>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className={styles.heroVisual}>
+            <DashboardMock />
           </div>
         </div>
       </Container>
@@ -264,24 +325,312 @@ export function Hero() {
   );
 }
 
-export function ProblemSection() {
+function DashboardMock() {
   return (
-    <section className={styles.section}>
-      <Container>
-        <SectionHeading
-          eyebrow="CHALLENGES"
-          title="Battery Passport対応で、このような課題はありませんか？"
-          description="DPP対応の難しさはQRコードを発行することではなく、必要なデータを社内外から正しい形で集めることにあります。"
-          align="center"
-        />
-        <div className={styles.problemGrid}>
-          {issues.map((issue) => (
-            <article className={styles.problemCard} key={issue.title}>
-              <div className={styles.iconBox}>
-                <Icon name={issue.icon} />
+    <div className={styles.dashboard}>
+      <div className={styles.dashTop}>
+        <div className={styles.dashLogo}>MP</div>
+        <span>Passport Readiness</span>
+        <span className={styles.livePill}>LIVE</span>
+      </div>
+      <div className={styles.dashBody}>
+        <aside className={styles.dashSide}>
+          {["Overview", "Batteries", "Suppliers", "Imports", "Registry"].map(
+            (x, i) => (
+              <div key={x} className={i === 0 ? styles.dashActive : ""}>
+                <span />
+                <b>{x}</b>
               </div>
-              <h3>{issue.title}</h3>
-              <p>{issue.body}</p>
+            ),
+          )}
+        </aside>
+        <div className={styles.dashMain}>
+          <div className={styles.dashHeading}>
+            <div>
+              <small>Organization</small>
+              <strong>ABC Battery Co.</strong>
+            </div>
+            <button type="button">Export</button>
+          </div>
+          <div className={styles.kpiGrid}>
+            <div>
+              <small>Total Batteries</small>
+              <strong>12,482</strong>
+              <span>+1,248 this month</span>
+            </div>
+            <div>
+              <small>Passport Ready</small>
+              <strong>79.2%</strong>
+              <span>9,881 passports</span>
+            </div>
+            <div>
+              <small>Issues</small>
+              <strong>2,601</strong>
+              <span>183 supplier pending</span>
+            </div>
+          </div>
+          <div className={styles.readinessPanel}>
+            <div className={styles.panelHead}>
+              <strong>Readiness by category</strong>
+              <b>82%</b>
+            </div>
+            {[
+              ["Identity", 99],
+              ["Carbon Footprint", 82],
+              ["Recycled Content", 61],
+              ["Supply Chain", 53],
+            ].map(([label, val]) => (
+              <div className={styles.metricRow} key={String(label)}>
+                <span>{label}</span>
+                <div>
+                  <i style={{ width: `${val}%` }} />
+                </div>
+                <b>{val}%</b>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function RegulationStrip() {
+  return (
+    <section className={styles.regulationStrip}>
+      <Container>
+        <div className={styles.regulationGrid}>
+          <div>
+            <strong>2027.02.18</strong>
+            <span>Battery Passport義務化</span>
+          </div>
+          <div>
+            <strong>3 categories</strong>
+            <span>LMT / 産業用&gt;2kWh / EV</span>
+          </div>
+          <div>
+            <strong>QR linked</strong>
+            <span>Battery Passportへアクセス</span>
+          </div>
+          <div>
+            <strong>Access controlled</strong>
+            <span>役割に応じた情報公開</span>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function WhyNow() {
+  return (
+    <section className={`${styles.section} ${styles.whiteSection}`} id="why">
+      <Container>
+        <SectionIntro
+          eyebrow="WHY NOW"
+          title="Battery Passportは、QRコードを作るだけの話ではありません。"
+          body="本当に重いのは、社内外に散在するデータを集め、規制要求に対応する形へ整え、継続的に更新できる運用をつくることです。"
+          center
+        />
+        <div className={styles.challengeGrid}>
+          {challenges.map((c) => (
+            <article className={styles.challengeCard} key={c.title}>
+              <div className={styles.iconBadge}>
+                <Icon name={c.icon} />
+              </div>
+              <h3>{c.title}</h3>
+              <p>{c.body}</p>
+            </article>
+          ))}
+        </div>
+        <div className={styles.problemStatement}>
+          <div className={styles.problemIcon}>!</div>
+          <div>
+            <strong>対応のボトルネックは「データ」です。</strong>
+            <p>
+              Registryの存在や技術仕様が整っても、企業内の製品情報・環境情報・Supplier情報がつながっていなければ、Passport運用は回りません。
+            </p>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function Solution() {
+  return (
+    <section
+      className={`${styles.section} ${styles.softSection}`}
+      id="solution"
+    >
+      <Container>
+        <SectionIntro
+          eyebrow="SOLUTION"
+          title="MyStory Passportは、DPP対応の“前工程”から支援します。"
+          body="既存システムを一気に置き換えるのではなく、Excelからでも始められる現実的な導入を前提にしています。"
+          center
+        />
+        <div className={styles.flowBoard}>
+          <div className={styles.flowSources}>
+            {["ERP", "PLM", "Excel / CSV", "Supplier"].map((x) => (
+              <div key={x}>{x}</div>
+            ))}
+          </div>
+          <div className={styles.flowArrowDown}>↓</div>
+          <div className={styles.flowCore}>
+            <span>MyStory Passport</span>
+            <strong>Collect → Map → Validate → Publish</strong>
+          </div>
+          <div className={styles.flowModules}>
+            <div>
+              <Icon name="grid" />
+              <span>Data Mapping</span>
+            </div>
+            <div>
+              <Icon name="check" />
+              <span>Validation</span>
+            </div>
+            <div>
+              <Icon name="users" />
+              <span>Supplier Portal</span>
+            </div>
+            <div>
+              <Icon name="scan" />
+              <span>Passport Viewer</span>
+            </div>
+          </div>
+          <div className={styles.flowArrowDown}>↓</div>
+          <div className={styles.flowDestinations}>
+            <div>EU DPP Registry</div>
+            <div>Public / Restricted Viewer</div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function Reasons() {
+  return (
+    <section className={`${styles.section} ${styles.whiteSection}`}>
+      <Container>
+        <SectionIntro
+          eyebrow="WHY MYSTORY PASSPORT"
+          title="選ばれる理由"
+          body="規制対応を、巨大なシステム刷新ではなく、現場データから始められる形に。"
+          center
+        />
+        <div className={styles.reasonStack}>
+          {[
+            [
+              "01",
+              "Excel First",
+              "既存運用を活かしながら、まずはExcel / CSVから開始。大規模な入れ替えを前提にしません。",
+            ],
+            [
+              "02",
+              "Data Mapping",
+              "自社項目とDPP属性を対応付け、不足・重複・形式違いを見える化します。",
+            ],
+            [
+              "03",
+              "Supplier Ready",
+              "自社だけでは完結しない情報収集を、依頼・回収・証憑管理まで一つの流れにします。",
+            ],
+          ].map(([n, t, b]) => (
+            <div className={styles.reasonCircle} key={n}>
+              <span>{n}</span>
+              <h3>{t}</h3>
+              <p>{b}</p>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function ProductPreview() {
+  return (
+    <section className={`${styles.section} ${styles.darkSection}`}>
+      <Container>
+        <div className={styles.productGrid}>
+          <div>
+            <p className={styles.eyebrowLight}>PRODUCT EXPERIENCE</p>
+            <h2>何が足りないかが、ひと目で分かる。</h2>
+            <p className={styles.darkLead}>
+              日常業務で見るべきなのは「綺麗なPassport画面」だけではありません。誰のデータが不足し、どの項目が未対応で、何を直せばReadyになるかです。
+            </p>
+            <ul className={styles.darkList}>
+              <li>Readiness Score</li>
+              <li>不足データ・形式エラー</li>
+              <li>Supplier回答状況</li>
+              <li>更新履歴・Registry状態</li>
+            </ul>
+          </div>
+          <div className={styles.productMock}>
+            <div className={styles.productMockTop}>
+              <div>
+                <small>BX-000345</small>
+                <strong>Battery Passport Readiness</strong>
+              </div>
+              <span>87%</span>
+            </div>
+            <div className={styles.progressBar}>
+              <i style={{ width: "87%" }} />
+            </div>
+            {[
+              ["Identification", "Ready", "ok"],
+              ["Carbon Footprint", "Ready", "ok"],
+              ["Recycled Content", "1 missing", "warn"],
+              ["Supplier Data", "2 pending", "warn"],
+              ["Performance", "Ready", "ok"],
+            ].map(([a, b, c]) => (
+              <div className={styles.productStatusRow} key={a}>
+                <span>{a}</span>
+                <b className={c === "ok" ? styles.okPill : styles.warnPill}>
+                  {b}
+                </b>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function Industries() {
+  return (
+    <section
+      className={`${styles.section} ${styles.softSection}`}
+      id="industries"
+    >
+      <Container>
+        <SectionIntro
+          eyebrow="INDUSTRIES"
+          title="こんな企業・業界に"
+          body="Battery Passportの対象企業だけでなく、そのデータを支えるサプライヤー側にも対応業務が発生します。"
+          center
+        />
+        <div className={styles.industryGrid}>
+          {industryCards.map((card) => (
+            <article className={styles.industryCard} key={card.title}>
+              <div className={styles.industryVisual}>
+                <Icon name={card.icon} size={52} />
+              </div>
+              <div className={styles.industryBody}>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+                <div className={styles.riskBox}>
+                  <strong>特に整理したい項目</strong>
+                  <ul>
+                    {card.risks.map((r) => (
+                      <li key={r}>{r}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </article>
           ))}
         </div>
@@ -290,359 +639,273 @@ export function ProblemSection() {
   );
 }
 
-export function OverviewSection() {
+function Recommend() {
+  const items = [
+    ["EU向け製品がある", "対象バッテリーの市場投入・使用開始を予定している"],
+    [
+      "データが分散している",
+      "ERP・PLM・Excel・部門別ファイルに情報が分かれている",
+    ],
+    ["Supplier依存が大きい", "原材料・再生材・証憑の回収に社外調整が必要"],
+  ];
   return (
-    <section className={`${styles.section} ${styles.softSection}`} id="service">
+    <section className={`${styles.section} ${styles.whiteSection}`}>
       <Container>
-        <div className={styles.twoColumn}>
-          <div>
-            <SectionHeading
-              eyebrow="SECTION 1"
-              title="MyStory Passportなら一つの画面で管理できます。"
-              description="社内システム、Excel、Supplierから集めたデータを一元化。DPP用データへ変換し、検証・公開・Registry連携までを一つの流れにします。"
-            />
-            <div className={styles.checkList}>
-              {[
-                "ERP・PLM・Excel・CSVからデータを取り込み",
-                "EU要求項目へのData Mapping",
-                "不足項目・形式エラーを自動チェック",
-                "QR / Data CarrierからPassportを表示",
-                "Registry連携に必要なデータを管理",
-              ].map((item) => (
-                <div key={item}>
-                  <span>✓</span>
-                  <p>{item}</p>
-                </div>
-              ))}
+        <SectionIntro eyebrow="FIT" title="こんな企業におすすめ" center />
+        <div className={styles.recommendGrid}>
+          {items.map(([title, body], i) => (
+            <div className={styles.recommendCard} key={title}>
+              <span>0{i + 1}</span>
+              <div className={styles.recommendIcon}>
+                <Icon
+                  name={i === 0 ? "battery" : i === 1 ? "database" : "link"}
+                  size={42}
+                />
+              </div>
+              <h3>{title}</h3>
+              <p>{body}</p>
+              <div className={styles.reasonLabel}>選定理由</div>
+              <b>
+                {i === 0
+                  ? "2027年対応に向け、早期のデータ整備が必要"
+                  : i === 1
+                    ? "規制項目との突合・更新運用が属人化しやすい"
+                    : "自社だけではPassportを完成できない"}
+              </b>
             </div>
-          </div>
-          <DataFlow />
+          ))}
         </div>
       </Container>
     </section>
   );
 }
 
-function DataFlow() {
-  const sources = ["ERP", "PLM", "Excel", "Supplier"];
+function Services() {
   return (
-    <div className={styles.flowCard}>
-      <div className={styles.flowSources}>
-        {sources.map((source) => (
-          <div key={source}>{source}</div>
-        ))}
+    <section className={`${styles.section} ${styles.softSection}`}>
+      <Container>
+        <SectionIntro
+          eyebrow="SERVICES"
+          title="提供サービス"
+          body="診断だけでも、PoCからでも。現在地に合わせて必要な範囲から開始できます。"
+          center
+        />
+        <div className={styles.serviceGrid}>
+          {services.map((s) => (
+            <article className={styles.serviceCard} key={s.no}>
+              <span className={styles.serviceNo}>{s.no}</span>
+              <div className={styles.serviceIcon}>
+                <Icon name={s.icon} />
+              </div>
+              <h3>{s.title}</h3>
+              <p>{s.body}</p>
+            </article>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function Comparison() {
+  const rows = [
+    [
+      "開始しやすさ",
+      "個別整理が必要",
+      "要件定義・開発が先行",
+      "Excelから段階導入",
+    ],
+    ["規制項目とのMapping", "手作業", "個別実装", "標準機能として管理"],
+    ["Supplier情報回収", "メール・Excel", "別途開発", "Portalで一元管理"],
+    ["更新運用", "属人化しやすい", "保守契約に依存", "継続運用を前提"],
+    ["スケール", "製品増で負荷増", "追加開発が発生", "データ・設定で拡張"],
+  ];
+  return (
+    <section className={`${styles.section} ${styles.whiteSection}`}>
+      <Container>
+        <SectionIntro
+          eyebrow="COMPARE"
+          title="従来対応との違い"
+          body="“一度作る”ではなく、“更新し続ける”ことを前提にした運用設計です。"
+          center
+        />
+        <div className={styles.compareWrap}>
+          <table className={styles.compareTable}>
+            <thead>
+              <tr>
+                <th></th>
+                <th>手作業</th>
+                <th>個別SI開発</th>
+                <th className={styles.highlightCol}>MyStory Passport</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((r) => (
+                <tr key={r[0]}>
+                  {r.map((c, i) => (
+                    <td key={i} className={i === 3 ? styles.highlightCol : ""}>
+                      {c}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function Deliverables() {
+  const list = [
+    "現状対応度・診断概要",
+    "不足データ一覧",
+    "DPP属性Mapping表",
+    "Supplier依存項目一覧",
+    "導入優先度・対応ロードマップ",
+    "PoC対象・次フェーズ提案",
+  ];
+  return (
+    <section className={`${styles.section} ${styles.softSection}`}>
+      <Container>
+        <div className={styles.deliverableGrid}>
+          <div>
+            <SectionIntro
+              eyebrow="OUTPUT"
+              title="無料診断・PoCで確認できること"
+              body="規制解説だけで終わらず、御社の現状データに照らして“次に何をすべきか”まで整理します。"
+            />
+            <div className={styles.checkRows}>
+              {list.map((x) => (
+                <div key={x}>
+                  <Icon name="check" size={20} />
+                  <span>{x}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <ReportMock />
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function ReportMock() {
+  return (
+    <div className={styles.reportMock}>
+      <div className={styles.reportCover}>
+        <span>MyStory Passport</span>
+        <strong>
+          Battery Passport
+          <br />
+          Readiness Report
+        </strong>
+        <small>Sample / ABC Battery Co.</small>
       </div>
-      <div className={styles.flowArrow}>↓</div>
-      <div className={styles.flowMain}>MyStory Passport</div>
-      <div className={styles.flowSteps}>
-        <span>Mapping</span>
-        <span>Validation</span>
-        <span>Passport</span>
+      <div className={styles.reportSheet}>
+        <div className={styles.reportSheetHead}>
+          <span>Overall readiness</span>
+          <strong>68%</strong>
+        </div>
+        <div className={styles.reportMiniBars}>
+          {[
+            ["Identity", 95],
+            ["Carbon", 72],
+            ["Supplier", 46],
+            ["Circularity", 58],
+          ].map(([x, v]) => (
+            <div key={String(x)}>
+              <span>{x}</span>
+              <i>
+                <b style={{ width: `${v}%` }} />
+              </i>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className={styles.flowArrow}>↓</div>
-      <div className={styles.flowRegistry}>EU DPP Registry</div>
     </div>
   );
 }
 
-export function ExcelSection() {
+function Process() {
+  const steps = [
+    ["01", "無料相談", "対象製品・現在の対応状況を30分程度で確認します。"],
+    ["02", "簡易診断", "データ保有状況・不足・Supplier依存を整理します。"],
+    ["03", "PoC", "限定製品でMapping・Passport生成・運用を検証します。"],
+    ["04", "本番導入", "必要な連携を追加し、継続運用へ移行します。"],
+  ];
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} ${styles.whiteSection}`}>
       <Container>
-        <div className={styles.featureGrid}>
-          <div>
-            <SectionHeading
-              eyebrow="SECTION 2"
-              title="Excelからすぐに開始"
-              description="大規模なシステム更改は不要。現在お使いのExcel / CSVから始められます。一度列を設定すれば、以降は同じフォーマットから自動変換できます。"
-            />
-            <div className={styles.featureFootnote}>
-              ERP・PLM連携は必要に応じて段階的に追加できます。
-            </div>
-          </div>
-          <div className={styles.mappingCard}>
-            <div className={styles.cardToolbar}>
-              <strong>Column Mapping</strong>
-              <span>AI Suggestions</span>
-            </div>
-            <div className={styles.mappingHeader}>
-              <span>御社Excel列</span>
-              <span>DPP Attribute</span>
-              <span>Confidence</span>
-            </div>
-            {[
-              ["製造番号", "serialNumber", "99%"],
-              ["製造工場", "manufacturingPlace", "96%"],
-              ["CF_total", "carbonFootprint", "91%"],
-              ["Li再生率", "recycledLithiumPercentage", "87%"],
-            ].map((row) => (
-              <div className={styles.mappingRow} key={row[0]}>
-                <span>{row[0]}</span>
-                <span>{row[1]}</span>
-                <strong>{row[2]}</strong>
+        <SectionIntro
+          eyebrow="PROCESS"
+          title="導入までの流れ"
+          body="最初から全社システムを作り替えず、小さく検証してから広げます。"
+          center
+        />
+        <div className={styles.processGrid}>
+          {steps.map(([no, title, body], i) => (
+            <div className={styles.processStep} key={no}>
+              <div className={styles.processIcon}>
+                <Icon
+                  name={
+                    i === 0
+                      ? "users"
+                      : i === 1
+                        ? "file"
+                        : i === 2
+                          ? "grid"
+                          : "shield"
+                  }
+                />
               </div>
-            ))}
-            <button className={styles.mockButton} type="button">
-              Accept suggestions
-            </button>
-          </div>
+              <span>{no}</span>
+              <h3>{title}</h3>
+              <p>{body}</p>
+              {i < steps.length - 1 && (
+                <div className={styles.processArrow}>→</div>
+              )}
+            </div>
+          ))}
         </div>
       </Container>
     </section>
   );
 }
 
-export function ReadinessSection() {
+function Pricing() {
   return (
     <section className={`${styles.section} ${styles.darkSection}`}>
       <Container>
-        <div className={styles.featureGrid}>
+        <div className={styles.priceLayout}>
           <div>
-            <SectionHeading
-              eyebrow="SECTION 3"
-              title="Battery Passport対応状況を自動チェック"
-              description="現在登録されている情報と必要項目を照合。何が揃っていて何が不足しているかを一目で確認できます。"
-            />
-          </div>
-          <div className={styles.readinessCard}>
-            <div className={styles.readinessTop}>
-              <div>
-                <span>Battery Passport Readiness</span>
-                <strong>78%</strong>
-              </div>
-              <span className={styles.warningBadge}>Needs review</span>
-            </div>
-            <div className={styles.readinessBar}>
-              <span style={{ width: "78%" }} />
-            </div>
-            <div className={styles.readinessList}>
-              {readinessItems.map(([label, status]) => (
-                <div key={label}>
-                  <span>{label}</span>
-                  <span
-                    className={`${styles.statusDot} ${
-                      status === "ready"
-                        ? styles.ready
-                        : status === "warning"
-                          ? styles.warning
-                          : styles.error
-                    }`}
-                  >
-                    {status === "ready"
-                      ? "✓"
-                      : status === "warning"
-                        ? "△"
-                        : "×"}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-export function SupplierSection() {
-  return (
-    <section className={styles.section}>
-      <Container>
-        <div className={styles.featureGridReverse}>
-          <div className={styles.supplierCard}>
-            <div className={styles.supplierHeader}>
-              <div>
-                <span>Supplier</span>
-                <strong>XYZ Metals</strong>
-              </div>
-              <span>74% complete</span>
-            </div>
-            <div className={styles.supplierTable}>
-              {supplierRows.map(([label, status]) => (
-                <div key={label}>
-                  <span>{label}</span>
-                  <span
-                    className={
-                      status === "Received"
-                        ? styles.receivedPill
-                        : styles.pendingPill
-                    }
-                  >
-                    {status}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <button className={styles.outlineButton} type="button">
-              Send reminder
-            </button>
-          </div>
-          <div>
-            <SectionHeading
-              eyebrow="SECTION 4"
-              title="Supplierへの情報依頼も一元管理"
-              description="メールやExcelのやり取りを削減。Supplierごとに必要項目を指定して依頼し、誰から何が届いていないかを可視化します。"
-            />
-            <div className={styles.miniFeature}>
-              <strong>Supplier Portal</strong>
-              <p>
-                取引先には必要項目だけを見せるシンプルな入力画面を提供できます。
-              </p>
-            </div>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-export function PassportSection() {
-  return (
-    <section className={`${styles.section} ${styles.softSection}`}>
-      <Container>
-        <div className={styles.featureGrid}>
-          <div>
-            <SectionHeading
-              eyebrow="SECTION 5"
-              title="QRコードからBattery Passportを表示"
-              description="製品ごとにData Carrierを生成。利用者、事業者、当局など、アクセス権に応じて必要な情報を提供します。"
-            />
-            <p className={styles.noteText}>
-              公開情報とアクセス制限情報を分けて管理できる設計を前提とします。
+            <p className={styles.eyebrowLight}>POC PLAN</p>
+            <h2>
+              本格導入前に、
+              <br />
+              小さく検証できます。
+            </h2>
+            <p className={styles.darkLead}>
+              まずは最大100
+              Batteries程度のPoCから。データMapping、Passport生成、readiness評価を通じて、御社固有の難所を確認します。
             </p>
-          </div>
-
-          <div className={styles.phoneWrap}>
-            <div className={styles.phone}>
-              <div className={styles.phoneTop} />
-              <div className={styles.phoneContent}>
-                <span className={styles.phoneLabel}>BATTERY PASSPORT</span>
-                <h3>ABC Corporation</h3>
-                <p>BX500 · EV Battery</p>
-                <div className={styles.validPill}>✓ Passport Valid</div>
-                <div className={styles.phoneInfo}>
-                  <div>
-                    <span>Capacity</span>
-                    <strong>82 kWh</strong>
-                  </div>
-                  <div>
-                    <span>Chemistry</span>
-                    <strong>NMC811</strong>
-                  </div>
-                  <div>
-                    <span>Carbon Footprint</span>
-                    <strong>3,820 kg CO₂e</strong>
-                  </div>
-                  <div>
-                    <span>Recycled Lithium</span>
-                    <strong>8.3%</strong>
-                  </div>
-                </div>
-                <div className={styles.phoneFooter}>
-                  <span>Last updated</span>
-                  <strong>13 Aug 2027</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-export function RegistrySection() {
-  return (
-    <section className={styles.section}>
-      <Container>
-        <div className={styles.featureGridReverse}>
-          <div className={styles.registryVisual}>
-            <div className={styles.registryNode}>MyStory Passport</div>
-            <div className={styles.registryConnector}>
-              <span />
-              <b>API</b>
-              <span />
-            </div>
-            <div className={`${styles.registryNode} ${styles.registryEu}`}>
-              EU DPP Registry
-            </div>
-          </div>
-          <div>
-            <SectionHeading
-              eyebrow="SECTION 6"
-              title="EU DPP Registryと連携"
-              description="Registry登録に必要な情報を管理しAPI連携を前提とした設計に。詳細なDPPデータとRegistry向けデータを分けて扱います。"
-            />
-            <p className={styles.noteText}>
-              既存の業務システムとの接続を見据え、データモデル・API・履歴管理を分離します。
-            </p>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-export function DiagnosisSection() {
-  return (
-    <section className={`${styles.section} ${styles.diagnosisSection}`}>
-      <Container>
-        <div className={styles.diagnosisCard}>
-          <div>
-            <p className={styles.eyebrow}>SECTION 7</p>
-            <h2>まずは現在の対応状況を確認しませんか？</h2>
-            <p className={styles.lead}>
-              Battery Passport対応 無料診断。30分程度のヒアリングをもとに
-              現在の対応状況と優先課題を整理します。
-            </p>
-            <PrimaryCta>無料診断を申し込む</PrimaryCta>
-          </div>
-          <div className={styles.diagnosisList}>
-            {[
-              "現在の対応度",
-              "不足データ",
-              "Supplier依存項目",
-              "システム上の課題",
-              "対応優先順位",
-            ].map((item) => (
-              <div key={item}>
-                <span>✓</span>
-                <p>{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-export function PocSection() {
-  return (
-    <section className={styles.section}>
-      <Container>
-        <div className={styles.pricingGrid}>
-          <div>
-            <SectionHeading
-              eyebrow="SECTION 8"
-              title="本格導入前に小さく検証できます。"
-              description="まずは限られた製品・データでPoCを実施し、データ整備の難所や運用負荷を確認します。"
-            />
           </div>
           <div className={styles.priceCard}>
-            <span className={styles.priceLabel}>PoC PLAN</span>
-            <div className={styles.price}>
+            <span>PoC</span>
+            <div className={styles.priceValue}>
               <strong>50</strong>
-              <span>万円〜</span>
+              <b>万円〜</b>
             </div>
             <ul>
               <li>最大100 Batteries</li>
-              <li>Excel Data Mapping</li>
-              <li>Battery Passport生成</li>
-              <li>Data completeness評価</li>
+              <li>Excel / CSV Data Mapping</li>
+              <li>Readiness評価</li>
+              <li>Passport Preview</li>
               <li>課題レポート</li>
             </ul>
-            <PrimaryCta>PoCについて相談する</PrimaryCta>
+            <PrimaryButton>PoCについて相談する</PrimaryButton>
           </div>
         </div>
       </Container>
@@ -650,63 +913,65 @@ export function PocSection() {
   );
 }
 
-export function FinalCta() {
+function FAQ() {
+  return (
+    <section className={`${styles.section} ${styles.whiteSection}`} id="faq">
+      <Container>
+        <SectionIntro eyebrow="FAQ" title="よくあるご質問" center />
+        <div className={styles.faqList}>
+          {faq.map(([q, a]) => (
+            <details key={q} className={styles.faqItem}>
+              <summary>
+                <span>{q}</span>
+                <b>＋</b>
+              </summary>
+              <p>{a}</p>
+            </details>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function FinalCTA() {
+  return (
+    <section className={styles.finalCta}>
+      <Container>
+        <div className={styles.finalInner}>
+          <p className={styles.kickerLight}>GET READY FOR 2027</p>
+          <h2>2027年2月18日の対応を、今から。</h2>
+          <p>
+            まずは、貴社のBattery Passport対応状況とデータ課題を整理しませんか。
+          </p>
+          <div className={styles.ctaBubble}>30分程度・オンライン</div>
+          <PrimaryButton>無料で対応状況を相談する</PrimaryButton>
+          <small>システム導入を前提としない相談も可能です。</small>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+export default function BatteryPassportLandingPage() {
   return (
     <>
-      <section className={`${styles.section} ${styles.valueSection}`}>
-        <Container>
-          <SectionHeading
-            eyebrow="SECTION 9"
-            title="DPP対応の難しさはQRコードの発行ではありません。"
-            description="必要な製品・サプライチェーンデータを正しい形で揃えること。MyStory Passportはそのデータ整備から支援します。"
-            align="center"
-          />
-          <div className={styles.valueGrid}>
-            {[
-              ["Data first", "社内外に分散するデータを起点に設計。"],
-              ["Japan ready", "日本企業の既存運用を前提に導入。"],
-              ["Step by step", "Excelから始め、必要に応じてAPI連携へ。"],
-            ].map(([title, body]) => (
-              <div key={title}>
-                <strong>{title}</strong>
-                <p>{body}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className={`${styles.section} ${styles.trustSection}`}>
-        <Container>
-          <SectionHeading
-            eyebrow="SECTION 10"
-            title="まずは、現状把握から。"
-            description="システム導入を前提にせず、御社のBattery Passport対応状況とデータ課題を整理します。"
-            align="center"
-          />
-          <div className={styles.trustMeta}>
-            <span>30分程度</span>
-            <span>オンライン対応</span>
-            <span>簡易診断レポート</span>
-          </div>
-        </Container>
-      </section>
-
-      <section className={styles.finalCta}>
-        <Container>
-          <div className={styles.finalCtaInner}>
-            <p className={styles.eyebrow}>GET READY FOR 2027</p>
-            <h2>2027年2月18日の対応を今から。</h2>
-            <p>
-              MyStory Passportで、Battery Passport対応に必要なデータ整備を
-              シンプルに始めましょう。
-            </p>
-            <div className={styles.heroActions}>
-              <PrimaryCta>無料診断を申し込む</PrimaryCta>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <Header />
+      <Hero />
+      <RegulationStrip />
+      <WhyNow />
+      <Solution />
+      <Reasons />
+      <ProductPreview />
+      <Industries />
+      <Recommend />
+      <Services />
+      <Comparison />
+      <Deliverables />
+      <Process />
+      <Pricing />
+      <FAQ />
+      <FinalCTA />
     </>
   );
 }

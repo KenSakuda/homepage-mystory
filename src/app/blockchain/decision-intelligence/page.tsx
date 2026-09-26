@@ -699,7 +699,7 @@ export default function DecisionIntelligencePage() {
             <span className={styles.ctaEyebrow}>PROOF OF CONCEPT</span>
 
             <h2>
-              御社の実際の新規事業で
+              貴社の実際の新規事業で
               <br />
               意思決定を科学してみませんか。
             </h2>
@@ -736,8 +736,6 @@ export default function DecisionIntelligencePage() {
               PoCについて問い合わせる
               <Icon name="arrow" size={19} />
             </a>
-
-            <small>株式会社MyStory / データ分析・Decision Science</small>
           </div>
         </div>
       </section>

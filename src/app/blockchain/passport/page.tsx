@@ -1,39 +1,17 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
-import {
-  Hero,
-  ProblemSection,
-  OverviewSection,
-  ExcelSection,
-  ReadinessSection,
-  SupplierSection,
-  PassportSection,
-  RegistrySection,
-  DiagnosisSection,
-  PocSection,
-  FinalCta,
-} from "./_components/PassportLandingPage";
+import BatteryPassportLandingPage from "./_components/PassportLandingPage";
 
 export const metadata: Metadata = {
-  title: "MyStory Passport | EU Battery Passport対応を、データからシンプルに。",
+  title: "MyStory Passport | EU Battery Passport対応を、データから。",
   description:
-    "Excel・ERP・PLM・Supplierに分散した製品情報を整理し、EU Battery Passport対応を支援する日本企業向けプラットフォーム。",
+    "2027年2月18日のEU Battery Passport義務化に向けて、Excel・ERP・PLM・Supplierに分散するデータを整理し、対応状況の可視化からPassport生成・Registry連携まで支援します。",
 };
 
-export default function PassportPage() {
+export default function Page() {
   return (
     <main className={styles.page}>
-      <Hero />
-      <ProblemSection />
-      <OverviewSection />
-      <ExcelSection />
-      <ReadinessSection />
-      <SupplierSection />
-      <PassportSection />
-      <RegistrySection />
-      <DiagnosisSection />
-      <PocSection />
-      <FinalCta />
+      <BatteryPassportLandingPage />
     </main>
   );
 }
